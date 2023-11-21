@@ -1,11 +1,10 @@
 # PHP-base 2023
 
-![PHP - officiel - Par Colin Viebrock — http://php.net/logos, CC BY-SA 4.0, https://commons.wikimedia.org/w/index.php?curid=9632398](https://github.com/mikhawa/PHP-base/blob/main/datas/PHP-logo.svg.png?raw=true)
-
 ## Menu de navigation
 - [Présentation](#présentation)
 - [Historique de PHP](#historique-de-php)
 - [Installation de Apache, PHP et MySQL](#installation-de-apache-php-et-mysql)
+  - [Installation de WAMP pour Windows](#installation-de-wamp-pour-windows)] 
 - Les bases de PHP
 
 
