@@ -36,7 +36,7 @@ Libre, gratuit, simple d'utilisation et d'installation, ce langage nécessite n�
 ### Historique de PHP
 
 #### Les Débuts de PHP (1994-1995) :
-- PHP, qui signifie à l'origine "Personal Home Page", a été créé par Rasmus Lerdorf en 1994. À l'époque, il s'agissait d'un simple ensemble de scripts écrits en langage C pour gérer son site web personnel.
+- PHP, qui signifie à l'origine "Personal Home Page", a été créé par Rasmus Lerdorf en 1994. À l'époque, il s'agissait d'un simple ensemble de scripts écrits en [langage C](## "C est un langage de programmation impératif, généraliste et de bas niveau. Inventé au début des années 1970 pour réécrire Unix, C est devenu un des langages les plus utilisés, encore de nos jours. De nombreux langages plus modernes comme C++, C#, Java et PHP ou JavaScript ont repris une syntaxe similaire au C et reprennent en partie sa logique.") pour gérer son site web personnel.
 - En 1995, PHP a été officiellement annoncé en tant que langage de script côté serveur, permettant d'ajouter des fonctionnalités dynamiques aux pages web.
 
 #### PHP/FI (1996-1997) :
