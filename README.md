@@ -5,7 +5,7 @@
 ## Menu de navigation
 - [Présentation](#présentation)
 - [Historique de PHP](#historique-de-php)
-- Installation de PHP
+- [Installation de Apache, PHP et MySQL](#installation-de-apache-php-et-mysql)
 - Les bases de PHP
 
 
@@ -69,3 +69,24 @@ Libre, gratuit, simple d'utilisation et d'installation, ce langage nécessite n�
 - PHP coexiste avec d'autres technologies web et reste un choix populaire pour sa simplicité, sa polyvalence et son support communautaire.
 
 [Retour au menu](#menu-de-navigation)
+
+### Installation de Apache, PHP et MySQL
+
+Nous allons installer un package qui contient les trois composants nécessaires à la création d'un site web dynamique : Apache, PHP et MySQL (et/ou MariaDB). 
+
+Ce package s'appelle **WAMP** (Windows, Apache, MySQL, PHP). Il existe aussi **LAMP** (Linux, Apache, MySQL, PHP) et **MAMP** (Macintosh, Apache, MySQL, PHP).
+
+Il existe d'autres alternatives comme **XAMPP** ou **EasyPHP**.
+
+On peut également installer les composants séparément.
+
+#### Installation de WAMP pour Windows
+
+- Télécharger WAMP sur le site officiel : 
+
+[https://www.wampserver.com/](https://www.wampserver.com/)
+
+- ou sur le site avec les add-ons : 
+
+[https://wampserver.aviatechno.net/](https://wampserver.aviatechno.net/)
+
