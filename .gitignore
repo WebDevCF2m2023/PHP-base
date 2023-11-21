@@ -1,2 +1,4 @@
 # ignore PHPStorm project files
 .idea
+# ignore VSCode project files
+.vscode
