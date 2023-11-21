@@ -4,10 +4,11 @@
 - [Présentation](#présentation)
 - [Historique de PHP](#historique-de-php)
 - [Installation de Apache, PHP et MySQL](#installation-de-apache-php-et-mysql)
-  - [Installation de WAMP pour Windows](#installation-de-wamp-pour-windows)] 
+  - [Installation de WAMP pour Windows](#installation-de-wamp-pour-windows) 
   - [Installation de XAMPP pour MacOs](#installation-de-xampp-pour-macos)
 - Les bases de PHP
 
+---
 
 ### Présentation
 
@@ -31,7 +32,11 @@ Il est multi-plateforme : autant sur Linux qu'avec Windows (et Macintosh), il pe
 
 Libre, gratuit, simple d'utilisation et d'installation, ce langage nécessite néanmoins une connaissance aiguë des problèmes de sécurité.
 
+---
+
 [Retour au menu](#menu-de-navigation)
+
+---
 
 ### Historique de PHP
 
@@ -68,7 +73,11 @@ Libre, gratuit, simple d'utilisation et d'installation, ce langage nécessite n�
 - La communauté PHP continue de contribuer à l'évolution du langage, avec des mises à jour régulières et l'ajout de nouvelles fonctionnalités.
 - PHP coexiste avec d'autres technologies web et reste un choix populaire pour sa simplicité, sa polyvalence et son support communautaire.
 
+---
+
 [Retour au menu](#menu-de-navigation)
+
+---
 
 ### Installation de Apache, PHP et MySQL
 
@@ -79,6 +88,12 @@ Ce package s'appelle **WAMP** (Windows, Apache, MySQL, PHP). Il existe aussi **L
 Il existe d'autres alternatives comme **XAMPP** ou **EasyPHP**.
 
 On peut également installer les composants séparément.
+
+---
+
+[Retour au menu](#menu-de-navigation)
+
+---
 
 #### Installation de WAMP pour Windows
 
@@ -94,6 +109,12 @@ Voici un petit tutoriel pour installer WAMP chez vous :
 
 https://espritweb.fr/installer-wamp-sur-windows-10-etape-par-etape-et-sans-erreur/
 
+---
+
+[Retour au menu](#menu-de-navigation)
+
+---
+
 #### Installation de XAMPP pour MacOs
 
 Nous préférerons l'installation de XAMPP pour MacOs, car avec Mamp, il y a des problèmes de droits d'accès, sauf en version payante.
@@ -105,3 +126,8 @@ Voici un petit tutoriel pour installer XAMPP chez vous :
 
 https://www.ionos.fr/digitalguide/serveur/outils/tutoriel-xampp-creer-un-serveur-de-test-local/
 
+---
+
+[Retour au menu](#menu-de-navigation)
+
+---
