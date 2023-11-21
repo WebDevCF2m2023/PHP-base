@@ -5,6 +5,7 @@
 - [Historique de PHP](#historique-de-php)
 - [Installation de Apache, PHP et MySQL](#installation-de-apache-php-et-mysql)
   - [Installation de WAMP pour Windows](#installation-de-wamp-pour-windows)] 
+  - [Installation de XAMPP pour MacOs](#installation-de-xampp-pour-macos)
 - Les bases de PHP
 
 
@@ -88,4 +89,19 @@ On peut également installer les composants séparément.
 - ou sur le site avec les add-ons : 
 
 [https://wampserver.aviatechno.net/](https://wampserver.aviatechno.net/)
+
+Voici un petit tutoriel pour installer WAMP chez vous :
+
+https://espritweb.fr/installer-wamp-sur-windows-10-etape-par-etape-et-sans-erreur/
+
+#### Installation de XAMPP pour MacOs
+
+Nous préférerons l'installation de XAMPP pour MacOs, car avec Mamp, il y a des problèmes de droits d'accès, sauf en version payante.
+
+- Télécharger XAMPP sur le site officiel :
+https://www.apachefriends.org/fr/index.html pour OS X.
+
+Voici un petit tutoriel pour installer XAMPP chez vous :
+
+https://www.ionos.fr/digitalguide/serveur/outils/tutoriel-xampp-creer-un-serveur-de-test-local/
 
