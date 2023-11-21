@@ -6,7 +6,9 @@
 - [Installation de Apache, PHP et MySQL](#installation-de-apache-php-et-mysql)
   - [Installation de WAMP pour Windows](#installation-de-wamp-pour-windows) 
   - [Installation de XAMPP pour MacOs](#installation-de-xampp-pour-macos)
-- Les bases de PHP
+- [Les bases de PHP](#les-bases-de-php)
+  - [Les fichiers PHP](#les-fichiers-php)
+  - [Les balises PHP](#les-balises-php)
 
 ---
 
@@ -125,6 +127,38 @@ https://www.apachefriends.org/fr/index.html pour OS X.
 Voici un petit tutoriel pour installer XAMPP chez vous :
 
 https://www.ionos.fr/digitalguide/serveur/outils/tutoriel-xampp-creer-un-serveur-de-test-local/
+
+---
+
+[Retour au menu](#menu-de-navigation)
+
+---
+
+## Les bases de PHP
+
+### Les fichiers PHP
+
+Les fichiers PHP sont des fichiers texte qui contiennent du code PHP. Ils sont généralement enregistrés avec l'extension `.php`.
+
+Le code PHP est exécuté sur le serveur, et le résultat est renvoyé au navigateur sous forme de code HTML.
+
+---
+
+[Retour au menu](#menu-de-navigation)
+
+---
+
+### Les balises PHP
+
+Le code PHP est écrit entre les balises `<?php ?>`.
+
+ici, nous allons afficher le texte "Hello World" dans le navigateur :
+
+```php
+<?php
+echo "Hello World";
+?>
+```
 
 ---
 
