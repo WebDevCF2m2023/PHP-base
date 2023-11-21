@@ -1,13 +1,16 @@
 # PHP-base 2023
 
-![PHP - officiel - Par Colin Viebrock — http://php.net/logos, CC BY-SA 4.0, https://commons.wikimedia.org/w/index.php?curid=9632398](https://github.com/mikhawa/PHP-base/blob/main/datas/PHP-logo.svg.png?raw=true)
-
 ## Menu de navigation
 - [Présentation](#présentation)
 - [Historique de PHP](#historique-de-php)
-- Installation de PHP
-- Les bases de PHP
+- [Installation de Apache, PHP et MySQL](#installation-de-apache-php-et-mysql)
+  - [Installation de WAMP pour Windows](#installation-de-wamp-pour-windows) 
+  - [Installation de XAMPP pour MacOs](#installation-de-xampp-pour-macos)
+- [Les bases de PHP](#les-bases-de-php)
+  - [Les fichiers PHP](#les-fichiers-php)
+  - [Les balises PHP](#les-balises-php)
 
+---
 
 ### Présentation
 
@@ -31,12 +34,16 @@ Il est multi-plateforme : autant sur Linux qu'avec Windows (et Macintosh), il pe
 
 Libre, gratuit, simple d'utilisation et d'installation, ce langage nécessite néanmoins une connaissance aiguë des problèmes de sécurité.
 
+---
+
 [Retour au menu](#menu-de-navigation)
+
+---
 
 ### Historique de PHP
 
 #### Les Débuts de PHP (1994-1995) :
-- PHP, qui signifie à l'origine "Personal Home Page", a été créé par Rasmus Lerdorf en 1994. À l'époque, il s'agissait d'un simple ensemble de scripts écrits en langage C pour gérer son site web personnel.
+- PHP, qui signifie à l'origine "Personal Home Page", a été créé par Rasmus Lerdorf en 1994. À l'époque, il s'agissait d'un simple ensemble de scripts écrits en [langage C](## "C est un langage de programmation impératif, généraliste et de bas niveau. Inventé au début des années 1970 pour réécrire Unix, C est devenu un des langages les plus utilisés, encore de nos jours. De nombreux langages plus modernes comme C++, C#, Java et PHP ou JavaScript ont repris une syntaxe similaire au C et reprennent en partie sa logique.") pour gérer son site web personnel.
 - En 1995, PHP a été officiellement annoncé en tant que langage de script côté serveur, permettant d'ajouter des fonctionnalités dynamiques aux pages web.
 
 #### PHP/FI (1996-1997) :
@@ -68,4 +75,93 @@ Libre, gratuit, simple d'utilisation et d'installation, ce langage nécessite n�
 - La communauté PHP continue de contribuer à l'évolution du langage, avec des mises à jour régulières et l'ajout de nouvelles fonctionnalités.
 - PHP coexiste avec d'autres technologies web et reste un choix populaire pour sa simplicité, sa polyvalence et son support communautaire.
 
+---
+
 [Retour au menu](#menu-de-navigation)
+
+---
+
+### Installation de Apache, PHP et MySQL
+
+Nous allons installer un package qui contient les trois composants nécessaires à la création d'un site web dynamique : Apache, PHP et MySQL (et/ou MariaDB). 
+
+Ce package s'appelle **WAMP** (Windows, Apache, MySQL, PHP). Il existe aussi **LAMP** (Linux, Apache, MySQL, PHP) et **MAMP** (Macintosh, Apache, MySQL, PHP).
+
+Il existe d'autres alternatives comme **XAMPP** ou **EasyPHP**.
+
+On peut également installer les composants séparément.
+
+---
+
+[Retour au menu](#menu-de-navigation)
+
+---
+
+#### Installation de WAMP pour Windows
+
+- Télécharger WAMP sur le site officiel : 
+
+[https://www.wampserver.com/](https://www.wampserver.com/)
+
+- ou sur le site avec les add-ons : 
+
+[https://wampserver.aviatechno.net/](https://wampserver.aviatechno.net/)
+
+Voici un petit tutoriel pour installer WAMP chez vous :
+
+https://espritweb.fr/installer-wamp-sur-windows-10-etape-par-etape-et-sans-erreur/
+
+---
+
+[Retour au menu](#menu-de-navigation)
+
+---
+
+#### Installation de XAMPP pour MacOs
+
+Nous préférerons l'installation de XAMPP pour MacOs, car avec Mamp, il y a des problèmes de droits d'accès, sauf en version payante.
+
+- Télécharger XAMPP sur le site officiel :
+https://www.apachefriends.org/fr/index.html pour OS X.
+
+Voici un petit tutoriel pour installer XAMPP chez vous :
+
+https://www.ionos.fr/digitalguide/serveur/outils/tutoriel-xampp-creer-un-serveur-de-test-local/
+
+---
+
+[Retour au menu](#menu-de-navigation)
+
+---
+
+## Les bases de PHP
+
+### Les fichiers PHP
+
+Les fichiers PHP sont des fichiers texte qui contiennent du code PHP. Ils sont généralement enregistrés avec l'extension `.php`.
+
+Le code PHP est exécuté sur le serveur, et le résultat est renvoyé au navigateur sous forme de code HTML.
+
+---
+
+[Retour au menu](#menu-de-navigation)
+
+---
+
+### Les balises PHP
+
+Le code PHP est écrit entre les balises `<?php ?>`.
+
+ici, nous allons afficher le texte "Hello World" dans le navigateur :
+
+```php
+<?php
+echo "Hello World";
+?>
+```
+
+---
+
+[Retour au menu](#menu-de-navigation)
+
+---
