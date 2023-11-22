@@ -6,6 +6,7 @@
 - [Installation de Apache, PHP et MySQL](#installation-de-apache-php-et-mysql)
   - [Installation de WAMP pour Windows](#installation-de-wamp-pour-windows) 
   - [Installation de XAMPP pour MacOs](#installation-de-xampp-pour-macos)
+- [Principe des exercices](#principe-des-exercices)
 - [Les bases de PHP](#les-bases-de-php)
   - [Les fichiers PHP](#les-fichiers-php)
   - [Les balises PHP](#les-balises-php)
@@ -150,7 +151,13 @@ Et si vous souhaitez que je le vois, n'oubliez pas de faire un `pull request` ! 
 
 Les exercices seront reconnaissables par le logo :
 
-00 | ![Exercice 00](https://github.com/mikhawa/PHP-base/blob/main/datas/folder-type-php-opened_48.png?raw=true) | Exercice 00 | Enoncé de l'exercice
+00 | ![Exercice 00](https://github.com/mikhawa/PHP-base/blob/main/datas/folder-type-php-opened_24.png?raw=true) | Exercice 00 | Énoncé de l'exercice
+
+---
+
+[Retour au menu](#menu-de-navigation)
+
+---
 
 ## Les bases de PHP
 
@@ -178,13 +185,15 @@ echo "Hello World";
 ?>
 ```
 
-01 | ![Exercice 01](https://github.com/mikhawa/PHP-base/blob/main/datas/folder-type-php-opened_48.png?raw=true) | Exercice 01 |
+01 | ![Exercice 01](https://github.com/mikhawa/PHP-base/blob/main/datas/folder-type-php-opened_24.png?raw=true) | Exercice 01 | Créez un fichier `01-hello-world.php` qui affiche "Hello World" dans le navigateur.
 
 Nous pouvons également utiliser les balises `<?= ?>`, celles-ci sont équivalentes à `<?php echo ?>` :
 
 ```php
 <?="Hello World"?>
 ```
+
+02 | ![Exercice 02](https://github.com/mikhawa/PHP-base/blob/main/datas/folder-type-php-opened_24.png?raw=true) | Exercice 02 | Créez un fichier `02-hello-world-short.php` qui affiche "Hello World" dans le navigateur.
 
 Vous remarquerez que nous n'avons pas besoin du `;` lorsque nous sommes devant la fermeture de PHP `?>`.
 
@@ -196,6 +205,8 @@ echo "Hello World";
 echo "<br>Hello friends"
 ?>
 ```
+
+03 | ![Exercice 03](https://github.com/mikhawa/PHP-base/blob/main/datas/folder-type-php-opened_24.png?raw=true) | Exercice 03 | Créez un fichier `03-hello-friends.php` qui affiche "Hello World<br>Hello friends" dans le navigateur.
 
 ---
 
