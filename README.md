@@ -11,6 +11,8 @@
   - [Les fichiers PHP](#les-fichiers-php)
   - [Les balises PHP](#les-balises-php)
   - [Les commentaires](#les-commentaires)
+  - [Placement des balises PHP](#placement-des-balises-php)
+  - [Les variables](#les-variables)
 
 ---
 
@@ -206,6 +208,8 @@ Nous pouvons également utiliser les balises `<?= ?>`, celles-ci sont équivalen
 
 Vous remarquerez que nous n'avons pas besoin du `;` lorsque nous sommes devant la fermeture de PHP `?>`.
 
+Le `;` est nécessaire pour dire à PHP que la ligne d'instruction est terminée. C'est la première cause d'erreur d'inattention.
+
 Il en va de même dès que nous sommes dans un fichier PHP, et nous n'avons pas besoin de fermer la balise PHP, sauf si nous avons du code HTML après. Ceci est une bonne pratique.
 
 ```php
@@ -249,6 +253,66 @@ sur plusieurs lignes
 
 | 04 | ![Exercice 04](https://github.com/mikhawa/PHP-base/blob/main/datas/folder-type-php-opened_24.png?raw=true) | Exercice 04 | Créez un fichier `04-commentaires.php` qui n'affiche rien dans le navigateur ! |
 |----|:----------------------------------------------------------------------------------------------------------:|:-----------:|:------------------------------------------------------------------------------:|
+
+---
+
+[Retour au menu](#menu-de-navigation)
+
+---
+
+### Placement des balises PHP
+
+Les balises PHP peuvent être placées n'importe où dans le document HTML.
+
+Voici un exemple de code PHP dans lequel nous plaçons les balises PHP dans différentes parties du document HTML :
+
+```php
+<?php // Début du code PHP
+  // Prenons la date et heure du jour dans une variable
+  $date = date("Y-m-d H:i:s"); // format datetime MySQL
+// Fin du code PHP
+?>
+<!DOCTYPE html>
+<html>
+<head>
+  <title>05 date <?= date("H:i") // heure et minute?></title>
+</head>
+<body>
+  <h1>05 date <?= $date?></h1>
+  <p>Il est <?= date("H:i:s") // heure, minute et seconde?></p>
+</body>
+</html>
+<?php
+// on peut même mettre du code PHP après la fermeture de la balise HTML
+?>
+```
+
+Nous avons utilisé la fonction native `date()` pour afficher la date et l'heure et nous avons stocké le résultat dans la variable `$date`.
+
+Nous verrons plus tard comment fonctionnent les fonctions et variables.
+
+| 05 | ![Exercice 05](https://github.com/mikhawa/PHP-base/blob/main/datas/folder-type-php-opened_24.png?raw=true) | Exercice 05 | Créez un fichier `05-php-placement.php` qui affiche le temps du serveur dans une page html ! |
+|----|:----------------------------------------------------------------------------------------------------------:|:-----------:|:--------------------------------------------------------------------------------------------:|
+
+---
+
+[Retour au menu](#menu-de-navigation)
+
+---
+
+### Les variables
+
+Une variable est un **conteneur pour stocker des informations**. 
+
+Les variables sont créées en PHP avec le signe `$` suivi du nom de la variable. 
+
+Le nom de la variable doit **commencer** par une lettre ou un tiret bas `_` et ne peut **contenir que des lettres, des chiffres et des tirets bas `_`**. 
+
+Les noms de variables sont sensibles à la casse (les majuscules et les minuscules sont différentes).
+
+Les variables peuvent être de **n'importe quel type** de données, et peuvent changer de type de données après leur création (en cas de typage non strict).
+
+Voici une liste des variables prédéfinies en PHP : [Variables prédéfinies](https://www.php.net/manual/fr/reserved.variables.php)
 
 ---
 
