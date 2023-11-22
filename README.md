@@ -10,6 +10,7 @@
 - [Les bases de PHP](#les-bases-de-php)
   - [Les fichiers PHP](#les-fichiers-php)
   - [Les balises PHP](#les-balises-php)
+  - [Les commentaires](#les-commentaires)
 
 ---
 
@@ -216,6 +217,38 @@ echo "<br>Hello friends"
 
 | 03 | ![Exercice 03](https://github.com/mikhawa/PHP-base/blob/main/datas/folder-type-php-opened_24.png?raw=true) | Exercice 03 | Créez un fichier `03-hello-friends.php` qui affiche "Hello World<br>Hello friends" dans le navigateur. |
 |----|:----------------------------------------------------------------------------------------------------------:|:-----------:|:------------------------------------------------------------------------------------------------------:|
+
+---
+
+[Retour au menu](#menu-de-navigation)
+
+---
+
+### Les commentaires
+
+Les commentaires sont des lignes de texte qui ne sont pas exécutées par le serveur.
+
+Ils sont utilisés pour rendre le code plus lisible et pour empêcher l'exécution de certaines parties du code.
+
+Les commentaires commencent par `//` ou `#` pour une ligne de commentaire, et `/*` et `*/` pour un bloc de commentaire.
+
+```php
+<?php
+// Ceci est un commentaire sur une ligne
+
+# Ceci est un commentaire sur une ligne
+
+/*
+Ceci est un commentaire
+sur plusieurs lignes
+*/
+
+// Les bonnes pratiques :
+# Ne fermez pas la balise PHP si vous êtes en fin de fichier
+```
+
+| 04 | ![Exercice 04](https://github.com/mikhawa/PHP-base/blob/main/datas/folder-type-php-opened_24.png?raw=true) | Exercice 04 | Créez un fichier `04-commentaires.php` qui n'affiche rien dans le navigateur ! |
+|----|:----------------------------------------------------------------------------------------------------------:|:-----------:|:------------------------------------------------------------------------------:|
 
 ---
 
