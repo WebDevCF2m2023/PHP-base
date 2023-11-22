@@ -6,9 +6,13 @@
 - [Installation de Apache, PHP et MySQL](#installation-de-apache-php-et-mysql)
   - [Installation de WAMP pour Windows](#installation-de-wamp-pour-windows) 
   - [Installation de XAMPP pour MacOs](#installation-de-xampp-pour-macos)
+- [Principe des exercices](#principe-des-exercices)
 - [Les bases de PHP](#les-bases-de-php)
   - [Les fichiers PHP](#les-fichiers-php)
   - [Les balises PHP](#les-balises-php)
+  - [Les commentaires](#les-commentaires)
+  - [Placement des balises PHP](#placement-des-balises-php)
+  - [Les variables](#les-variables)
 
 ---
 
@@ -134,6 +138,32 @@ https://www.ionos.fr/digitalguide/serveur/outils/tutoriel-xampp-creer-un-serveur
 
 ---
 
+## Principe des exercices
+
+**N'oubliez pas de faire un `git pull upstream main` dès le début du cours !**
+
+Pour chaque exercice, vous devrez créer vos fichiers avec le nom demandé dans le dossier `stagiaires/{votre_prénom}/`.
+
+Vous pouvez également utiliser ce dossier pour stocker vos fichiers de travail de `PHP-base`. 
+
+**Ne modifiez pas les fichiers de travail de `PHP-base` qui se trouvent en dehors de votre dossier !**
+
+N'oubliez pas de faire un `commit` et un `push` à chaque fin d'exercice.
+
+Et si vous souhaitez que je le vois, n'oubliez pas de faire un `pull request` ! Il ne faudra pas le faire à chaque fois.
+
+Les exercices seront reconnaissables par le logo :
+
+| 00 | ![Exercice 00](https://github.com/mikhawa/PHP-base/blob/main/datas/folder-type-php-opened_24.png?raw=true) | Exercice 00 | Énoncé de l'exercice |
+|----|:----------------------------------------------------------------------------------------------------------:|:-----------:|:--------------------:|
+
+
+---
+
+[Retour au menu](#menu-de-navigation)
+
+---
+
 ## Les bases de PHP
 
 ### Les fichiers PHP
@@ -152,13 +182,137 @@ Le code PHP est exécuté sur le serveur, et le résultat est renvoyé au naviga
 
 Le code PHP est écrit entre les balises `<?php ?>`.
 
-ici, nous allons afficher le texte "Hello World" dans le navigateur :
+Ici, nous allons afficher le texte "Hello World" dans le navigateur :
 
 ```php
 <?php
 echo "Hello World";
 ?>
 ```
+
+| 01 | ![Exercice 01](https://github.com/mikhawa/PHP-base/blob/main/datas/folder-type-php-opened_24.png?raw=true) | Exercice 01 | Créez un fichier `01-hello-world.php` qui affiche "Hello World" dans le navigateur. |
+|----|:----------------------------------------------------------------------------------------------------------:|:-----------:|:-----------------------------------------------------------------------------------:|
+
+---
+
+Nous pouvons également utiliser les balises `<?= ?>`, celles-ci sont équivalentes à `<?php echo ?>` :
+
+```php
+<?="Hello World"?>
+```
+
+| 02 | ![Exercice 02](https://github.com/mikhawa/PHP-base/blob/main/datas/folder-type-php-opened_24.png?raw=true) | Exercice 02 | Créez un fichier `02-hello-world-short.php` qui affiche "Hello World" dans le navigateur. |
+|----|:----------------------------------------------------------------------------------------------------------:|:-----------:|:-----------------------------------------------------------------------------------------:|
+
+---
+
+Vous remarquerez que nous n'avons pas besoin du `;` lorsque nous sommes devant la fermeture de PHP `?>`.
+
+Le `;` est nécessaire pour dire à PHP que la ligne d'instruction est terminée. C'est la première cause d'erreur d'inattention.
+
+Il en va de même dès que nous sommes dans un fichier PHP, et nous n'avons pas besoin de fermer la balise PHP, sauf si nous avons du code HTML après. Ceci est une bonne pratique.
+
+```php
+<?php
+echo "Hello World";
+echo "<br>Hello friends"
+?>
+```
+
+| 03 | ![Exercice 03](https://github.com/mikhawa/PHP-base/blob/main/datas/folder-type-php-opened_24.png?raw=true) | Exercice 03 | Créez un fichier `03-hello-friends.php` qui affiche "Hello World<br>Hello friends" dans le navigateur. |
+|----|:----------------------------------------------------------------------------------------------------------:|:-----------:|:------------------------------------------------------------------------------------------------------:|
+
+---
+
+[Retour au menu](#menu-de-navigation)
+
+---
+
+### Les commentaires
+
+Les commentaires sont des lignes de texte qui ne sont pas exécutées par le serveur.
+
+Ils sont utilisés pour rendre le code plus lisible et pour empêcher l'exécution de certaines parties du code.
+
+Les commentaires commencent par `//` ou `#` pour une ligne de commentaire, et `/*` et `*/` pour un bloc de commentaire.
+
+```php
+<?php
+// Ceci est un commentaire sur une ligne
+
+# Ceci est un commentaire sur une ligne
+
+/*
+Ceci est un commentaire
+sur plusieurs lignes
+*/
+
+// Les bonnes pratiques :
+# Ne fermez pas la balise PHP si vous êtes en fin de fichier
+```
+
+| 04 | ![Exercice 04](https://github.com/mikhawa/PHP-base/blob/main/datas/folder-type-php-opened_24.png?raw=true) | Exercice 04 | Créez un fichier `04-commentaires.php` qui n'affiche rien dans le navigateur ! |
+|----|:----------------------------------------------------------------------------------------------------------:|:-----------:|:------------------------------------------------------------------------------:|
+
+---
+
+[Retour au menu](#menu-de-navigation)
+
+---
+
+### Placement des balises PHP
+
+Les balises PHP peuvent être placées n'importe où dans le document HTML.
+
+Voici un exemple de code PHP dans lequel nous plaçons les balises PHP dans différentes parties du document HTML :
+
+```php
+<?php // Début du code PHP
+  // Prenons la date et heure du jour dans une variable
+  $date = date("Y-m-d H:i:s"); // format datetime MySQL
+// Fin du code PHP
+?>
+<!DOCTYPE html>
+<html>
+<head>
+  <title>05 date <?= date("H:i") // heure et minute?></title>
+</head>
+<body>
+  <h1>05 date <?= $date?></h1>
+  <p>Il est <?= date("H:i:s") // heure, minute et seconde?></p>
+</body>
+</html>
+<?php
+// on peut même mettre du code PHP après la fermeture de la balise HTML
+?>
+```
+
+Nous avons utilisé la fonction native `date()` pour afficher la date et l'heure et nous avons stocké le résultat dans la variable `$date`.
+
+Nous verrons plus tard comment fonctionnent les fonctions et variables.
+
+| 05 | ![Exercice 05](https://github.com/mikhawa/PHP-base/blob/main/datas/folder-type-php-opened_24.png?raw=true) | Exercice 05 | Créez un fichier `05-php-placement.php` qui affiche le temps du serveur dans une page html ! |
+|----|:----------------------------------------------------------------------------------------------------------:|:-----------:|:--------------------------------------------------------------------------------------------:|
+
+---
+
+[Retour au menu](#menu-de-navigation)
+
+---
+
+### Les variables
+
+Une variable est un **conteneur pour stocker des informations**. 
+
+Les variables sont créées en PHP avec le signe `$` suivi du nom de la variable. 
+
+Le nom de la variable doit **commencer** par une lettre ou un tiret bas `_` et ne peut **contenir que des lettres, des chiffres et des tirets bas `_`**. 
+
+Les noms de variables sont sensibles à la casse (les majuscules et les minuscules sont différentes).
+
+Les variables peuvent être de **n'importe quel type** de données, et peuvent changer de type de données après leur création (en cas de typage non strict).
+
+Voici une liste des variables prédéfinies en PHP : [Variables prédéfinies](https://www.php.net/manual/fr/reserved.variables.php)
 
 ---
 
