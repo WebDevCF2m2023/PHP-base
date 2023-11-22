@@ -160,7 +160,7 @@ echo "Hello World";
 ?>
 ```
 
-
+01 | ![Exercice 01](https://github.com/mikhawa/PHP-base/blob/main/datas/php_%2048.png?raw=true) | Exercice 01 |
 
 Nous pouvons également utiliser les balises `<?= ?>`, celles-ci sont équivalentes à `<?php echo ?>` :
 
