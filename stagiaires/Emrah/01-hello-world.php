@@ -1,2 +1,4 @@
-<?php 
-echo "hello Monde de ouf" ?>
+<?php
+echo "Hello World";
+echo "<br>Hello friends"
+?>
