@@ -151,7 +151,8 @@ Et si vous souhaitez que je le vois, n'oubliez pas de faire un `pull request` ! 
 
 Les exercices seront reconnaissables par le logo :
 
-00 | ![Exercice 00](https://github.com/mikhawa/PHP-base/blob/main/datas/folder-type-php-opened_24.png?raw=true) | Exercice 00 | Énoncé de l'exercice
+| 00 | ![Exercice 00](https://github.com/mikhawa/PHP-base/blob/main/datas/folder-type-php-opened_24.png?raw=true) | Exercice 00 | Énoncé de l'exercice  |
+
 
 ---
 
