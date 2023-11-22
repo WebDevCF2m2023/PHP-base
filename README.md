@@ -134,6 +134,24 @@ https://www.ionos.fr/digitalguide/serveur/outils/tutoriel-xampp-creer-un-serveur
 
 ---
 
+## Principe des exercices
+
+**N'oubliez pas de faire un `git pull upstream main` dès le début du cours !**
+
+Pour chaque exercice, vous devrez créer vos fichiers avec le nom demandé dans le dossier `stagiaires/{votre_prénom}/`.
+
+Vous pouvez également utiliser ce dossier pour stocker vos fichiers de travail de `PHP-base`. 
+
+**Ne modifiez pas les fichiers de travail de `PHP-base` qui se trouvent en dehors de votre dossier !**
+
+N'oubliez pas de faire un `commit` et un `push` à chaque fin d'exercice.
+
+Et si vous souhaitez que je le vois, n'oubliez pas de faire un `pull request` ! Il ne faudra pas le faire à chaque fois.
+
+Les exercices seront reconnaissables par le logo :
+
+00 | ![Exercice 00](https://github.com/mikhawa/PHP-base/blob/main/datas/folder-type-php-opened_48.png?raw=true) | Exercice 00 | Enoncé de l'exercice
+
 ## Les bases de PHP
 
 ### Les fichiers PHP
@@ -160,7 +178,7 @@ echo "Hello World";
 ?>
 ```
 
-01 | ![Exercice 01](https://github.com/mikhawa/PHP-base/blob/main/datas/php_%2024.png?raw=true) | Exercice 01 |
+01 | ![Exercice 01](https://github.com/mikhawa/PHP-base/blob/main/datas/folder-type-php-opened_48.png?raw=true) | Exercice 01 |
 
 Nous pouvons également utiliser les balises `<?= ?>`, celles-ci sont équivalentes à `<?php echo ?>` :
 
