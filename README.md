@@ -152,11 +152,30 @@ Le code PHP est exécuté sur le serveur, et le résultat est renvoyé au naviga
 
 Le code PHP est écrit entre les balises `<?php ?>`.
 
-ici, nous allons afficher le texte "Hello World" dans le navigateur :
+Ici, nous allons afficher le texte "Hello World" dans le navigateur :
 
 ```php
 <?php
 echo "Hello World";
+?>
+```
+
+
+
+Nous pouvons également utiliser les balises `<?= ?>`, celles-ci sont équivalentes à `<?php echo ?>` :
+
+```php
+<?="Hello World"?>
+```
+
+Vous remarquerez que nous n'avons pas besoin du `;` lorsque nous sommes devant la fermeture de PHP `?>`.
+
+Il en va de même dès que nous sommes dans un fichier PHP, et nous n'avons pas besoin de fermer la balise PHP, sauf si nous avons du code HTML après. Ceci est une bonne pratique.
+
+```php
+<?php
+echo "Hello World";
+echo "<br>Hello friends"
 ?>
 ```
 
