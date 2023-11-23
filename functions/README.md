@@ -44,7 +44,54 @@ Les méthodes sont des fonctions qui sont définies dans une classe (POO). Elles
 
 ### Les fonctions natives et constructions du langage à connaitre
 
-- [array_change_key_case](https://www.php.net/manual/fr/function.array-change-key-case.php)
+- Les balises d'ouverture et fermeture du script php
+
+Lorsque PHP traite un fichier, il cherche les balises d'ouverture et de fermeture () qui délimitent le code qu'il doit interpréter.
+
+De cette manière, cela permet à PHP d'être intégré dans toutes sortes de documents, car tout ce qui se trouve en dehors des balises ouvrantes / fermantes de PHP est ignoré.
+
+```php
+<?php
+// code PHP
+?>
+```
+
+- Les commentaires
+
+Les commentaires permettent d'ajouter des informations dans le code source. Ils sont ignorés par l'interpréteur PHP.
+
+```php
+// Ceci est un commentaire sur une ligne
+
+# Ceci est un autre commentaire sur une ligne
+
+/*
+Ceci est un commentaire
+sur plusieurs lignes
+*/
+```
+
+- echo *(structure du langage)*
+
+Affiche toutes les chaînes de caractères qui lui sont passées en paramètres.
+
+```php
+<?php
+echo "bonjour à tous";
+?>
+```
+
+Version courte avec balise courte : `<?= "bonjour à tous"; ?>`
+
+- print *(structure du langage)*
+
+Affiche toutes les chaînes de caractères qui lui sont passées en paramètres.
+
+```php
+<?php
+print "bonjour à tous";
+?>
+```
 
 
 
