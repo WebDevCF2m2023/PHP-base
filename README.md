@@ -319,3 +319,14 @@ Voici une liste des variables prédéfinies en PHP : [Variables prédéfinies](h
 [Retour au menu](#menu-de-navigation)
 
 ---
+
+#### Déclaration de variables
+
+En PHP, une variable commence par le signe `$`, suivi du nom de la variable :
+
+```php
+<?php
+$nom_de_variable = "valeur de la variable";
+?>
+```
+
