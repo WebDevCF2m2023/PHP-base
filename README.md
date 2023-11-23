@@ -7,7 +7,7 @@
   - [Installation de WAMP pour Windows](#installation-de-wamp-pour-windows) 
   - [Installation de XAMPP pour MacOs](#installation-de-xampp-pour-macos)
 - [Principe des exercices](#principe-des-exercices)
-- [Liste des fonctions à connaitre](../../tree/main/functions#liste-des-fonctions-à-connaitre) - Par CŒUR !
+- [Liste des fonctions à connaitre](../../tree/main/functions#les-fonctions-natives-et-constructions-du-langage-à-connaitre) - Par CŒUR !
 - [Les bases de PHP](#les-bases-de-php)
   - [Les fichiers PHP](#les-fichiers-php)
   - [Les balises PHP](#les-balises-php)
@@ -321,13 +321,57 @@ Voici une liste des variables prédéfinies en PHP : [Variables prédéfinies](h
 
 ---
 
-#### Déclaration de variables
+#### Déclaration de variables non strictement typées
 
 En PHP, une variable commence par le signe `$`, suivi du nom de la variable :
 
 ```php
 <?php
-$nom_de_variable = "valeur de la variable";
+/*
+  Déclaration de variables au nom valide non strictement typées.
+  Le type de la variable est déterminé par la valeur qu'elle contient
+*/
+
+// variable valide de type string (en snake_case)
+$nom_de_variable_1 = "valeur de la variable";
+// variable valide de type integer (en camelCase)
+$nomDeVariable2 = 123;
+// variable valide de type float (en Upper CamelCase - PascalCase)
+$NomDeVariable3 = 123.456;
+// variable valide de type boolean
+$nom_de_variable_4 = true; // ou false
+// variable valide de type array (indexé)
+$nom_de_variable_5 = [1, 2, 3];
+// variable valide de type array (associatif)
+$nomDeVariable6 = ["clef1" => "valeur1", "clef2" => "valeur2"];
+// variable valide de type null
+$nomDeVariable7 = null;
+
+// affichage des variables via le débugueur var_dump()
+var_dump($nom_de_variable_1, $nomDeVariable2, $NomDeVariable3, $nom_de_variable_4, $nom_de_variable_5, $nomDeVariable6, $nomDeVariable7);
 ?>
 ```
 
+| 06 | ![Exercice 06](https://github.com/mikhawa/PHP-base/blob/main/datas/folder-type-php-opened_24.png?raw=true) | Exercice 06 | Créez un fichier `06-php-variables-valides.php` qui affiche uniquement les variables valides |
+|----|:----------------------------------------------------------------------------------------------------------:|:-----------:|:--------------------------------------------------------------------------------------------:|
+
+```php
+<?php
+/*
+  Les variables suivantes sont donc non valides !!!
+*/
+
+$Nom de Variable	// comporte des espaces
+$123Nom_De_Variable	// commence par un chiffre
+$toto@mailcity.com	//caractère spécial @
+$Nom-de-variable	// signe - interdit (en kebab-case)
+nom_de_variable	    // ne commence pas par $
+
+?>
+```
+
+Il existe d'autres types de variables, mais nous les verrons plus tard.
+
+
+| 07 | ![Exercice 07](https://github.com/mikhawa/PHP-base/blob/main/datas/folder-type-php-opened_24.png?raw=true) | Exercice 07 | Créez un fichier `07-php-variables-non-valides.php` qui affiche également les variables non valides ! |
+|----|:----------------------------------------------------------------------------------------------------------:|:-----------:|:-----------------------------------------------------------------------------------------------------:|
