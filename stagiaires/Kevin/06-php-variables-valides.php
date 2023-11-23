@@ -12,7 +12,7 @@ class Part{
 }
 $snake = [];
 for($i = 0; $i < 4; ++$i)
-    array_push($snake, new Part($i));
+    $snake[] = new Part($i);
 
 $snake[0]->setColor("red");
 
