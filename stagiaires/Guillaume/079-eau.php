@@ -4,11 +4,11 @@ L'eau est solide à -7° - L'eau est liquide à 33 ° - L'eau est gazeuse à 105
 
 <?php
 $a = mt_rand(-100,200);
-if($a>0){
+if($a<=0){
   echo "solide en dessous de 0 compris";
-}elseif($a<=1>=99){
+}elseif($a<=99){
   echo "liquide entre 1 et 99°";
-}else($a<=100){
+}else{
   echo "gazeux à partir de 100°";
 }
 ?>
