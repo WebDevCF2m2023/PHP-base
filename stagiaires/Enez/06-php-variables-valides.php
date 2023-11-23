@@ -1,37 +1,38 @@
 <?php
-
-$myInteger = 5; // integer en camelCase
-
-$my_float = 12.36; // float en snake_case
-
-$MyString = "je suis du texte et j'en suis fier !" // string en PascalCase
-
-$bool = true; // booléen variable binaire positive
-
-$MyBool = false; // booléen en PascalCase (UpperCamelCase)
-
-$is_null = NULL; //Variable ne contenant... rien (NULL)
-// ne pas confondre avec vide
-
-$arrayIndex = array("un","deux","trois"); /* tableau indexé créé avec array(), 
-//variable fondamentale permattant de contenir
-//un nombre indéfini d'autres variables en camelCase */
-
-$arrayIndex_2 = [1,2,3]; // tableau i,dexé créé ave []
-
+ 
+$myInteger = 5;
+ 
+$my_float = 12.36;
+ 
+$MyString = "je suis du texte et j'en suis fier!";
+ 
+$bool = true; // ou false: variable binaire
+ 
+$MyBool = false; // booleen en pascalcase
+ 
+$is_null = NULL; // variable ne contenant ... rie (NULL)
+ 
+$arrayIndex = array("un","deux","trois"); // tableau, indexé crée avec array(), variable fondamentale permettant de contenir un nombre indéfine d'autres variables
+ 
+$arrayIndex2 = [1,2,3]; // tableau indexé crée avec []
+ 
 $ArrayAssoc = [
     "key1"=>"du texte",
     "key2"=>5,
-    "key3"=>true,
+    "key3"=> true,
     4=>false,
     "key5"=>[
         1,
         2,
         3,
-    ],
-];  // tableau associatif multidimentionnel
-
-// on va afficher nos variables grâce â l'outil de debogage le plus somple:
-// var dump
-var_dump($myInteger,$my_float,$MyString,$bool,$MyBool,
-$is_null,$arrayIndex,$arrayIndex_2,$ArrayAssoc);
+    ]
+]; // tableau associatif multidimentionnel
+// on va afficher nos variables grâce à l'outil de débogage le plus simple:
+// var_dump
+ 
+var_dump($myInteger,$my_float,$MyString,$bool,$MyBool,$is_null,$arrayIndex,$arrayIndex2,$ArrayAssoc);
+ 
+?>
+ 
+Dispose d’un menu contextuel
+Composer
