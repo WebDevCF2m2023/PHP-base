@@ -8,5 +8,5 @@ $MyString = "je suis du texte et j'en suis fier!";
 
 $bool = true; // ou false: variable binaire
 
-
+$MyBool = false; // booleen en pascalcase
 
