@@ -2,7 +2,7 @@
 
 ---
 
-[Retour à la page d'accueil](../#menu-de-navigation)
+[Retour à la page d'accueil](../../../#menu-de-navigation)
 
 ---
 
