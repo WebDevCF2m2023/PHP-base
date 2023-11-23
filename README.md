@@ -14,6 +14,8 @@
   - [Les commentaires](#les-commentaires)
   - [Placement des balises PHP](#placement-des-balises-php)
   - [Les variables](#les-variables)
+    - [Déclaration de variables non strictement typées](#déclaration-de-variables-non-strictement-typées)
+    
 
 ---
 
@@ -348,7 +350,8 @@ $nomDeVariable6 = ["clef1" => "valeur1", "clef2" => "valeur2"];
 $nomDeVariable7 = null;
 
 // affichage des variables via le débugueur var_dump()
-var_dump($nom_de_variable_1, $nomDeVariable2, $NomDeVariable3, $nom_de_variable_4, $nom_de_variable_5, $nomDeVariable6, $nomDeVariable7);
+var_dump($nom_de_variable_1, $nomDeVariable2, $NomDeVariable3, 
+$nom_de_variable_4, $nom_de_variable_5, $nomDeVariable6, $nomDeVariable7);
 ?>
 ```
 
@@ -361,17 +364,21 @@ var_dump($nom_de_variable_1, $nomDeVariable2, $NomDeVariable3, $nom_de_variable_
   Les variables suivantes sont donc non valides !!!
 */
 
-$Nom de Variable	// comporte des espaces
-$123Nom_De_Variable	// commence par un chiffre
-$toto@mailcity.com	//caractère spécial @
-$Nom-de-variable	// signe - interdit (en kebab-case)
-nom_de_variable	    // ne commence pas par $
+$Nom de Variable = 5;	// comporte des espaces
+$123Nom_De_Variable	= 3;// commence par un chiffre
+$toto@mailcity.com = [];	//caractère spécial @
+$Nom-de-variable = "coucou";	// signe - interdit (en kebab-case)
+nom_de_variable	= "Yes";   // ne commence pas par $
 
 ?>
 ```
+| 07 | ![Exercice 07](https://github.com/mikhawa/PHP-base/blob/main/datas/folder-type-php-opened_24.png?raw=true) | Exercice 07 | Créez un fichier `07-php-variables-non-valides.php` qui affiche également les variables non valides ! |
+|----|:----------------------------------------------------------------------------------------------------------:|:-----------:|:-----------------------------------------------------------------------------------------------------:|
 
 Il existe d'autres types de variables, mais nous les verrons plus tard.
 
+---
 
-| 07 | ![Exercice 07](https://github.com/mikhawa/PHP-base/blob/main/datas/folder-type-php-opened_24.png?raw=true) | Exercice 07 | Créez un fichier `07-php-variables-non-valides.php` qui affiche également les variables non valides ! |
-|----|:----------------------------------------------------------------------------------------------------------:|:-----------:|:-----------------------------------------------------------------------------------------------------:|
+[Retour au menu](#menu-de-navigation)
+
+---
