@@ -1,25 +1,40 @@
 <?php
-/*
-  Déclaration de variables au nom valide non strictement typées.
-  Le type de la variable est déterminé par la valeur qu'elle contient
-*/
 
-// variable valide de type string (en snake_case)
-$nom_de_variable_1 = "valeur de la variable";
-// variable valide de type integer (en camelCase)
-$nomDeVariable2 = 123;
-// variable valide de type float (en Upper CamelCase - PascalCase)
-$NomDeVariable3 = 123.456;
-// variable valide de type boolean
-$nom_de_variable_4 = true; // ou false
-// variable valide de type array (indexé)
-$nom_de_variable_5 = [1, 2, 3];
-// variable valide de type array (associatif)
-$nomDeVariable6 = ["clef1" => "valeur1", "clef2" => "valeur2"];
-// variable valide de type null
-$nomDeVariable7 = null;
+$myInteger = 5; // integer en camelCase
 
-// affichage des variables via le débugueur var_dump()
-var_dump($nom_de_variable_1, $nomDeVariable2, $NomDeVariable3, 
-$nom_de_variable_4, $nom_de_variable_5, $nomDeVariable6, $nomDeVariable7);
-?>
+$my_float = -12.36; // float en snake_case
+
+$MyString = "Je suis du texte et j'en suis fier !"; // string en PascalCase
+
+$bool = true; // booléen variable binaire positive
+
+$MyBool = false; // booléen en PascalCase (UpperCamelCase)
+
+$is_null = NULL; // Variable ne contenant... rien (NULL) ! 
+// ne pas confondre avec vide
+
+$arrayIndex = array("un","deux","trois"); /* tableau indexé créé avec array(),
+variable fondamentale permettant de contenir
+un nombre indéfini d'autres variables en camelCase */
+
+$arrayIndex_2 = [1,2,3]; // tableau indexé créé avec []
+
+$ArrayAssoc = [
+    "key1"=>"du texte",
+    "key2"=>5,
+    "key3"=>true,
+    4=>false,
+    "key5"=>[
+        1,
+        2,
+        3,
+    ],
+]; // tableau associatif multidimentionnel 
+
+
+// on va afficher nos variables grâce à l'outil de débogage le plus simple:
+// var_dump
+var_dump($myInteger,$my_float,$MyString,$bool,$MyBool,
+$is_null, $arrayIndex, $arrayIndex_2, $ArrayAssoc
+);
+
