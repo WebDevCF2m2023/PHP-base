@@ -1,5 +1,7 @@
 <?php // Début du code PHP
   // Prenons la date et heure du jour dans une variable
+  date_default_timezone_set("Europe/Paris");
+
   $date = date("Y-m-d H:i:s"); // format datetime MySQL
 // Fin du code PHP
 ?>
