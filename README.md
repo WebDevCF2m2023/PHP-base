@@ -7,7 +7,7 @@
   - [Installation de WAMP pour Windows](#installation-de-wamp-pour-windows) 
   - [Installation de XAMPP pour MacOs](#installation-de-xampp-pour-macos)
 - [Principe des exercices](#principe-des-exercices)
-- [Liste des fonctions à connaitre](../../tree/main/functions#liste-des-fonctions-à-connaitre)
+- [Liste des fonctions à connaitre](../../tree/main/functions#liste-des-fonctions-à-connaitre) - Par CŒUR !
 - [Les bases de PHP](#les-bases-de-php)
   - [Les fichiers PHP](#les-fichiers-php)
   - [Les balises PHP](#les-balises-php)
