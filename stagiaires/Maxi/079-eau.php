@@ -8,3 +8,4 @@ if($eau <=0){
 }else{
     echo "Gazeuse à $eau °C";
 }
+?>
