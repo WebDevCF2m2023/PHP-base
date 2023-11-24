@@ -4,13 +4,13 @@
 
 $a = mt_rand(0,10);
 
-if($a=>0=<3){
+if($a>=3){
   echo "$a Nul, étudie la prochaine fois";
 
-}elseif($a=>4=<5){
+}elseif($a=4 & =5){
   echo "$a: Peut mieux faire";
 
-}elseif($a=>6=<7){
+}elseif($a=6 & =7){
     echo "$a : Bien";
 
 }else{
