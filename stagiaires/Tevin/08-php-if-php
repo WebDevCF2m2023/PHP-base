@@ -1,25 +1,25 @@
-[retour au menu] #(menu-de-navigation)
- 
----
- 
-#les conditions
- 
- //Les conditions sont la deuxième brique fondamentale d'un langage de programmation, elle permettent d'évaluer l'était de propositions de variable etc...
- 
- ### if(condition) {action si condition est vrai (true) }
- 
- ```php
- $a = true;
- if($a){
-    echo "ok";
- }
- ```
+<?php
 
- $a =mt_rand(0,2);
- if($a===0){
-    echo "Pas de chance, tu perds un point";
+$a = true;
+if($a){
+  echo "ok";
+}
 
- } elseif($a==1){
-    echo "Super, un point gagné !";
+$a = false;
+if($a){
+  echo "ok";
+}else{
+  echo "ko";
+}
 
- }
+$a = mt_rand(0,2);
+if($a==0){
+  echo "Pas de chance, tu perds un point";
+// sinon si
+}elseif($a==1){
+  echo "Super, un point gagné !";
+}else{
+  echo "Magnifique, tu gagnes encore 2 points";
+}
+
+?>

@@ -9,3 +9,5 @@ $Incubater@gmail.com = []; // charactère spécial @
 $Madoka = "coucou"; // signe interdit (en kebab-case)
 
 Magica = "yes"; // ne commence pas par $
+
+?>
