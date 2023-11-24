@@ -20,7 +20,10 @@ $temp=mt_rand(-100,200);
 <?php
 
 // affichage de la température avec un retour à la ligne
-echo $temp."<br>";
+echo $temp;
+?>
+<p>
+<?php
 // si la température est égale ou supérieure à 100
 if ($temp >= 100){
     echo"L’eau s'évapore!";
@@ -33,5 +36,6 @@ if ($temp >= 100){
 }
 
 ?>
+</p>
 </body>
 </html>

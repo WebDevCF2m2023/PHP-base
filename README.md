@@ -272,6 +272,7 @@ Voici un exemple de code PHP dans lequel nous plaçons les balises PHP dans diff
 ```php
 <?php // Début du code PHP
   // Prenons la date et heure du jour dans une variable
+  // Les arguments se trouvent : https://www.php.net/manual/fr/datetime.format.php
   $date = date("Y-m-d H:i:s"); // format datetime MySQL
 // Fin du code PHP
 ?>
