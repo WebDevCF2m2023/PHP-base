@@ -307,6 +307,8 @@ Nous verrons plus tard comment fonctionnent les fonctions et variables.
 
 Une variable est un **conteneur pour stocker des informations**. 
 
+Elles sont la première brique d'un langage de programmation.
+
 Les variables sont créées en PHP avec le signe `$` suivi du nom de la variable. 
 
 Le nom de la variable doit **commencer** par une lettre ou un tiret bas `_` et ne peut **contenir que des lettres, des chiffres et des tirets bas `_`**. 
@@ -382,3 +384,46 @@ Il existe d'autres types de variables, mais nous les verrons plus tard.
 [Retour au menu](#menu-de-navigation)
 
 ---
+
+### Les conditions
+
+Les conditions sont la deuxième brique fondamentale d'un langage de programmation, elles permettent d'évaluer l'état de propositions, de variables etc...
+
+#### if(condition) { action si condition == true }
+
+Le **if** va permettre de vérifier si une condition est vraie (true)
+
+```php
+$a = true;
+if($a){
+  echo "ok";
+}
+```
+
+#### else {action si condition d'un if préalable est false}
+
+```php
+$a = false;
+if($a){
+  echo "ok";
+}else{
+  echo "ko";
+}
+```
+
+#### elseif(){sinon si true} ou else if(sinon si true){}
+
+```php
+$a = mt_rand(0,2);
+if($a==0){
+  echo "Pas de chance, tu perds un point";
+// sinon si
+}elseif($a==1){
+  echo "Super, un point gagné !";
+}else{
+  echo "Magnifique, tu gagnes encore 2 points";
+}
+```
+
+| 09 | ![Exercice 09](https://github.com/mikhawa/PHP-base/blob/main/datas/folder-type-php-opened_24.png?raw=true) | Exercice 09 | Créez un fichier `09-eau.php` qui affiche suvant une température allant de -100 à 200 °, l'état de l'eau (solide en dessous de 0 compris) (liquide entre 1 et 99°) (gazeux à partir de 100°) : L'eau est solide à -7° - L'eau est liquide à 33 ° - L'eau est gazeuse à 105°|
+|----|:----------------------------------------------------------------------------------------------------------:|:-----------:|:-----------------------------------------------------------------------------------------------------:|
