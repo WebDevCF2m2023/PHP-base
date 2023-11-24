@@ -1,7 +1,7 @@
 <?php
 $temp = rand(-100,200);
 echo "la température est de {$temp}°\n";
-if ($temp<=-100 || $temp>200){
+if ($temp<-100 || $temp>200){
     echo "nombre invalide\n";
 }
 if ($temp<=0){
