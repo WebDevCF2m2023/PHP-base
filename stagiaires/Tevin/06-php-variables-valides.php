@@ -32,4 +32,4 @@ $ArrayAssoc = [
 
 // on va afficher nos variables grâce à l'outil de débogage le plus simple: 
 // var_dump
-var_dump($myInteger,$my_float,$MyString,$bool,$MyBool,$is_null,$arrayIndex,$arrayIndex_2,$ArrayAssoc); 
+var_dump($myInteger,$my_float,$MyString,$bool,$MyBool,$is_null,$arrayIndex,$arrayIndex_2,$ArrayAssoc);
