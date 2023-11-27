@@ -33,6 +33,8 @@ switch($hasard1){
 <hr>
 <?php
    
+   $hasard1 = mt_rand(0,10);
+
 switch($hasard1){
     case "0":
     case "1":
