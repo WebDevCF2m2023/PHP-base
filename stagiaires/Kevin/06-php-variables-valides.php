@@ -1,6 +1,7 @@
 <?php
 class Part{
     private int $id;
+    private string $color;
     function __construct($id, $color="green"){
         $this->id = $id;
         $this->color = $color;
@@ -17,4 +18,3 @@ for($i = 0; $i < 4; ++$i)
 $snake[0]->setColor("red");
 
 var_dump($snake);
-?>
