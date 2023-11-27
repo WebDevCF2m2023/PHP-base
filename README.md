@@ -402,7 +402,7 @@ if($a){
 }
 ```
 
-#### else {action si condition d'un if préalable est false}
+#### else { action si condition d'un if préalable est false}
 
 ```php
 $a = false;
@@ -436,5 +436,184 @@ https://www.php.net/manual/fr/language.operators.logical.php
 | 10 | ![Exercice 10](https://github.com/mikhawa/PHP-base/blob/main/datas/folder-type-php-opened_24.png?raw=true) | Exercice 10 | Créez un fichier `10-info.php` qui affiche la configuration complète du serveur Apache, PHP, SQL ... |
 |----|:----------------------------------------------------------------------------------------------------------:|:-----------:|:----------------------------------------------------------------------------------------------------:|
 
+```php
+<?php
+phpinfo();
+```
+
+
 | 11 | ![Exercice 11](https://github.com/mikhawa/PHP-base/blob/main/datas/folder-type-php-opened_24.png?raw=true) | Exercice 11 | Créez un fichier `11-conditions.php` qui affiche suivant un chiffre au hasard entre 0 et 10, vous affiche : Si il est de 0 à 3 : EXACTEMENT : "{chiffre} : Nul, étudie la prochaine fois", Si de 4 à 5 : "{chiffre} : Peut mieux faire" , Si de 6 à 7 : "{chiffre} : Bien", Sinon "{chiffre} : Très bien" |
 |----|:----------------------------------------------------------------------------------------------------------:|:-----------:|:---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|
+
+```php
+// $point vaut un entier au hasard entre 0 et 10
+$point = mt_rand(0, 10);
+
+if($point <= 3)
+{
+    // AVEC echo, les variables entre "" sont interprétées, pas celles entre simple ',
+    // pour mettre des chaînes de caractères à la suite les unes des autres, on utilise le "."
+    // Cela se nomme la concaténation
+    // la virgule fonctionne également, mais n'est pas recommandée
+    echo '$point vaut '.
+        "$point : Nul, étudie la prochaine fois.";
+}
+// 4 ou 5, pourrait être $point <= 5
+elseif($point<6)
+{
+    echo '$point vaut '.
+        "$point : peut mieux faire.";
+}
+// 6 ou 7, pourrait être <=7
+elseif ($point<8)
+{
+    echo '$point vaut '.
+        "$point : Bien.";
+}
+// sinon => 8,9,10
+else{
+    echo '$point vaut '.
+        "$point : Très bien.";
+}
+```
+
+#### Autre manière de faire des conditions
+
+```php
+// $point vaut un entier au hasard entre 0 et 10
+$point = mt_rand(0, 10);
+
+// mode fermeture de balises if
+if($point <= 3):
+    echo '$point vaut '.
+        "$point : Nul, étudie la prochaine fois.";
+// mode fermeture de balises elseif
+elseif($point<6):
+    echo '$point vaut '.
+        "$point : peut mieux faire.";
+// mode fermeture de balises elseif
+elseif ($point<8):
+    echo '$point vaut '.
+        "$point : Bien.";
+// mode fermeture de balises else
+else:
+    echo '$point vaut '.
+        "$point : Très bien.";
+// mode fermeture de balises endif
+endif;
+```
+
+Un exemple de l'utilisation des balises plutôt que les accolades :
+
+```php
+<?php
+for($i=0;$i<10;$i++){
+  if($i%2==0){
+    echo "Pair :$i";
+  }else{
+    echo "Impair :$i";
+  }
+}
+echo "<br>";
+for($i=0;$i<10;$i++):
+  if($i%2==0):
+    echo "Pair :$i";
+  else:
+    echo "Impair :$i";
+  endif;
+endfor;
+?>
+```
+
+---
+
+[Retour au menu](#menu-de-navigation)
+
+---
+
+#### switch
+
+Le switch est une autre manière de faire des conditions, il est plus rapide que les if/elseif/else. Mais il ne permet que de vérifier une seule variable, de manière non stricte et seulement son égalité.
+
+*! le switch de JavaScript est stricte contrairement à celui de PHP !*
+
+```php
+$variable = 3;
+
+// vérifie la variable $variable
+switch($variable){
+  // si $variable == 1
+  case 1:
+    echo "1";
+    // équivalent à la fermeture d'accolade ou endif
+    break;
+  case 2:
+    echo "2";
+    break;
+  case 3:
+    echo "3";
+    break;
+    // SINON = else
+  default:
+    echo "default";
+    // inutile car dernière action : break;
+}
+```
+
+Exemple avec des chaînes de caractères :
+
+```php
+<?php
+// donne un int (integer) de 1 à 4
+$hasard1 = mt_rand(1,4);
+
+// si $hasard vaut string "1" non strictement (on ne vérifie pas le type)
+if($hasard1=="1"){
+    echo "$hasard1 - Première place, bravo";
+}elseif($hasard1=="2"){
+    echo "$hasard1 - Deuxième place, bravo";
+}elseif($hasard1=="3"){
+    echo "$hasard1 - Troisième place, courage";
+}else{
+    echo "$hasard1 - Quatrième place, courage";
+}
+?>
+<hr>
+<?php
+
+// idem en switch
+
+switch($hasard1){
+    case "1": // si
+        echo "$hasard1 - Première place, bravo";
+        break;
+    case "2": // sinon si
+        echo "$hasard1 - Deuxième place, bravo";
+        break;
+    case "3": // sinon si
+        echo "$hasard1 - Troisième place, courage";
+        break;
+    default: // sinon
+        echo "$hasard1 - Quatrième place, courage";
+}
+
+?>
+    <hr>
+<?php
+
+// switch avec valeur par défaults
+
+switch($hasard1){
+    case "1":
+    case "2":
+    case "3":
+        echo "$hasard1 - Chiffre entre 1 et 3";
+        break;
+    default: // sinon
+        echo "$hasard1 - Chiffre 4";
+}
+
+```
+
+| 12b | ![Exercice 12b](https://github.com/mikhawa/PHP-base/blob/main/datas/folder-type-php-opened_24.png?raw=true) | Exercice 12 | Créez un fichier `12b-switch.php` qui affiche EXACTEMENT l'exercice 11 en utilisant un switch |
+|-----|:-----------------------------------------------------------------------------------------------------------:|:-----------:|:---------------------------------------------------------------------------------------------:|
