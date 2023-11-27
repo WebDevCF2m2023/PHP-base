@@ -11,3 +11,6 @@ if($chiffre<4){
   }else{
     echo "$chiffre : Très bien";
   }
+
+
+  
