@@ -402,7 +402,7 @@ if($a){
 }
 ```
 
-#### else {action si condition d'un if préalable est false}
+#### else { action si condition d'un if préalable est false}
 
 ```php
 $a = false;
@@ -436,5 +436,98 @@ https://www.php.net/manual/fr/language.operators.logical.php
 | 10 | ![Exercice 10](https://github.com/mikhawa/PHP-base/blob/main/datas/folder-type-php-opened_24.png?raw=true) | Exercice 10 | Créez un fichier `10-info.php` qui affiche la configuration complète du serveur Apache, PHP, SQL ... |
 |----|:----------------------------------------------------------------------------------------------------------:|:-----------:|:----------------------------------------------------------------------------------------------------:|
 
+```php
+<?php
+phpinfo();
+```
+
+
 | 11 | ![Exercice 11](https://github.com/mikhawa/PHP-base/blob/main/datas/folder-type-php-opened_24.png?raw=true) | Exercice 11 | Créez un fichier `11-conditions.php` qui affiche suivant un chiffre au hasard entre 0 et 10, vous affiche : Si il est de 0 à 3 : EXACTEMENT : "{chiffre} : Nul, étudie la prochaine fois", Si de 4 à 5 : "{chiffre} : Peut mieux faire" , Si de 6 à 7 : "{chiffre} : Bien", Sinon "{chiffre} : Très bien" |
 |----|:----------------------------------------------------------------------------------------------------------:|:-----------:|:---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|
+
+```php
+// $point vaut un entier au hasard entre 0 et 10
+$point = mt_rand(0, 10);
+
+if($point <= 3)
+{
+    // AVEC echo, les variables entre "" sont interprétées, pas celles entre simple ',
+    // pour mettre des chaînes de caractères à la suite les unes des autres, on utilise le "."
+    // Cela se nomme la concaténation
+    // la virgule fonctionne également, mais n'est pas recommandée
+    echo '$point vaut '.
+        "$point : Nul, étudie la prochaine fois.";
+}
+// 4 ou 5, pourrait être $point <= 5
+elseif($point<6)
+{
+    echo '$point vaut '.
+        "$point : peut mieux faire.";
+}
+// 6 ou 7, pourrait être <=7
+elseif ($point<8)
+{
+    echo '$point vaut '.
+        "$point : Bien.";
+}
+// sinon => 8,9,10
+else{
+    echo '$point vaut '.
+        "$point : Très bien.";
+}
+```
+
+#### Autre manière de faire des conditions
+
+```php
+// $point vaut un entier au hasard entre 0 et 10
+$point = mt_rand(0, 10);
+
+// mode fermeture de balises if
+if($point <= 3):
+    echo '$point vaut '.
+        "$point : Nul, étudie la prochaine fois.";
+// mode fermeture de balises elseif
+elseif($point<6):
+    echo '$point vaut '.
+        "$point : peut mieux faire.";
+// mode fermeture de balises elseif
+elseif ($point<8):
+    echo '$point vaut '.
+        "$point : Bien.";
+// mode fermeture de balises else
+else:
+    echo '$point vaut '.
+        "$point : Très bien.";
+// mode fermeture de balises endif
+endif;
+```
+
+Un exemple de l'utilisation des balises plutôt que les accolades :
+
+```php
+<?php
+for($i=0;$i<10;$i++){
+  if($i%2==0){
+    echo "Pair :$i";
+  }else{
+    echo "Impair :$i";
+  }
+}
+echo "<br>";
+for($i=0;$i<10;$i++):
+  if($i%2==0):
+    echo "Pair :$i";
+  else:
+    echo "Impair :$i";
+  endif;
+endfor;
+?>
+```
+
+---
+
+[Retour au menu](#menu-de-navigation)
+
+---
+
