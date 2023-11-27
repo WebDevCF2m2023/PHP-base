@@ -4,4 +4,26 @@ qui affiche suivant un chiffre au hasard entre 0 et 10, vous affiche : Si il est
  */
 
 $number = mt_rand(0, 10);
-echo $number < 4 ? "{".$number."} :  EXACTEMENT" : ($number < 6 ? "{".$number."} :  Peut mieux faire" : ($number < 8 ? "{".$number."} :  Bien" : "{".$number."} :  Très bien"));
+echo $number < 4 ? "{".$number."} :  Nul, étudie la prochaine fois" : ($number < 6 ? "{".$number."} :  Peut mieux faire" : ($number < 8 ? "{".$number."} :  Bien" : "{".$number."} :  Très bien"));
+
+echo "<br>";
+// version switch
+switch($number){
+    case 0:
+    case 1:
+    case 2:
+    case 3:
+        echo "{".$number."} :  Nul, étudie la prochaine fois";
+        break;
+    case 4:
+    case 5:
+        echo "{".$number."} :  Peut mieux faire";
+        break;
+    case 6:
+    case 7:
+        echo "{".$number."} :  Bien";
+        break;
+    default:
+        echo "{".$number."} :  Très bien";
+        break;
+}

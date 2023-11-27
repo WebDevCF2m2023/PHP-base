@@ -15,6 +15,13 @@
   - [Placement des balises PHP](#placement-des-balises-php)
   - [Les variables](#les-variables)
     - [Déclaration de variables non strictement typées](#déclaration-de-variables-non-strictement-typées)
+- [Les conditions](#les-conditions)
+  - [if](#if)
+  - [else](#else)
+  - [elseif() ou else if()](#elseif-ou-else-if)
+  - [Exercices et exemples if - elseif - else](#exercices-et-exemples-if---elseif---else)
+  - [Autre manière de faire des conditions](#autre-manière-de-faire-des-conditions)
+  - [switch](#switch)
     
 
 ---
@@ -389,9 +396,11 @@ Il existe d'autres types de variables, mais nous les verrons plus tard.
 
 ### Les conditions
 
-Les conditions sont la deuxième brique fondamentale d'un langage de programmation, elles permettent d'évaluer l'état de propositions, de variables etc...
+Les conditions sont la deuxième brique fondamentale d'un langage de programmation, elles permettent d'évaluer l'état de propositions, de variables etc.
 
-#### if(condition) { action si condition == true }
+#### if
+
+`if(condition) { action si condition == true }`
 
 Le **if** va permettre de vérifier si une condition est vraie (true)
 
@@ -402,7 +411,16 @@ if($a){
 }
 ```
 
-#### else { action si condition d'un if préalable est false}
+---
+
+[Retour au menu](#menu-de-navigation)
+
+---
+
+
+#### else
+
+`else { action si condition d'un if préalable est false}`
 
 ```php
 $a = false;
@@ -413,7 +431,15 @@ if($a){
 }
 ```
 
-#### elseif(){sinon si true} ou else if(sinon si true){}
+---
+
+[Retour au menu](#menu-de-navigation)
+
+---
+
+#### elseif() ou else if()
+
+`elseif(){sinon si true} ou else if(sinon si true){}`
 
 ```php
 $a = mt_rand(0,2);
@@ -427,9 +453,18 @@ if($a==0){
 }
 ```
 
+---
+
+[Retour au menu](#menu-de-navigation)
+
+---
+
+#### Exercices et exemples if - elseif - else
+
 | 09 | ![Exercice 09](https://github.com/mikhawa/PHP-base/blob/main/datas/folder-type-php-opened_24.png?raw=true) | Exercice 09 | Créez un fichier `09-eau.php` qui affiche suvant une température allant de -100 à 200 °, l'état de l'eau (solide en dessous de 0 compris) (liquide entre 1 et 99°) (gazeux à partir de 100°) : L'eau est solide à -7° - L'eau est liquide à 33 ° - L'eau est gazeuse à 105°|
 |----|:----------------------------------------------------------------------------------------------------------:|:-----------:|:-----------------------------------------------------------------------------------------------------:|
 
+Lien vers les opérateurs logiques :
 
 https://www.php.net/manual/fr/language.operators.logical.php
 
@@ -476,6 +511,12 @@ else{
         "$point : Très bien.";
 }
 ```
+
+---
+
+[Retour au menu](#menu-de-navigation)
+
+---
 
 #### Autre manière de faire des conditions
 
@@ -617,3 +658,9 @@ switch($hasard1){
 
 | 12b | ![Exercice 12b](https://github.com/mikhawa/PHP-base/blob/main/datas/folder-type-php-opened_24.png?raw=true) | Exercice 12 | Créez un fichier `12b-switch.php` qui affiche EXACTEMENT l'exercice 11 en utilisant un switch |
 |-----|:-----------------------------------------------------------------------------------------------------------:|:-----------:|:---------------------------------------------------------------------------------------------:|
+
+---
+
+[Retour au menu](#menu-de-navigation)
+
+---
