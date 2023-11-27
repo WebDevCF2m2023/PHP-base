@@ -15,6 +15,13 @@
   - [Placement des balises PHP](#placement-des-balises-php)
   - [Les variables](#les-variables)
     - [Déclaration de variables non strictement typées](#déclaration-de-variables-non-strictement-typées)
+- [Les conditions](#les-conditions)
+  - [if(condition) { action si condition == true }](#ifcondition--action-si-condition--true-)
+  - [else { action si condition d'un if préalable est false}](#else--action-si-condition-d-un-if-préalable-est-false-)
+  - [elseif(){sinon si true} ou else if(sinon si true){}](#elseif-sinon-si-true-ou-else-if-sinon-si-true-)
+  - [Exercices et exemples if/elseif/else](#exercices-et-exemples-if-elseif-else)
+  - [Autre manière de faire des conditions](#autre-manière-de-faire-des-conditions)
+  - [switch](#switch)
     
 
 ---
@@ -402,6 +409,13 @@ if($a){
 }
 ```
 
+---
+
+[Retour au menu](#menu-de-navigation)
+
+---
+
+
 #### else { action si condition d'un if préalable est false}
 
 ```php
@@ -412,6 +426,12 @@ if($a){
   echo "ko";
 }
 ```
+
+---
+
+[Retour au menu](#menu-de-navigation)
+
+---
 
 #### elseif(){sinon si true} ou else if(sinon si true){}
 
@@ -427,9 +447,18 @@ if($a==0){
 }
 ```
 
+---
+
+[Retour au menu](#menu-de-navigation)
+
+---
+
+#### Exercices et exemples if/elseif/else
+
 | 09 | ![Exercice 09](https://github.com/mikhawa/PHP-base/blob/main/datas/folder-type-php-opened_24.png?raw=true) | Exercice 09 | Créez un fichier `09-eau.php` qui affiche suvant une température allant de -100 à 200 °, l'état de l'eau (solide en dessous de 0 compris) (liquide entre 1 et 99°) (gazeux à partir de 100°) : L'eau est solide à -7° - L'eau est liquide à 33 ° - L'eau est gazeuse à 105°|
 |----|:----------------------------------------------------------------------------------------------------------:|:-----------:|:-----------------------------------------------------------------------------------------------------:|
 
+Lien vers les opérateurs logiques :
 
 https://www.php.net/manual/fr/language.operators.logical.php
 
@@ -476,6 +505,12 @@ else{
         "$point : Très bien.";
 }
 ```
+
+---
+
+[Retour au menu](#menu-de-navigation)
+
+---
 
 #### Autre manière de faire des conditions
 
@@ -617,3 +652,9 @@ switch($hasard1){
 
 | 12b | ![Exercice 12b](https://github.com/mikhawa/PHP-base/blob/main/datas/folder-type-php-opened_24.png?raw=true) | Exercice 12 | Créez un fichier `12b-switch.php` qui affiche EXACTEMENT l'exercice 11 en utilisant un switch |
 |-----|:-----------------------------------------------------------------------------------------------------------:|:-----------:|:---------------------------------------------------------------------------------------------:|
+
+---
+
+[Retour au menu](#menu-de-navigation)
+
+---
