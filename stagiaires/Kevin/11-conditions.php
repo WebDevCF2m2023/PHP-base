@@ -4,7 +4,7 @@ qui affiche suivant un chiffre au hasard entre 0 et 10, vous affiche : Si il est
  */
 
 $number = mt_rand(0, 10);
-
-$message = $number < 4 ? "{$number} : EXACTEMENT" : ($number < 6 ? "{$number} : Peut mieux faire" : ($number < 8 ? "{$number} : Bien" : "{$number} : Très bien"));
+$b = "{".$number."} : ";
+$message = $number < 4 ? "$b EXACTEMENT" : ($number < 6 ? "$b Peut mieux faire" : ($number < 8 ? "$b Bien" : "$b Très bien"));
 
 echo $message;
