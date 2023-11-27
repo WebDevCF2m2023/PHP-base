@@ -3,6 +3,7 @@
 $a = mt_rand(0,10);
 
 switch($a) {
+    case 0 :
     case 1 :
     case 2 :
     case 3 :
