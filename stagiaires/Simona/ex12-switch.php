@@ -7,12 +7,12 @@ switch($cifre){
     case 4:
         echo"{$cifre} : Nul, étudie la prochaine fois";
         break;
-    case 4:
     case 5:
+    case 6:
         echo"{$cifre} : Peut mieux faire";
         break;
-    case 6:
     case 7:
+    case 8:
         echo"{$cifre} : Bien";
         break;
     default:
