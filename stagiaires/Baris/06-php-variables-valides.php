@@ -13,10 +13,11 @@ $MyBool = false; // booléen en PascalCase (UpperCamelCase)
 $is_null = NULL; // Variable ne contenant... rien (NULL) ! 
 // ne pas confondre avec vide
 
-$arrayIndex = array("un","deux","trois"); // tableau indexé créé avec array(), variable fondamentale 
-// permettant de contenir un nombre indéfini d'autres variables en CamelCase
+$arrayIndex = array("un","deux","trois"); /* tableau indexé créé avec array(),
+variable fondamentale permettant de contenir
+un nombre indéfini d'autres variables en camelCase */
 
-$arrayIndex_2 = [1,2,3]; // tableau indexé avec []
+$arrayIndex_2 = [1,2,3]; // tableau indexé créé avec []
 
 $ArrayAssoc = [
     "key1"=>"du texte",
@@ -28,8 +29,12 @@ $ArrayAssoc = [
         2,
         3,
     ],
-]; // tableau associatif multimentionnel
+]; // tableau associatif multidimentionnel 
 
-// on va afficher nos variables grâce à l'outil de débogage le plus simple: 
+
+// on va afficher nos variables grâce à l'outil de débogage le plus simple:
 // var_dump
-var_dump($myInteger,$my_float,$MyString,$bool,$MyBool,$is_null,$arrayIndex,$arrayIndex_2,$ArrayAssoc);
+var_dump($myInteger,$my_float,$MyString,$bool,$MyBool,
+$is_null, $arrayIndex, $arrayIndex_2, $ArrayAssoc
+);
+
