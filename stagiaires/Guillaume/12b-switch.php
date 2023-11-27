@@ -1,38 +1,39 @@
 <?php
-
+$note= mt_rand(0,10);
 switch($note){
     case 1:
-      echo "pas ouf";
+      echo "$note : pas ouf";
       break;
     case 2:
-      echo "mouai";
+      echo "$note : mouai";
       break;
     case 3:
-      echo "nul";
+      echo "$note : nul";
       break;
-      case 4:
-        echo "un peu mieux";
+    case 4:
+        echo "$note : un peu mieux";
+      break;
+    case 5:
+        echo "$note : moitié plein, moitié vide";
         break;
-      case 5:
-        echo "moitié plein, moitié vide";
+    case 6:
+        echo "$note : un petit effort";
         break;
-      case 6:
-        echo "un petit effort";
+    case 7:
+        echo "$note : super";
         break;
-      case 7:
-        echo "super";
-        break;
-      case 8:
-        echo "très bien";
+    case 8:
+        echo "$note : très bien";
             break;
-       case 9:
-            echo "très très très bien";
+    case 9:
+            echo "$note : très très très bien";
             break;
-        case 10: 
-        echo "parfait!"
+    case 10: 
+        echo "$note : parfait!";
         break;
+
     default:
-      echo "default";
+      echo "$note : default";
       
   }
   
