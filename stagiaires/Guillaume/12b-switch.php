@@ -1,21 +1,38 @@
 <?php
 
-$a(mt_rand(0,10));{
-
-case "1"($a<=3):
-  echo "$a - Nul, étudie la prochaine fois";
-  break;
-
-case "2"($a <=5):
-  echo "$a - Peut mieux faire";
-  break;
-
-case "3"($a <=7):
-    echo "$a - Bien";
-    break;
-
-default:
-  echo "$a - Très bien";
-
-}
-
+switch($note){
+    case 1:
+      echo "pas ouf";
+      break;
+    case 2:
+      echo "mouai";
+      break;
+    case 3:
+      echo "nul";
+      break;
+      case 4:
+        echo "un peu mieux";
+        break;
+      case 5:
+        echo "moitié plein, moitié vide";
+        break;
+      case 6:
+        echo "un petit effort";
+        break;
+      case 7:
+        echo "super";
+        break;
+      case 8:
+        echo "très bien";
+            break;
+       case 9:
+            echo "très très très bien";
+            break;
+        case 10: 
+        echo "parfait!"
+        break;
+    default:
+      echo "default";
+      
+  }
+  
