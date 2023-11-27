@@ -1,5 +1,5 @@
 <?php
-
+// $temp = vaut un entier au hasard entre -100 et 200
 $temp = mt_rand(-100,200);
 
  echo "$temp °C<br>"; 
