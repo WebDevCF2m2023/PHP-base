@@ -13,7 +13,7 @@ switch($number){
     case 1:
     case 2:
     case 3:
-        echo "{".$number."} :  EXACTEMENT";
+        echo "{".$number."} :  Nul, étudie la prochaine fois";
         break;
     case 4:
     case 5:
