@@ -4,7 +4,6 @@ $chiffre = mt_rand(0,10);
 
 if($chiffre<4){
     echo "$chiffre : Nul, étudie la prochaine fois";
-  // sinon si
   }elseif($chiffre<6){
     echo "$chiffre : Peut mieux faire";
   }elseif($chiffre<8){
