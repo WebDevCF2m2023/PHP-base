@@ -2,12 +2,12 @@
 
 $Temperature = true;
 if($Temperature === 36) {
-    echo "Alright."
+    echo "Alright.";
 }
 
 $Temperature = false;
 if($Temperature === -36) {
-    echo "Come out, Holy sun! Please!"
+    echo "Come out, Holy sun! Please!";
 }
 
 $Temperature = mt_rand(-100,200);
@@ -18,10 +18,10 @@ if($Temperature === -190) {
 // Thank you, Lee.
 
 elseif($Temperature === 28) {
-    echo "A fine weather it is."
+    echo "A fine weather it is.";
 
 }else{
-    echo "One will always complain, no matter the weather."
+    echo "One will always complain, no matter the weather.";
 }
 
 ?>
