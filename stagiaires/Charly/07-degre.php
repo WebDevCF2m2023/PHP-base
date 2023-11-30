@@ -26,7 +26,7 @@ echo $temp;
 <?php
 // si la température est égale ou supérieure à 100
 if ($temp >= 100){
-    echo"L’eau s'évapore!";
+    echo "L’eau s'évapore!";
 // sinon si la température est plus petit ou égal que 0
 } elseif($temp<=0) {
     echo "l'eau est solide";
@@ -34,6 +34,7 @@ if ($temp >= 100){
 }else {
     echo "l'eau boue";
 }
+
 
 ?>
 </p>
