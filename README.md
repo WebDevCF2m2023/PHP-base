@@ -678,6 +678,21 @@ Les variables superglobales sont des variables prédéfinies qui sont toujours a
 
 En PHP, les variables superglobales sont des tableaux associatifs.
 
+https://www.php.net/manual/fr/language.variables.superglobals.php
+
+### $_GET
+
+`$_GET` est une variable superglobale qui est utilisée pour collecter des données de formulaires, après avoir envoyé un formulaire avec la méthode "get". 
+
+**On l'utilise surtout pour récupérer des données dans l'URL.**
+
+
+
+
+
+
+
+
 ## Les boucles
 
 Un peu plus tard, nous verrons les boucles, mais voici un petit aperçu :
