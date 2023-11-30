@@ -12,6 +12,15 @@ case "biographie":
        $text= "balblablalblalblalblalblalblalblalblablalbla";
        break;
        
+case "contact":
+       $title= "contact";
+       $text= "Guillaume";
+       break;
+
+case "livredor":
+      $title= "contact";
+      $text= "Guillaume";
+       
 endswitch;
 
 //pas de variable get nommée section
