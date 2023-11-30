@@ -1,6 +1,5 @@
 <?php
 $hasard1 = mt_rand(1,3);
-
 if($hasard1 == "1"){
     echo "$hasard1 - premiere place , bravo";
 }elseif($hasard1== "2"){
