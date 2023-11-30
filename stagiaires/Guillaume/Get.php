@@ -20,6 +20,11 @@ case "contact":
 case "livredor":
       $title= "contact";
       $text= "Guillaume";
+      break;
+
+case "actualités":
+      $title= "actualités";
+      $text= "blbalblblabllablalblabla";
        
 endswitch;
 
@@ -47,6 +52,7 @@ endswitch;
         <a href="?section=biographie">Biographie</a>
         <a href="?section=contact">Contact</a>
         <a href="?section=livredor">Livre d'or</a>
+        <a href="?section=actualités">Actualités</a>
     </p>
     <h2><?=$title?></h2>
     <h3>Débogage de $_GET</h3>
