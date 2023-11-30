@@ -36,18 +36,18 @@ switch($hasard1){
    $hasard1 = mt_rand(0,10);
 
 switch($hasard1){
-    case "0":
-    case "1":
-    case "2":
-    case "3":
+    case 0:
+    case 1:
+    case 2:
+    case 3:
         echo "$hasard1 - nul, etudie la prochaine fois ";
         break; 
-    case "4":
-    case "5":
+    case 4:
+    case 5:
     echo "$hasard1 - peut mieux faire "; 
     break;
-    case "6":
-    case "7":
+    case 6:
+    case 7:
     echo "$hasard1 - bien";   
     break;
     default:
