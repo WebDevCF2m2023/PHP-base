@@ -578,6 +578,13 @@ Le switch est une autre manière de faire des conditions, il est plus rapide que
 
 *! le switch de JavaScript est stricte contrairement à celui de PHP !*
 
+Pour utiliser un équivalent du switch fortement typé, on peut utiliser match() à partir de PHP 8 : 
+
+https://www.php.net/manual/fr/control-structures.match.php
+
+Ou simplement nos bons vieux if/elseif/else.
+
+
 ```php
 $variable = 3;
 
@@ -664,3 +671,38 @@ switch($hasard1){
 [Retour au menu](#menu-de-navigation)
 
 ---
+
+## Les variables superglobales
+
+Les variables superglobales sont des variables prédéfinies qui sont toujours accessibles, quel que soit le contexte.
+
+En PHP, les variables superglobales sont des tableaux associatifs.
+
+https://www.php.net/manual/fr/language.variables.superglobals.php
+
+### $_GET
+
+`$_GET` est une variable superglobale qui est utilisée pour collecter des données de formulaires, après avoir envoyé un formulaire avec la méthode "get". 
+
+**On l'utilise surtout pour récupérer des données dans l'URL.**
+
+
+
+
+
+
+
+
+## Les boucles
+
+Un peu plus tard, nous verrons les boucles, mais voici un petit aperçu :
+
+### for
+
+
+--- 
+
+[Retour au menu](#menu-de-navigation)
+
+---
+
