@@ -13,7 +13,15 @@ if(isset($_GET['section']))
             du 45 tours sur lequel elle est pressée.
             
 Le titre est l'un des plus connus de l'interprète à travers le monde.";
-            break;
+        break;
+        case "livredor":
+            $title = "Salut1";
+            $text = "Salut1";
+        break;
+        case "contact":
+            $title = "Salut3";
+            $text = "Salut3";
+        break;
 
         default:
             $title ="Error 404";
