@@ -55,6 +55,7 @@ endswitch;
         <a href="?section=actualités">Actualités</a>
     </p>
     <h2><?=$title?></h2>
+    <p><?=nl2br($text);?></p>
     <h3>Débogage de $_GET</h3>
     <p>
     <p><?php
