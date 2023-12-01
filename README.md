@@ -734,11 +734,21 @@ Les expressions de langage _include | include_once | require | require_once_ per
 // inclut et exécute le fichier "menu.php"
 include("menu.php");
 ?>
+<p>ma page html, affichée même en cas d'erreur</p>
+<?php   
+// inclut et exécute le fichier "menu.php"
+include("menu.php");
+?>
 ```
 
 ```php
 <?php
 // inclut et exécute le fichier "menu.php"
+include_once("menu.php");
+?>
+<p>ma page html, affichée même en cas d'erreur</p>
+<?php   
+// n'affiche rien, le fichier "menu.php" a déjà été inclus
 include_once("menu.php");
 ?>
 ```
@@ -748,11 +758,21 @@ include_once("menu.php");
 // inclut et exécute le fichier "menu.php"
 require("menu.php");
 ?>
+<p>ma page html, non affichée en cas d'erreur du require</p>
+<?php   
+// inclut et exécute le fichier "menu.php"
+require("menu.php");
+?>
 ```
 
 ```php
 <?php
 // inclut et exécute le fichier "menu.php"
+require_once("menu.php");
+?>
+<p>ma page html, non affichée en cas d'erreur du require</p>
+<?php   
+// n'affiche rien, le fichier "menu.php" a déjà été inclus
 require_once("menu.php");
 ?>
 ```
