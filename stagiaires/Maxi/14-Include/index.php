@@ -7,8 +7,15 @@
 </head>
 <body>
     <h1>Include</h1>
-    <nav>
-        <a href="./">Accueil Include</a> - <a href="./?section=bio">Biograpghie</a>
-    </nav>
+    <?php
+    // on importe, sqns erreurs fatales en cas d'échec, le menu
+    //le texte "on a du texte..." apparait 
+    require "menu.php";
+    ?>
+    <p>On a du texte ici</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos exercitationem distinctio, vitae quia minima at sequi placeat architecto dicta sunt consequuntur? Voluptatum reprehenderit repellat earum saepe qui culpa impedit quos! Sit labore quo itaque architecto culpa vitae dolores corporis consequatur, harum aliquid recusandae libero ex ut dicta velit aliquam earum fugiat eveniet quod dolor distinctio ab adipisci eligendi eos. Eveniet perspiciatis odio error assumenda sequi repellendus qui laborum consectetur quidem corrupti voluptate voluptatem unde, inventore excepturi eum iure et dignissimos earum eligendi. Tempora sit dignissimos, perferendis ut rem non necessitatibus porro officiis architecto explicabo totam itaque? Recusandae non quidem optio?</p>
+    <?php
+    include "inc/menu.php";
+    ?>
 </body>
 </html>
