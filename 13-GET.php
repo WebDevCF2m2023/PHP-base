@@ -14,10 +14,24 @@ if(isset($_GET['section']))
             
 Le titre est l'un des plus connus de l'interprète à travers le monde.";
             break;
-
+        case "contact":
+            $title = 'Mon contact';
+            $text = 'Mon mail: example@cf2000m.be 
+            Tel : 32 324424552';
+            break;
+        case "livredor":
+            $title = "Livre d'or";
+            $text = "Même le livre d'or que je suis, n'arrive pas a la cheville de la Bible : )";
+            break;
+        # valeur par défaut : else
+        case "actualites":
+            $title = "Actualités";
+            $text = "Voici l'actualité de la semaine : blabla";
+            break;
         default:
-            $title ="Error 404";
+            $title =404;
             $text = "Error 404 - PAGE NOT FOUND";
+
     endswitch;
 
 // pas de variable get nommée section
