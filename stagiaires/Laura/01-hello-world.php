@@ -10,7 +10,7 @@
 </head>
 <body>
   <h1>05 date <?= $date?></h1>
-  <p>Il est <?= date("H:i:s") // heure, minute et seconde?></p>
+ <p>Il est <?= date("H:i:s") // heure, minute et seconde?></p>
 </body>
 </html>
 <?php

@@ -21,3 +21,4 @@ switch($myNum){
         echo "$myNum : Très Bien"; 
     
 }
+
