@@ -46,22 +46,4 @@ switch($hasard1){
         break;
     default: // sinon
         echo "$hasard1 - Chiffre 4";
-<<<<<<< HEAD
 }
-
-$chiffre = mt_rand(0,10);
- 
-if($chiffre<4){
-    echo "$chiffre : Nul, étudie la prochaine fois";
-  }elseif($chiffre<6){
-    echo "$chiffre : Peut mieux faire";
-  }elseif($chiffre<8){
-    echo "$chiffre : Bien";
-  }else{
-    echo "$chiffre : Très bien";
-  }
-
-
-=======
-}
->>>>>>> d886366f6062b2bc1fcf7f6258857704a48ab501
