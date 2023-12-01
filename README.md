@@ -24,6 +24,11 @@
   - [switch](#switch)
 - [Les variables superglobales](#les-variables-superglobales)
   - [$_GET](#_get)
+- [Les inclusions](#les-inclusions)
+  - [include](#include)
+  - [require](#require)
+  - [include_once](#include_once)
+  - [require_once](#require_once)
 - [Les boucles](#les-boucles)
   - [for](#for)
 - [Les fonctions](#les-fonctions)
@@ -701,6 +706,10 @@ https://www.php.net/manual/fr/language.variables.superglobals.php
 [Retour au menu](#menu-de-navigation)
 
 ---
+
+## Les inclusions
+
+Les expressions de langage _include | include_once | require | require_once_ permettent d'inclure et d'exécuter le fichier spécifié en argument.
 
 ## Les boucles
 
