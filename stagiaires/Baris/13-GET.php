@@ -1,39 +1,37 @@
 <?php
 
-// on va vérifier si une variable GET dont la clef est 'section'
-// existe (est initialisée et différente de NULL)
-
-if(isset($_GET['section']))
-{
-    // switch
-    switch($_GET['section']):
+if(isset($_GET['section'])){
+    switch($_GET['section']){
         case "biographie":
             $title = "Ma vie";
-            $text = "\"Ma vie\" est une chanson composée et interprétée par Alain Barrière, sortie en 1964. Elle est la chanson-titre 
-            du 45 tours sur lequel elle est pressée.
-            
-Le titre est l'un des plus connus de l'interprète à travers le monde.";
+            $text = "\"Lorem ipsum\" dolor sit amet consectetur adipisicing elit. Velit, vero consectetur.
+            Fugiat vero ipsa eum ratione qui reiciendis obcaecati, nostrum ad at asperiores quis officiis expedita facilis possimus necessitatibus,
+            maxime omnis natus. Ullam obcaecati expedita cumque fugit!";
             break;
         case "contact":
-            $title = 'Mon contact';
-            $text = 'Mon mail: example@cf2000m.be 
-            Tel : 32 324424552';
+            $title = "Contact";
+            $text = "Voici mon contact";
             break;
         case "livredor":
             $title = "Livre d'or";
-            $text = "Même le livre d'or que je suis, n'arrive pas a la cheville de la Bible : )";
+            $text = "Voici mon livre d'or";
             break;
-        # valeur par défaut : else
         case "actualites":
-            $title = "Actualités";
-            $text = "Voici l'actualité de la semaine : blabla";
+            $title = "Actualites";
+            $text = "Voici mes actualites";
             break;
         default:
-            $title =404;
-            $text = "Error 404 - PAGE NOT FOUND";
+            $title = "ERROR 404";
+            $text = "Error 404: Page not found";
+    }
+} else {
+    $title = "Accueil";
+    $text = "Bienvenue sur notre page d'accueil";
+}
 
-    endswitch;
 
+?>
+  
 // pas de variable get nommée section
 }else{
     // Nous sommes sur l'accueil
@@ -55,7 +53,6 @@ Le titre est l'un des plus connus de l'interprète à travers le monde.";
 <h1>$_GET</h1>
 <p>
     <a href="?">Accueil</a>
-    <a href="?section=biographie">Biographie</a>
     <a href="?section=contact">Contact</a>
     <a href="?section=livredor">Livre d'or</a>
     <a href="?section=actualites">Actualités</a>
