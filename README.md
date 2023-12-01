@@ -22,7 +22,17 @@
   - [Exercices et exemples if - elseif - else](#exercices-et-exemples-if---elseif---else)
   - [Autre manière de faire des conditions](#autre-manière-de-faire-des-conditions)
   - [switch](#switch)
-    
+- [Les variables superglobales](#les-variables-superglobales)
+  - [$_GET](#_get)
+- [Les inclusions](#les-inclusions)
+  - [include](#include)
+  - [require](#require)
+  - [include_once](#include_once)
+  - [require_once](#require_once)
+- [Les boucles](#les-boucles)
+  - [for](#for)
+- [Les fonctions](#les-fonctions)
+
 
 ---
 
@@ -691,19 +701,123 @@ https://www.php.net/manual/fr/language.variables.superglobals.php
 | 13 | ![Exercice 13](https://github.com/mikhawa/PHP-base/blob/main/datas/folder-type-php-opened_24.png?raw=true) | Exercice 13 | Créez un fichier `13-GET.php` et modifiez le switch pour afficher votre contenu pour les rubriques : Contact - Livre d'or - Actualités.  |
 |----|:----------------------------------------------------------------------------------------------------------:|:-----------:|:----------------------------------------------------------------------------------------------------------------------------------------:|
 
+---
 
+[Retour au menu](#menu-de-navigation)
 
+---
+
+## Les inclusions
+
+Les expressions de langage _include | include_once | require | require_once_ permettent d'inclure et d'exécuter le fichier spécifié en argument.
+
+### include
+
+`include` inclut et exécute le fichier spécifié en argument. Si le fichier n'existe pas, il affiche une erreur et continue l'exécution du script. On peut inclure plusieurs fois le même fichier.
+
+### include_once
+
+`include_once` inclut et exécute le fichier spécifié en argument. Si le fichier n'existe pas, il affiche une erreur et continue l'exécution du script. On ne peut inclure **qu'une seule fois** le même fichier.
+
+### require
+
+`require` inclut et exécute le fichier spécifié en argument. Si le fichier n'existe pas, il affiche une erreur et **stoppe** l'exécution du script. On peut inclure plusieurs fois le même fichier.
+
+### require_once
+
+`require_once` inclut et exécute le fichier spécifié en argument. Si le fichier n'existe pas, il affiche une erreur et **stoppe** l'exécution du script. On ne peut inclure **qu'une seule fois** le même fichier.
+
+**Exemples :**
+
+```php
+<?php
+// inclut et exécute le fichier "menu.php"
+include("menu.php");
+?>
+<p>ma page html, affichée même en cas d'erreur</p>
+<?php   
+// inclut et exécute le fichier "menu.php"
+include("menu.php");
+?>
+```
+
+```php
+<?php
+// inclut et exécute le fichier "menu.php"
+include_once("menu.php");
+?>
+<p>ma page html, affichée même en cas d'erreur</p>
+<?php   
+// n'affiche rien, le fichier "menu.php" a déjà été inclus
+include_once("menu.php");
+?>
+```
+
+```php
+<?php
+// inclut et exécute le fichier "menu.php"
+require("menu.php");
+?>
+<p>ma page html, non affichée en cas d'erreur du require</p>
+<?php   
+// inclut et exécute le fichier "menu.php"
+require("menu.php");
+?>
+```
+
+```php
+<?php
+// inclut et exécute le fichier "menu.php"
+require_once("menu.php");
+?>
+<p>ma page html, non affichée en cas d'erreur du require</p>
+<?php   
+// n'affiche rien, le fichier "menu.php" a déjà été inclus
+require_once("menu.php");
+?>
+```
+
+exe
+
+---
+
+[Retour au menu](#menu-de-navigation)
+
+---
 
 ## Les boucles
 
-Un peu plus tard, nous verrons les boucles, mais voici un petit aperçu :
+Les boucles permettent de répéter des instructions un certain nombre de fois.
 
 ### for
 
+
+A continuer...
 
 --- 
 
 [Retour au menu](#menu-de-navigation)
 
 ---
+
+## Les fonctions
+
+Une fonction est un bloc de code qui peut être réutilisé à plusieurs endroits dans un script.
+
+Une fonction peut être appelée plusieurs fois, elle peut prendre des paramètres et renvoyer une valeur.
+
+Il existe des fonctions prédéfinies en PHP, comme `echo()` ou `print()`, qu'on nomme aussi fonctions natives ou même structures de langage pour les plus courantes.
+
+Il existe aussi des fonctions définies par l'utilisateur, qu'on nomme fonctions personnalisées.
+
+https://www.php.net/manual/fr/language.functions.php
+
+A continuer...
+
+--- 
+
+[Retour au menu](#menu-de-navigation)
+
+---
+
 

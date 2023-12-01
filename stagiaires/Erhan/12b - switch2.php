@@ -20,6 +20,3 @@ switch($chiffre){
     default:
         echo "$chiffre :Très bien";
 }
-
-
-  
