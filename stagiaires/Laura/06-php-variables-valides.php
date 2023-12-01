@@ -34,3 +34,29 @@ $ArrayAssoc = [
 // on va afficher nos variable grace à l'outil de débogage la plus simple 
 // var_dump
 Var_dump ($myInteger,$my_float,$MyString,$bool,$MyBool,$is_null,$arrayIndex,$ArrayAssoc);
+
+[retour au menu](#menu-de-navigation)
+
+---
+
+#les conditions
+
+ //Les conditions sont la deuxième brique fondamentale d'un langage de programmation, elle permettent d'évaluer l'était de propositions de variable etc...
+
+ ### if(condition) {action si condition est vrai (true) }
+
+ ```php
+
+ $a = true;
+
+ if($a){
+    
+    echo "ok";
+ }
+ ```
+
+ 
+ 
+
+
+
