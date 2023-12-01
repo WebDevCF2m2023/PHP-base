@@ -702,10 +702,8 @@ La manière d'écrire des variables get dans l'URL est la suivante : `?section=c
 <?php
 // affiche le contenu de la variable superglobale $_GET
 var_dump($_GET);
-
-
-
-
+?>
+```
 
 | 13 | ![Exercice 13](https://github.com/mikhawa/PHP-base/blob/main/datas/folder-type-php-opened_24.png?raw=true) | Exercice 13 | Créez un fichier `13-GET.php` et modifiez le switch pour afficher votre contenu pour les rubriques : Contact - Livre d'or - Actualités.  |
 |----|:----------------------------------------------------------------------------------------------------------:|:-----------:|:----------------------------------------------------------------------------------------------------------------------------------------:|
