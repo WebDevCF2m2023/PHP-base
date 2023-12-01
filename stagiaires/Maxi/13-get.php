@@ -18,6 +18,9 @@ if(isset($_GET['section'])){
      case "actualité":
      $title = "Actualité";
      $text = "Le Centre de Formation 2 Mille (CF2M) implanté à Saint-Gilles, propose des formations professionnelles en informatique pour chercheur.se d’emploi. Ainsi que des formations de base et détermination pour les jeunes de 18 à 29 ans. ";
+     default:
+     $title = 404;
+     $text = "Error 404 -page not found";
     endswitch;
 }
 
