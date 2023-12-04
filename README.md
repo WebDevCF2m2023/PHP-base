@@ -718,60 +718,82 @@ var_dump($_GET);
 
 Les expressions de langage _include | include_once | require | require_once_ permettent d'inclure et d'exécuter le fichier spécifié en argument.
 
+---
+
+[Retour au menu](#menu-de-navigation)
+
+---
+
 ### include
 
 `include` inclut et exécute le fichier spécifié en argument. Si le fichier n'existe pas, il affiche une erreur et continue l'exécution du script. On peut inclure plusieurs fois le même fichier.
+
+```php
+<?php
+// inclut et exécute le fichier "menu.php"
+include("menu.php");
+?>
+<p>ma page html, affichée même en cas d'erreur</p>
+<?php   
+// inclut et exécute le fichier "menu.php"
+include("menu.php");
+?>
+```
+
+---
+
+[Retour au menu](#menu-de-navigation)
+
+---
 
 ### include_once
 
 `include_once` inclut et exécute le fichier spécifié en argument. Si le fichier n'existe pas, il affiche une erreur et continue l'exécution du script. On ne peut inclure **qu'une seule fois** le même fichier.
 
+```php
+<?php
+// inclut et exécute le fichier "menu.php"
+include_once("menu.php");
+?>
+<p>ma page html, affichée même en cas d'erreur</p>
+<?php   
+// n'affiche rien, le fichier "menu.php" a déjà été inclus
+include_once("menu.php");
+?>
+```
+
+---
+
+[Retour au menu](#menu-de-navigation)
+
+---
+
 ### require
 
 `require` inclut et exécute le fichier spécifié en argument. Si le fichier n'existe pas, il affiche une erreur et **stoppe** l'exécution du script. On peut inclure plusieurs fois le même fichier.
+
+```php
+<?php
+// inclut et exécute le fichier "menu.php"
+require("menu.php");
+?>
+<p>ma page html, non affichée en cas d'erreur du require</p>
+<?php   
+// inclut et exécute le fichier "menu.php"
+require("menu.php");
+?>
+```
+
+---
+
+[Retour au menu](#menu-de-navigation)
+
+---
 
 ### require_once
 
 `require_once` inclut et exécute le fichier spécifié en argument. Si le fichier n'existe pas, il affiche une erreur et **stoppe** l'exécution du script. On ne peut inclure **qu'une seule fois** le même fichier.
 
-**Exemples :**
-
-```php
-<?php
-// inclut et exécute le fichier "menu.php"
-include("menu.php");
-?>
-<p>ma page html, affichée même en cas d'erreur</p>
-<?php   
-// inclut et exécute le fichier "menu.php"
-include("menu.php");
-?>
-```
-
-```php
-<?php
-// inclut et exécute le fichier "menu.php"
-include_once("menu.php");
-?>
-<p>ma page html, affichée même en cas d'erreur</p>
-<?php   
-// n'affiche rien, le fichier "menu.php" a déjà été inclus
-include_once("menu.php");
-?>
-```
-
-```php
-<?php
-// inclut et exécute le fichier "menu.php"
-require("menu.php");
-?>
-<p>ma page html, non affichée en cas d'erreur du require</p>
-<?php   
-// inclut et exécute le fichier "menu.php"
-require("menu.php");
-?>
-```
-
 ```php
 <?php
 // inclut et exécute le fichier "menu.php"
@@ -783,8 +805,6 @@ require_once("menu.php");
 require_once("menu.php");
 ?>
 ```
-
-exe
 
 ---
 
