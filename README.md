@@ -30,7 +30,9 @@
   - [include_once](#include_once)
   - [require_once](#require_once)
 - [Principe du contrôleur frontal](#principe-du-contrôleur-frontal)
-  - [Le .htaccess du 18-front-controller](#le-htaccess-du-18-front-controller)
+  - [L'index de la racine 18-front-controller](#lindex-de-la-racine-18-front-controller)
+  - [L'index du dossier public 18-front-controller/public](#lindex-du-dossier-public-18-front-controllerpublic)
+    - [Le fichier accueil.php 18-front-controller/templates/accueil.php](#le-fichier-accueilphp-18-front-controllertemplatesaccueilphp)
 - [Les boucles](#les-boucles)
   - [for](#for)
 - [Les fonctions](#les-fonctions)
@@ -824,7 +826,7 @@ Dans le dossier `18-front-controller`, On aura une architecture de fichiers comm
 
 ```
 .
-├── .htaccess
+├── index.php
 ├── /public
 │   ├── index.php
 │   ├── /css
@@ -845,9 +847,13 @@ Dans le dossier `18-front-controller`, On aura une architecture de fichiers comm
 
 ```
 
-Le dossier `public` contient tous les fichiers accessibles par le navigateur. C'est le dossier racine du site. C'est la que l'on va inclure les fichiers `css`, `js`, `img` et `index.php`.
+Le fichier `index.php` à la racine du site va uniquement nous rediriger vers le fichier `index.php` du dossier `public`.
+
+Le dossier `public` contient tous les fichiers accessibles par le navigateur. C'est le dossier racine du site. C'est la que l'on va inclure les fichiers `css`, `js`, `img` et le contrôleur frontal `index.php`.
 
 Le dossier `templates` contient tous les fichiers qui seront inclus dans le fichier `index.php`.
+
+Le dossier `inc` contient tous les fichiers qui seront inclus dans les fichiers du dossier `templates`.
 
 La racine d'un site, par exemple `https://www.cf2m.be`, est en réalité pointé vers un dossier `public`, qui est le seul dossier accessible par le navigateur. C'est ce qu'on appelle le `DocumentRoot`. On utilise cette technique pour éviter que les utilisateurs puissent accéder aux fichiers sensibles du site.
 
@@ -857,19 +863,27 @@ La racine d'un site, par exemple `https://www.cf2m.be`, est en réalité pointé
 
 ---
 
-### Le .htaccess du 18-front-controller
+### L'index de la racine 18-front-controller
 
-C'est un fichier caché du serveur `apache` qui va permettre de rediriger toutes les requêtes vers le dossier `public`. Il va donc falloir créer un fichier `.htaccess` à la racine du projet.
+C'est un fichier `index.php` qui va rediriger vers le dossier `public`.
 
-```apacheconf
-# on active le module rewrite
-RewriteEngine On
-# on redirige tout vers le dossier public
-RewriteRule ^$ public/ [L]
+```php
+<?php
+// on redirige vers le dossier "public" en envoyant un header "Location"
+header("Location: public");
+// on arrête l'exécution du script (bonne pratique)
+exit;
 ```
 
-Il est généralement pas nécessaire dans ce cas, car se seront les [DNS](## "Le Domain Name Service ou DNS est un service informatique distribué qui associe les noms de domaine Internet avec leurs adresses IP ou d'autres types d'enregistrements") du nom de domaine qui redirigeront vers le dossier `public`.
+---
 
+[Retour au menu](#menu-de-navigation)
+
+---
+
+### L'index du dossier public 18-front-controller/public
+
+Nommé **Contrôleur Frontal**, ce fichier nommé `index.php` va rediriger les visiteurs vers les bons fichiers en fonction des paramètres GET.
 
 ```php
 <?php
@@ -901,6 +915,41 @@ if(isset($_GET['section'])){
 }
 
 ```
+
+---
+
+[Retour au menu](#menu-de-navigation)
+
+---
+
+#### Le fichier accueil.php 18-front-controller/templates/accueil.php
+
+C'est la partie du template qui représente notre page d'accueil.
+
+On y inclut les fichiers `menu.php` et `footer.php` qui se trouvent dans le dossier `inc`.
+
+**!!! Les chemins vers les fichiers front-end, images, css, javascript, etc... partent TOUS du CONTRÔLEUR FRONTAL **
+
+```php
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Bienvenue sur 18-front-controller</title>
+    <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+    <h1>Bienvenue sur 18-front-controller</h1>
+<?php include 'inc/menu.php'; ?>
+    <p>Vous êtes sur la page d'accueil</p>
+<?php include 'inc/footer.php'; ?>
+</body>
+</html>
+```
+
 
 ## Les boucles
 

@@ -1,4 +1,0 @@
-# activate URL rewriting
-RewriteEngine On
-# redirect / to public folder /public/
-RewriteRule ^$ public/ [L]

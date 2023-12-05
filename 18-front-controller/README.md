@@ -6,7 +6,7 @@ Cette partie du site web est la racine du site web. Elle contient les fichiers d
 
 ```
 .
-├── .htaccess
+├── index.php
 ├── /public
 │   ├── index.php
 │   ├── /css
