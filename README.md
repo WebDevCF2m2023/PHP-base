@@ -29,6 +29,7 @@
   - [require](#require)
   - [include_once](#include_once)
   - [require_once](#require_once)
+- [Principe du contrôleur frontal](#principe-du-contrôleur-frontal)
 - [Les boucles](#les-boucles)
   - [for](#for)
 - [Les fonctions](#les-fonctions)
@@ -811,6 +812,61 @@ require_once("menu.php");
 [Retour au menu](#menu-de-navigation)
 
 ---
+
+## Principe du contrôleur frontal
+
+Le principe du contrôleur frontal est de centraliser toutes les requêtes vers un seul et même fichier, qui va ensuite rediriger vers les bons fichiers.
+
+En général, on utilise un fichier `index.php` qui va rediriger vers les bons fichiers en fonction des paramètres GET.
+
+Dans le dossier `18-front-controller`, On aura une architecture de fichiers comme celle-ci :
+
+```
+.
+├── .htaccess
+├── /public
+│   ├── index.php
+│   ├── /css
+│   │   └── style.css
+│   ├── /js
+│   │   └── script.js
+│   └── /img
+│       └── logo.png
+├── /templates
+│   ├── accueil.php
+│   ├── actualites.php
+│   ├── contact.php
+│   ├── mentions-legales.php
+│   └── page-404.php
+
+```
+
+
+
+```php
+<?php
+// si le paramètre "section" est défini dans l'URL
+if(isset($_GET['section']){
+    // on va utiliser un switch pour rediriger vers le bon fichier
+    switch($_GET['section']){
+        case 'contact':
+            include('contact.php');
+            break;
+        case 'livre-or':
+            include('a-propos.php');
+            break;
+        case 'actualites':
+            include('actualites.php');
+            break;
+        default:
+            include('404.php');
+    }
+// si le paramètre "section" n'est pas défini dans l'URL   
+}else{ 
+    include('accueil.php');
+}
+?>
+```
 
 ## Les boucles
 
