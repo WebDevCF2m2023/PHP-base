@@ -834,6 +834,9 @@ Dans le dossier `18-front-controller`, On aura une architecture de fichiers comm
 │   └── /img
 │       └── logo.png
 ├── /templates
+│   ├── /inc
+│   │   ├── menu.php
+│   │   └── footer.php
 │   ├── accueil.php
 │   ├── actualites.php
 │   ├── contact.php
@@ -865,32 +868,38 @@ RewriteEngine On
 RewriteRule ^$ public/ [L]
 ```
 
-Il est généralement pas nécessaire dans ce cas, car se seront les ![DNS](## "Le Domain Name Service ou DNS est un service informatique distribué qui associe les noms de domaine Internet avec leurs adresses IP ou d'autres types d'enregistrements") du nom de domaine qui redirigeront vers le dossier `public`.
+Il est généralement pas nécessaire dans ce cas, car se seront les [DNS](## "Le Domain Name Service ou DNS est un service informatique distribué qui associe les noms de domaine Internet avec leurs adresses IP ou d'autres types d'enregistrements") du nom de domaine qui redirigeront vers le dossier `public`.
 
 
 ```php
 <?php
+/*
+ * Front Controller
+ */
+
 // si le paramètre "section" est défini dans l'URL
-if(isset($_GET['section']){
+if(isset($_GET['section'])){
     // on va utiliser un switch pour rediriger vers le bon fichier
     switch($_GET['section']){
         case 'contact':
-            include('contact.php');
+            # on inclut le fichier contact.php en suivant l'arborescence de fichiers
+            include('../templates/contact.php');
             break;
-        case 'livre-or':
-            include('a-propos.php');
+        case 'rgpd':
+            include('../templates/mentions-legales.php');
             break;
         case 'actualites':
-            include('actualites.php');
+            include('../templates/actualites.php');
             break;
         default:
-            include('404.php');
+            include('../templates/404.php');
     }
-// si le paramètre "section" n'est pas défini dans l'URL   
-}else{ 
-    include('accueil.php');
+// si le paramètre "section" n'est pas défini dans l'URL
+}else{
+    // on inclut le fichier accueil.php en suivant l'arborescence de fichiers
+    include('../templates/accueil.php');
 }
-?>
+
 ```
 
 ## Les boucles

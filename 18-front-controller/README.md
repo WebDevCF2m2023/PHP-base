@@ -16,8 +16,13 @@ Cette partie du site web est la racine du site web. Elle contient les fichiers d
 │   └── /img
 │       └── logo.png
 ├── /templates
+│   ├── /inc
+│   │   ├── menu.php
+│   │   └── footer.php
 │   ├── accueil.php
 │   ├── actualites.php
 │   ├── contact.php
 │   ├── mentions-legales.php
 │   └── page-404.php
+
+
