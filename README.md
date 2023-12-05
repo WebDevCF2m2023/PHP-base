@@ -30,6 +30,7 @@
   - [include_once](#include_once)
   - [require_once](#require_once)
 - [Principe du contrôleur frontal](#principe-du-contrôleur-frontal)
+  - [Le .htaccess du 18-front-controller](#le-htaccess-du-18-front-controller)
 - [Les boucles](#les-boucles)
   - [for](#for)
 - [Les fonctions](#les-fonctions)
@@ -839,6 +840,28 @@ Dans le dossier `18-front-controller`, On aura une architecture de fichiers comm
 │   ├── mentions-legales.php
 │   └── page-404.php
 
+```
+
+Le dossier `public` contient tous les fichiers accessibles par le navigateur. C'est le dossier racine du site. C'est la que l'on va inclure les fichiers `css`, `js`, `img` et `index.php`.
+
+Le dossier `templates` contient tous les fichiers qui seront inclus dans le fichier `index.php`.
+
+
+---
+
+[Retour au menu](#menu-de-navigation)
+
+---
+
+### Le .htaccess du 18-front-controller
+
+C'est un fichier `apache` qui va permettre de rediriger toutes les requêtes vers le dossier `public`. Il va donc falloir créer un fichier `.htaccess` à la racine du projet.
+
+```apacheconf
+# on active le module rewrite
+RewriteEngine On
+# on redirige tout vers le dossier public
+RewriteRule ^$ public/ [L]
 ```
 
 
