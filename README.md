@@ -928,7 +928,7 @@ C'est la partie du template qui représente notre page d'accueil.
 
 On y inclut les fichiers `menu.php` et `footer.php` qui se trouvent dans le dossier `inc`.
 
-**!!! Les chemins vers les fichiers front-end, images, css, javascript, etc... partent TOUS du CONTRÔLEUR FRONTAL **
+__!!! Les chemins vers les fichiers front-end, images, css, javascript, etc... partent TOUS du CONTRÔLEUR FRONTAL__
 
 ```php
 <!doctype html>
