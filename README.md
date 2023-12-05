@@ -846,6 +846,7 @@ Le dossier `public` contient tous les fichiers accessibles par le navigateur. C'
 
 Le dossier `templates` contient tous les fichiers qui seront inclus dans le fichier `index.php`.
 
+La racine d'un site, par exemple `https://www.cf2m.be`, est en réalité pointé vers un dossier `public`, qui est le seul dossier accessible par le navigateur. C'est ce qu'on appelle le `DocumentRoot`. On utilise cette technique pour éviter que les utilisateurs puissent accéder aux fichiers sensibles du site.
 
 ---
 
@@ -855,7 +856,7 @@ Le dossier `templates` contient tous les fichiers qui seront inclus dans le fich
 
 ### Le .htaccess du 18-front-controller
 
-C'est un fichier `apache` qui va permettre de rediriger toutes les requêtes vers le dossier `public`. Il va donc falloir créer un fichier `.htaccess` à la racine du projet.
+C'est un fichier caché du serveur `apache` qui va permettre de rediriger toutes les requêtes vers le dossier `public`. Il va donc falloir créer un fichier `.htaccess` à la racine du projet.
 
 ```apacheconf
 # on active le module rewrite
@@ -864,6 +865,7 @@ RewriteEngine On
 RewriteRule ^$ public/ [L]
 ```
 
+Il est généralement pas nécessaire dans ce cas, car se seront les ![DNS](## "Le Domain Name Service ou DNS est un service informatique distribué qui associe les noms de domaine Internet avec leurs adresses IP ou d'autres types d'enregistrements") du nom de domaine qui redirigeront vers le dossier `public`.
 
 
 ```php
