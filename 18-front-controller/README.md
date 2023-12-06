@@ -14,7 +14,7 @@ Cette partie du site web est la racine du site web. Elle contient les fichiers d
 │   ├── /js
 │   │   └── script.js
 │   └── /img
-│       └── logo.png
+│       └── favicon-32x32.png
 ├── /templates
 │   ├── /inc
 │   │   ├── menu.php

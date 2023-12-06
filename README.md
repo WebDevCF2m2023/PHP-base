@@ -827,6 +827,7 @@ Dans le dossier `18-front-controller`, On aura une architecture de fichiers comm
 ```
 .
 ├── index.php       -> redirige vers le dossier "public"
+│
 ├── /public
 │   ├── index.php   -> contrôleur frontal
 │   ├── /css
@@ -834,7 +835,8 @@ Dans le dossier `18-front-controller`, On aura une architecture de fichiers comm
 │   ├── /js
 │   │   └── script.js
 │   └── /img
-│       └── logo.png
+│       └── favicon-32x32.png
+│
 ├── /templates      -> fichiers inclus par le contrôleur frontal
 │   ├── /inc        -> fichiers inclus par les fichiers du dossier "templates"
 │   │   ├── menu.php
@@ -930,7 +932,7 @@ if(isset($_GET['section'])){
 
 C'est la partie du template qui représente notre page d'accueil.
 
-On y inclut les fichiers `menu.php` et `footer.php` qui se trouvent dans le dossier `inc`.
+On y inclut avec `include` (ou n'importe quelle des 4 fonctions d'importation de fichier en `PHP`), les fichiers `menu.php` et `footer.php` qui se trouvent dans le dossier `inc` __en utilisant les chemins relatifs depuis le fichier dans lequel l'appel est fait__ (On peut aussi utiliser des chemins absolus, ou des chemins relatifs venant d'un parent, mais ne nous compliquons pas la vie pour le moment !).
 
 __!!! Les chemins vers les fichiers front-end, images, css, javascript, etc... partent TOUS du CONTRÔLEUR FRONTAL, donc du dossier `public/` !__
 

@@ -47,3 +47,13 @@ footer {
     padding-left: 2px;
     padding-right: 2px;
 }
+#nuage {
+    position: absolute;
+    top: 20px;
+    left: -100px; /* Commence en dehors de la page */
+    width: 100px;
+    height: 60px;
+    background: url('../img/nuage.png') no-repeat center center;
+    background-size: contain;
+    opacity: 30%;
+}
