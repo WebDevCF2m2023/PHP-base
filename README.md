@@ -826,17 +826,17 @@ Dans le dossier `18-front-controller`, On aura une architecture de fichiers comm
 
 ```
 .
-├── index.php
+├── index.php   -> redirige vers le dossier "public"
 ├── /public
-│   ├── index.php
+│   ├── index.php -> contrôleur frontal
 │   ├── /css
 │   │   └── style.css
 │   ├── /js
 │   │   └── script.js
 │   └── /img
 │       └── logo.png
-├── /templates
-│   ├── /inc
+├── /templates  -> fichiers inclus par le contrôleur frontal
+│   ├── /inc    -> fichiers inclus par les fichiers du dossier "templates"
 │   │   ├── menu.php
 │   │   └── footer.php
 │   ├── accueil.php

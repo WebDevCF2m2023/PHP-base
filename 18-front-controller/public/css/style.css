@@ -1,16 +1,49 @@
-ul {
-    list-style-type: none;
+body {
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    overflow: hidden;
 }
 
-li {
-    float: left;
+header {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1em;
 }
 
-li a {
-    display: block;
-    padding: 8px;
-    background-color: #dddddd;
+nav ul {
+    list-style-type: none;
+    margin: 10px;
+    padding: 10px;
+    float: right;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 10px;
+}
+
+section {
+    padding: 1em;
+}
+
+section ul li{
+    margin: 10px;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1em;
+}
+.txtBold {
+    font-weight: bold;
+}
+.txtItalic {
+    font-style: italic;
+    background-color: #333333;
+    color: #ffffff;
+    padding-left: 2px;
+    padding-right: 2px;
 }
