@@ -826,17 +826,17 @@ Dans le dossier `18-front-controller`, On aura une architecture de fichiers comm
 
 ```
 .
-├── index.php   -> redirige vers le dossier "public"
+├── index.php       -> redirige vers le dossier "public"
 ├── /public
-│   ├── index.php -> contrôleur frontal
+│   ├── index.php   -> contrôleur frontal
 │   ├── /css
 │   │   └── style.css
 │   ├── /js
 │   │   └── script.js
 │   └── /img
 │       └── logo.png
-├── /templates  -> fichiers inclus par le contrôleur frontal
-│   ├── /inc    -> fichiers inclus par les fichiers du dossier "templates"
+├── /templates      -> fichiers inclus par le contrôleur frontal
+│   ├── /inc        -> fichiers inclus par les fichiers du dossier "templates"
 │   │   ├── menu.php
 │   │   └── footer.php
 │   ├── accueil.php
@@ -849,7 +849,7 @@ Dans le dossier `18-front-controller`, On aura une architecture de fichiers comm
 
 Le fichier `index.php` à la racine du site va uniquement nous rediriger vers le fichier `index.php` du dossier `public`.
 
-Le dossier `public` contient tous les fichiers accessibles par le navigateur. C'est le dossier racine du site. C'est la que l'on va inclure les fichiers `css`, `js`, `img` et le contrôleur frontal `index.php`.
+Le dossier `public` contient tous les fichiers accessibles par le navigateur. C'est le dossier racine du site. C'est là que l'on va inclure les fichiers `css`, `js`, `img` et le contrôleur frontal `index.php`.
 
 Le dossier `templates` contient tous les fichiers qui seront inclus dans le fichier `index.php`.
 
@@ -932,7 +932,7 @@ C'est la partie du template qui représente notre page d'accueil.
 
 On y inclut les fichiers `menu.php` et `footer.php` qui se trouvent dans le dossier `inc`.
 
-__!!! Les chemins vers les fichiers front-end, images, css, javascript, etc... partent TOUS du CONTRÔLEUR FRONTAL, donc du dossier /templates/ !__
+__!!! Les chemins vers les fichiers front-end, images, css, javascript, etc... partent TOUS du CONTRÔLEUR FRONTAL, donc du dossier `public/` !__
 
 ```php
 <!doctype html>
@@ -943,6 +943,7 @@ __!!! Les chemins vers les fichiers front-end, images, css, javascript, etc... p
           content="width=device-width, user-scalable=no, initial-scale=1.0, 
           maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
     <title>Bienvenue sur 18-front-controller</title>
     <link href="css/style.css" rel="stylesheet">
 </head>
@@ -951,6 +952,7 @@ __!!! Les chemins vers les fichiers front-end, images, css, javascript, etc... p
 <?php include 'inc/menu.php'; ?>
     <p>Vous êtes sur la page d'accueil</p>
 <?php include 'inc/footer.php'; ?>
+<script src="js/script.js"></script>
 </body>
 </html>
 ```
