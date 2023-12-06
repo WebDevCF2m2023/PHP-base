@@ -912,7 +912,7 @@ if(isset($_GET['section'])){
             break;
         # Si aucune des sections n'est valide, on affiche la page 404
         default:
-            include('../templates/404.php');
+            include('../templates/page-404.php');
     }
 // si le paramètre "section" n'est pas défini dans l'URL
 }else{
@@ -959,6 +959,20 @@ __!!! Les chemins vers les fichiers front-end, images, css, javascript, etc... p
 </html>
 ```
 
+Tous les autres fichiers du dossier `templates` sont construits de la même manière. Ils incluent le menu et le footer.
+
+Pour le moment le site n'est pas réellement fonctionnel, car il n'y a pas de contenu dynamique.
+
+Il est un exemple de structure de site pour le TI de fin du mois.
+
+| 19 | ![Exercice 19](https://github.com/mikhawa/PHP-base/blob/main/datas/folder-type-php-opened_24.png?raw=true) | Exercice 19 | Créez un dossier nommé `19-my-front-controller.php` et créez un petit site de 5 pages en utilisant une technique proche du `18-front-controller`, contenant un dossier `public` avec un contrôleur frontal et un dossier `templates`. Utilisez un .css externe au minimum, et quelques images (libres et gratuites !) |
+|----|:----------------------------------------------------------------------------------------------------------:|:-----------:|:---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|
+
+---
+
+[Retour au menu](#menu-de-navigation)
+
+---
 
 ## Les boucles
 

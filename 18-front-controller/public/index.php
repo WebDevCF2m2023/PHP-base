@@ -19,7 +19,7 @@ if(isset($_GET['section'])){
             break;
         # Si aucune des sections n'est valide, on affiche la page 404
         default:
-            include('../templates/404.php');
+            include('../templates/page-404.php');
     }
 // si le paramètre "section" n'est pas défini dans l'URL
 }else{
