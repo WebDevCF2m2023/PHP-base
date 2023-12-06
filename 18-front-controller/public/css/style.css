@@ -57,3 +57,11 @@ footer {
     background-size: contain;
     opacity: 30%;
 }
+form {
+    max-width: 400px;
+    margin: 0 auto;
+}
+label, input, textarea {
+    display: block;
+    margin-bottom: 10px;
+}
