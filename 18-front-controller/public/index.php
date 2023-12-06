@@ -17,6 +17,7 @@ if(isset($_GET['section'])){
         case 'actualites':
             include('../templates/actualites.php');
             break;
+        # Si aucune des sections n'est valide, on affiche la page 404
         default:
             include('../templates/404.php');
     }

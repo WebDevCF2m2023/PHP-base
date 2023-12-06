@@ -866,6 +866,7 @@ La racine d'un site, par exemple `https://www.cf2m.be`, est en réalité pointé
 ### L'index de la racine 18-front-controller
 
 C'est un fichier `index.php` qui va rediriger vers le dossier `public`.
+Il est non obligatoire et pourrait être remplacé par un fichier `.htaccess` qui redirigerait directement vers le dossier `public`.
 
 ```php
 <?php
@@ -874,6 +875,8 @@ header("Location: public");
 // on arrête l'exécution du script (bonne pratique)
 exit;
 ```
+
+documentation : https://www.php.net/manual/fr/function.header.php
 
 ---
 
@@ -905,6 +908,7 @@ if(isset($_GET['section'])){
         case 'actualites':
             include('../templates/actualites.php');
             break;
+        # Si aucune des sections n'est valide, on affiche la page 404
         default:
             include('../templates/404.php');
     }
@@ -928,7 +932,7 @@ C'est la partie du template qui représente notre page d'accueil.
 
 On y inclut les fichiers `menu.php` et `footer.php` qui se trouvent dans le dossier `inc`.
 
-__!!! Les chemins vers les fichiers front-end, images, css, javascript, etc... partent TOUS du CONTRÔLEUR FRONTAL__
+__!!! Les chemins vers les fichiers front-end, images, css, javascript, etc... partent TOUS du CONTRÔLEUR FRONTAL, donc du dossier /templates/ !__
 
 ```php
 <!doctype html>
