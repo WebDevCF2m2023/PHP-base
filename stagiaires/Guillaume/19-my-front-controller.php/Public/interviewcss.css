@@ -1,0 +1,261 @@
+@font-face {
+    font-family: 'martyric';
+    src: url('../font/martyric-webfont.woff') format('woff'),
+         url('../font/martyric-webfont.woff2') format('woff2')
+    
+}
+
+@font-face {
+    font-family: 'adidas';
+    src: url('../font/texgyreadventor-bold-webfont.woff2') format('woff2'),
+         url('../font/texgyreadventor-bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'roboto';
+    src: url('../font/roboto/robotocondensed-regular-webfont.woff2') format('woff2'),
+         url('../font/roboto/robotocondensed-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+body {
+    /* règle le background de la page */
+
+    background-image: url(https://images.alphacoders.com/107/1072541.jpg); /* url de l'image de background */
+    background-size: cover; /* couvre toute la page avec l'image */
+    margin: 0; /* bordure atour de la page: aucune */
+}
+.button{
+    /* regle le style des boutons accueil, interview, entreprise, conclusion */
+
+    background-color: rgba(159, 51, 51, 0.808); /*couleur de fond du bouton */
+    border: none; /* enleve la bordure autour du background*/
+    color: rgb(156, 174, 246); /* couleur de la typo */
+    padding: 8px;  /*marge autour du texte */
+    text-align: center; /*aligne le texte au milieu du bouton */
+    text-decoration: none; /*enlève le soulignement du texte */
+    display: inline-block; /*dispose les boutons l'un a coté de l'autre */
+    font-size: 15px;  /* taille de la typo */
+    margin: 4px 4px;  /*écart entre chaque bouton */
+    border-radius: 4rem; /* crée un contour arrondis pour le bouton */
+    font-family: 'roboto'; /*style de la typo */
+    width: 80px; /*règle la largeur du bouton */
+    
+}
+
+
+.button2 {
+     /* règle le style du bouton expo */
+    
+    padding: 0;  /* marge autour du texte */
+    text-align: center; /* alignement du texte au milieu du bouton */
+    text-decoration: none; /* suppression du soulignement du texte */
+    display: inline-block; /* disposition des bouton l'un a coter de l'autre */
+    font-size: 20px; /* taille de la typo */
+    margin: 4px 4px; /*écart entre chaque bouton */
+    font-family: 'martyric'; /*style de la typo */
+    -webkit-text-stroke: 0.1px; /* grandeur du contour de la typo */
+    -webkit-text-stroke-color: rgb(58, 87, 248); /* couleur du contour de la typo */
+    color: gold; /* couleur de la typo */
+}
+
+.button3 {
+    /* règle le style du bouton galerie */
+    
+    padding: 0; /* marge autour du texte */
+    text-align: center; /* alignement du texte au milieu du bouton */
+    text-decoration: none; /* suppression du soulignement du texte */
+    display: inline-block; /* disposition des bouton l'un a coter de l'autre */
+    font-size: 20px; /* taille de la typo */
+    margin: 4px 4px; /*écart entre chaque bouton */
+    font-family: 'martyric'; /*style de la typo */
+    -webkit-text-stroke: 0.1px; /* grandeur du contour de la typo */
+    -webkit-text-stroke-color: rgb(58, 87, 248); /* couleur du contour de la typo */
+    color: gold; /* couleur de la typo */
+}
+
+h1 {
+    /*permet de régler le style du titre principal */
+
+    color: rgb(236, 225, 161); /* couleur princile du titre */
+    font-family: 'roboto'; /*style de typo */
+    -webkit-text-stroke: 0.0005rem; /* contour du texte */
+    -webkit-text-stroke-color: rgb(58, 87, 248); /*couleur du contour du texte */
+    margin-bottom: 2px; /*marge autour du titre */
+    font-size: 2.5rem; /*taille de la typo */
+}
+
+h2 {
+    /*permet de régler le style des titres secondaires */
+
+    color:rgb(243, 228, 141); /*couleur des titres secondaires */
+    font-family: 'roboto'; /*style de typo */
+    font-size: small; /*taille de la typo */
+    margin-top: 0; /*marge du dessus */
+   
+}
+
+
+p {
+    /* permet de régler le style des paragraphes */
+
+    color: rgb(255, 255, 255); /*couleur du texte des paragraphes */
+    font-size: 13.8px; /*taille de la police */
+    font-family: 'roboto';  /*style de la typo */
+    text-align: justify; /*permet de remplir entièrement les colonnes */
+    margin-top: 0;  /*marge du dessus = aucune */ 
+
+}
+
+.pconclusion {
+    /* permet de régler le style du paragraphe de la page conclusion */
+
+    color: rgb(255, 255, 255); /*couleur principal du texte */
+    font-size: medium; /*taille de la police */
+    font-family: 'roboto'; /*style de la typo */ 
+    text-align: justify; /*permet de remplir entièrement les colonnes */
+    margin-top: 0; /*marge du dessus = aucune */
+}
+
+.intro {
+    /* permet de régler le style de l'intro du paragraphe de la conclusion */
+
+    color: rgb(245, 225, 114); /*couleur du texte */
+    font-size: medium; /*taille de la police */
+    font-family: 'roboto';  /*style de la typo */
+    text-align: justify; /*permet de remplir entièrement les colonnes */
+    margin-top: 0; /*marge du dessus = aucune */
+}
+
+.outro {
+    /* permet de régler le style de l'outro du paragraphe de la conclusion */
+
+    color: rgb(245, 225, 114);  /*couleur du texte */
+    font-size: medium; /*taille de la police */
+    font-family: 'roboto'; /*style de la typo */ 
+    text-align: justify;  /*permet de remplir entièrement les colonnes */
+    margin-top: 0; /*marge du dessus = aucune */
+}
+
+.interview {
+    /* permet de regler le style de la page interview */
+
+    column-count: 7; /* nombre des colonnes du contenu principal */
+    position: relative; /*positionnement du contenu princial */
+    background-color: rgba(2, 21, 128, 0.705); /*couleur de background du contenu principal */
+    padding: 3rem; /*marge autour du contenu principal */
+}
+
+a:hover{
+    /* permet de régler le style des liens */
+    color: rgb(231, 175, 34); /*couleur des liens une fois le curseur positionné au dessus */ 
+}
+
+.conclusion{
+    /* permet de regler le style de la page conclusion */
+    
+    column-count: 6; /* nombre des colonnes du contenu principal */
+    position: relative; /*positionnement du contenu princial */
+    background-color:rgba(2, 21, 128, 0.705); /*couleur de background du contenu principal */
+    padding: 6rem; /*marge autour du contenu principal */
+}
+
+.titreconclu {
+    /*permet de régler le titre de la conclusion */
+   
+    color: rgb(236, 225, 161); /*couleur du titre de la conclusion */
+    font-family: 'roboto'; /*style de la typo */
+    -webkit-text-stroke: 0.0005rem; /*grandeur du contour du texte */
+    -webkit-text-stroke-color: rgb(58, 87, 248); /*couleur du contour du texte */
+    font-size: 2.5rem; /*grandeur de la police */
+
+}
+
+.entreprise {
+    /* permet de regler le style de la page entreprise */
+
+    column-count: 2; /* nombre des colonnes du contenu principal */
+    position: relative; /*positionnement du contenu princial */
+    background-color: rgba(2, 21, 128, 0.705); /*couleur de background du contenu principal */
+    padding: 3rem; /*marge autour du contenu principal */
+}
+
+.ent {
+    /* permet de régler le style des paragraphes de la page entreprise */
+
+    color: rgb(255, 255, 255); /*couleur principal du texte */
+    font-size: medium; /*taille de la police */
+    font-family: 'roboto'; /*style de la police */
+    text-align: justify; /*permet de remplir entièrrement les colonnes avec le texte */
+    margin-top: 0; /*marge du dessus = aucune */
+
+}
+
+.prise {
+    /* permet de régler le style des titres de la page entreprise */
+
+    color:rgb(243, 228, 141); /*couleur principal du texte */
+    font-family: 'roboto'; /*style de la police */
+    font-size: larger; /*taille de la police */
+    margin-top: 0; /*marge au dessus du texte */
+}
+
+.siteofficiel{
+    /* permet de regler le style de lien vers le site officiel de l'entreprise sur la page entreprise */ 
+
+    background-color: rgba(159, 51, 51, 0.808); /* couleur du background du bouton */
+    border: none; /*aucune bordure sur le bouton */
+    color: rgb(156, 174, 246); /* couleur du texte */
+    padding: 8px; /*marge autour du texte a l'interieur du bouton */
+    text-align: center; /* texte placer au milieu du bouton */
+    display: inline-block; /* positionnement aligné sur la page */
+    font-size: 12px; /* taille de la police */
+    margin: 4px 3px; /* marge a gauche et a droite du bouton */
+    border-radius: 4rem; /* permet d'arrondir les bord du bouton */
+    font-family: 'roboto'; /* style de la police */
+
+}
+
+.lien {
+    /* permet de regler le style des liens */
+
+    text-decoration: none; /* permet d'enlever le souligement des liens */
+}
+
+.galerieofficiel{  
+    /* permet de régler le style du lien vers la galerie officiel */
+
+    color: rgb(156, 174, 246); /*couleur de la police */
+    display: inline-block; /*aligne l'un a coter de l'autre */
+    font-size: medium; /* taille de la police */
+    font-family: 'roboto'; /*style de la typo */
+}
+
+.galerietom{  
+    /* permet de régler le style du lien vers la galerie de tommy */ 
+
+    color: rgb(156, 174, 246); /*couleur de la police */
+    display: inline-block; /*aligne l'un a coter de l'autre */
+    font-size: 13.8px; /*taille de la police */
+    font-family: 'roboto'; /*style de la typo */
+}
+
+.footer {
+    /* règle le style du copyright */
+
+    position:fixed; /*reste fixé a une position donnée */
+    top: 928px; /* marge par le haut du texte */
+    bottom: 0;  /* marge par le bas du texte */
+    left: 0; /* marge par la gauche du texte */
+    right: 5px; /* marge par la droite du texte */
+    padding: 0.2rem; /*marge autour du contenu */
+    font-family: "roboto"; /*style de la typo */
+    color: white; /*couleur du texte */
+    display: flex; /*système de positionnement */
+    justify-content: right; /* positionne le contenu sur la droite de la page */
+}
+

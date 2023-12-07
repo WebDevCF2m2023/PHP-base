@@ -1,0 +1,112 @@
+@font-face {
+    font-family: 'martyric';
+    src: url('../font/martyric-webfont.woff') format('woff'),
+         url('../font/martyric-webfont.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'adidas';
+    src: url('../font/texgyreadventor-bold-webfont.woff2') format('woff2'),
+         url('../font/texgyreadventor-bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'roboto';
+    src: url('../font/roboto/robotocondensed-regular-webfont.woff2') format('woff2'),
+         url('../font/roboto/robotocondensed-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+body {
+    /* règle le background de la page */
+
+    background-image: url(https://i.redd.it/v1j1be6y44m91.png); /* url de l'image de background */
+    background-size: cover; /* couvre toute la page avec l'image */
+    margin: 0; /* bordure atour de la page: aucune */
+    
+}
+.button{
+     /* regle le style des boutons accueil, interview, entreprise, conclusion */
+
+    background-color: rgba(159, 51, 51, 0.808); /*couleur de fond du bouton */
+    border: none; /* enleve la bordure autour du background*/
+    color: rgb(156, 174, 246); /* couleur de la typo */
+    padding: 8px; /*dimension du contour extérieur des boutons */
+    text-align: center; /*aligne le texte au milieu du bouton */
+    text-decoration: none; /*enlève le soulignement du texte */
+    display: inline-block; /*dispose les boutons l'un a coté de l'autre */
+    width: 80px; /*règle la largeur du bouton */
+    font-size: 15px; /* taille de la typo */
+    margin: 4px 4px; /*écart entre chaque bouton */
+    border-radius: 4rem; /* crée un contour arrondis pour le bouton */
+    font-family: 'roboto'; /*style de la typo */
+    
+}
+
+
+.button2 {
+    /* règle le style du bouton expo */
+    
+    padding: 0; /* marge autour du bouton */
+    text-align: center; /* alignement du texte au milieu du bouton */
+    text-decoration: none; /* suppression du soulignement du texte */
+    display: inline-block; /* disposition des bouton l'un a coter de l'autre */
+    font-size: 20px; /* taille de la police */
+    margin: 4px 4px; /* marge a gauche et a droite du bouton */
+    font-family: 'martyric'; /*style de la typo */
+    -webkit-text-stroke: 0.1px; /* grandeur du contour de la typo */
+    -webkit-text-stroke-color: rgb(58, 87, 248); /* couleur du contour de la typo */
+    color: gold; /* couleur de la typo */
+}
+
+.button3 {
+    /*règle le style du bouton galerie */
+
+    padding: 0;  /* marge autour du bouton */
+    text-align: center; /* alignement du texte au milieu du bouton */
+    text-decoration: none; /* suppression du soulignement du texte */
+    display: inline-block; /* disposition des bouton l'un a coter de l'autre */
+    font-size: 20px; /* taille de la police */
+    margin: 4px 4px; /* marge a gauche et a doitre du bouton */
+    font-family: 'martyric'; /*style de la typo */
+    -webkit-text-stroke: 0.1px; /* grandeur du contour de la typo */
+    -webkit-text-stroke-color: rgb(58, 87, 248); /* couleur du contour de la typo */
+    color: gold; /* couleur de la typo */
+}
+
+
+a:hover{
+    /* règle la couleur des lien une fois le curseur dessus */
+
+    color: rgb(231, 175, 34); /* couleur de la typo une fois le curseur sur le lien */
+}
+
+.footer {
+    /* règle le style du copyright */
+
+    position: fixed; /*reste fixé a une position donnée */
+    top: 928px; /* marge par le haut du texte */
+    bottom: 0; /* marge par le bas du texte */
+    right: 5px; /* marge par la droite du texte */
+    padding: 0.2rem; /*marge autour du texte */
+    font-family: "roboto"; /* style de la typo */
+    color: white; /* couleur du texte */
+    display: flex; /*système de positionnement */
+    justify-content: right; /* positionne le contenu sur la droite de la page */
+}
+
+.moodboard {
+    /* règle le style de l'image du moodboad */
+
+    display: block; /*système de positionnement */
+    margin: auto; /*permet de centrer l'image en milieu de page */
+    margin-top: 30px; /*permet de changer la marge du dessus */
+    width: 1080px; /*règle la largeur de l'image */
+   
+}
