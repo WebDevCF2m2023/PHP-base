@@ -33,6 +33,7 @@
   - [L'index de la racine 18-front-controller](#lindex-de-la-racine-18-front-controller)
   - [L'index du dossier public 18-front-controller/public](#lindex-du-dossier-public-18-front-controllerpublic)
     - [Le fichier accueil.php 18-front-controller/templates/accueil.php](#le-fichier-accueilphp-18-front-controllertemplatesaccueilphp)
+  - [Préparation PHP du TI de fin de mois](#préparation-php-du-ti-de-fin-de-mois)
 - [Les boucles](#les-boucles)
   - [for](#for)
 - [Les fonctions](#les-fonctions)
@@ -964,6 +965,14 @@ Tous les autres fichiers du dossier `templates` sont construits de la même mani
 Pour le moment le site n'est pas réellement fonctionnel, car il n'y a pas de contenu dynamique.
 
 Il est un exemple de structure de site pour le TI de fin du mois.
+
+---
+
+[Retour au menu](#menu-de-navigation)
+
+---
+
+### Préparation PHP du TI de fin de mois
 
 | 19 | ![Exercice 19](https://github.com/mikhawa/PHP-base/blob/main/datas/folder-type-php-opened_24.png?raw=true) | Exercice 19 | Créez un dossier nommé `19-my-front-controller.php` et recréez votre __site de préformation__  en utilisant une technique proche du `18-front-controller`, contenant un dossier `public` avec un contrôleur frontal et un dossier `templates`. Utilisez un .css externe au minimum, et quelques images (libres et gratuites !) |
 |----|:----------------------------------------------------------------------------------------------------------:|:-----------:|:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|
