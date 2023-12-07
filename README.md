@@ -965,8 +965,8 @@ Pour le moment le site n'est pas réellement fonctionnel, car il n'y a pas de co
 
 Il est un exemple de structure de site pour le TI de fin du mois.
 
-| 19 | ![Exercice 19](https://github.com/mikhawa/PHP-base/blob/main/datas/folder-type-php-opened_24.png?raw=true) | Exercice 19 | Créez un dossier nommé `19-my-front-controller.php` et créez un petit site de 5 pages en utilisant une technique proche du `18-front-controller`, contenant un dossier `public` avec un contrôleur frontal et un dossier `templates`. Utilisez un .css externe au minimum, et quelques images (libres et gratuites !) |
-|----|:----------------------------------------------------------------------------------------------------------:|:-----------:|:---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|
+| 19 | ![Exercice 19](https://github.com/mikhawa/PHP-base/blob/main/datas/folder-type-php-opened_24.png?raw=true) | Exercice 19 | Créez un dossier nommé `19-my-front-controller.php` et recréez votre __site de préformation__  en utilisant une technique proche du `18-front-controller`, contenant un dossier `public` avec un contrôleur frontal et un dossier `templates`. Utilisez un .css externe au minimum, et quelques images (libres et gratuites !) |
+|----|:----------------------------------------------------------------------------------------------------------:|:-----------:|:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|
 
 ---
 
