@@ -6,7 +6,7 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
-    <title>Mentions légales de 18-front-controller</title>
+    <title><?=$title?></title>
     <link href="css/style.css" rel="stylesheet">
 </head>
 <body>
@@ -15,7 +15,7 @@
     </header>
         <?php include 'inc/menu.php'; ?>
     <section>
-        <h2>Mentions légales </h2>
+        <h2><?=$title?></h2>
         <h3>Propriété intellectuelle :</h3>
 
         <p>Ce site et son contenu sont la propriété exclusive de CF2m. Toute reproduction, même partielle, est strictement interdite sans autorisation préalable.</p>
