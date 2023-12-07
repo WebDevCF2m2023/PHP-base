@@ -60,11 +60,11 @@ div.desc {
 
   <main>
     <ul>
-      <li><a href="index.html">accueil</a></li>
-      <li><a href="?page=interview1">interview</a></li>
-      <li><a href="?page=expo">expo</a></li>
-      <li><a href="?page=conclusion">conclusion</a></li>
-      <li><a href="?page=galerie">galerie</a></li>
+      <li><a href="?section=accueil">accueil</a></li>
+      <li><a href="?section=interview1">interview</a></li>
+      <li><a href="?section=expo">expo</a></li>
+      <li><a href="?section=conclusion">conclusion</a></li>
+      <li><a href="?section=galerie">galerie</a></li>
    
     </ul> 
 

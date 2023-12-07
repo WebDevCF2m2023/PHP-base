@@ -12,7 +12,7 @@ if(isset($_GET['section'])){
             $title = "Conclusion";
             include('../templates/conclusion.php');
             break;
-        case 'interviws':
+        case 'interview1':
             $title = "Interview";
             include('../templates/interview1.php');
             break;
