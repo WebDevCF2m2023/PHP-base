@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+<defs>
+<linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="0%" gradientTransform="rotate(90)">
+      <stop offset="30%" style="stop-color:rgb(19,19,19);stop-opacity:1" />
+      <stop offset="40%" style="stop-color:rgb(240,219,24);stop-opacity:1" />
+      <stop offset="90%" style="stop-color:rgb(255,64,41);stop-opacity:1" />
+    </linearGradient>
+</defs>
+
+  <polygon points="15.293 3.293 6.586 12 15.293 20.707 16.707 19.293 9.414 12 16.707 4.707 15.293 3.293" fill="url(#grad1)"/>
+</svg>
