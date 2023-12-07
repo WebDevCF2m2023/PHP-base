@@ -19,7 +19,7 @@ $rand1 = mt_rand(1,10);
      echo "$rand1 : bien";
      break;
      default :
-     echo " tres bien";
+     echo "$rand1 : tres bien";
 
 
   }
