@@ -1,0 +1,496 @@
+@font-face {
+  font-family: "sign";
+  src: url(../fond/sign.otf);
+}
+
+@font-face {
+  font-family: "byl";
+  src: url(../fond/byl.otf);
+}
+:root {
+  --green: rgb(61, 214, 88);
+}
+* {
+  margin: 0; /*La propriété margin définit la taille des marges sur les quatre côtés de l'élément. C'est une propriété raccourcie qui permet de manipuler les autres propriétés de marges : margin-top, margin-right, margin-bottom et margin-left. */
+  padding: 0; /*La propriété padding est une propriété raccourcie qui permet de définir les différents écarts de remplissage sur les quatre côtés d'un élément (cf. les boîtes CSS). Elle synthétise padding-top, padding-right, padding-bottom, padding-left.*/
+  box-sizing: border-box; /*La propriété CSS box-sizing définit la façon dont la hauteur et la largeur totale d'un élément est calculée (avec le modèle de boîte CSS).*/
+}
+
+body {
+  display: flex; /* Définit le modèle d'affichage flex pour l'élément body */
+  flex-wrap: wrap; /* Permet aux éléments enfants de s'enrouler (passer à la ligne suivante) si nécessaire */
+  align-items: center; /* Centre verticalement les éléments enfants dans le conteneur flex */
+  justify-content: center; /* Centre horizontalement les éléments enfants dans le conteneur flex */
+  min-height: 100vh; /* Fixe la hauteur minimale du body à 100% de la hauteur de la fenêtre du navigateur */
+}
+
+/*--------------------------------------------------------------------------------------card rota--------------------------------------------------------------------------------*/
+.card {
+  position: relative; /* Position relative pour permettre des positionnements internes */
+  width: 300px; /* Largeur de la carte de 300 pixels */
+  height: 350px; /* Hauteur de la carte de 350 pixels */
+  margin: 50px; /* Marge de 50 pixels autour de la carte */
+  top: -50px; /* Déplace la carte vers le haut de 50 pixels par rapport à sa position normale */
+}
+
+.card .face {
+  position: absolute; /* Position absolue pour les éléments enfants de la classe .face */
+  width: 100%; /* Largeur à 100% de la largeur du parent */
+  height: 100%; /* Hauteur à 100% de la hauteur du parent */
+  backface-visibility: hidden; /* Masque la face arrière de l'élément lors de rotations (pour les effets de retournement) */
+  border-radius: 10px; /* Arrondit les coins de la carte avec un rayon de 10 pixels */
+  overflow: hidden; /* Masque tout contenu dépassant des dimensions de la carte */
+  transition: 1.9s; /* Applique une transition de 1.9 secondes pour des effets animés, comme les rotations */
+}
+
+.card .front {
+  transform: perspective(600px) rotateY(0deg); /* Applique une perspective et une rotation horizontale de 0 degrés */
+  box-shadow: 0 5px 10px #000; /* Ajoute une ombre sous la carte */
+}
+
+.card .front img {
+  position: absolute; /* Position absolue pour l'image à l'intérieur de la face avant de la carte */
+  width: 100%; /* Largeur de l'image à 100% de la largeur de son parent */
+  height: 100%; /* Hauteur de l'image à 100% de la hauteur de son parent */
+  object-fit: cover; /* Redimensionne l'image pour couvrir tout l'espace disponible sans déformation */
+  z-index: 3; /* Définit l'empilement en z-index pour contrôler la superposition d'éléments (3 étant au-dessus des autres) */
+}
+
+.card .front h3 {
+  position: absolute; /* Position absolue pour le titre à l'intérieur de la face avant de la carte */
+  bottom: 0; /* Aligne le titre en bas de la carte */
+  width: 100%; /* Largeur du titre à 100% de la largeur de son parent */
+  height: 45px; /* Hauteur du titre de 45 pixels */
+  line-height: 45px; /* Hauteur de ligne égale à la hauteur du titre pour centrer le texte verticalement */
+  color: #fff; /* Couleur du texte en blanc */
+  background: rgba(0, 0, 0, 0.4); /* Fond semi-transparent de couleur noire */
+  text-align: center; /* Centre le texte horizontalement */
+}
+
+.card .back {
+  transform: perspective(600px) rotateY(180deg); /* Applique une perspective et une rotation horizontale de 180 degrés pour la face arrière de la carte (retournement) */
+  background: rgb(3, 35, 54); /* Définit la couleur d'arrière-plan en RVB */
+  padding: 15px; /* Ajoute un espacement intérieur de 15 pixels autour du contenu de la face arrière */
+  color: #ffffff; /* Définit la couleur du texte en blanc */
+  display: flex; /* Utilise un modèle d'affichage flex pour organiser les éléments enfants */
+  flex-direction: column; /* Organise les éléments enfants en colonne */
+  justify-content: space-between; /* Répartit l'espace disponible de manière égale entre les éléments enfants */
+  text-align: center; /* Centre le texte horizontalement */
+  box-shadow: 0 5px 10px #000; /* Ajoute une ombre sous la carte */
+  font-size: 2em; /* Définit la taille de la police à 2 fois la taille de la police de base */
+  font-family: "Times New Roman", Times, serif; /* Définit la famille de police */
+}
+
+.card .back .link {
+  border-top: solid 1px #f3f3f3; /* Ajoute une bordure supérieure solide de 1 pixel de couleur f3f3f3 */
+  height: 50px; /* Définit la hauteur de l'élément .link à 50 pixels */
+  line-height: 50px; /* Hauteur de ligne égale à la hauteur de l'élément .link pour centrer le texte verticalement */
+}
+
+.card .back .link a {
+  color: #f3f3f3; /* Définit la couleur du lien en f3f3f3 */
+}
+
+.card .back h3 {
+  font-size: 30px; /* Définit la taille de la police à 30 pixels */
+  margin-top: 20px; /* Ajoute une marge supérieure de 20 pixels à l'élément h3 */
+  letter-spacing: 2px; /* Ajoute un espacement entre les caractères de 2 pixels */
+}
+
+.card .back p {
+  letter-spacing: 1px; /* Ajoute un espacement entre les caractères de 1 pixel pour les paragraphes à l'intérieur de la face arrière de la carte */
+}
+
+.card:hover .front {
+  transform: perspective(600px) rotateY(180deg); /* Lorsque l'utilisateur survole la carte, effectue une rotation de 180 degrés de la face avant */
+}
+
+.card:hover .back {
+  transform: perspective(600px) rotateY(360deg); /* Lorsque l'utilisateur survole la carte, effectue une rotation complète de 360 degrés de la face arrière, revenant à la face avant */
+}
+
+/*---------------------------------------------------------------------------------------------fin card-------------------------------------------------------------------------*/
+main {
+  margin-top: 5vh;
+}
+/*------------------------------------------------------------------decran daccuil--------------------------------------------------------------------------------------------*/
+#style {
+  position: absolute; /* Position absolue pour l'élément avec l'ID "style" */
+  background-image: url(image\ video/code1.jpg); /* Définit une image d'arrière-plan pour l'élément avec l'ID "style" */
+  top: 0; /* Place l'élément en haut de la fenêtre */
+  left: 0; /* Place l'élément tout à gauche de la fenêtre */
+  width: 100%; /* Définit la largeur de l'élément à 100% de la largeur de la fenêtre */
+  height: 100vh; /* Définit la hauteur de l'élément à 100% de la hauteur de la fenêtre (viewport height, VH) */
+  background-position: center; /* Centre l'image d'arrière-plan horizontalement et verticalement */
+  background-size: cover; /* Redimensionne l'image d'arrière-plan pour couvrir tout l'espace disponible sans déformation */
+  opacity: 0.07; /* Définit l'opacité de l'élément à 0.07 (très transparent) */
+  z-index: 0; /* Définit l'empilement en z-index de l'élément à 0 (derrière les autres éléments) */
+}
+
+/*------------------------------------------------------------------------------bar navigateur------------------------------------------------------------------------------------*/
+nav {
+  z-index: 3; /* Définit l'empilement en z-index de l'élément à 3 (au-dessus des autres éléments) */
+  position: fixed; /* Fixe la position de l'élément sur l'écran, de sorte qu'il reste visible même lorsque l'utilisateur fait défiler la page */
+  width: 100%; /* Définit la largeur de l'élément à 100% de la largeur de la fenêtre */
+  top: 0; /* Place l'élément en haut de la fenêtre, c'est-à-dire au niveau du haut de la fenêtre du navigateur */
+  display: flex; /*La propriété display définit le type d'affichage utilisée pour le rendu d'un élément (de bloc ou en ligne) et la disposition utilisée pour ses éléments fils : grille ou boîtes flexibles.
+
+                   Le type d'affichage donné par display possède deux composantes : le type d'affichage extérieur qui définit comment la boîte participe au flux et le type d'affichage intérieur qui définit l'organisation des éléments enfants.
+  
+                   Certaines valeurs de display sont définies dans des spécifications séparées. Pour plus d'informations, voir la section Spécifications ci-après.*/
+  justify-content: end; /*La propriété CSS justify-content indique la façon dont l'espace doit être réparti entre et autour des éléments selon l'axe principal d'un conteneur flexible ou selon l'axe en ligne lorsque le conteneur est une grille.*/
+  padding-right: 20px; /*La propriété padding-right d'un élément correspond à l'espace nécessaire à la droite d'un élément. La zone de remplissage correspond à l'espace entre le contenu et la bordure. padding-right ne peut pas recevoir de valeurs négatives.*/
+  height: 7vh; /*La propriété height définit la hauteur de la boîte de contenu d'un élément. La boîte de contenu (en-US) est à l'intérieur de la boîte de remplissage (padding) qui est à l'intérieur de la boîte de bordure qui est elle-même à l'intérieur de la boîte de marge de l'élément. Si la propriété box-sizing vaut border-box, cette propriété détermine la hauteur de la boîte de marge.*/
+  background-color: rgb(26, 26, 26); /*couleur de fond d'ecran */
+  border-bottom: 2px solid red; /*La propriété border-bottom-color permet de définir la couleur utilisée pour la bordure basse d'un élément.*/
+}
+nav img {
+  position: absolute; /* Position absolue pour les images à l'intérieur de la balise <nav> */
+  height: 6vh; /* Hauteur des images à 6.5% de la hauteur de la fenêtre (viewport height, VH) */
+  filter: brightness(0) invert(1); /* Applique un filtre d'image pour réduire la luminosité à 0 et inverser les couleurs (crée un effet d'image en noir et blanc inversé) */
+  top: 0.3vh; /* Place les images en haut de leur contenant */
+  left: 2rem; /* Place les images à 2 rem (unité de mesure relative) à partir de la gauche du contenant */
+}
+/*Cela concerne tout les balise html <a> qui se situe dans la balise <nav> */
+nav > a {
+  color: white;
+  padding-top: 2vh;
+  margin: 0px 10px 0px 20px;
+  font-size: 1.6rem; /*La propriété font-size définit la taille de fonte utilisée pour le texte. La modification de cette taille peut entraîner la modification de la taille d'autres éléments car elle est utilisée pour calculer les valeurs des longueurs relatives (type <length>) (par exemple exprimées avec les unités em ou ex).*/
+  font-weight: bold; /*La propriété CSS font-weight permet de définir la graisse utilisée pour le texte. Les niveaux de graisse disponibles dépendent de la police (cf. font-family). Certaines fontes n'existent qu'avec les niveaux de graisses normal et bold.*/
+  position: relative; /*La propriété CSS position définit la façon dont un élément est positionné dans un document. Les propriétés top, right, bottom et left déterminent l'emplacement final de l'élément positionné.*/
+  text-decoration: none; /*La propriété text-decoration est utilisée pour « décorer » le texte en ajoutant une ligne pouvant être positionnée sous, sur ou à travers le texte. C'est une propriété raccourcie qui permet de paramétrer simultanément les propriétés « détaillées » : text-decoration-line, text-decoration-color et text-decoration-style.*/
+  text-transform: uppercase; /*La propriété text-transform définit la façon d'utiliser les lettres capitales pour le texte d'un élément. Cela permet que le texte soit écrit uniquement en majuscules, minuscules ou que chaque mot commence par une capitale. Cela permet également d'améliorer la lisibilité pour les textes avec des annotations Ruby.*/
+  transition-timing-function: cubic-bezier(
+    0.25,
+    0.8,
+    0.25,
+    1
+  ); /*La propriété transition-timing-function décrit la façon dont les valeurs intermédiaires des propriétés CSS affectées par un effet de transition sont calculées. Ceci permet donc de définir une courbe d'accelération, de manière à ce que la vitesse de la transition varie au cours de sa durée.*/
+  transition-duration: 400ms; /*La propriété transition-duration définit le nombre de secondes ou de millisecondes que doit durer une animation. La valeur par défaut, 0s, indique qu'il n'y aura aucune animation.*/
+  transition-property: color; /*La propriété transition-property désigne les noms des propriétés CSS sur lesquelles un effet de transition devrait être appliqué.*/
+  font-family: serif;
+}
+
+/*Lorsque l'on met la souris sur les balises <a> , on change la couleur du texte des balises <a> en*/
+nav > a:focus,
+nav > a:hover {
+  color: #ff0000;
+}
+
+/*
+Lorsque l'on met notre souris sur les balises <a> , l'element after est changé.
+On change le width et la position left de l'element after
+*/
+nav > a:focus:after,
+nav > a:hover:after {
+  width: 100%;
+  left: 0%;
+}
+/*   Cela concerne tout les balise html <a> qui se situe dans la balise <nav> 
+     Le after qant a lui signifie qu'il ajoute un element virtuel , une fausse balise après chaque <a>
+     Donc c'est un element html qui ne figure par dans le fichier html
+*/
+nav > a:after {
+  /* Sélecteur pour les pseudo-éléments ::after des balises <a> enfants directs de l'élément <nav> */
+  content: "";
+  /* Ajoute un contenu vide */
+  pointer-events: none;
+  /* Désactive les événements de pointeur pour cet élément, ce qui permettra de cliquer à travers lui */
+  bottom: -2px;
+  /* Positionne le bas de l'élément 2 pixels au-dessous de sa position normale */
+  left: 50%;
+  /* Positionne la gauche de l'élément au centre de son conteneur parent */
+  position: absolute;
+  /* Positionne l'élément de façon absolue par rapport à son conteneur parent */
+  width: 0%;
+  /* Initialise la largeur de l'élément à 0 */
+  height: 2px;
+  /* Définit la hauteur de l'élément à 2 pixels */
+  background-color: #fff;
+  /* Définit la couleur d'arrière-plan en blanc */
+  transition-timing-function: cubic-bezier(0.25, 0.8, 1, 1);
+  /* Définit la fonction de temporisation pour les transitions (effet d'accélération personnalisé) */
+  transition-duration: 0.8s;
+  /* Définit la durée de la transition à 0.8 seconde */
+  transition-property: width, left;
+  /* Spécifie les propriétés CSS qui seront animées lors de la transition */
+}
+h5 {
+  color: #fff;
+  font-size: 50px;
+  text-align: center;
+}
+/*-------------------------------------------------------------------------------------end navbar------------------------------------------------------------------------------*/
+/*--------------------------------------------------------------------------------rotation Preformation-------------------------------------------------------------------------*/
+#index {
+  /* Sélecteur pour l'élément avec l'ID "index" */
+  background: black;
+  /* Définit la couleur d'arrière-plan en noir */
+  overflow-x: hidden;
+}
+
+#animation_section {
+  /* Sélecteur pour l'élément avec l'ID "animation_section" */
+  height: 100vh;
+  /* Définit la hauteur à 100% de la hauteur de la vue */
+}
+
+video {
+  /* Sélecteur pour tous les éléments vidéo */
+  height: 100vh;
+  /* Définit la hauteur à 100% de la hauteur de la vue */
+  width: 100vw;
+  /* Définit la largeur à 100% de la largeur de la vue */
+  left: 0;
+  /* Place l'élément au bord gauche de son conteneur parent */
+  right: 0;
+  /* Place l'élément au bord droit de son conteneur parent */
+  top: 0;
+  /* Place l'élément au bord supérieur de son conteneur parent */
+  bottom: 0;
+  /* Place l'élément au bord inférieur de son conteneur parent */
+  object-fit: cover;
+  /* Ajuste la taille de l'objet vidéo pour couvrir complètement l'élément */
+  margin-left: 20px;
+  /* Ajoute une marge de 20 pixels à gauche de l'élément */
+  z-index: 2;
+}
+
+#mainTitle {
+  /* Sélecteur pour l'élément avec l'ID "mainTitle" */
+  position: absolute;
+  width: 100%;
+  /* Positionne l'élément de façon absolue par rapport à son conteneur parent */
+  top: 30%;
+  /* Positionne le haut de l'élément à 30% de la hauteur de son conteneur parent */
+  text-align: center;
+  font-size: 3rem;
+  /* Centre le texte horizontalement dans l'élément */
+  color: rgb(255, 255, 255);
+  /* Définit la couleur du texte en rouge foncé */
+  z-index: 2;
+  letter-spacing: 0.3em;
+  font-family: byl;
+}
+
+#mainTitle > h1 {
+  animation: projet 5.5s alternate forwards;
+  /* Applique l'animation "projet" sur l'élément pendant 4 secondes en mode alterné et la conserve à la fin */
+}
+
+#animation {
+  /* Sélecteur pour l'élément avec l'ID "animation" */
+  position: absolute;
+  /* Positionne l'élément de façon absolue par rapport à son conteneur parent */
+  top: 0;
+  /* Positionne le haut de l'élément à 50% de la hauteur de son conteneur parent */
+  left: 0;
+  /* Positionne la gauche de l'élément à 20% de la largeur de son conteneur parent */
+  color: #ffffff;
+  /* Définit la couleur du texte en rouge clair */
+  font-family: byl;
+  /* Définit la police du texte comme "byl" */
+  font-size: 7.5em;
+  /* Définit la taille de la police à 5 fois la taille de la police par défaut */
+  letter-spacing: 0.3em;
+  /* Ajoute un espacement de 0.2 em entre les lettres du texte */
+  z-index: 2;
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+}
+
+#animation span {
+  /* Sélecteur pour les éléments span à l'intérieur de l'élément avec l'ID "animation" */
+  opacity: 0;
+  /* Définit l'opacité à 0 (élément invisible) */
+  display: inline-block;
+  /* Affiche l'élément comme un bloc en ligne */
+  animation: sebastien 1s linear forwards;
+  /* Applique l'animation "sebastien" sur l'élément pendant 1 seconde en mode linéaire et la conserve à la fin */
+}
+
+@keyframes projet {
+  /* Définition d'une animation nommée "projet" */
+  0% {
+    /* Au début de l'animation */
+    opacity: 0;
+    /* L'élément est invisible */
+  }
+  40% {
+    opacity: 0;
+  }
+  100% {
+    /* À la fin de l'animation */
+    opacity: 1;
+    /* L'élément est complètement visible */
+  }
+}
+
+@keyframes sebastien {
+  /* Définition d'une animation nommée "sebastien" */
+  0% {
+    /* Au début de l'animation */
+    opacity: 0;
+    /* L'élément est invisible */
+    transform: rotateY(90deg);
+    /* Applique une rotation de 90 degrés autour de l'axe Y */
+    filter: blur(10px);
+    /* Applique un flou de 10 pixels */
+  }
+  100% {
+    /* À la fin de l'animation */
+    opacity: 1;
+    /* L'élément est complètement visible */
+    transform: rotateY(0deg);
+    /* Rétablit la rotation à 0 degré */
+    filter: blur(0);
+    /* Supprime le flou */
+  }
+}
+#animation span:nth-child(1) {
+  /* Sélecteur pour le premier élément span à l'intérieur de l'élément avec l'ID "animation" */
+  animation-delay: 1s;
+  /* Décale le démarrage de l'animation de 1 seconde après le début */
+}
+
+#animation span:nth-child(2) {
+  /* Sélecteur pour le deuxième élément span à l'intérieur de l'élément avec l'ID "animation" */
+  animation-delay: 1.2s;
+  /* Décale le démarrage de l'animation de 1.2 secondes après le début */
+}
+
+#animation span:nth-child(3) {
+  animation-delay: 1.4s;
+}
+
+#animation span:nth-child(4) {
+  animation-delay: 1.6s;
+}
+
+#animation span:nth-child(5) {
+  animation-delay: 1.8s;
+}
+
+#animation span:nth-child(6) {
+  animation-delay: 2s;
+}
+
+#animation span:nth-child(7) {
+  animation-delay: 2.5s;
+}
+
+#animation span:nth-child(8) {
+  animation-delay: 2.8s;
+}
+
+#animation span:nth-child(9) {
+  animation-delay: 2.9s;
+}
+#animation span:nth-child(10) {
+  animation-delay: 3s;
+}
+
+#animation span:nth-child(11) {
+  animation-delay: 3.5s;
+}
+
+#animation span:nth-child(12) {
+  animation-delay: 3.8s;
+}
+/*---------------------------------------------------------------------------------fin rotation lettre preformation----------------------------------------------------------*/
+
+/*-----------------------------------------------------------------------------footer------------------------------------------------------------------------------------------*/
+/* Définition du style pour la section "footer" */
+footer {
+  /* Position relative pour le contexte de positionnement */
+  position: relative;
+  /* Largeur de 100% de la largeur disponible */
+  width: 100%;
+  /* Fond avec une teinte, une saturation et une luminosité spécifiques */
+  background: hwb(0 1% 99%);
+  /* Opacité de 0.5 (50%) pour le fond */
+  opacity: 0.5;
+  /* Hauteur minimale de 100 pixels pour le pied de page */
+  min-height: 100px;
+  /* Rembourrage de 10 pixels en haut et en bas, 50 pixels à gauche et à droite */
+  padding: 10px 50px;
+  /* Utilisation de flexbox pour le positionnement des éléments internes */
+  display: flex;
+  /* Centrage horizontal des éléments internes */
+  justify-content: center;
+  /* Centrage vertical des éléments internes */
+  align-items: center;
+  /* Alignement des éléments internes en colonne (verticalement) */
+  flex-direction: column;
+}
+
+footer .social_icon,
+footer .menu {
+  position: relative; /* Position relative pour les éléments à l'intérieur de la balise <footer> */
+  display: flex; /* Utilise un modèle d'affichage flex pour organiser les éléments */
+  align-items: center; /* Centre verticalement les éléments enfants */
+  justify-content: center; /* Centre horizontalement les éléments enfants */
+  margin: 10px 0; /* Ajoute une marge de 10 pixels en haut et en bas des éléments */
+  cursor: pointer; /* Change le curseur en une main pointant pour indiquer que les éléments sont cliquables */
+}
+
+footer .social_icon li,
+footer .menu li {
+  list-style: none; /* Supprime les puces de liste pour les éléments <li> */
+  cursor: pointer; /* Change le curseur en une main pointant pour indiquer que les éléments sont cliquables */
+}
+
+footer .social_icon li a {
+  font-size: 2em; /* Définit la taille de la police à 2 fois la taille de la police de base */
+  color: #ffffff; /* Définit la couleur du texte en blanc */
+  margin: 0 10px; /* Ajoute une marge de 0 pixels à gauche et à droite des liens */
+  display: inline-block; /* Affiche les liens en tant que blocs en ligne */
+  transition: 0.5s; /* Ajoute une transition de 0.5 seconde pour des effets animés */
+}
+
+footer .social_icon a:hover {
+  transform: translateY(
+    -10px
+  ); /* Lorsque l'utilisateur survole un lien social, le déplace vers le haut de 10 pixels */
+}
+
+footer .menu li {
+  margin: 0 10px; /* Ajoute une marge de 0 pixels à gauche et à droite des éléments de menu */
+  display: inline-block; /* Affiche les éléments de menu en tant que blocs en ligne */
+  transition: 0.5s; /* Ajoute une transition de 0.5 seconde pour des effets animés */
+  text-decoration: none; /* Supprime la décoration par défaut des liens */
+  opacity: 0.75; /* Définit l'opacité à 0.75 (partiellement transparent) */
+}
+
+footer .menu a {
+  font-size: 2em; /* Définit la taille de la police à 2 fois la taille de la police de base */
+  color: #fdfcfc; /* Définit la couleur du texte en rouge (#ff0000) */
+  transition: 0.5s; /* Ajoute une transition de 0.5 seconde pour des effets animés */
+  font-family: serif;
+}
+
+footer .menu a:hover {
+  opacity: 1; /* Lorsque l'utilisateur survole un élément de menu, l'opacité passe à 1 (complètement opaque) */
+}
+
+footer p {
+  color: #ffffff; /* Définit la couleur du texte en blanc */
+  text-align: center; /* Centre le texte horizontalement */
+  margin-top: 15px; /* Ajoute une marge supérieure de 15 pixels */
+  margin-bottom: 10px; /* Ajoute une marge inférieure de 10 pixels */
+  font-size: 1.1em; /* Définit la taille de la police à 1.1 fois la taille de la police de base */
+}
+
+footer p a {
+  color: #ffffff; /* Définit la couleur du texte des liens dans les paragraphes en blanc */
+}
+
+footer span {
+  font-size: 2.1em; /* Définit la taille de la police à 2.1 fois la taille de la police de base */
+  color: #f3f3f3; /* Définit la couleur du texte en gris (#f3f3f3) */
+  font-family: sign; /* Utilise la police de caractères "sign" */
+}
