@@ -5,7 +5,7 @@
     <link rel="icon" href="image video/logo.png" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=0.75" />
-    <title>interview</title>
+    <title><?=$title?></title>
   </head>
   <body id="interview">
     <nav>

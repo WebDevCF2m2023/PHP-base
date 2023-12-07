@@ -5,11 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=0.75" />
     <link rel="stylesheet" href="css/style5.css" />
     <link rel="icon" href="image video/logo.png" />
-    <title>conclusion</title>
+    <title><?=$title?></title>
   </head>
   <body id="conclusion">
     <nav>
-      <a href="?page=index">Accueil</a>
+      <a href="?page=accueil">Accueil</a>
       <a href="?page=interview">Interview</a>
       <a href="?page=conclusion">Conclusion</a>
       <a href="?page=expo">Expo</a>

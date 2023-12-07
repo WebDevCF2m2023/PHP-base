@@ -3,6 +3,11 @@
 if(isset($_GET['page'])){
     
     switch($_GET['page']){
+        case 'accueil':
+            $title = "accueil";
+            
+            include('../template/accueil.php');
+            break;
         case 'interview':
             $title = "interview";
             
@@ -23,11 +28,10 @@ if(isset($_GET['page'])){
         
                 default:
                 $title = "Erreur 404";
-                include('../templates/page-404.php');
+                include('../template/404.php');
     }
 
 }else{
     $title ="accueil";
-    // on inclut le fichier accueil.php en suivant l'arborescence de fichiers
-    include('accueil.php');
+    include('../template/accueil.php');
 }

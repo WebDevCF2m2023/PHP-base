@@ -4,13 +4,13 @@
      
     <link rel="icon" href="image video/logo.png">
     <link rel="stylesheet" href="css/style.css" />
-    <title>smoke animation</title>
+    <title><?=$title?></title>
     <style type="text/css"></style>
   </head>
   <body id="index">
     <nav>
       <img src="image video/logo.png" alt="">
-      <a href="#">Accueil</a>
+      <a href="?page=accueil">Accueil</a>
       <a href="?page=interview">Interview</a>
       <a href="?page=conclusion">conclusion</a>
       <a href="?page=expo">Expo</a> 

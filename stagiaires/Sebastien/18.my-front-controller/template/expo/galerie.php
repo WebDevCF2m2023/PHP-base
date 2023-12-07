@@ -5,11 +5,11 @@
     <link rel="icon" href="image video/logo.png" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=0.75" />
-    <title>photo galerie</title>
+    <title><?=$title?></title>
   </head>
   <body>
     <nav>
-      <a href="?page=index">Accueil</a>
+      <a href="?page=accueil">Accueil</a>
       <a href="?page=interview">Interview</a>
       <a href="?page=conclusion">Conclusion</a>
       <a href="?page=expo">Expo</a>
