@@ -6,7 +6,7 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
-    <title>Actualités de 18-front-controller</title>
+    <title><?=$title?></title>
     <link href="css/style.css" rel="stylesheet">
 </head>
 <body>
@@ -15,7 +15,7 @@
     </header>
         <?php include 'inc/menu.php'; ?>
     <section>
-        <h2>Actualités</h2>
+        <h2><?=$title?></h2>
         <h3>1. Nouvelle Version Majeure de FrontController 3.0</h3>
         <p>La communauté PHP accueille avec enthousiasme la sortie de la version 3.0 de FrontController, le célèbre framework de contrôleurs frontal. Cette mise à jour apporte des fonctionnalités révolutionnaires, une meilleure gestion des dépendances, et des améliorations significatives des performances. Les développeurs sont invités à mettre à jour leurs projets pour profiter des dernières avancées dans la gestion frontale en PHP.</p>
 
