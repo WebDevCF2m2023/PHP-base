@@ -420,3 +420,11 @@ div.scroll-container img:hover {
     border-color: #00abf0;
     border-style: double;
 }
+
+.erreur{
+    font-size: 60px;
+    font-style: italic;
+    margin: 5%;
+    text-align: center;
+}
+
