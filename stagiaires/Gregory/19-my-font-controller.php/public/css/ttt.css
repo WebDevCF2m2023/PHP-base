@@ -1,0 +1,87 @@
+/* colors
+black : #2b2d42
+grey : #8d99ae
+white : #edf2f4
+red clear : #ef233c
+red dark : #d90429
+*/
+h1 {
+    margin: 1em;
+}
+.grid_ttt {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 8em;
+}
+.line_ttt {
+    width: 468px;
+    height: 150px;
+    background-color: #8d99ae;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+}
+.line_ttt > div {
+    background-color: #8d99ae;
+    border: 3px solid #d90429;
+    width: 150px;
+    height: 150px;
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+.line_ttt > div > div {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    background-size: 100%;
+    transition-duration: 1000ms;
+    transition-property: opacity;
+    /*fast spawn but slown finishing*/
+    transition-timing-function: linear(0 0%, 0.35 0.1%, 1 100%);
+}
+/*cercle*/
+.cercle-img {
+    background-image: url("../img/cercle.webp");
+}
+.cercle > .cercle-img {
+    opacity: 1;
+}
+.void > .cercle-img, .cross > .cercle-img{
+    opacity: 0;
+}
+/*cross*/
+.cross-img {
+    background-image: url("../img/cross.svg");
+}
+.cross > .cross-img {
+    opacity: 1;
+}
+.void > .cross-img, .cercle > .cross-img{
+    opacity: 0;
+}
+.void > .cross-img:hover {
+    opacity: 0.5;
+}
+/*reset button*/
+#button-div {
+    text-align: center;
+}
+#button-div > button {
+    border-width: 0px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 2em;
+    padding: 14px ;
+    width: 4em;
+    color: #2b2d42;
+    background-color: #ef233c;
+}
+#button-div > button:hover {
+    background: linear-gradient(90deg, #ef233c, #d90429);
+}
+img {
+    max-width: 100%;
+}

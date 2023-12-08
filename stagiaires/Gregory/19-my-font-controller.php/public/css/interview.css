@@ -1,0 +1,137 @@
+/* colors
+black : #2b2d42
+grey : #8d99ae
+white : #edf2f4
+red clear : #ef233c
+red dark : #d90429
+*/
+
+#interview {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#interview > h1 {
+    margin-left: 0;
+    margin-right: 0;
+}
+#left_lang, #right_lang {
+    border-width: 1px;
+    border-color: #d90429;
+    width: 60px;
+    height: 60px;
+    font-size: 2em;
+    background-color: #ef233c;
+    color: #2b2d42;
+}
+#left_lang {
+    border-top-left-radius: 30%;
+    border-bottom-left-radius: 30%;
+    margin-left: 10px;
+    margin-right: 0;
+}
+#right_lang {
+    border-top-right-radius: 30%;
+    border-bottom-right-radius: 30%;
+    margin-left: 0;
+    margin-right: 10px;
+}
+#left_lang:hover, #right_lang:hover {
+    background: linear-gradient(90deg, #ef233c, #d90429);
+}
+#interview > .clicked{
+    background-color: #d90429;
+    border-color: #ef233c;
+    border-width: 2px;
+}
+.answer {
+    font-size: 2.5em;
+    font-weight: 600;
+    text-align: end;
+    max-width: 100%;
+    width: 40%;
+    margin-left: 40%;
+    margin-right: 20%;
+    background-color: #8d99ae;
+    color: #2b2d42;
+    border-radius: 50px;
+    padding: 20px;
+}
+#questions h3 {
+    text-align: start;
+    max-width: 100%;
+    width: 40%;
+    margin-left: 20%;
+    margin-right: 40%;
+    margin-top: 32px;
+    margin-bottom: 32px;
+    background-color: #8d99ae;
+    color: #2b2d42;
+    border-radius: 50px;
+    padding: 20px;
+}
+#interviewed > h2 {
+    margin: 0;
+}
+#interviewed {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#next, #previous {
+    margin-left: 10px;
+    margin-right: 10px;
+    border: 0;
+    width: 30px;
+    height: 60px;
+    font-size: 2em;
+    background-color: #ef233c;
+    color: #2b2d42;
+}
+#next:hover, #previous:hover {
+    background: linear-gradient(90deg, #ef233c, #d90429);
+}
+div.interview-link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+a.interview-link {
+    margin: 2em;
+    color: #ef233c;
+    text-align: center;
+    font-size: 2em;
+}
+a.interview-link:hover {
+	color:#d90429;
+}
+#up, #down {
+    text-align: center;
+    border: 0;
+    height: 90px;
+    width: 135px;
+    font-size: 2em;
+    background-color: #2b2d42;
+    position: fixed;
+    right: 50px;
+}
+#up:hover{
+    background-image: url("../img/up_dark.svg");
+    cursor: pointer;
+}
+#down:hover{
+    background-image: url("../img/down_dark.svg");
+    cursor: pointer;
+}
+#down {
+    bottom: 0;
+    background-image: url("../img/down.svg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+#up {
+    bottom: 90px;
+    background-image: url("../img/up.svg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
