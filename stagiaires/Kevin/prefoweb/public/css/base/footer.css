@@ -1,0 +1,97 @@
+footer {
+  position: -webkit-sticky;
+  position: sticky;
+  font-family: "Inter", sans-serif;
+  top: auto;
+  bottom: 0;
+  width: 100vw;
+  height: 35vh;
+  z-index: 1;
+  background-color: var(--footer);
+}
+
+footer li a.selected {
+  color: var(--yellow);
+}
+
+#skyline {
+  position: absolute;
+  bottom: 21%;
+  width: 100vw;
+  text-align: center;
+  z-index: -1;
+  transform: scale(1.2);
+}
+
+footer span {
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--white);
+  letter-spacing: 0.3rem;
+  display: block;
+  text-align: center;
+  padding: 3rem;
+}
+
+#link {
+  position: absolute;
+  right: 6%;
+  margin-top: 3.5%;
+}
+
+footer article {
+  position: relative;
+}
+
+footer h5 {
+  color: red;
+  font-size: 2rem;
+}
+
+footer h5::selection {
+  background-color: var(--yellow);
+}
+
+footer li {
+  list-style-type: none;
+  cursor: url("../../images/cursors/Belgium_Flag_Pointer.png"), pointer;
+}
+
+footer li:hover a {
+  color: var(--yellow);
+}
+
+footer li a {
+  font-size: 1.4rem;
+  text-decoration: none;
+  color: var(--white);
+}
+
+footer p {
+  color: var(--white);
+  font-size: 1.2rem;
+}
+
+#copyright {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 2;
+  text-align: center;
+  padding-bottom: 1rem;
+  padding-top: 1rem;
+  background-color: var(--blackMenuList);
+}
+
+#logo {
+  width: 15%;
+  position: absolute;
+  left: 3%;
+  margin-top: 3.5%;
+}
+
+#logoImage {
+  width: 250px;
+  filter: brightness(0) invert(1);
+}

@@ -1,0 +1,201 @@
+@font-face {
+  font-family: "garamond";
+  src: url("../fonts/garamond.ttf");
+}
+
+header nav {
+  position: fixed;
+  z-index: 3;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: var(--blackMenuList);
+  height: 3.5rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+header nav li {
+  list-style-type: none;
+  display: inline-block;
+  margin: 0 1rem 0 1rem;
+}
+
+header nav li a {
+  text-decoration: none;
+  color: white;
+  font-size: 1.5rem;
+}
+
+header nav li a:visited {
+  color: white;
+}
+
+header nav li a:hover {
+  color: var(--yellow);
+}
+
+header nav li a.selected {
+  color: var(--yellow);
+}
+
+#entreprise {
+  position: relative;
+}
+
+#entreprise:hover #menuEntreprise {
+  display: block;
+}
+
+#entreprise #menuEntreprise:hover {
+  display: block;
+}
+
+#menuEntreprise {
+  display: none;
+  position: absolute;
+  background-color: var(--blackMenuList);
+  padding: 15% 0.5rem 0.5rem 1rem;
+  border-bottom-left-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+  top: 100%;
+}
+
+#menuEntreprise li a {
+  font-size: 1.25rem;
+}
+
+#menuEntreprise li::before {
+  content: "-";
+  position: absolute;
+  color: white;
+  font-weight: bold;
+  font-size: 1.25rem;
+  left: 6%;
+}
+
+/* Main */
+
+main {
+  margin-top: 3.5rem;
+  position: relative;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(0, 0, 0);
+  overflow: hidden;
+  box-shadow: 0 10px 10px #16181b;
+}
+
+main video {
+  position: absolute;
+  top: -18%;
+  right: -6%;
+  bottom: 0;
+  width: 60%;
+}
+
+#timeline {
+  position: relative;
+  z-index: 2;
+}
+
+#timeline h3 {
+  font-size: 2.5rem;
+  color: var(--white);
+  text-align: center;
+  padding-top: 1.5rem;
+  padding-bottom: 1rem;
+  text-shadow: 2px 2px black;
+  font-family: "garamond", sans-serif;
+}
+
+#content {
+  width: 65%;
+  padding-bottom: 1rem;
+}
+
+#timeline img {
+  cursor: url("../images/cursors/Belgium_Flag_Pointer.png"), pointer;
+  margin: 0 1.5% 0 0;
+  width: 30%;
+  transition: transform 120s linear;
+}
+
+#timeline img::selection {
+  background-color: transparent;
+}
+
+#timeline img.notransition {
+  transition: none;
+}
+
+#timeline section {
+  white-space: nowrap;
+  overflow-x: hidden;
+}
+
+#backgroundViewImage {
+  display: none;
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  z-index: 4;
+  top: 0;
+  left: 0;
+  background-color: rgba(15, 15, 15, 0.9);
+}
+
+#viewImage {
+  display: none;
+  position: fixed;
+  width: 60vw;
+  height: 100vh;
+  z-index: 4;
+  top: 0;
+  left: 20vw;
+}
+
+#buttonClose {
+  position: absolute;
+  cursor: url("../images/cursors/Belgium_Flag_Pointer.png"), pointer;
+  top: 2rem;
+  left: 2rem;
+  width: 5rem;
+  height: 5rem;
+  background-image: url(../images/galerie/remove.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+#buttonClose:hover {
+  background-image: url(../images/galerie/remove_hover.png);
+}
+
+#viewImage section {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+#viewImage section img:nth-child(2) {
+  width: 60%;
+}
+
+#viewImage section img:nth-child(1) {
+  cursor: url("../images/cursors/Belgium_Flag_Pointer.png"), pointer;
+  margin-right: 3vw;
+  width: 12%;
+}
+
+#viewImage section img:nth-child(3) {
+  cursor: url("../images/cursors/Belgium_Flag_Pointer.png"), pointer;
+  margin-left: 3vw;
+  width: 12%;
+}
