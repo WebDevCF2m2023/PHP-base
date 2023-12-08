@@ -1,0 +1,193 @@
+ /* Ajout des styles CSS */
+
+        /* Définition de la police personnalisée "Pixeloid Sans" */
+
+        
+        @font-face {
+            font-family: 'Pixeloid Sans';
+            src: url('../Fonts/PixeloidSans.woff2') format('woff2'),
+                 url('../Fonts/PixeloidSans.woff') format('woff'),
+                 url('../Fonts/PixeloidSans.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+            font-display: swap;
+        }
+html{
+    scroll-behavior: smooth;
+}
+        /* Styles pour les liens hypertexte */
+        a:link {
+            color: rgb(128, 0, 87); /* Couleur des liens non visités */
+        }
+        a:visited {
+            color: rgb(255, 106, 0); /* Couleur des liens déjà visités */
+        }
+        a:hover {
+            color: red; /* Couleur des liens au survol */
+        }
+        a:active {
+            color: rgb(68, 0, 255); /* Couleur des liens lorsque cliqués */
+        }b 
+footer > p  >a{
+    background-image: url(../image/PACMAN.gif);
+    background-position: center;
+    background-size: cover;
+}
+h1 {
+    color: yellow; /* Couleur du texte en jaune */
+    text-align: center; /* Alignement du texte au centre de son conteneur */
+    font-size: 70px; /* Taille de la police à 70 pixels */
+    box-shadow: 10px 10px 10px rgba(252, 0, 185, 0.516), -5px -5px 20px rgb(93, 0, 255);
+    /* Ombre portée avec deux parties :
+       - 10px 10px 10px rgba(252, 0, 185, 0.516) : ombre avec décalage horizontal de 10px, décalage vertical de 10px,
+         flou de 10px et couleur avec transparence
+       - -5px -5px 20px rgb(93, 0, 255) : ombre avec décalage horizontal de -5px, décalage vertical de -5px,
+         flou de 20px et couleur solide */
+    text-shadow: 1px 1px 2px orangered; /* Ombre pour le texte avec décalage horizontal de 1px, décalage vertical de 1px, flou de 2px et couleur "orangered" */
+    background-image: url(../image/pacmanlabirinto.gif); /* Image d'arrière-plan */
+    background-position: center; /* Position de l'image d'arrière-plan au centre */
+    background-size: cover; /* Redimensionne l'image d'arrière-plan pour couvrir la totalité de l'élément */
+    background-repeat: no-repeat; /* Empêche la répétition de l'image d'arrière-plan */
+    border-style: groove; /* Style de bordure "groove" */
+    border-radius: 10px 10px 10px 10px; /* Rayon de la bordure pour les coins arrondis */
+}
+body {
+    font-family: 'Pixeloid Sans'; /* Utilisation de la police personnalisée 'Pixeloid Sans' pour le texte du corps */
+    background-image: url("../image/SkyStar.gif"); /* Image d'arrière-plan pour le corps */
+    background-size: cover; /* Redimensionne l'image d'arrière-plan pour couvrir la totalité de l'élément */
+    font-size: 25px; /* Taille de la police à 25 pixels */
+    
+}
+
+h4{
+    color: rgb(108, 209, 250)
+}
+p {
+    color: white; /* Couleur du texte des paragraphes en blanc */
+}
+
+ul {
+    color: aliceblue; /* Couleur du texte des listes à puces (ul) en 'aliceblue' */
+}
+
+ol {
+    color: aliceblue; /* Couleur du texte des listes ordonnées (ol) en 'aliceblue' */
+}
+
+dd {
+    color: aliceblue; /* Couleur du texte des descriptions (dd) en 'aliceblue' */
+}
+
+dt {
+    color: aliceblue; /* Couleur du texte des termes de description (dt) en 'aliceblue' */
+}
+main {
+    width: 50%; /* La largeur du contenu principal est de 50% de la largeur de son conteneur parent */
+    background-color: rgba(67, 67, 67, 0.5); /* Couleur de fond avec transparence pour le contenu principal */
+    border: 1px solid white; /* Bordure de 1 pixel solide en blanc autour du contenu principal */
+    padding: 0 40px 0 40px; /* Ajoute un espacement de 5 pixels à l'intérieur du contenu principal */
+    margin: auto; /* Centre le contenu principal horizontalement en utilisant la marge automatique */
+    text-align: justify;
+}
+
+footer {
+    background-color: rgba(67, 67, 67, 0.5); /* Couleur de fond avec transparence pour le pied de page (footer) */
+    text-align: center; /* Centre le texte dans le pied de page */
+}
+
+.frame {
+    width: 500px; /* Largeur de 500 pixels pour l'élément avec la classe "frame" */
+    height: 500px; /* Hauteur de 500 pixels pour l'élément avec la classe "frame" */
+    background-color: transparent; /* Couleur de fond transparente pour l'élément avec la classe "frame" */
+    margin: auto; /* Centre l'élément horizontalement en utilisant la marge automatique */
+    text-align: center; /* Centre le contenu de l'élément */
+    border: 1px solid transparent; /* Bordure de 1 pixel solide et transparente autour de l'élément */
+    -webkit-box-shadow: 0px 10px 13px -7px black, 5px 5px 15px 5px rgba(0,0,0,0); 
+    /* Ombre portée pour les navigateurs WebKit (anciennes versions de Safari et Chrome) */
+    box-shadow: 0px 10px 13px -7px black, 5px 5px 15px 5px rgba(0,0,0,0);
+    /* Ombre portée standard avec un décalage horizontal de 10px, un décalage vertical de 13px, un flou de 7px en utilisant une couleur noire */
+    background-image: url("https://wpmisc.ites/default/files/wallpaper/abstract/66172/neon-grid-hd-wallpapers-66172-5530351.png");
+    /* Image d'arrière-plan pour l'élément avec la classe "frame" */
+    background-size: cover; /* Redimensionne l'image d'arrière-plan pour couvrir la totalité de l'élément */
+    position: relative; /* Position relative pour permettre l'ajustement de position */
+    top: -5rem; /* Décale l'élément vers le haut de 5 unités relatives par rapport à sa position normale */
+}
+
+
+.frame1 {
+    text-align: center; /* Centre le contenu horizontalement dans l'élément avec la classe "frame1" */
+    margin: auto; /* Centre l'élément horizontalement en utilisant la marge automatique */
+    z-index: 10; /* Spécifie la position de l'élément en 3D, ici "10" signifie qu'il est au-dessus de la plupart des autres éléments */
+    margin-top: 35px; /* Ajoute une marge en haut de 35 pixels */
+}
+
+.button {
+    text-align: middle; /* Il y a une erreur ici, cela devrait être "text-align: center;" pour centrer le texte horizontalement */
+    margin-top: 30px; /* Ajoute une marge en haut de 30 pixels */
+    padding-top: 10px; /* Espacement intérieur en haut de 10 pixels */
+    padding-bottom: 10px; /* Espacement intérieur en bas de 10 pixels */
+    padding-left: 80px; /* Espacement intérieur à gauche de 80 pixels */
+    padding-right: 80px; /* Espacement intérieur à droite de 80 pixels */
+    background-color: transparent; /* Couleur de fond transparente */
+    -webkit-box-shadow: 5px 5px 5px 0px orange, inset 4px 4px 15px 0px orange, 5px 5px 15px 5px rgba(255,139,253,0); 
+    /* Ombre portée pour les navigateurs WebKit (anciennes versions de Safari et Chrome) avec plusieurs parties :
+       - Ombre extérieure avec décalage horizontal de 5px, décalage vertical de 5px, flou de 5px, couleur orange
+       - Ombre intérieure avec décalage horizontal de 4px, décalage vertical de 4px, flou de 15px, couleur orange
+       - Autre ombre extérieure avec décalage horizontal de 5px, décalage vertical de 5px, flou de 15px, couleur avec transparence */
+    box-shadow: 5px 5px 5px 0px orange, inset 4px 4px 15px 0px orange, 5px 5px 15px 5px rgba(255,139,253,0);
+    /* Ombre portée standard avec plusieurs parties similaire à la version WebKit */
+    text-shadow: blue 0px 0px 5px, blue 0px 0px 10px, blue 0px 0px 15px, rgb(13, 113, 255) 0px 0px 20px, rgb(13, 113, 255) 0px 0px 30px, rgb(13, 113, 255) 0px 0px 40px, rgb(13, 113, 255) 0px 0px 50px, rgb(13, 113, 255) 0px 0px 75px;
+    /* Ombre pour le texte avec plusieurs parties, spécifiant la couleur et le flou de l'ombre */
+    border: 3px double rgb(255, 156, 1); /* Bordure de 3 pixels, style "double" en couleur */
+    border-radius: 20px; /* Rayon de la bordure pour les coins arrondis de 20 pixels */
+    color: rgb(181, 214, 255); /* Couleur du texte en RVB */
+    font-family: 'Pixeloid Sans'; /* Utilisation de la police personnalisée 'Pixeloid Sans' pour le texte */
+    font-size: 24px; /* Taille de la police à 24 pixels */
+}
+
+.btn-group {
+    margin-top: 80px; /* Ajoute une marge en haut de 80 pixels pour l'élément avec la classe "btn-group" */
+}
+
+
+button {
+    font-family: 'Pixeloid Sans';
+    border: none;
+    outline: 1px dotted rgb(37, 37, 37);
+    outline-offset: -4px;
+    background: hsl(0deg 0% 75%);
+    box-shadow: inset -1px -1px #292929, inset 1px 1px #fff, inset -2px -2px rgb(158, 158, 158), inset 2px 2px #ffffff;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    padding: 5px 30px;
+    cursor: pointer;
+}
+  
+
+/* star code css pour gsm */
+
+/* Stili di base */
+
+/* Media query per schermi più piccoli (max-width: 600px) */
+@media only screen and (max-width: 600px) {
+    body {
+        font-size: 18px; /* Modifica la dimensione del testo per schermi più piccoli */
+        background-size: cover;
+    background-repeat: no-repeat; /* Impedisci la ripetizione dell'immagine di sfondo */
+    font-size: 25px;
+    }
+
+    main {
+        width: 90%; /* Riduci la larghezza del contenuto principale per schermi più piccoli */
+    }
+
+    /* Aggiungi altre regole specifiche per schermi più piccoli se necessario */
+}
+
+/* Media query per schermi di dimensioni medie (min-width: 601px e max-width: 1024px) */
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+    /* Regole specifiche per schermi di dimensioni medie */
+}
+
+/* Altre media queries se necessario */
