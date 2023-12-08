@@ -1,0 +1,241 @@
+* {
+  cursor: url("../images/cursors/France_Flag_Cursor.png"), auto;
+}
+
+a,
+button,
+#menu,
+#menu > span,
+a img {
+  cursor: url("../images/cursors/France_Flag_Pointer.png"), pointer;
+}
+
+#content .showingDiv h2 {
+  cursor: url("../images/cursors/France_Flag_Pointer.png"), pointer;
+}
+
+/* HEADER */
+header nav {
+  position: fixed;
+  z-index: 3;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: var(--blackMenuList);
+  height: 3.5rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+header nav li {
+  list-style-type: none;
+  display: inline-block;
+  margin: 0 1rem 0 1rem;
+}
+
+header nav li a {
+  text-decoration: none;
+  color: white;
+  font-size: 1.5rem;
+}
+
+header nav li a:visited {
+  color: white;
+}
+
+header nav li a:hover {
+  color: var(--blue);
+}
+
+header nav li a.selected {
+  color: var(--red);
+}
+
+#entreprise {
+  position: relative;
+}
+
+#entreprise:hover #menuEntreprise {
+  display: block;
+}
+
+#entreprise #menuEntreprise:hover {
+  display: block;
+}
+
+#menuEntreprise {
+  display: none;
+  position: absolute;
+  background-color: var(--blackMenuList);
+  padding: 15% 0.5rem 0.5rem 1rem;
+  border-bottom-left-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+  top: 100%;
+}
+
+#menuEntreprise li a {
+  font-size: 1.25rem;
+}
+
+#menuEntreprise li::before {
+  content: "-";
+  position: absolute;
+  color: white;
+  font-weight: bold;
+  font-size: 1.25rem;
+  left: 6%;
+}
+/* MAIN */
+
+main {
+  position: relative;
+  z-index: 2;
+  margin-top: 3rem;
+  background: linear-gradient(
+    120deg,
+    rgba(0, 0, 255, 1) 0%,
+    rgba(200, 200, 200, 1) 45%,
+    rgba(200, 200, 200, 1) 55%,
+    rgba(255, 0, 0, 1) 100%
+  );
+  font-family: "Inter", sans-serif;
+}
+
+h1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(242, 103, 65);
+  color: white;
+  font-size: 3rem;
+  text-align: center;
+  height: 12.5vh;
+}
+
+@keyframes animationLeftToRight {
+  0% {
+    opacity: 0.1;
+    transform: translateX(-250px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes animationRightToLeft {
+  0% {
+    opacity: 0.1;
+    transform: translateX(250px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+#demarche {
+  background-color: rgb(46, 110, 171);
+}
+
+#demarche p {
+  padding: 1rem;
+  font-size: 1.5rem;
+  color: white;
+  animation: animationLeftToRight 1s linear;
+}
+
+#demarche img {
+  animation: animationLeftToRight 1s linear;
+}
+
+#description {
+  background-color: rgb(255, 223, 93);
+}
+
+#description section {
+  display: none;
+  margin-right: 1rem;
+}
+
+#description img {
+  display: none;
+}
+
+#description h2 {
+  padding-left: 1rem;
+  font-size: 2rem;
+}
+
+#description p {
+  padding: 1rem;
+  font-size: 1.5rem;
+}
+
+#demarche,
+#description {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+#demarche p,
+#description p {
+  vertical-align: top;
+}
+
+#demarche img,
+#description img {
+  width: 50%;
+}
+
+/* FOOTER */
+
+@keyframes cloud {
+  0% {
+    left: -110vw;
+  }
+
+  100% {
+    left: 150vw;
+  }
+}
+
+#cloud img {
+  position: absolute;
+  z-index: 1;
+  bottom: 30%;
+  transform: scaleY(-1);
+  opacity: 0.5;
+  left: -110vw;
+  animation: cloud 30s linear infinite;
+}
+
+article section {
+  z-index: 2;
+}
+
+footer article {
+  position: relative;
+}
+
+footer *::selection {
+  background-color: var(--blue);
+}
+
+footer h5::selection {
+  background-color: var(--red);
+}
+
+footer li:hover a {
+  color: var(--blue);
+}
+
+footer li a.selected {
+  color: var(--red);
+}
