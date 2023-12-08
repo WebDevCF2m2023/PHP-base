@@ -12,17 +12,17 @@ if(isset($_GET['section'])){
             $title = "Conclusion";
             include('../templates/Conclusion.php');
             break;
-        case 'Interveiws':
+        case 'Interview':
             $title = "Interview";
             include('../templates/Interview.php');
             break;
-        case 'Enterprise':
+        case 'Entreprise':
             $title = "Expo";
             include('../templates/Entreprise.php');
             break;
         case 'Galerie':
             $title = "Galerie";
-            include('..public/templates/Galerie.php');
+            include('../templates/Galerie.php');
             break;
         # Si aucune des sections n'est valide, on affiche la page 404
         default:
@@ -31,7 +31,7 @@ if(isset($_GET['section'])){
     }
 // si le paramètre "section" n'est pas défini dans l'URL
 }else{
-    $title ="index";
+    $title ="Index";
     // on inclut le fichier accueil.php en suivant l'arborescence de fichiers
     include('../templates/Index.php');
 }

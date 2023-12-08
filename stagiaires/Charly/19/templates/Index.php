@@ -9,21 +9,7 @@
     <title>Accueil</title>
   </head>
   <body>
-    <script>
-      function startanim() {
-        document.getElementById("Accueil").style.animationName = "Accueil";
-        document.getElementById("PInterview").style.animationName =
-          "PInterview";
-        document.getElementById("Entreprise").style.animationName =
-          "Entreprise";
-        document.getElementById("Exposition").style.animationName =
-          "Exposition";
-        document.getElementById("Conclusion").style.animationName =
-          "Conclusion";
-        var liens = document.querySelectorAll(".fingerprint p a");
-        liens.forEach((item) => (item.style.animationName = "opacite"));
-      }
-    </script>
+
     <nav class="navbar">
       <div class="logo">WebDev2023</div>
       <ul class="nav">
@@ -117,9 +103,5 @@
         </p>
       </div>
     </div>
-    <footer>
-      <h1></h1>
-      <p></p>
-    </footer>
   </body>
 </html>

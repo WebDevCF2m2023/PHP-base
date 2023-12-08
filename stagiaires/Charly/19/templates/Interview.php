@@ -13,7 +13,7 @@
         <div class="logo">WebDev2023</div>
         <ul class="nav">
           <li><a href="?section=Index">Accueil</a></li>
-          <li><a href="?section=entreprise">Entreprise</a></li>
+          <li><a href="?section=Entreprise">Entreprise</a></li>
           <li><a href="?section=Galerie">Galerie</a></li>
           <li><a href="?section=Conclusion">Conclusion</a></li>
         </ul>
