@@ -8,21 +8,18 @@
     <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
     <title><?=$title?></title>
     <link href="css/style.css" rel="stylesheet">
-    <style>
-        body {
-            background: url("image/giphy (2).gif");
-            background-size: cover;
-        }
-        h1 {
-            color: white;
-            text-align: center;
-            font-size: 18rem;
-            margin-top: 45vh;
-        }
-    </style>
 </head>
 <body>
-    
-    
+    <header>
+    <h1>18-front-controller</h1>
+    </header>
+        <?php include 'inc/menu.php'; ?>
+    <section>
+        <h2><?=$title?></h2>
+        <p>La page demandée n'existe pas.</p>
+    </section>
+    <div id="nuage"></div>
+<?php include 'inc/footer.php'; ?>
+<script  src="js/script.js"></script>
 </body>
 </html>

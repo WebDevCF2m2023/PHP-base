@@ -12,8 +12,8 @@
     <h4><a href="index.php">Erhan ERDAS</a></h4>
   </div>
   <nav class="navbar-sections">
-      <a href="./">Accueil</a>
-      <a href="interview">Interview</a>
+      <a href="./?page=accueil">Accueil</a>
+      <a href="#">Interview</a>
       <a href="./?page=rapport">Conclusion</a>
       <a href="./?page=expo">Exposition</a>
       <a href="./?page=galerie">Photos</a>
