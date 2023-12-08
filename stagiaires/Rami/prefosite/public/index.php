@@ -12,6 +12,11 @@ if(isset($_GET['section'])){
             # on inclut le fichier contact.php en suivant l'arborescence de fichiers
             include('../template/index2ARCADE/presentation.php');
             break;
+        case 'accueil':
+            $title = "accueil";
+            # on inclut le fichier contact.php en suivant l'arborescence de fichiers
+            include('../template/accueil.php');
+            break;
             case 'galerie':
                 $title = "galerie";
                 # on inclut le fichier contact.php en suivant l'arborescence de fichiers
@@ -25,7 +30,7 @@ if(isset($_GET['section'])){
                     case 'interview':
                         $title = "interview";
                         # on inclut le fichier contact.php en suivant l'arborescence de fichiers
-                        include('../template/index2ARCADE/interview.php');
+                        include('../template/entreprise/interview.php');
                         break;
                         case 'presentationEntreprise':
                             $title = "presentation";
@@ -37,7 +42,7 @@ if(isset($_GET['section'])){
             $title = "conclusion et orientation";
             include('../template/index2ARCADE/conclusion&orientation.php');
             break;
-        case 'presentationInterview':
+        case 'presentationFR':
             $title = "présentation";
             include('../template/index2ARCADE/presentation.php');
             break;

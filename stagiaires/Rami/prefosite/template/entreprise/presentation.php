@@ -28,7 +28,7 @@
     <h1>BONJOUR ALEXIS</h1>
     <main>
 
-        <a href="interview.html"><button type="button">
+        <a href="?section=interview"><button type="button">
                 RETOUR AU INTERVIEW
             </button></a>
         <br>
@@ -37,7 +37,7 @@
                 <li>Prénom: Alexis</li>
                 <li>Age: 25 </li>
                 <li>Pays: France</li>
-                <li>Entreprise: <a href="entreprise.html" target="_blank"> Capgimini</a></li>
+                <li>Entreprise: <a href="?section=entreprise" target="_blank"> Capgimini</a></li>
                 <li>Métier: Consulant testing</li>
             </ul>
         </div>

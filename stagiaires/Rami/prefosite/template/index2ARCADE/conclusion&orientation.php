@@ -15,7 +15,7 @@ h4{
     <audio src="SOUND/alexinterviewMARIO2.mp3" loop autoplay></audio>
     <h1>Conclusion & Orientation</h1>
     <main>
-       <a href="entreprise/interview.html"><button type="button">RETOUR AU INTERVIEW</button></a>
+       <a href="?section=interview"><button type="button">RETOUR AU INTERVIEW</button></a>
        <h4>Ma conclusion:</h4>
              <p><strong>
                 Cette entrevue a simplement renforcé mes convictions antérieures concernant un métier exigeant discipline, 

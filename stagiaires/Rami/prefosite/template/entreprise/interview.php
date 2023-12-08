@@ -38,10 +38,10 @@
     <h1>INTERVIEW</h1>
     <main>
       <div id="NexC"><a href="#"><button type="button" onclick="playLoserAudioAndRedirect('?section=accueil')">RETOUR AU MENU</button></a>
-        <a href="index2ARCADE/conclusion&orientation.html"><button type="button">NEXT: CONCLUSION</button></a></div>
+        <a href="?section=conclusion"><button type="button">NEXT: CONCLUSION</button></a></div>
             
 
-        <p><strong>Voici quelques question que j'ai pu faire à <a href="?section=presentationInterview">Alexis: </a></strong></p>
+        <p><strong>Voici quelques question que j'ai pu faire à <a href="?section=presentationEntreprise">Alexis: </a></strong></p>
 
         <h4>1. Quels langages de programmation connaissez-vous et dans quels projets les avez-vous utilisés ?</h4>
 

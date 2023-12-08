@@ -189,7 +189,7 @@
   </style>
   <audio src="SOUND/Dragon Ball GT Theme 8 Bit Remix (1).mp3" loop autoplay></audio>
   <h1>GALERIE PHOTOS</h1> <!-- Intitulé principal de la page -->
-  <a href="index.html">
+  <a href="?section=accueil">
     <button id="buttonGalerie" type="button">RETOUR AU MENU
     </button></a>
 

@@ -32,7 +32,7 @@
     </audio>
     <main> <!-- Élément principal du contenu de la page -->
 
-        <a href="index.html">
+        <a href="?section=accueil">
                 <button type="button">RETOUR AU MENU
                 </button></a> <!-- Paragraphe avec un lien pour revenir au menu -->
             <img src="image/ryu-ken.gif" alt="StreetFighter" width="70">

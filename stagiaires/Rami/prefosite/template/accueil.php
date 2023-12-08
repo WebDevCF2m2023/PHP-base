@@ -49,19 +49,19 @@
   <div class="cherry"><img src="image/cherry.png" alt="cherry"></div>
   <div class="frame"> <!-- Autre conteneur avec la classe CSS "frame" -->
     <div class="btn-group"> <!-- Groupe de boutons  -->
-      <a href="?section=presentationEntreprise"> <!-- Lien hypertexte vers une page "presentation.html" -->
+      <a href="?section=presentationFR"> <!-- Lien hypertexte vers une page "presentation.html" -->
         <button class="button" type="button">
           <h2>START</h2>
         </button> <!-- Bouton "START" avec la classe CSS "button" -->
       </a>
-      <a href="exposition/galerie.html">
+      <a href="?section=galerie">
         <!-- Lien hypertexte vers une page "galerie.html" dans un dossier "exposition" -->
         <button class="button" type="button">
           <h2>GALERIE PHOTO</h2>
         </button> <!-- Bouton "GALLERIE PHOTO" -->
       </a>
       <div class="ghostwhite2"><img src="image/ghost.png" alt="ghostwhite"></div>
-     <a href="entreprise/interview.html">
+     <a href="?section=interview">
       <button class="button" type="button">
         <h2>INTERVIEW</h2>
       </button> <!-- Bouton "INTERVIEW" -->
