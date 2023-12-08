@@ -1,27 +1,28 @@
-@font-face{  
+@font-face {
     font-family: 'martyric';
-    src: url('../font/martyric-webfont.woff') format('woff'),
-         url('../font/martyric-webfont.woff2') format('woff2');
+    src: url('../CSS/martyric-webfont.woff') format('woff'),
+         url('../CSS/martyric-webfont.woff2') format('woff2');
     font-weight: normal;
     font-style: normal;
 }
 
-@font-face{  
+@font-face {
     font-family: 'adidas';
-    src: url('../font/texgyreadventor-bold-webfont.woff2') format('woff2'),
-         url('../font/texgyreadventor-bold-webfont.woff') format('woff');
+    src: url('CSS/font/texgyreadventor-bold-webfont.woff2') format('woff2'),
+         url('CSS/font/texgyreadventor-bold-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'roboto';
-    src: url('../font/roboto/robotocondensed-regular-webfont.woff2') format('woff2'),
-         url('../font/roboto/robotocondensed-regular-webfont.woff') format('woff');
+    src: url('../CSS/roboto/robotocondensed-regular-webfont.woff2') format('woff2'),
+         url('../CSS/roboto/robotocondensed-regular-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 
 }
+
 
 body{
      /* règle le background de la page */

@@ -4,22 +4,26 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Interview</title>
-    <link rel="stylesheet" href="../CSS/interviewcss.css" />
+    <link rel="stylesheet" href="../Public/CSS/interviewcss.css" />
   </head>
   <body>
-    <div class="home">
-      <a class="button" href="../index.html"><strong>Accueil</strong></a>
-      <a class="button" href="../HTML/interview.html"
+  <div class="home">
+      <a class="button" href="./"
+        ><strong>Accueil</strong></a
+      >
+      <a class="button" href="?section=interview"
         ><strong>Interview</strong></a
       >
-      <a class="button" href="../HTML/entreprise.html"
+      <a class="button" href="?section=entreprise"
         ><strong>Entreprise</strong></a
       >
-      <a class="button" href="../HTML/Conclusion.html"
+      <a class="button" href="?section=Conclusion"
         ><strong>Conclusion</strong></a
       >
-      <a class="button2" href="../HTML/expo.html"><strong>EXPO</strong></a>
-      <a class="button3" href="../HTML/Galerie.html"
+      <a class="button2" href="?section=Expo"
+        ><strong>EXPO</strong></a
+      >
+      <a class="button3" href="?section=Galerie"
         ><strong>GALERIE</strong></a
       >
     </div>
@@ -248,7 +252,7 @@
       <br />
       <p class="galerietom">
         Galerie d'un travail personnel de
-        <a class="lien" href="../HTML/galerietommy.html">Tommy Roughol</a>
+        <a class="lien" href="?section=galerietommy">Tommy Roughol</a>
       </p>
     </div>
     <footer class="footer">© 2024 Capsule Corp. Tous droits réservés.</footer>

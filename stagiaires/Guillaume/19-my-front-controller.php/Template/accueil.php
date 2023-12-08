@@ -3,11 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Moodboard</title>
-    <link rel="stylesheet" href="../Public/CSS/moodboard.css" />
+    <title>Accueil</title>
+    <link rel="stylesheet" href="../Public/CSS/cssindex.css" />
   </head>
   <body>
-  <div class="home">
+    <div class="home">
       <a class="button" href="./"
         ><strong>Accueil</strong></a
       >
@@ -27,8 +27,6 @@
         ><strong>GALERIE</strong></a
       >
     </div>
-
-    <img class="moodboard" src="../Public/CSS/moodboard conv 1.jpeg"></img>
 
     <footer class="footer">© 2024 Capsule Corp. Tous droits réservés.</footer>
   </body>

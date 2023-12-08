@@ -3,26 +3,30 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../CSS/expo.css" />
+    <link rel="stylesheet" href="../Public/CSS/expo.css" />
     <title>Exposition</title>
   </head>
 
-  <nav class="home">
-    <a class="button" href="../index.html"><strong>Accueil</strong></a>
-    <a class="button" href="../HTML/interview.html"
-      ><strong>Interview</strong></a
-    >
-    <a class="button" href="../HTML/entreprise.html"
-      ><strong>Entreprise</strong></a
-    >
-    <a class="button" href="../HTML/Conclusion.html"
-      ><strong>Conclusion</strong></a
-    >
-    <a class="button2" href="../HTML/expo.html"><strong>EXPO</strong></a>
-    <a class="button3" href="../HTML/Galerie.html"><strong>GALERIE</strong></a>
-  </nav>
-
-  <body>
+  <div class="home">
+      <a class="button" href="./"
+        ><strong>Accueil</strong></a
+      >
+      <a class="button" href="?section=interview"
+        ><strong>Interview</strong></a
+      >
+      <a class="button" href="?section=entreprise"
+        ><strong>Entreprise</strong></a
+      >
+      <a class="button" href="?section=Conclusion"
+        ><strong>Conclusion</strong></a
+      >
+      <a class="button2" href="?section=Expo"
+        ><strong>EXPO</strong></a
+      >
+      <a class="button3" href="?section=Galerie"
+        ><strong>GALERIE</strong></a
+      >
+    </div>
     <p class="site">
       Sujet inspiré par la visite du
       <a class="lien" target="_blank" href="http://www.nam-ip.be/"
@@ -147,11 +151,11 @@
       <p class="nom">Guillaume Baillieux</p>
       <p class="lienversion1">
         Lien vers la 1ere vesion de
-        <a class="lien" href="../HTML/expo1erversion.html">l'exposition</a>
+        <a class="lien" href="?section=Expo1erversion">l'exposition</a>
       </p>
       <p class="lienversion1">
         Lien vers le
-        <a class="lien" href="../HTML/moodboard.html">moodboard</a>
+        <a class="lien" href="?section=Moodboard">moodboard</a>
       </p>
     </main>
 
@@ -167,7 +171,7 @@
       </p>
 
       <audio controls autoplay>
-        <source src="../sound/perfect.mp3" type="audio/mpeg" />
+        <source src="sound/perfect.mp3" type="audio/mpeg" />
       </audio>
     </div>
     <footer class="footer2">© 2024 Capsule Corp. Tous droits réservés.</footer>
