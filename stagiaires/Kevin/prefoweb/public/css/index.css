@@ -1,0 +1,306 @@
+header {
+  position: relative;
+  z-index: 2;
+  height: 100vh;
+  overflow: hidden;
+}
+
+#mainTitle {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  z-index: 1;
+}
+
+#mainTitle > h1 {
+  text-shadow: 3px 2px black;
+  text-transform: uppercase;
+  background-color: transparent;
+  text-align: center;
+  color: white;
+  font-size: 5.5rem;
+}
+
+#menu {
+  position: relative;
+  display: inline-block;
+  width: 2.8rem;
+  height: 2.5rem;
+  margin: 1rem;
+  border-radius: 10px;
+  background-color: var(--black);
+  border: 1px solid black;
+  padding-left: 10px;
+  padding-right: 10px;
+  z-index: 2;
+  transition: all 0.3s linear;
+}
+
+#menu:hover {
+  background-color: var(--blackHover);
+  border: 1px solid var(--red);
+  border-radius: 12px;
+}
+
+#menu > span {
+  display: block;
+  height: 2px;
+  background-color: var(--white);
+  margin: 8px 0 8px 0;
+  border-radius: 5px;
+}
+
+#menuList {
+  display: none;
+  border-right: 1px solid var(--red);
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  background-color: var(--blackMenuList);
+  z-index: 2;
+  width: 20vw;
+  animation: menuList 0.6s linear;
+  transition: all 0.6s linear;
+}
+
+@keyframes menuList {
+  0% {
+    width: 1vw;
+  }
+
+  100% {
+    width: 20vw;
+  }
+}
+
+#menuList nav {
+  display: none;
+  padding-top: 3rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  animation: menuListNav 0.5s linear;
+}
+
+@keyframes menuListNav {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+#menuList li {
+  list-style-type: none;
+  margin: 2rem 0 2rem 0;
+  padding: 1rem;
+  cursor: url("../images/cursors/Belgium_Flag_Pointer.png"), pointer;
+}
+
+#menuList li:hover {
+  background-color: var(--yellow);
+  border-radius: 1rem;
+}
+
+#menuList li:active {
+  background-color: var(--yellowHover);
+  border-radius: 1rem;
+}
+
+#menuList li:hover,
+#menuList li:hover > a {
+  color: var(--black);
+}
+
+#menuList li,
+#menuList li a {
+  font-size: 1.6rem;
+  color: var(--white);
+}
+
+#menuList a {
+  text-decoration: none;
+}
+
+@keyframes arrow3 {
+  0% {
+    transform: translateX(0);
+  }
+  20% {
+    transform: translateX(-50px);
+  }
+  30% {
+    transform: translateX(-35px);
+  }
+  40% {
+    transform: translateX(-50px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes arrow2 {
+  0% {
+    transform: translateX(40px);
+  }
+  20% {
+    transform: translateX(-15px);
+  }
+  30% {
+    transform: translateX(5px);
+  }
+  40% {
+    transform: translateX(-15px);
+  }
+  100% {
+    transform: translateX(40px);
+  }
+}
+
+@keyframes arrow1 {
+  0% {
+    transform: translateX(80px);
+  }
+  20% {
+    transform: translateX(20px);
+  }
+  30% {
+    transform: translateX(45px);
+  }
+  40% {
+    transform: translateX(20px);
+  }
+  100% {
+    transform: translateX(80px);
+  }
+}
+
+#arrowIndiquation img:nth-child(1) {
+  transform: translateX(80px);
+  animation: arrow1 2s linear infinite;
+}
+
+#arrowIndiquation img:nth-child(2) {
+  transform: translateX(40px);
+  animation: arrow2 2s linear infinite;
+}
+
+#arrowIndiquation img:nth-child(3) {
+  animation: arrow3 2s linear infinite;
+}
+
+#arrowIndiquation {
+  position: absolute;
+  z-index: 2;
+  bottom: 10.5%;
+  left: 47.5%;
+  transform: translateX(-25px) rotate(-90deg);
+  white-space: wrap;
+}
+
+#arrowIndiquation img {
+  width: 50px;
+  height: 50px;
+}
+
+#arrowIndiquation img:hover {
+  cursor: url("../images/cursors/Belgium_Flag_Pointer.png"), pointer;
+}
+
+#flag {
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+  width: 100%;
+  height: 100vh;
+}
+
+#entreprise:hover {
+  padding-bottom: 0;
+}
+#entreprise:hover #menuEntreprise {
+  display: block;
+}
+
+#menuEntreprise li {
+  padding-left: 1rem;
+  margin: 0;
+}
+
+#menuEntreprise li:nth-child(1) {
+  margin-top: 1rem;
+}
+
+#menuEntreprise {
+  display: none;
+}
+
+/*----------MAIN INDEX----------*/
+#index {
+  background: linear-gradient(
+    130deg,
+    rgba(19, 19, 19, 1) 30%,
+    rgba(240, 219, 24, 1) 60%,
+    rgba(255, 64, 41, 1) 80%
+  );
+}
+
+.showingDiv > div {
+  background: linear-gradient(
+    140deg,
+    rgba(19, 19, 19, 1) 0%,
+    rgba(220, 220, 220, 1) 15%,
+    rgba(220, 220, 220, 1) 85%,
+    rgba(255, 64, 41, 1) 100%
+  );
+}
+
+#atonium {
+  position: absolute;
+  left: -250px;
+  bottom: -250px;
+  z-index: -2;
+}
+
+#atonium img {
+  transform: rotate(25deg);
+}
+
+#mannekenpis {
+  position: absolute;
+  right: -30px;
+  bottom: -10px;
+  z-index: -2;
+}
+
+#mannekenpis img {
+  width: 250px;
+}
+
+#cloud img {
+  position: absolute;
+  z-index: -1;
+  bottom: 0;
+  left: -110vw;
+  animation: cloud 22s linear infinite;
+}
+
+@keyframes cloud {
+  0% {
+    left: -110vw;
+  }
+
+  100% {
+    left: 150vw;
+  }
+}

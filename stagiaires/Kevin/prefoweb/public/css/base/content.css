@@ -1,0 +1,96 @@
+main {
+  position: relative;
+  z-index: 2;
+  padding-top: 2rem;
+  padding-bottom: 1rem;
+  background-color: var(--white);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 2px solid var(--yellow);
+  box-shadow: 0 10px 10px #16181b;
+  overflow: hidden;
+}
+
+.showingDiv h2 {
+  position: relative;
+  color: var(--black);
+  font-size: 1.6rem;
+  background-color: var(--yellow);
+  padding: 0.5rem 0 0.5rem 1rem;
+  border-bottom: 1px solid red;
+  cursor: url("../../images/cursors/Belgium_Flag_Pointer.png"), pointer;
+}
+
+.showingDiv {
+  margin-bottom: 1rem;
+  overflow: hidden;
+  transition: max-height 0.6s ease-in-out;
+}
+
+.showingDiv h2:hover {
+  color: white;
+  background: linear-gradient(
+    130deg,
+    rgba(19, 19, 19, 1) 5%,
+    rgba(240, 219, 24, 1) 60%,
+    rgba(255, 64, 41, 1) 85%
+  );
+}
+
+.showingDiv div {
+  display: inline-block;
+  width: 100%;
+  font-size: 1.1rem;
+  padding: 2rem 1rem 2rem 1rem;
+  background-color: rgb(253, 253, 253, 0.9);
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+#content p {
+  font-family: "Inter", sans-serif;
+  font-size: 1.3rem;
+  text-align: justify;
+}
+
+#content {
+  width: 65%;
+}
+
+#contentTitle {
+  text-align: center;
+  color: white;
+}
+
+#contentTitle h2:hover {
+  border-radius: 1rem;
+  background-color: transparent;
+}
+
+#contentTitle h2 {
+  font-size: 2rem;
+  text-align: center;
+}
+
+#contentTitle img {
+  height: 3rem;
+  margin-bottom: 1rem;
+}
+
+#content .showingDiv .arrow {
+  position: absolute;
+  background-color: transparent;
+  padding: 0.5rem;
+  padding: 0;
+  width: 25px;
+  height: 25px;
+  overflow: hidden;
+  right: 25px;
+  top: 12px;
+}
+
+#content .showingDiv .arrow img {
+  transition: transform 0.5s linear;
+  transform: rotate(90deg);
+}
