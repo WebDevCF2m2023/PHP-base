@@ -1,0 +1,192 @@
+
+@font-face {
+    font-family: 'martyric';
+    src: url('martyric-webfont.woff') format('woff'),
+         url('martyric-webfont.woff2') format('woff2')
+    
+}
+
+@font-face {
+    font-family: 'adidas';
+    src: url('texgyreadventor-bold-webfont.woff2') format('woff2'),
+         url('texgyreadventor-bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+h1 {
+    font-family: 'martyric';
+    width: 70%;
+    height: 50%;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    background-image: url(https://w0.peakpx.com/wallpaper/71/441/HD-wallpaper-red-pixel-texture-red-background-stylish-art-squares-abstract-texture.jpg);
+    border: 3px solid black;
+    padding: 2px;
+    color: gold;
+    -webkit-text-stroke: 0.1px;
+    -webkit-text-stroke-color: rgb(58, 87, 248);
+    border-radius: 10px;
+    font-size: 60px;
+}
+
+li ul li {
+    font-variant: small-caps; 
+    
+}
+
+ h2 {
+    font-family: 'martyric';
+    width: 50%;
+    height: 50%;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    background-image: url(https://w0.peakpx.com/wallpaper/71/441/HD-wallpaper-red-pixel-texture-red-background-stylish-art-squares-abstract-texture.jpg);
+    border: 3px solid black;
+    -webkit-text-stroke: 0.1px;
+    -webkit-text-stroke-color: rgb(58, 87, 248);
+    color: gold;
+    border-radius: 10px;
+    font-size: 40px;
+ }
+  
+  div{
+    width: 60%;
+    height: 50%;
+    background-image: url(https://w0.peakpx.com/wallpaper/71/441/HD-wallpaper-red-pixel-texture-red-background-stylish-art-squares-abstract-texture.jpg);
+    background-size: cover;
+    border: 3px solid black;
+    text-align: center;
+    padding: 10px;
+    font-family: 'adidas';
+    border-radius: 10px;
+}
+main{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+body {
+    background-image: url(https://i.pinimg.com/originals/0f/0b/af/0f0baff0a66c270b41dc221f52ee4474.png);
+    background-size:cover;
+}
+
+h3 {
+    text-align: center;
+    font-family: 'martyric';
+    color: rgba(238, 255, 0, 0.973);
+    -webkit-text-stroke: 0.1px;
+    -webkit-text-stroke-color: rgb(58, 87, 248);
+    font-size: 40px;
+
+}
+
+.fin {
+    width: 60%;
+    height: 50%;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    background-image: url(https://w0.peakpx.com/wallpaper/71/441/HD-wallpaper-red-pixel-texture-red-background-stylish-art-squares-abstract-texture.jpg);
+    border: 3px solid black;
+    padding: 10px;
+    font-family: 'adidas';
+    border-radius: 10px;
+}
+.conclusion {
+    width: 60%;
+    height: 50%;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    background-image: url(https://w0.peakpx.com/wallpaper/71/441/HD-wallpaper-red-pixel-texture-red-background-stylish-art-squares-abstract-texture.jpg);
+    border: 3px solid black;
+    padding: 10px;
+    font-family: 'adidas';
+    border-radius: 10px;
+}
+
+header {
+    width: 60%;
+    height: 50%;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    background-image: url(https://w0.peakpx.com/wallpaper/71/441/HD-wallpaper-red-pixel-texture-red-background-stylish-art-squares-abstract-texture.jpg);
+    border: 3px solid black;
+    padding: 10px;
+    font-family: 'adidas';
+    border-radius: 10px;
+}
+
+
+
+.site {
+    width: 60%;
+    height: 50%;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    background-image: url(https://w0.peakpx.com/wallpaper/71/441/HD-wallpaper-red-pixel-texture-red-background-stylish-art-squares-abstract-texture.jpg);
+    border: 3px solid black;
+    font-family: 'adidas';
+    border-radius: 10px;
+    
+}
+
+.nom {
+    width: 60%;
+    height: 50%;
+    text-align: center;
+    font-family:'martyric';
+    -webkit-text-stroke: 0.4px;
+    -webkit-text-stroke-color: rgb(58, 87, 248);
+    color: gold;
+    border-radius: 10px;
+    font-size: xx-large;
+}
+
+.button{
+    background-color: rgba(159, 51, 51, 0.585);
+    border: none;
+    color: rgb(156, 174, 246);
+    padding: 8px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    margin: 4px 3px;
+    border-radius: 4rem;
+    font-family: 'adidas';
+    
+}
+
+
+.button2 {
+    
+    color: rgb(156, 174, 246);
+    padding: 0;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    margin: 4px 4px;
+    border-radius: 4rem;
+    font-family: 'martyric';
+    -webkit-text-stroke: 0.1px;
+    -webkit-text-stroke-color: rgb(58, 87, 248);
+    color: gold;
+}
+
+.button3 {
+    
+    color: rgb(156, 174, 246);
+    padding: 0;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    margin: 4px 3px;
+    border-radius: 4rem;
+    font-family: 'martyric';
+    -webkit-text-stroke: 0.1px;
+    -webkit-text-stroke-color: rgb(58, 87, 248);
+    color: gold;
+}

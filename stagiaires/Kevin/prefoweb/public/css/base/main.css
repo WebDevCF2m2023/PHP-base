@@ -1,0 +1,40 @@
+@import url("https://fonts.googleapis.com/css?family=Inter:300,400,500,600,700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  cursor: url("../../images/cursors/Belgium_Flag_Cursor.png"), auto;
+}
+
+:root {
+  --yellow: rgb(240, 219, 24);
+  --yellowHover: rgb(255, 242, 124);
+  --black: rgb(44, 43, 43);
+  --blackHover: rgb(66, 66, 66);
+  --blackMenuList: rgb(14, 18, 26);
+  --red: rgb(255, 64, 41);
+  --white: #ffffff;
+  --footer: rgb(33, 37, 41);
+  --blue: rgb(24, 59, 214);
+}
+
+a,
+button,
+#menu,
+#menu > span,
+a img {
+  cursor: url("../../images/cursors/Belgium_Flag_Pointer.png"), pointer;
+}
+
+nav {
+  font-family: "Inter", sans-serif;
+}
+
+.ionicon {
+  fill: white;
+}
+
+body {
+  overflow-x: hidden;
+}

@@ -1,0 +1,137 @@
+:root {
+  --php: rgb(120, 124, 180);
+  --csharp: rgb(150, 77, 145);
+  --crm: rgb(33, 154, 235);
+}
+
+@keyframes opacityAnimation {
+  0% {
+    opacity: 0.1;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+#organigramme {
+  font-family: "Inter", sans-serif;
+  position: relative;
+  height: 60vh;
+  width: 100vw;
+  background: linear-gradient(
+    130deg,
+    rgb(255, 255, 255) 0%,
+    rgba(85, 240, 240, 1) 25%,
+    rgba(240, 240, 240, 1) 40%,
+    rgba(240, 185, 240, 1) 50%,
+    rgba(240, 240, 240, 1) 60%,
+    rgba(240, 240, 85, 1) 75%,
+    rgba(255, 255, 255, 1) 100%
+  );
+}
+
+#organigramme h2 {
+  display: none;
+  text-align: center;
+  font-size: 2.5rem;
+  padding-top: 1rem;
+  text-transform: uppercase;
+  text-decoration: underline;
+  animation: opacityAnimation 1.2s linear;
+}
+
+#organigramme div {
+  display: none;
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-weight: bold;
+  font-size: 1rem;
+  width: 8vw;
+  height: 5vh;
+  transform: translateX(-4vw);
+  border-radius: 0.5rem;
+  animation: opacityAnimation 1.2s linear;
+}
+
+#organigramme #centre {
+  top: 15%;
+  left: 50%;
+  font-size: 1.5rem;
+  background-color: var(--red);
+}
+
+#organigramme #secteur {
+  top: 27.5%;
+  left: 50%;
+  font-size: 1.3rem;
+  background-color: rgb(240, 105, 27);
+}
+
+#organigramme #poleCRM,
+#organigramme #chefPoleCRM,
+#chefProjetCRM,
+#employeeCRM {
+  top: 40%;
+  left: 40%;
+  font-size: 1.1rem;
+  background-color: var(--crm);
+}
+
+#organigramme #polePHP,
+#organigramme #chefPolePHP,
+#chefProjetPHP,
+#employeePHP {
+  top: 40%;
+  left: 50%;
+  font-size: 1.2rem;
+  background-color: var(--php);
+}
+
+#organigramme #poleDOTNET,
+#organigramme #chefPoleDOTNET,
+#chefProjetDOTNET,
+#employeeDOTNET {
+  top: 40%;
+  left: 60%;
+  font-size: 1.2rem;
+  background-color: var(--csharp);
+}
+
+#organigramme #chefPoleCRM {
+  top: 55%;
+}
+
+#organigramme #chefPolePHP {
+  top: 55%;
+}
+
+#organigramme #chefPoleDOTNET {
+  top: 55%;
+}
+
+#chefProjetCRM {
+  top: 70%;
+}
+
+#chefProjetPHP {
+  top: 70%;
+}
+
+#chefProjetDOTNET {
+  top: 70%;
+}
+
+#employeeCRM {
+  top: 85%;
+}
+
+#employeePHP {
+  top: 85%;
+}
+
+#employeeDOTNET {
+  top: 85%;
+}

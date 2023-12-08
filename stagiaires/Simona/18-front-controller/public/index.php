@@ -1,6 +1,7 @@
 <?php
 /*
- * Front Controller
+ * Front Controller.
+ * Il sert de routeur, router, routing il "redirige"
  */
 
 // si le paramètre "section" est défini dans l'URL

@@ -1,0 +1,216 @@
+/*--------------------------------------------------------------------------------------gallery----------------------------------------------------------------------------*/
+body {
+  height: 100vh; /* Définit la hauteur du corps (élément <body>) à 100% de la hauteur de la fenêtre (viewport height, VH) */
+  width: 100vw; /* Définit la largeur du corps à 100% de la largeur de la fenêtre (viewport width, VW) */
+  background-color: black; /* Définit la couleur d'arrière-plan du corps en noir */
+  margin: 0rem; /* Réinitialise les marges du corps à zéro, bien que "0rem" soit équivalent à simplement "0" */
+  overflow: hidden; /* Masque tout contenu dépassant des dimensions du corps, empêchant ainsi le défilement de la page */
+}
+
+/*----------------------------------------------------------------------------------navbar-----------------------------------------------------------------------------------------------*/
+nav {
+  z-index: 3; /* Définit l'empilement en z-index de l'élément à 3 (au-dessus des autres éléments) */
+  position: fixed; /* Fixe la position de l'élément sur l'écran, de sorte qu'il reste visible même lorsque l'utilisateur fait défiler la page */
+  width: 100%; /* Définit la largeur de l'élément à 100% de la largeur de la fenêtre */
+  top: 0; /* Place l'élément en haut de la fenêtre, c'est-à-dire au niveau du haut de la fenêtre du navigateur */
+  display: flex; /*La propriété display définit le type d'affichage utilisée pour le rendu d'un élément (de bloc ou en ligne) et la disposition utilisée pour ses éléments fils : grille ou boîtes flexibles.
+  
+                     Le type d'affichage donné par display possède deux composantes : le type d'affichage extérieur qui définit comment la boîte participe au flux et le type d'affichage intérieur qui définit l'organisation des éléments enfants.
+    
+                     Certaines valeurs de display sont définies dans des spécifications séparées. Pour plus d'informations, voir la section Spécifications ci-après.*/
+  justify-content: end; /*La propriété CSS justify-content indique la façon dont l'espace doit être réparti entre et autour des éléments selon l'axe principal d'un conteneur flexible ou selon l'axe en ligne lorsque le conteneur est une grille.*/
+  height: 7vh; /*La propriété height définit la hauteur de la boîte de contenu d'un élément. La boîte de contenu (en-US) est à l'intérieur de la boîte de remplissage (padding) qui est à l'intérieur de la boîte de bordure qui est elle-même à l'intérieur de la boîte de marge de l'élément. Si la propriété box-sizing vaut border-box, cette propriété détermine la hauteur de la boîte de marge.*/
+  background-color: rgb(26, 26, 26); /*couleur de fond d'ecran */
+  border-bottom: 2px solid red; /*La propriété border-bottom-color permet de définir la couleur utilisée pour la bordure basse d'un élément.*/
+}
+/*Cela concerne tout les balise html <a> qui se situe dans la balise <nav> */
+
+/*Permet de mettre un margin right plus élevé pour la dernière balise a de la nav*/
+nav > a:nth-last-child(1) {
+  margin-right: 65px;
+}
+
+nav > a {
+  color: white;
+  padding-top: 2vh;
+  margin: 0px 10px 0px 20px;
+  font-size: 1.6rem; /*La propriété font-size définit la taille de fonte utilisée pour le texte. La modification de cette taille peut entraîner la modification de la taille d'autres éléments car elle est utilisée pour calculer les valeurs des longueurs relatives (type <length>) (par exemple exprimées avec les unités em ou ex).*/
+  font-weight: bold; /*La propriété CSS font-weight permet de définir la graisse utilisée pour le texte. Les niveaux de graisse disponibles dépendent de la police (cf. font-family). Certaines fontes n'existent qu'avec les niveaux de graisses normal et bold.*/
+  position: relative; /*La propriété CSS position définit la façon dont un élément est positionné dans un document. Les propriétés top, right, bottom et left déterminent l'emplacement final de l'élément positionné.*/
+  text-decoration: none; /*La propriété text-decoration est utilisée pour « décorer » le texte en ajoutant une ligne pouvant être positionnée sous, sur ou à travers le texte. C'est une propriété raccourcie qui permet de paramétrer simultanément les propriétés « détaillées » : text-decoration-line, text-decoration-color et text-decoration-style.*/
+  text-transform: uppercase; /*La propriété text-transform définit la façon d'utiliser les lettres capitales pour le texte d'un élément. Cela permet que le texte soit écrit uniquement en majuscules, minuscules ou que chaque mot commence par une capitale. Cela permet également d'améliorer la lisibilité pour les textes avec des annotations Ruby.*/
+  transition-timing-function: cubic-bezier(
+    0.25,
+    0.8,
+    0.25,
+    1
+  ); /*La propriété transition-timing-function décrit la façon dont les valeurs intermédiaires des propriétés CSS affectées par un effet de transition sont calculées. Ceci permet donc de définir une courbe d'accelération, de manière à ce que la vitesse de la transition varie au cours de sa durée.*/
+  transition-duration: 400ms; /*La propriété transition-duration définit le nombre de secondes ou de millisecondes que doit durer une animation. La valeur par défaut, 0s, indique qu'il n'y aura aucune animation.*/
+  transition-property: color; /*La propriété transition-property désigne les noms des propriétés CSS sur lesquelles un effet de transition devrait être appliqué.*/
+  font-family: serif;
+}
+
+/*Lorsque l'on met la souris sur les balises <a> , on change la couleur du texte des balises <a> en*/
+nav > a:focus,
+nav > a:hover {
+  color: #ff0000;
+}
+
+/*
+  Lorsque l'on met notre souris sur les balises <a> , l'element after est changé.
+  On change le width et la position left de l'element after
+  */
+nav > a:focus:after,
+nav > a:hover:after {
+  width: 100%;
+  left: 0%;
+}
+/*   Cela concerne tout les balise html <a> qui se situe dans la balise <nav> 
+       Le after qant a lui signifie qu'il ajoute un element virtuel , une fausse balise après chaque <a>
+       Donc c'est un element html qui ne figure par dans le fichier html
+  */
+nav > a:after {
+  /* Sélecteur pour les pseudo-éléments ::after des balises <a> enfants directs de l'élément <nav> */
+  content: "";
+  /* Ajoute un contenu vide */
+  pointer-events: none;
+  /* Désactive les événements de pointeur pour cet élément, ce qui permettra de cliquer à travers lui */
+  bottom: -2px;
+  /* Positionne le bas de l'élément 2 pixels au-dessous de sa position normale */
+  left: 50%;
+  /* Positionne la gauche de l'élément au centre de son conteneur parent */
+  position: absolute;
+  /* Positionne l'élément de façon absolue par rapport à son conteneur parent */
+  width: 0%;
+  /* Initialise la largeur de l'élément à 0 */
+  height: 2px;
+  /* Définit la hauteur de l'élément à 2 pixels */
+  background-color: #fff;
+  /* Définit la couleur d'arrière-plan en blanc */
+  transition-timing-function: cubic-bezier(0.25, 0.8, 1, 1);
+  /* Définit la fonction de temporisation pour les transitions (effet d'accélération personnalisé) */
+  transition-duration: 0.8s;
+  /* Définit la durée de la transition à 0.8 seconde */
+  transition-property: width, left;
+  /* Spécifie les propriétés CSS qui seront animées lors de la transition */
+  /*--------------------------------------------------------------------------fin navbar------------------------------------------------------------------------------------------------------*/
+}
+h5 {
+  color: #fff; /* Définit la couleur du texte en blanc */
+  font-size: 50px; /* Définit la taille de la police à 50 pixels */
+  text-align: center; /* Centre le texte horizontalement */
+}
+#video-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; /* Met la vidéo en arrière-plan */
+  overflow: hidden;
+}
+
+#video-container video {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+#image-track {
+  display: flex; /* Utilise un modèle d'affichage flex pour organiser les éléments enfants */
+  gap: 4vmin; /* Ajoute un espacement de 4vh (unité de mesure relative à la hauteur de la fenêtre) entre les éléments enfants */
+  position: absolute; /* Position absolue pour l'élément avec l'ID "image-track" */
+  left: 50%; /* Place l'élément horizontalement au centre de son contenant */
+  top: 50%; /* Place l'élément verticalement au centre de son contenant */
+  transform: translate(
+    0%,
+    -50%
+  ); /* Déplace l'élément de 50% vers le haut pour le centrer parfaitement verticalement */
+  user-select: none; /* Empêche la sélection du contenu de l'élément (évite la mise en surbrillance des images) */
+}
+
+#image-track > .image {
+  width: 55vmin; /* Définit la largeur des éléments avec la classe "image" à 45vmin */
+  height: 70vmin; /* Définit la hauteur des éléments avec la classe "image" à 56vmin */
+  object-fit: cover; /* Redimensionne les images pour couvrir tout l'espace disponible sans déformation */
+  object-position: 100% center; /* Positionne l'image à 100% à droite et au centre */
+  border-radius: 25px;
+}
+
+/* Styles pour les liens YouTube */
+
+body.menu-toggled > .meta-link > span {
+  color: rgb(
+    30,
+    30,
+    30
+  ); /* Change la couleur du texte des liens lorsque la classe "menu-toggled" est présente sur le corps */
+}
+
+#source-link {
+  bottom: 60px; /* Place l'élément avec l'ID "source-link" à 60 pixels en bas */
+}
+
+#source-link > i {
+  color: rgb(
+    94,
+    106,
+    210
+  ); /* Définit la couleur de l'icône avec l'ID "source-link" */
+}
+
+#yt-link > i {
+  color: rgb(
+    239,
+    83,
+    80
+  ); /* Définit la couleur de l'icône avec l'ID "yt-link" */
+}
+
+.meta-link {
+  align-items: center; /* Centre les éléments enfants verticalement */
+  backdrop-filter: blur(
+    3px
+  ); /* Applique un flou à l'arrière-plan de l'élément (effet de flou) */
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.05
+  ); /* Définit la couleur d'arrière-plan avec une faible opacité */
+  border: 1px solid rgba(255, 255, 255, 0.1); /* Ajoute une bordure légère avec une faible opacité */
+  border-radius: 6px; /* Arrondit les coins de l'élément avec un rayon de 6 pixels */
+  bottom: 10px; /* Place l'élément à 10 pixels en bas */
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1); /* Ajoute une ombre légère à l'élément */
+  cursor: pointer; /* Change le curseur en une main pointant pour indiquer que l'élément est cliquable */
+  display: inline-flex; /* Affiche l'élément en tant que bloc en ligne */
+  gap: 5px; /* Ajoute un espacement entre les éléments enfants de 5 pixels */
+  left: 10px; /* Place l'élément à 10 pixels à gauche */
+  padding: 10px 20px; /* Ajoute un espacement intérieur de 10 pixels en haut et en bas, et de 20 pixels à gauche et à droite */
+  position: fixed; /* Fixe la position de l'élément sur l'écran */
+  text-decoration: none; /* Supprime la décoration par défaut des liens */
+  transition: background-color 400ms, border-color 400ms; /* Ajoute une transition pour la couleur d'arrière-plan et la bordure */
+  z-index: 10000; /* Définit l'empilement en z-index de l'élément à 10000 (au-dessus de la plupart des autres éléments) */
+}
+
+.meta-link:hover {
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.1
+  ); /* Lorsque l'utilisateur survole l'élément, change la couleur d'arrière-plan avec une opacité réduite */
+  border: 1px solid rgba(255, 255, 255, 0.2); /* Lorsque l'utilisateur survole l'élément, change la bordure avec une opacité réduite */
+}
+
+.meta-link > i,
+.meta-link > span {
+  height: 20px; /* Définit la hauteur des éléments enfants à 20 pixels */
+  line-height: 20px; /* Définit la hauteur de ligne des éléments enfants à 20 pixels */
+}
+
+.meta-link > span {
+  color: white; /* Définit la couleur du texte en blanc */
+  font-family: "Rubik", sans-serif; /* Utilise la police de caractères "Rubik" ou une police sans empattement générique si "Rubik" n'est pas disponible */
+  font-weight: 500; /* Définit le poids de la police à 500 (moyen) */
+}
