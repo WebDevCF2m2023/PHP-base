@@ -706,7 +706,7 @@
           <h5>Link</h5>
           <ul>
             <li><a href="?page=accueil">Accueil</a></li>
-            <li><a href="rapport.html">Rapport</a></li>
+            <li><a href="?page=rapport">Rapport</a></li>
             <li><a href="#" class="selected">Interview</a></li>
             <li><a href="?page=galerie">Galerie</a></li>
             <li>

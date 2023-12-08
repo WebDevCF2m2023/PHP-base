@@ -436,7 +436,7 @@
         <section id="link">
           <h5>Link</h5>
           <ul>
-            <li><a href="?page=accueil" class="selected">Accueil</a></li>
+            <li><a href="#" class="selected">Accueil</a></li>
             <li><a href="?page=rapport">Rapport</a></li>
             <li><a href="?page=interview">Interview</a></li>
             <li><a href="?page=galerie">Galerie</a></li>
