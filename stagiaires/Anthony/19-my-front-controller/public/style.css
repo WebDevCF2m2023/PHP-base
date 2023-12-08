@@ -1,0 +1,582 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Lato&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz@1,6..96&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Tilt+Neon&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Bayon&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Lalezar&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital@1&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Kurale&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Marcellus&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Assistant&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Bubblegum+Sans&display=swap');
+
+
+
+
+* {
+    box-sizing: border-box;
+}
+
+/*body index.html*/
+body {
+    margin: 0;
+    padding: 0;
+}
+
+/*barre de naviguation*/
+nav {
+    width: 100%;
+    background: linear-gradient(90deg, hsla(237, 20%, 19%, 1) 32%, hsla(296, 24%, 12%, 1) 74%);
+    padding: 1px;
+    margin: 0px;
+}
+
+header {
+    margin: 0px;
+}
+
+/*Sous menu  en dessous d'entreprise(interview,rapport) etc */
+.sousMenu a {
+
+    text-align: left;
+    line-height: 2px;
+    font-size: 16px;
+    padding: 0px;
+    margin: 0px;
+    color: #ffff;
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: bold;
+}
+
+/*enlever puce devant les listes*/
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+/*Centrer la nav au centre*/
+header nav {
+    text-align: center;
+    margin: 0px;
+}
+
+/*Barre de naviguation*/
+header li {
+    display: inline;
+    margin-right: 40px;
+    position: relative;
+    margin-left: 0px;
+
+}
+
+/* cible le ul imbriqué dans un ul*/
+header ul ul {
+    display: none;/*Permet de cacher les ul imbriqués (sous-menu)*/
+    position: absolute;/*Permet de le positionner par rapport a son parent qui a une position relative*/
+    top: 100%;/*Permet de positionner les ul imnriqués juste en dessous de l'élèment parent*/
+    left: 0;/*Place les ul imbriqués tout à gauche de leur élèments parents(les premiers ul accueil etc)*/
+    width: 85px;
+    border-radius: 3px;
+    height: 80px;
+      
+}
+/*cible les li à l'intérieur d'un ul aussi à l'intérieur d'un header (accueil, entreprise etc)*/
+header ul li {
+    display: inline-block;/*Permet d'afficher les li les uns à côté des autres*/
+    margin: 0 50px;
+    position: relative;
+}
+/*Cible l'ul juste après un li */
+li:hover>ul {
+    display: block;/*Au survol, les sous-menus apparaissent grâce au display block(display:none les avaient cachés)*/
+    text-align: left;
+    position: absolute;
+    top: 100%;/*Permet de positionner les sous listes juste en dessous de leur élèment parents*/
+    left: 0;
+    background: linear-gradient(90deg, rgba(39, 40, 58, 0.707) 32%, rgba(37, 23, 38, 0.707) 74%);
+
+}
+/*Représente les liens à l'intérieur des listes à puces*/
+ul a {
+    text-decoration: none;/*Supprime le soulignement par défaut des liens*/
+    color: #ffff;
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: bold;
+    font-size: 17px;
+    font-style: italic;
+}
+/*Cible les li qui sont situés dans une sous liste ul qui est à l'intérieur d'un li qui se trouvent à l'intérieur d'un header*/
+header ul li ul li {
+    display: block;/*Affiche les sous-menus les uns en dessous des autres*/
+    margin: 0;
+    padding-top: 15px;
+    text-align: center;
+}
+
+
+#pageAccueil #introduction {
+    display: inline-block;
+}
+
+/*Projet preformation sur la page d'accueil*/
+#Introduction {
+    font-size: 90px;
+    text-align: center;
+    padding: 100px;
+    font-family: 'Bubblegum Sans', sans-serif;
+    color: #ffff;
+}
+
+/*Fond index.html*/
+#fondNoir {
+    background-image: url(images/neon.jpg);
+    background-repeat: no-repeat;/*Permet que l'image ne se répète pas à l'infini*/
+    background-position: center;/*Permet de positionner l'image*/
+    background-size: 100%;
+    
+}
+
+
+
+/*Footer de la page d'accueil*/
+footer {
+    color: white;
+    text-align: center;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+
+/*Représente les questions de l'interview*/
+.questions summary {
+    text-align: center;
+    padding: 20px;
+    margin: 20px;
+    color: rgb(255, 255, 255);
+
+}
+
+/*Div qui ont la classe questions de la page interview*/
+.questions {
+
+    border-radius: 20px;
+    width: 330px;
+    margin: 20px auto;
+    background-color: rgba(0, 0, 0, 0.3);
+    text-align: center;
+    height: auto;
+    flex-wrap: nowrap;/*Empeche le texte de continuer sur la ligne suivante si il n'y a pas assez d'espace*/
+    font-family: 'Lato', sans-serif;
+    font-size: 15px;
+   
+}
+
+/*Cible les élèments p(paragraphes) qui sont à l'intérieur des div avec la classe questions*/
+.questions p {
+    color: white;
+    max-height: 300px;/*Fixe la hauteur maximal à 300px*/
+    overflow-y: auto;/*Cela ajoute une barre de défilement vertical si le contenu dépasse la hauteur de 300px*/
+    text-align: center;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 16px;
+    padding: 20px 20px;
+    line-height: 20px;
+
+}
+
+/* Cible la barre de défilement chrome avec le  préfixe webkit */
+::-webkit-scrollbar {
+    width: 12px;/*Determine la largeur de la barre de défilement*/
+
+}
+
+/* Permet de modifier la couleur d'arrière plan'de la barre de défilement  */
+::-webkit-scrollbar-track {
+    background-color: rgba(0, 0, 0, 0.3);
+
+}
+
+/* Couleur du curseur de la barre de défilement */
+::-webkit-scrollbar-thumb {
+    background: #000000;
+
+}
+
+/*Permet d'espacer les divs avec la classe questions et rose des divs de la classe questions et bleu*/
+.questions.rose  {
+    margin-bottom: 50px;
+    border-radius: 10px;
+    }
+   
+/*Permet d'espacer les divs avec la classe questions et bleu des divs de la classe questions et rose*/
+.questions.bleu {
+    margin-bottom: 50px;
+    border-radius: 10px;
+}
+
+/*Effet néon bleu au survol pour les elements avec la classe questions et bleu*/
+.questions.bleu details:hover {
+    box-shadow: 0 0 10px #2f7eac, 0 0 20px #2f7eac, 0 0 30px #2f7eac, 0 0 40px #2f7eac, 0 0 50px #2f7eac;
+}
+
+
+/*Transition pour l'effet au survol rose et ajout d'une bordure transparente*/
+.questions.rose details {
+    border: 2px solid transparent;
+    transition: box-shadow 0.3s;/*Permet d'ajouter une transition de 3secondes de la boxshadow*/
+}
+/*Transition pour l'effet au survol bleu et ajout d'une bordure transparente*/
+.questions.bleu details{
+     border: 2px solid transparent;
+    transition: box-shadow 0.3s;
+}
+
+/*Effet néon rose au survol pour les elements avec la classe questions et rose*/
+.questions.rose details:hover {
+    box-shadow: 0 0 10px #9c296a, 0 0 20px #9c296a, 0 0 30px #9c296a, 0 0 40px #9c296a, 0 0 50px #9c296a;
+}
+
+/*Marqueur devant les questions interview*/
+.questions details summary::marker {
+    color: #ffff;
+
+}
+/*Représente la div qui contient l'image d'agnes dans la page interview*/
+#photoAgnes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+/*Image dans la div photoAgnes*/
+#photoAgnes img {
+    width: 300px;
+    height: 300px;
+    border-radius: 60px;
+    
+    margin-left: 120px;
+    margin-top: 50px;
+    margin-right: 20px;
+    box-shadow: 0 0 10px #9c296a,
+        0 0 20px #2f7eac,
+        0 0 30px #9c296a,
+        0 0 40px #2f7eac,
+        0 0 50px #9c296a;
+       
+        transition: box-shadow 0.3s;
+      
+   
+}
+
+/*Représente les paragraphes qui se trouvent dans la div photoAgnes*/
+#photoAgnes p {
+    color: #ffffff;
+    text-align: center;
+    font-size: 16px;
+    
+    margin: 20px 20px;
+    font-family: 'Josefin Sans', sans-serif;
+   
+}
+
+/*Fond interview*/
+#fondInterview {
+    background-color: #2d253a;
+    margin: 0;
+    padding: 0;
+
+}
+
+/*Body page rapport*/
+#pageRapport {
+    background-color: #2d253a;
+    margin: 0;
+    padding: 0;
+}
+/*Tous les titres de la page rapport.html*/
+#presentationEntreprise h2, #organigramme h1,#coordonnéesEntreprise h2 {
+    color: #ffff;
+    text-align: center;
+    padding-top: 20px;
+    font-style: italic;
+    font-family: 'Bubblegum Sans', sans-serif;
+margin-top: 35px;
+    font-size: 25px;
+    letter-spacing: 1px;
+}
+/*Tous les paragraphes de la section présentation entreprise rapport.html*/
+#presentationEntreprise p {
+    color: #ffffff;
+    text-align: justify;
+    padding-top: 20px;
+    font-size: 13px;
+    font-family: 'Josefin Sans', sans-serif;
+    margin: 20px;
+    margin-left: 130px;
+    margin-right: 130px;
+}
+/*Lien présent dans la section présentation entreprise de la page rapport*/
+#presentationEntreprise a {
+    text-decoration: none;
+    color: #FAEBD7;
+    border: 1px solid transparent;
+
+}
+/*Au survol du lien de la section présentation entreprise, effet néon bleu*/
+#presentationEntreprise a:hover {
+    /*Effet d'ombres avec plusieurs couches*/
+    box-shadow: 0 0 10px #2f7eac,/*Première couche qui un décalage horizontal et vertical de 0px, un flou de 10px et une couleur d'ombre*/
+        0 0 20px #2f7eac,/*Deuxieme couche avec un flou de 20px(donc plus flou que la première couche*/
+        0 0 30px #2f7eac,/*3eme couche avec un flou encore plus flou que la couche précédente*/
+        0 0 40px #2f7eac,
+        0 0 50px #2f7eac;
+}
+
+
+/*Image organigramme*/
+#organigramme img {
+   
+    margin-left: 275px;
+   
+   
+}
+/*Barre de séparation animé*/
+hr {
+    position: relative;
+     /* Supprimer la bordure par défaut */
+    border: none;
+     /* Hauteur de la ligne */ 
+    height: 2px;
+    /* Fond transparent */
+    background: transparent;
+   
+}
+/* s'applique à un pseudo-élément avant l'élément <hr>, ce qui permet d'ajouter du contenu et des styles supplémentaires à cet élément.*/
+hr::before {
+    content: "";
+    /*Cela positionne le pseudo-élément de manière absolue par rapport à son premier parent qui a une position relative*/
+    position: absolute;
+    /*Cela place le coin supérieur gauche du pseudo-élément au coin supérieur gauche de son parent*/
+    top: 0;
+    left: 0;
+    width:50%;
+    height: 100%;
+    background: linear-gradient(270deg, hsla(326, 58%, 39%, 1) 18%, hsla(202, 57%, 43%, 1) 79%);
+    animation: borderAnimation 2s linear infinite;
+    
+}
+
+@keyframes borderAnimation {
+    /*0% représente le début de l'animation*/
+    0% {
+        left: -100%; /* l'élément est déplacé vers la gauche, en dehors de sa position d'origine, à 100% de la largeur de son conteneur.*/
+    }
+/*Représente la fin de l'animation*/
+    100% {
+        left: 100%; /*l'élément est déplacé complètement vers la droite, à 100% de la largeur de son conteneur. */
+    }
+}
+
+iframe{
+    margin-left: 350px;
+    margin-right: 100px;
+   
+}
+/*Paragraphe de la section coordonnéesEntreprise page rapport*/
+#coordonnéesEntreprise p{
+   color: #FAEBD7;
+   font-family: 'Josefin Sans', sans-serif;
+   font-size: 15px;
+   text-align: center;
+}
+
+/*Page texte*/
+
+/*Body de la page texte*/
+#pageTexte{
+    background-color: #2d253a;
+}
+
+/*Titre du texte*/
+#texteFrancais h1{
+color: #ffffff;
+text-align: center;
+font-family: 'Bubblegum Sans', sans-serif;
+padding-top: 40px;
+}
+/*Paragraphe de la section texteFrancais page texte*/
+#texteFrancais p{
+    color: #ffffff;
+    margin-left: 140px;
+    margin-right: 140px;
+    padding-top: 30px;
+    text-align: justify;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 15px;
+
+}
+/*Représente le début du titre de la page texte (Découvrir le passé,inspirer le futur) qui est mis en bleu*/
+#texteFrancais h1 #texteBleu{
+    text-shadow: 0 0 10px #2f7eac,
+        0 0 20px #2f7eac,
+        0 0 30px #2f7eac,
+        0 0 40px #2f7eac,
+        0 0 50px #2f7eac;
+      
+}
+/*Représente la fin du titre de la page texte (les femmes pionnières de l'informatique) qui est mis en rose*/
+#texteFrancais h1 #texteRose{
+    text-shadow: 0 0 10px #9c296a,
+        0 0 20px #9c296a,
+        0 0 30px #9c296a,
+        0 0 40px #9c296a,
+        0 0 50px #9c296a; 
+}
+
+/*Représente le L en début de phrase de la page texte mis en bleu*/
+#texteFrancais p #L{
+    font-size: 25px;
+    text-shadow: 0 0 10px #9c296a,
+        0 0 20px #9c296a,
+        0 0 30px #9c296a,
+        0 0 40px #9c296a,
+        0 0 50px #9c296a;
+      
+}
+/*Image de la page texte*/
+#imageTexte img{
+    width: 200px;
+    height: 200px;
+    margin-left: 18%;
+    margin-top: 30px;
+    border-radius: 15px;
+    /*Ombre pour les images*/
+    box-shadow:8px 8px 10px 0 rgba(0,0,0,0.5);
+}
+/*Au survol de la photo d'ada, effet néon bleu*/
+#imageTexte  #Adaphoto:hover{
+    box-shadow: 0 0 10px #2f7eac,
+        0 0 20px #2f7eac,
+        0 0 30px #2f7eac,
+        0 0 40px #2f7eac,
+        0 0 50px #2f7eac;
+        transition: box-shadow 0.3s;
+}
+/*Au survol de la photo d'Hedy, effet néon rose*/
+#imageTexte  #Hedyphoto:hover{
+    box-shadow: 0 0 10px #9c296a,
+        0 0 20px #9c296a,
+        0 0 30px #9c296a,
+        0 0 40px #9c296a,
+        0 0 50px #9c296a;
+        transition: box-shadow 0.3s;
+}
+
+/*               Page Galerie            */
+
+/*Body de la page galerie*/
+
+#galeriePhoto{
+    background-color: #2d253a;
+}
+
+#galerie h1{
+    color: #ffffff;
+    text-align: center;
+    font-family: 'Bubblegum Sans', sans-serif;
+    font-size: 45px;
+  letter-spacing: 2px;/*Espace entre les lettres*/
+  padding-top: 40px;
+  padding-bottom: 15px;
+  
+  
+}
+/*Utilisation d'un span pour séparer le titre galerie photo pour pouvoir appliquer un effet au survol différent*/
+#galerie #motGalerie{
+    text-shadow: 0 0 10px #2f7eac,
+        0 0 20px #2f7eac,
+        0 0 30px #2f7eac,
+        0 0 40px #2f7eac,
+        0 0 50px #2f7eac;
+        
+}
+#galerie h1 #motPhoto{
+    text-shadow: 0 0 10px #9c296a,
+        0 0 20px #9c296a,
+        0 0 30px #9c296a,
+        0 0 40px #9c296a,
+        0 0 50px #9c296a;
+        
+}
+/*Photos de la page galerie*/
+#galerie img{
+    width: 300px;
+    height: 400px;
+    margin: 20px;
+ border-radius: 40px;
+ box-shadow:8px 8px 10px 0 rgba(0,0,0,0.5);
+ margin-left: 25px;
+ 
+}
+
+
+/*              Page Conclusion            */
+
+/*Body page conclusion */
+
+#conclusion{
+    background-color: #2d253a;
+    
+}
+/*Représente le titre conclusion de la page conclusion*/
+#texteConclusion h1{
+    color: #ffff;
+    text-align: center;
+    font-family: 'Bubblegum Sans', sans-serif;
+    padding-top: 20px;
+    padding-bottom: 15px;
+    font-size: 40px;
+}
+/*Représente les paragraphes de la page conclusion*/
+#texteConclusion p{
+    color: #ffff;
+    text-align: justify;
+    margin-left: 150px;
+    margin-right: 150px;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 14px;
+padding-bottom: 10px;
+}
+
+/*Titre conclusion de la page conclusion*/
+#texteConclusion h1 #conclusionRose{
+    text-shadow: 0 0 10px #9c296a,
+    0 0 20px #9c296a,
+    0 0 30px #9c296a,
+    0 0 40px #9c296a,
+    0 0 50px #9c296a;
+    
+}
+
+
+/*Lettre P de la première phrase de la page conclusion un peu plus grande avec un effet néon*/
+#texteConclusion #P{
+    font-size: 25px;
+    text-shadow: 0 0 10px #3eb8ff,
+    0 0 20px #3eb8ff,
+    0 0 30px #3eb8ff,
+    0 0 40px #3eb8ff,
+    0 0 50px #3eb8ff;
+   
+}
+
