@@ -1,0 +1,639 @@
+@import url("https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&family=Marck+Script&family=Open+Sans:ital,wght@1,700&family=Poppins:ital,wght@1,100;1,300;1,400;1,500;1,700;1,800;1,900&display=swap");
+
+/*------------------------------------------------------------------------------------------css interview----------------------------------------------------------------------------------------------------*/
+:root {
+  --green: rgb(61, 214, 88);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "open sans";
+}
+
+nav {
+  display: flex;
+  /*La propriété display définit le type d'affichage utilisée pour le rendu d'un élément (de bloc ou en ligne) et la disposition utilisée pour ses éléments fils : grille ou boîtes flexibles.
+  
+                     Le type d'affichage donné par display possède deux composantes : le type d'affichage extérieur qui définit comment la boîte participe au flux et le type d'affichage intérieur qui définit l'organisation des éléments enfants.
+    
+                     Certaines valeurs de display sont définies dans des spécifications séparées. Pour plus d'informations, voir la section Spécifications ci-après.*/
+  justify-content: end;
+  /*La propriété CSS justify-content indique la façon dont l'espace doit être réparti entre et autour des éléments selon l'axe principal d'un conteneur flexible ou selon l'axe en ligne lorsque le conteneur est une grille.*/
+  padding-right: 20px;
+  /*La propriété padding-right d'un élément correspond à l'espace nécessaire à la droite d'un élément. La zone de remplissage correspond à l'espace entre le contenu et la bordure. padding-right ne peut pas recevoir de valeurs négatives.*/
+  height: 7vh;
+  /*La propriété height définit la hauteur de la boîte de contenu d'un élément. La boîte de contenu (en-US) est à l'intérieur de la boîte de remplissage (padding) qui est à l'intérieur de la boîte de bordure qui est elle-même à l'intérieur de la boîte de marge de l'élément. Si la propriété box-sizing vaut border-box, cette propriété détermine la hauteur de la boîte de marge.*/
+  background-color: rgb(2, 67, 5);
+  /*couleur de fond d'ecran */
+  border-bottom: 2px solid rgb(73, 245, 16);
+  /*La propriété border-bottom-color permet de définir la couleur utilisée pour la bordure basse d'un élément.*/
+}
+
+/*Cela concerne tout les balise html <a> qui se situe dans la balise <nav> */
+nav > a {
+  color: white;
+  padding-top: 2vh;
+  margin: 0px 10px 0px 20px;
+  font-size: 1.6rem;
+  /*La propriété font-size définit la taille de fonte utilisée pour le texte. La modification de cette taille peut entraîner la modification de la taille d'autres éléments car elle est utilisée pour calculer les valeurs des longueurs relatives (type <length>) (par exemple exprimées avec les unités em ou ex).*/
+  font-weight: bold;
+  /*La propriété CSS font-weight permet de définir la graisse utilisée pour le texte. Les niveaux de graisse disponibles dépendent de la police (cf. font-family). Certaines fontes n'existent qu'avec les niveaux de graisses normal et bold.*/
+  position: relative;
+  /*La propriété CSS position définit la façon dont un élément est positionné dans un document. Les propriétés top, right, bottom et left déterminent l'emplacement final de l'élément positionné.*/
+  text-decoration: none;
+  /*La propriété text-decoration est utilisée pour « décorer » le texte en ajoutant une ligne pouvant être positionnée sous, sur ou à travers le texte. C'est une propriété raccourcie qui permet de paramétrer simultanément les propriétés « détaillées » : text-decoration-line, text-decoration-color et text-decoration-style.*/
+  text-transform: uppercase;
+  /*La propriété text-transform définit la façon d'utiliser les lettres capitales pour le texte d'un élément. Cela permet que le texte soit écrit uniquement en majuscules, minuscules ou que chaque mot commence par une capitale. Cela permet également d'améliorer la lisibilité pour les textes avec des annotations Ruby.*/
+  transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+  /*La propriété transition-timing-function décrit la façon dont les valeurs intermédiaires des propriétés CSS affectées par un effet de transition sont calculées. Ceci permet donc de définir une courbe d'accelération, de manière à ce que la vitesse de la transition varie au cours de sa durée.*/
+  transition-duration: 400ms;
+  /*La propriété transition-duration définit le nombre de secondes ou de millisecondes que doit durer une animation. La valeur par défaut, 0s, indique qu'il n'y aura aucune animation.*/
+  transition-property: color;
+  /*La propriété transition-property désigne les noms des propriétés CSS sur lesquelles un effet de transition devrait être appliqué.*/
+  font-family: serif;
+}
+
+/*Lorsque l'on met la souris sur les balises <a> , on change la couleur du texte des balises <a> en*/
+nav > a:focus,
+nav > a:hover {
+  color: #85db04;
+}
+
+/*
+  Lorsque l'on met notre souris sur les balises <a> , l'element after est changé.
+  On change le width et la position left de l'element after
+  */
+nav > a:focus:after,
+nav > a:hover:after {
+  width: 100%;
+  left: 0%;
+}
+
+/*   Cela concerne tout les balise html <a> qui se situe dans la balise <nav> 
+       Le after qant a lui signifie qu'il ajoute un element virtuel , une fausse balise après chaque <a>
+       Donc c'est un element html qui ne figure par dans le fichier html
+  */
+/* Crée un pseudo-élément ::after pour les balises <a> à l'intérieur de <nav> */
+nav > a:after {
+  /* Le contenu du pseudo-élément est vide, ce qui signifie qu'il n'affiche aucun contenu textuel. Il est principalement utilisé pour le style. */
+  content: "";
+  /* La propriété pointer-events détermine si l'élément réagit aux interactions de l'utilisateur. "none" signifie qu'il ne réagit pas aux événements de pointage, comme les clics. */
+  pointer-events: none;
+  /* Positionne l'élément 2 pixels au-dessous de son emplacement normal. */
+  bottom: -2px;
+  /* Positionne l'élément horizontalement au milieu de son contenant. */
+  left: 50%;
+  /* La position absolue permet de positionner l'élément par rapport à son contenant le plus proche avec une position relative, dans ce cas, la balise <a>. */
+  position: absolute;
+  /* Définit la largeur initiale de l'élément à 0, le rendant invisible. */
+  width: 0%;
+  /* Définit la hauteur de l'élément à 2 pixels, créant une ligne horizontale. */
+  height: 2px;
+  /* La couleur de fond de la ligne horizontale est blanche (#fff). */
+  background-color: #fff;
+  /* La transition-timing-function détermine la vitesse de l'animation. Dans ce cas, une courbe de transition cubic-bezier est utilisée pour un effet de transition doux. */
+  transition-timing-function: cubic-bezier(0.25, 0.8, 1, 1);
+  /* La transition-duration spécifie la durée de l'animation lorsque la largeur de l'élément change. */
+  transition-duration: 0.8s;
+  /* La transition-property indique quelles propriétés CSS sont animées pendant la transition. Dans ce cas, la largeur et la position horizontale (left) sont animées. */
+  transition-property: width, left;
+}
+
+#interview {
+  background-image: url(../img\ interview/bgwhatsapp.avif);
+}
+
+/* Styles pour la classe "container" */
+.container {
+  /* La propriété "position: relative;" est définie pour l'élément avec la classe "container". Cela signifie que l'élément est positionné par rapport à sa position normale dans le flux du document. */
+  position: relative;
+  /* La propriété "width: 70vw;" définit la largeur de l'élément à 70% de la largeur de la fenêtre de visualisation (viewport width). */
+  width: 70vw;
+  /* La propriété "max-width: 100%;" garantit que la largeur maximale de l'élément ne dépassera pas 100% de la largeur de son contenant. */
+  max-width: 100%;
+  /* La propriété "height: calc(100vh - 7vh);" définit la hauteur de l'élément en utilisant une expression "calc". Elle soustrait 7vh (7% de la hauteur de la fenêtre de visualisation) de la hauteur totale, ce qui permet à l'élément de prendre le reste de la hauteur disponible. */
+  height: calc(100vh - 7vh);
+  /* La propriété "background: #ffffff;" définit la couleur de fond de l'élément. Dans ce cas, la couleur est le blanc (#ffffff). */
+  background: #ffffff;
+  /* La propriété "box-shadow" ajoute une ombre à l'élément. Elle comprend deux jeux de valeurs, l'un pour une ombre fine et l'autre pour une ombre plus floue. */
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.06), 0 2px 5px 0 rgba(0, 0, 0, 0.06);
+  /* La propriété "display: flex;" définit l'affichage de l'élément comme une boîte flexible, ce qui permet un meilleur contrôle de l'alignement des éléments enfants. */
+  display: flex;
+  /* La propriété "margin: auto;" centre l'élément horizontalement en utilisant des marges automatiques. */
+  margin: auto;
+}
+
+/* Styles pour les éléments avec la classe "leftside" à l'intérieur de ".container" */
+.container .leftside {
+  /* La propriété "position: relative;" est définie pour les éléments avec la classe "leftside". Cela signifie que ces éléments sont positionnés par rapport à leur position normale dans le flux du document. */
+  position: relative;
+  /* La propriété "flex: 30%;" définit la flexibilité de ces éléments à 30% de l'espace disponible, ce qui les fait occuper 30% de la largeur de leur contenant. */
+  flex: 30%;
+  /* La propriété "background: #ffffff;" définit la couleur de fond de ces éléments. Dans ce cas, la couleur est le blanc (#ffffff). */
+  background: #ffffff;
+  /* La propriété "border-right: 1px solid rgba(0, 0, 0, 0.2);" ajoute une bordure de 1 pixel à droite de ces éléments avec une couleur de fond (solid) d'un gris transparent (rgba(0, 0, 0, 0.2)). */
+  border-right: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+/* Styles pour les éléments avec la classe "rightside" à l'intérieur de ".container" */
+.container .rightside {
+  /* La propriété "position: relative;" est définie pour les éléments avec la classe "rightside", de la même manière que pour "leftside". */
+  position: relative;
+  /* La propriété "flex: 70%;" définit la flexibilité de ces éléments à 70% de l'espace disponible, ce qui les fait occuper 70% de la largeur de leur contenant. */
+  flex: 70%;
+  /* La propriété "background: #e5ddd5;" définit la couleur de fond de ces éléments. Dans ce cas, la couleur est un beige clair (#e5ddd5). */
+  background: #e5ddd5;
+  /* La propriété "border-right: 1px solid #000;" ajoute une bordure de 1 pixel à droite de ces éléments avec une couleur de fond solide noire (#000). */
+  border-right: 1px solid #000;
+}
+
+.container .rightside::before {
+  /* La propriété "content: '';" indique que le pseudo-élément ::before n'aura pas de contenu textuel, il est principalement utilisé pour le style. */
+  content: "";
+  /* La propriété "position: absolute;" positionne le pseudo-élément par rapport à son élément parent (.rightside) de manière absolue. */
+  position: absolute;
+  /* La propriété "top: 0;" positionne le pseudo-élément au sommet de son élément parent. */
+  top: 0;
+  /* La propriété "left: 0;" positionne le pseudo-élément à la gauche de son élément parent. */
+  left: 0;
+  /* La propriété "width: 100%;" définit la largeur du pseudo-élément à 100% de la largeur de son élément parent. */
+  width: 100%;
+  /* La propriété "height: 100%;" définit la hauteur du pseudo-élément à 100% de la hauteur de son élément parent. */
+  height: 100%;
+  /* La propriété "background: url(../img\ interv/pattern.png);" définit une image de fond pour le pseudo-élément en utilisant une image située à l'emplacement spécifié. */
+  background: url(../img\ interv/pattern.png);
+  /* La propriété "opacity: 0.10;" définit l'opacité du pseudo-élément à 0.10, ce qui signifie qu'il est partiellement transparent. */
+  opacity: 0.1;
+}
+
+.header {
+  /* La propriété "position: relative;" est définie pour les éléments avec la classe "header". Cela signifie que ces éléments sont positionnés par rapport à leur position normale dans le flux du document. */
+  position: relative;
+  /* La propriété "height: 60px;" définit la hauteur des éléments avec la classe "header" à 60 pixels. */
+  height: 60px;
+  /* La propriété "background: #00968786;" définit la couleur de fond de ces éléments. Dans ce cas, la couleur est un bleu-vert semi-transparent (#00968786). */
+  background: #00968786;
+  /* La propriété "display: flex;" définit l'affichage de ces éléments comme une boîte flexible, ce qui permet un meilleur contrôle de l'alignement des éléments enfants. */
+  display: flex;
+  /* La propriété "justify-content: space-between;" aligne les éléments enfants sur l'axe horizontal et les répartit pour qu'ils occupent tout l'espace disponible, créant un espacement entre eux. */
+  justify-content: space-between;
+  /* La propriété "align-items: center;" centre verticalement les éléments enfants dans ces éléments. */
+  align-items: center;
+  /* La propriété "padding: 0 15px;" ajoute un espacement intérieur de 0 pixels en haut et en bas et de 15 pixels à gauche et à droite de ces éléments. */
+  padding: 0 15px;
+}
+
+.userimg {
+  /* La propriété "position: relative;" est définie pour les éléments avec la classe "userimg". */
+  position: relative;
+  /* La propriété "width: 40px;" définit la largeur de ces éléments à 40 pixels. */
+  width: 40px;
+  /* La propriété "height: 40px;" définit la hauteur de ces éléments à 40 pixels. */
+  height: 40px;
+  /* La propriété "overflow: hidden;" masque tout contenu qui dépasse les dimensions spécifiées (40x40) de ces éléments. */
+  overflow: hidden;
+  /* La propriété "border-radius: 50%;" arrondit les coins de ces éléments, les transformant en cercles. */
+  border-radius: 50%;
+  /* La propriété "cursor: pointer;" indique que le curseur de la souris doit changer en une main pointant vers un lien lorsque l'utilisateur survole ces éléments, indiquant qu'ils sont cliquables. */
+  cursor: pointer;
+}
+
+.cover {
+  /* La propriété "position: absolute;" est définie pour les éléments avec la classe "cover". Cela signifie que ces éléments sont positionnés par rapport à leur premier élément parent avec une position relative. Dans ce cas, ils sont positionnés absolument par rapport à cet élément parent. */
+  position: absolute;
+  /* La propriété "top: 0;" positionne ces éléments au sommet de leur élément parent, de sorte qu'ils commencent à partir du bord supérieur. */
+  top: 0;
+  /* La propriété "left: 0;" positionne ces éléments tout à gauche de leur élément parent, de sorte qu'ils commencent à partir du bord gauche. */
+  left: 0;
+  /* La propriété "width: 100%;" définit la largeur de ces éléments à 100% de la largeur de leur élément parent, ce qui signifie qu'ils s'étirent sur toute la largeur disponible. */
+  width: 100%;
+  /* La propriété "height: 100%;" définit la hauteur de ces éléments à 100% de la hauteur de leur élément parent, de sorte qu'ils s'étirent sur toute la hauteur disponible. */
+  height: 100%;
+  /* La propriété "object-fit: cover;" définit comment l'image contenue dans ces éléments est ajustée pour remplir complètement la zone. Dans ce cas, "cover" indique que l'image sera agrandie ou rétrécie pour couvrir entièrement la zone, tout en conservant ses proportions d'origine. */
+  object-fit: cover;
+}
+
+.nav_icons {
+  display: flex;
+}
+
+.nav_icons li {
+  /* La propriété "display: flex;" définit ces éléments en tant que boîtes flexibles, ce qui permet un meilleur contrôle de l'alignement des éléments enfants. */
+  display: flex;
+  /* La propriété "list-style: none;" supprime les puces de liste par défaut des éléments de liste. */
+  list-style: none;
+  /* La propriété "cursor: pointer;" indique que le curseur de la souris doit changer en une main pointant vers un lien lorsque l'utilisateur survole ces éléments, indiquant qu'ils sont cliquables. */
+  cursor: pointer;
+  /* La propriété "color: #51585c;" définit la couleur du texte de ces éléments à un gris foncé (#51585c). */
+  color: #51585c;
+  /* La propriété "font-size: 1.5em;" définit la taille de la police pour ces éléments à 1.5 fois la taille de la police par défaut. */
+  font-size: 1.5em;
+  /* La propriété "margin-left: 22px;" ajoute une marge de 22 pixels à gauche de ces éléments, créant un espacement entre eux. */
+  margin-left: 22px;
+}
+
+.search_chat {
+  /* La propriété "position: relative;" est définie pour les éléments avec la classe "search_chat". */
+  position: relative;
+  /* La propriété "width: 580px;" définit la largeur de ces éléments à 580 pixels. */
+  width: 580px;
+  /* La propriété "height: 90px;" définit la hauteur de ces éléments à 90 pixels. */
+  height: 90px;
+  /* La propriété "background: #f6f5f5;" définit la couleur de fond de ces éléments à un gris plus clair (#f6f5f5). */
+  background: #f6f5f5;
+  /* La propriété "display: flex;" définit ces éléments en tant que boîtes flexibles, ce qui permet un meilleur contrôle de l'alignement des éléments enfants. */
+  display: flex;
+  /* La propriété "justify-content: center;" centre les éléments enfants horizontalement à l'intérieur de ces éléments. */
+  justify-content: center;
+  /* La propriété "align-items: center;" centre les éléments enfants verticalement à l'intérieur de ces éléments. */
+  align-items: center;
+  /* La propriété "padding: 0 5px;" ajoute un espacement intérieur de 0 pixels en haut et en bas et de 5 pixels à gauche et à droite de ces éléments. */
+  padding: 0 5px;
+}
+
+.search_chat div {
+  width: 100%;
+}
+
+.search_chat div input {
+  /* La propriété "width: 390px;" définit la largeur de l'élément <input> à 390 pixels. */
+  width: 390px;
+  /* La propriété "outline: none;" supprime la bordure de mise en évidence autour de l'élément <input> lorsqu'il est en focus, ce qui peut améliorer l'apparence. */
+  outline: none;
+  /* La propriété "border: none;" supprime la bordure autour de l'élément <input>, la rendant sans bordure. */
+  border: none;
+  /* La propriété "background: #fff;" définit la couleur de fond de l'élément <input> à blanc (#fff). */
+  background: #fff;
+  /* La propriété "padding: 5px;" ajoute un espacement intérieur de 5 pixels autour du contenu de l'élément <input>. */
+  padding: 15px;
+  /* La propriété "height: 38px;" définit la hauteur de l'élément <input> à 38 pixels. */
+  height: 38px;
+  /* La propriété "border-radius: 30px;" arrondit les coins de l'élément <input>, créant un effet d'arrondi sur les bords. */
+  border-radius: 30px;
+  /* La propriété "font-size: 15px;" définit la taille de la police pour le texte à l'intérieur de l'élément <input> à 15 pixels. */
+  font-size: 15px;
+  /* La propriété "padding-left: 40px;" ajoute un espacement intérieur de 40 pixels à gauche de l'élément <input>, créant un espace pour le contenu ou un icône à gauche de l'élément. */
+  padding-left: 50px;
+}
+
+/* Styles pour les icônes à l'intérieur de ".search_chat" */
+.search_chat div ion-icon {
+  /* Position absolue pour ces icônes, les positionnant 25px depuis la gauche et 35px depuis le bas */
+  position: absolute;
+  left: 25px;
+  bottom: 35px;
+  /* Taille de police de 1.2em pour les icônes */
+  font-size: 1.2em;
+}
+
+/* Styles pour ".chatlist" */
+.chatlist {
+  /* Position relative pour ".chatlist" */
+  position: relative;
+  /* Hauteur calculée pour occuper 100% de la hauteur moins 150px, avec défilement vertical si nécessaire */
+  height: calc(100% - 150px);
+  overflow-y: auto;
+}
+
+/* Styles pour ".chatlist .block" */
+.chatlist .block {
+  /* Position relative pour ".block" */
+  position: relative;
+  /* Largeur de 190% par rapport à son conteneur */
+  width: 100%;
+  /* Utilisation de flexbox pour centrer les éléments enfants horizontalement et verticalement */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* Rembourrage de 15px */
+  padding: 15px;
+  /* Bordure inférieure de 1px avec une légère opacité */
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+  /* Curseur pointeur au survol, indiquant que l'élément est cliquable */
+  cursor: pointer;
+}
+
+/* Styles pour les éléments ".block" qui sont actifs dans ".chatlist" */
+.chatlist .block.active {
+  /* Arrière-plan gris clair (#ebebeb) pour les éléments ".block" actifs */
+  background: #ebebeb;
+}
+
+/* Styles pour les éléments ".block" au survol dans ".chatlist" */
+.chatlist .block:hover {
+  /* Arrière-plan gris très clair (#f5f5f5) pour les éléments ".block" au survol */
+  background: #f5f5f5;
+}
+
+/* Styles pour les éléments ".imgbx" à l'intérieur des éléments ".block" */
+.chatlist .block .imgbx {
+  /* Position relative pour ".imgbx" */
+  position: relative;
+  /* Largeur de 45px et hauteur de 45px pour créer une boîte carrée */
+  width: 45px;
+  height: 45px;
+  /* Dépassement caché pour masquer le contenu qui dépasse de la boîte */
+  overflow: hidden;
+  /* Coin arrondi à 50% pour créer un cercle */
+  border-radius: 50%;
+  /* Bordure fine de 0.1px avec couleur non spécifiée (noire par défaut) */
+  border: 0.1px solid;
+  /* Marge à droite de 10px pour séparer ".imgbx" des autres éléments */
+  margin-right: 10px;
+}
+
+/* Styles pour les éléments ".details" à l'intérieur des éléments ".block" */
+.chatlist .block .details {
+  /* Position relative pour ".details" */
+  position: relative;
+  /* Largeur de 100% pour occuper toute la largeur de ".block" */
+  width: 100%;
+}
+
+/* Styles pour les éléments ".listhead" à l'intérieur de ".details" */
+.chatlist .block .details .listhead {
+  /* Affichage en flexbox avec justification entre les éléments */
+  display: flex;
+  justify-content: space-between;
+  /* Marge inférieure de 5px pour séparer ".listhead" du contenu suivant */
+  margin-bottom: 5px;
+}
+
+/* Styles pour les éléments h4 à l'intérieur de ".listhead" dans ".details" des éléments ".block" */
+.chatlist .block .details .listhead h4 {
+  /* Taille de police de 1.3em (relativement plus grande) */
+  font-size: 1.3em;
+  /* Poids de la police en gras (600) */
+  font-weight: 600;
+  /* Couleur de texte de #111 (noir) */
+  color: #111;
+}
+
+/* Styles pour les éléments ".time" à l'intérieur de ".listhead" dans ".details" des éléments ".block" */
+.chatlist .block .details .listhead .time {
+  /* Taille de police de 0.75em (relativement plus petite) */
+  font-size: 0.75em;
+  /* Couleur de texte de #aaa (gris clair) */
+  color: #aaa;
+  /* Largeur de 40px pour l'élément ".time" */
+  width: 40px;
+}
+
+/* Styles pour les éléments ".time" dans ".listhead" des éléments ".block" lorsque ces éléments ont la classe "unread" */
+.chatlist .block.unread .details .listhead .time {
+  /* Couleur de texte différente (#06d755 - vert) pour les éléments ".time" non lus */
+  color: #06d755;
+}
+
+/* Styles pour ".message_p" */
+.message_p {
+  /* Utilisation de flexbox pour afficher les éléments en rangée et les espacer horizontalement */
+  display: flex;
+  justify-content: space-between;
+  /* Alignement vertical des éléments au centre */
+  align-items: center;
+}
+
+/* Styles pour ".message_p p" */
+.message_p p {
+  /* Couleur du texte en gris clair (#aaa) */
+  color: #aaa;
+  /* Affichage du texte avec une seule ligne, coupé avec une ellipse (...) en cas de dépassement */
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  /* Taille de police de 1em */
+  font-size: 1em;
+  /* Orientation du texte à la verticale */
+  -webkit-box-orient: vertical;
+  /* Masquage du texte dépassant de la boîte */
+  overflow: hidden;
+  /* Ajout d'une ellipse (...) pour indiquer que le texte est coupé */
+  text-overflow: ellipsis;
+}
+
+/* Styles pour ".message_p b" */
+.message_p b {
+  /* Fond vert (#06d755) avec texte blanc (#fff) */
+  background: #06d755;
+  color: #fff;
+  /* Largeur minimale de 20px, hauteur de 20px, coin arrondi pour créer une forme de cercle */
+  min-width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  /* Utilisation de flexbox pour centrer le texte horizontalement et verticalement */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* Taille de police de 0.75em pour le texte */
+  font-size: 0.75em;
+}
+
+/* Styles pour ".imgtext" */
+.imgtext {
+  /* Position relative pour ".imgtext" */
+  position: relative;
+  /* Utilisation de flexbox pour afficher les éléments en rangée et les centrer horizontalement et verticalement */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Styles pour ".imgtext h4" */
+.imgtext h4 {
+  /* Épaisseur de police moyenne (font-weight: 500) */
+  font-weight: 500;
+  /* Hauteur de ligne de 1.2em (l'espace entre les lignes de texte) */
+  line-height: 1.2em;
+  /* Marge à gauche de 15px pour séparer le texte du reste du contenu */
+  margin-left: 15px;
+}
+
+/* Styles pour ".imgtext h4 span" */
+.imgtext h4 span {
+  /* Taille de police de 0.8em */
+  font-size: 0.8em;
+  /* Couleur du texte en gris foncé (#555) */
+  color: #b6df31;
+}
+
+/* Styles pour ".chatbox" */
+.chatbox {
+  /* Position relative pour ".chatbox" */
+  position: relative;
+  /* Hauteur calculée pour occuper 100% de la hauteur moins 150px, avec défilement vertical si nécessaire */
+  height: calc(100% - 150px);
+  /* Rembourrage de 50px pour créer de l'espace à l'intérieur de ".chatbox" */
+  padding: 50px;
+  /* Défilement vertical autorisé si le contenu dépasse la hauteur de ".chatbox" */
+  overflow-y: auto;
+}
+
+/* Styles pour ".message" */
+.message {
+  /* Position relative pour ".message" */
+  position: relative;
+  /* Utilisation de flexbox pour afficher les éléments en rangée */
+  display: flex;
+  /* Largeur de 95% par rapport à son conteneur */
+  width: 95%;
+  /* Marge de 5px en haut et en bas pour séparer les éléments ".message" */
+  margin: 5px 0;
+}
+
+/* Styles pour ".message p" */
+.message p {
+  /* Position relative pour ".message p" */
+  position: relative;
+  /* Alignement du texte à droite */
+  text-align: left;
+  /* Largeur maximale de 65% par rapport à son conteneur */
+  max-width: 65%;
+  /* Rembourrage de 15px autour du texte */
+  padding: 15px;
+  /* Couleur de fond verte (#dcf8c6) avec coins arrondis (border-radius) */
+  background: #dcf8c6;
+  border-radius: 10px;
+  /* Taille de police de 1.1em */
+  font-size: 1.1em;
+}
+
+/* Styles pour ".message p::before" (pseudo-élément ::before de ".message p") */
+.message p::before {
+  /* Contenu vide pour le pseudo-élément */
+  content: "";
+  /* Position absolue pour le pseudo-élément, le positionnant en haut à droite de ".message p" */
+  position: absolute;
+  top: 0;
+  right: -12px;
+  /* Largeur et hauteur de 20px, créant un coin décoratif */
+  width: 20px;
+  height: 20px;
+  /* Arrière-plan en dégradé linéaire de la couleur verte (#dcf8c6) à transparent */
+  background: linear-gradient(
+    135deg,
+    #dcf8c6 0%,
+    #dcf8c6 50%,
+    transparent 50%,
+    transparent
+  );
+}
+
+/* Styles pour ".message p span" */
+.message p span {
+  /* Affichage en tant que bloc */
+  display: block;
+  /* Marge supérieure de 5px pour créer un espace entre le texte et le pseudo-élément */
+  margin-top: 5px;
+  /* Taille de police de 0.85em */
+  font-size: 0.85em;
+  /* Opacité de 0.5 pour rendre le texte partiellement transparent */
+  opacity: 0.5;
+  text-align: right;
+}
+
+/* Styles pour ".my_message" */
+.my_message {
+  /* Justification des éléments à droite pour les messages de l'utilisateur */
+  justify-content: flex-end;
+}
+
+/* Styles pour ".frnd_message" */
+.frnd_message {
+  /* Justification des éléments à gauche pour les messages de l'ami */
+  justify-content: flex-start;
+}
+
+/* Styles pour les paragraphes (éléments <p>) à l'intérieur de ".frnd_message" */
+.frnd_message p {
+  /* Couleur de fond blanche (#ffffff) pour les messages de l'ami */
+  background: #ffffff;
+  /* Texte aligné à droite à l'intérieur des messages de l'ami */
+  text-align: left;
+}
+
+.frnd_message a {
+  text-decoration: none;
+  color: green;
+  font-weight: bold;
+}
+
+/* Styles pour les pseudo-éléments "::before" à l'intérieur de ".frnd_message p" */
+.frnd_message p::before {
+  /* Contenu vide pour l'élément "::before" */
+  content: "";
+  /* Position absolue par rapport à son conteneur */
+  position: absolute;
+  /* Positionnement en haut à 0 et à gauche à -12px (pour le coin supérieur gauche) */
+  top: 0;
+  left: -12px;
+  /* Largeur de 20px et hauteur de 20px pour créer une forme */
+  width: 20px;
+  height: 20px;
+  /* Arrière-plan avec un dégradé linéaire de blanc à transparent */
+  background: linear-gradient(
+    225deg,
+    #fff 0%,
+    #fff 50%,
+    transparent 50%,
+    transparent
+  );
+}
+
+/* Styles pour ".chatbox_input" */
+.chatbox_input {
+  /* Position relative pour ".chatbox_input" */
+  position: relative;
+  /* Largeur de 100% par rapport à son conteneur */
+  width: 100%;
+  /* Hauteur de 90px pour la zone de saisie de chat */
+  height: 90px;
+  /* Couleur de fond gris clair (#f0f0f0) */
+  background: #f0f0f0;
+  /* Rembourrage de 15px pour créer de l'espace à l'intérieur de ".chatbox_input" */
+  padding: 15px;
+  /* Utilisation de flexbox pour afficher les éléments en rangée et les centrer horizontalement et verticalement */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Styles pour les icônes (éléments ion-icon) à l'intérieur de ".chatbox_input" */
+.chatbox_input ion-icon {
+  /* Curseur en forme de main pour indiquer l'interaction */
+  cursor: pointer;
+  /* Taille de police de 1.8em pour les icônes */
+  font-size: 1.8em;
+  /* Couleur du texte en gris foncé (#51585c) pour les icônes */
+  color: #51585c;
+}
+
+/* Styles pour le premier élément ion-icon à l'intérieur de ".chatbox_input" */
+.chatbox_input ion-icon:nth-child(1) {
+  /* Marge à droite de 15px pour séparer le premier élément ion-icon du reste du contenu */
+  margin-right: 15px;
+}
+
+/* La ligne suivante sélectionne les éléments <input> qui se trouvent à l'intérieur de la classe .chatbox_input. */
+.chatbox_input input {
+  /* La propriété 'position: relative;' est définie pour l'élément <input>. Elle détermine la manière dont l'élément est positionné par rapport à son contexte. 'relative' signifie que l'élément est positionné par rapport à sa position normale dans le flux du document. */
+  position: relative;
+  /* La propriété 'width: 90%;' détermine la largeur de l'élément <input>. Elle est définie à 90% de la largeur de son contenant, ce qui signifie que l'élément s'étirera pour occuper 90% de l'espace disponible. */
+  width: 90%;
+  /* La propriété 'margin: 0 20px;' détermine les marges de l'élément <input>. Elle a une marge de 0 en haut et en bas, et de 20px à gauche et à droite, créant un espace entre l'élément et ses voisins. */
+  margin: 0 20px;
+  /* La propriété 'padding: 10px 20px;' détermine la distance entre le contenu de l'élément et ses bords. Elle a 10px de rembourrage en haut et en bas, et 20px à gauche et à droite. */
+  padding: 10px 20px;
+  /* La propriété 'border: none;' supprime toute bordure autour de l'élément <input>, le rendant sans bordure. */
+  border: none;
+  /* La propriété 'outline: none;' supprime toute bordure d'accentuation (lorsqu'on clique sur l'élément) autour de l'élément <input>. */
+  outline: none;
+  /* La propriété 'border-radius: 30px;' détermine le rayon de l'arrondi des coins de l'élément <input>. Elle le rend avec des coins arrondis de 30px. */
+  border-radius: 30px;
+  /* La propriété 'font-size: 1em;' définit la taille de la police de l'élément <input>. '1em' signifie que la taille de la police est équivalente à la taille de police de base de l'élément parent. */
+  font-size: 1em;
+}
+
+.online span {
+  color: var(--green);
+}

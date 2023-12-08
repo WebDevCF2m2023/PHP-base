@@ -23,6 +23,10 @@ if(isset($_GET['section'])){
             $text = "Il va faire froid toute la semaine, prévoyez des habits chauds";
             break;
 
+         default:
+            $title = 404;
+            $text = "Error 404 - PAGE NOT FOUND";
+
 
     endswitch;
            

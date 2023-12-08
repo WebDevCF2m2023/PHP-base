@@ -1,0 +1,233 @@
+@font-face {
+    font-family: 'martyric';
+    src: url('../CSS/martyric-webfont.woff') format('woff'),
+         url('../CSS/martyric-webfont.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'adidas';
+    src: url('CSS/font/texgyreadventor-bold-webfont.woff2') format('woff2'),
+         url('CSS/font/texgyreadventor-bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'roboto';
+    src: url('../CSS/roboto/robotocondensed-regular-webfont.woff2') format('woff2'),
+         url('../CSS/roboto/robotocondensed-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+body{
+     /* règle le background de la page */
+
+    background-image: url(https://i.redd.it/v1j1be6y44m91.png); /* url de l'image de background */
+    background-size: cover; /* couvre toute la page avec l'image */
+    margin: 0;  /* bordure atour de la page: aucune */
+}
+
+.button{
+     /* regle le style des boutons accueil, interview, entreprise, conclusion */
+
+    background-color: rgba(159, 51, 51, 0.808); /*couleur de fond du bouton */
+    border: none; /* enleve la bordure autour du background*/
+    color: rgb(156, 174, 246); /* couleur de la typo */
+    padding: 8px; /*marge autour du texte */
+    text-align: center;  /*aligne le texte au milieu du bouton */
+    text-decoration: none; /*enlève le soulignement du texte */
+    display: inline-block;  /*dispose les boutons l'un a coté de l'autre */
+    font-size: 15px; /* taille de la typo */
+    margin: 4px 4px; /*écart entre chaque bouton */
+    border-radius: 4rem; /* crée un contour arrondis pour le bouton */
+    font-family: 'roboto'; /*style de la typo */
+    width: 80px; /*règle la largeur du bouton */
+    
+}
+
+.button2{
+     /* règle le style du bouton expo */
+    
+    padding: 0; /* marge autour du texte */
+    text-align: center; /* alignement du texte au milieu du bouton */
+    text-decoration: none; /* suppression du soulignement du texte */
+    display: inline-block; /* disposition des bouton l'un a coter de l'autre */
+    font-size: 20px; /* taille de la police */
+    margin: 4px 4px; /* marge a gauche et a droite du bouton */
+    font-family: 'martyric'; /*style de la typo */
+    -webkit-text-stroke: 0.1px; /* grandeur du contour de la typo */
+    -webkit-text-stroke-color: rgb(58, 87, 248); /* couleur du contour de la typo */
+    color: gold; /* couleur de la typo */
+}
+
+.button3{
+     /*règle le style du bouton galerie */
+    
+    padding: 0; /* marge autour du texte */
+    text-align: center; /* alignement du texte au milieu du bouton */
+    text-decoration: none; /* suppression du soulignement du texte */
+    display: inline-block; /* disposition des bouton l'un a coter de l'autre */
+    font-size: 20px;  /* taille de la police */
+    margin: 4px 4px; /* marge a gauche et a droite du bouton */
+    font-family: 'martyric';  /*style de la typo */
+    -webkit-text-stroke: 0.1px; /* grandeur du contour de la typo */
+    -webkit-text-stroke-color: rgb(58, 87, 248); /* couleur du contour de la typo */
+    color: gold; /* couleur de la typo */
+}
+
+.site{
+    /* règle le bouton du lien vers le site du musée */
+
+    background-color: rgba(159, 51, 51, 0.808); /*régle la couleur du background du bouton */
+    border: none; /*enlève la bordure du background du bouton*/
+    color: rgb(156, 174, 246); /*couleur du texte hors lien*/
+    padding: 8px; /* marge autour du texte */
+    text-align: center; /*aligne le texte au centre du bouton */
+    display: inline-block; /*aligne le bouton a une partie de la page */
+    font-size: 12px; /*taille de la typo */
+    margin: 4px 3px; /*marge a gauche et a droite du bouton */
+    border-radius: 4rem; /*crée un arrondis du background du bouton */
+    font-family: 'roboto'; /*style de typo */
+
+}
+
+main{
+    /* règle la dipsosition du texte principal de la page */
+
+    column-count: 6; /* permet de faire faire des colone avec le contenu */
+    position: absolute; /* permet de regler la position du contenu a part du reste */
+    top: 7rem; /* marge supérieur du contenu*/
+    background-color: rgba(159, 51, 51, 0.808); /* couleur du background */
+    padding: 3.5rem; /*marge interieur autour du texte */
+    display: block; /* permet d'occuper toute la largeur de la page */
+    
+}
+
+h1{
+    /* règle le style du titre principal */
+
+    font-family: 'martyric'; /*règle la typo du texte */
+    -webkit-text-stroke: 0.03px; /*régle la taille du contour du texte */
+    -webkit-text-stroke-color: rgb(58, 87, 248); /*règle la couleur du contour */
+    font-size: 2rem; /*taille de la typo */
+    color: rgb(240, 221, 113); /*couleur de la typo */
+    margin-top: 0; /*marge au dessus du texte */
+    margin-bottom: 0; /*marge en dessous du texte */
+    padding-bottom: 3rem; /*ajout d'une deuxieme marge en dessous tu texte */
+   
+}
+
+h2{
+    /* règle le style des sous-titres */
+
+    font-family: 'martyric'; /*style de la typo */
+    -webkit-text-stroke: 0.01px; /*régle la grandeur du contour du texte */
+    -webkit-text-stroke-color: rgb(58, 87, 248); /*règle la couleur du contour */
+    font-size: 1.4rem; /*régle la grandeur de la typo */
+    color: rgb(240, 221, 113); /*couleur principal du texte */
+    margin-top: 0; /*marge au dessus du texte */
+    padding-bottom: 0.5rem; /*marge en dessous du texte */
+    padding-top: 2rem;
+}
+
+p{
+    /*règle le style du texte principal */
+
+    color: rgb(255, 255, 255); /*règle la couleur du texte principal */
+    font-size: medium; /*règle la taille de la typo */
+    font-family: 'roboto';  /*règle la typo du texte */
+    text-align: justify; /*permet de remplir les colonnes du texte */
+}
+
+header{
+    /*règle le style de l'intro du texte */
+
+    color: rgb(243, 228, 141); /*règle la couleur de la typo de l'intro */
+    font-size: medium; /*règle la taille de la police */
+    font-family: 'roboto';  /*règle la typo du texte */
+    padding-bottom: 1rem; /*marge en dessous du texte */
+    text-align: justify; /*permet de remplir les colonnes du texte */
+}
+
+h3{
+    /*règle le style des titres secondaire */
+
+    font-family: 'martyric'; /*style de la typo */
+    -webkit-text-stroke: 0.02px; /*grandeur du contour du texte */
+    -webkit-text-stroke-color: rgb(58, 87, 248); /*couleur du contour du texte */
+    font-size: 1.4rem; /*grandeur de la taille de la typo */
+    color: rgb(240, 221, 113); /*couleur principal de la typo */
+    margin-top: 10px; /*marge au dessus du titre */
+    margin-bottom: 0; /* marge en dessous du titre */
+    padding-top: 2.5rem; /* deuxieme marge de contour du texte qui prends en compte la marge du haut*/
+    padding-bottom: 2rem; /* deuxieme marge de contour du texte qui prends en compte la marge du bas*/
+
+}
+
+.conclusion {
+    color: rgb(243, 228, 141);
+}
+
+.nom{
+    /* règle le style du nom prenom en fin de texte */
+
+    font-family: 'martyric'; /*style de typo */
+    -webkit-text-stroke: 0.6px; /*largeur du contour du texte */
+    -webkit-text-stroke-color: rgb(58, 87, 248); /*couleur du contour du texte */
+    font-size: 25px; /*taille de la police */
+    color: rgb(240, 221, 113); /*couleur principale du texte */
+    margin-top: 10px; /*marge au dessus du texte */
+    margin-bottom: 0; /*marge en dessous du texte */
+    
+}
+
+.footer{
+    /*règle la position de la source wikipedia */
+
+    position: fixed; /* fixe la position du texte */
+    bottom: 0; /*aucune marge en dessous du texte */
+}
+
+a:hover{
+    /*règle le style des liens sur la page */
+
+    color: rgb(231, 175, 34); /* couleur du lien une fois le curseur dessus */
+
+    
+}
+
+.lien{
+    /*règle le style du lien wikipedia */
+
+    text-decoration: none;  /*enlève le souligenement du lien wikipedia */
+}
+
+.lienversion1{  
+    /* permet de régler le style du lien vers la galerie de tommy */ 
+
+    color: rgb(156, 174, 246); /*couleur de la police */
+    display: inline-block; /*aligne l'un a coter de l'autre */
+    font-size: 13.8px; /*taille de la police */
+    font-family: 'roboto'; /*style de la typo */
+}
+
+.footer2 {
+    /* règle le style du copyright */
+
+    position:fixed; /*fixe la position du texte sur la page */
+    top: 928px; /*marge au dessus du texte */
+    bottom: 0; /*marge du dessous du texte */
+    left: 0; /*marge sur la gauche du texte */
+    right: 5px; /*marge sur la droite du texte */
+    padding: 0.2rem; /*marge du contour du texte */
+    font-family: "roboto"; /*style de typo */
+    color: white; /* couleur du texte */
+    display: flex; /*système de positionnement */
+    justify-content: right; /* positionne le contenu sur la droite de la page */
+}
+
