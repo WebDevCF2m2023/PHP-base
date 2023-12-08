@@ -1,0 +1,41 @@
+body{
+    margin: 100px 390px;
+    background-image: url(Image/99402221-vecteur-ordinateur-pattern-ordinateur.png);
+    background-repeat: repeat;
+}
+
+h1 {
+    text-align: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+h2 {
+    text-align: center;
+    text-decoration: underline;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+p {
+    text-align: center;
+}
+
+.themwords {
+    text-align: left
+}
+
+.tee {
+    text-align: right;
+}
+
+.Requirement {
+    color: green;
+}
+
+.Sins {
+    color: red;
+}
+
+#images{
+    text-align: center;
+    margin: 90px 200px;
+}
