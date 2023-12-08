@@ -29,5 +29,5 @@ if(isset($_GET['section'])){
 }else{
     $title ="Accueil";
     // on inclut le fichier accueil.php en suivant l'arborescence de fichiers
-    include('../templates/Index.php');
+    include('../templates/accueil.php');
 }
