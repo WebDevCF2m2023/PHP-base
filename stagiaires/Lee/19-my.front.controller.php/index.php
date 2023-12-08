@@ -1,3 +1,3 @@
 <?php
-header("Location: public");
-exit;
+header ("Location: public");
+die();

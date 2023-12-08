@@ -98,6 +98,11 @@ li dt a {
 li dt a:hover {
     text-decoration: underline;
     font-style: italic;
+
+}
+
+.column ul li{
+    cursor: pointer;
 }
 
 #expoimg {                  /* pour positioner les images */
@@ -245,6 +250,8 @@ dd:target {
     font-size: 25px;
     margin-bottom: 10px;
     padding-right: 25px;
+    color: rgba(34, 76, 118, 1);
+    text-decoration: underline;
 }
 
 .interintro {
@@ -259,7 +266,7 @@ dd:target {
     color: rgb(34,76,118);
 }
 
-.intanswer {
+#intanswerJD, #intanswerMC {
     font-size: larger;
     font-style: italic;
     font-family: Verdana, Tahoma, sans-serif;

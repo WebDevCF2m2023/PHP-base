@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
-    <link href="style.css" rel="stylesheet">
+    <link href="styles/style.css" rel="stylesheet">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Galerie</title>
@@ -18,10 +18,10 @@
             </div>
             <ul>
                 <a href="?section=home"><li>Home</li></a> 
-                <a href="?section=rapport"><li>Entreprise</li></a>
+                <a href="?section=entreprise"><li>Entreprise</li></a>
                 <a href="?section=interview"><li>Interview</li></a>
                 <a href="?section=museum"><li>Musée</li></a>
-                <a href="?section=galerie1"><li>Galerie</li></a>
+                <a href="?section=galerie"><li>Galerie</li></a>
                 <a href="?section=conclusion"><li>Conclusion</li></a>
             </ul>
         </nav>
@@ -31,9 +31,9 @@
 
             <div>
                 <ul>
-                    <a href="galerie2.html"><li>Page 2</li></a>
-                    <a href="galerie3.html"><li>Page 3</li></a>
-                    <a href="galerie4.html"><li>Page 4</li></a>
+                    <a href="?page=galerie && section=galerie2"><li>Page 2</li></a>
+                    <a href="?page=galerie && section=galerie3"><li>Page 3</li></a>
+                    <a href="?page=galerie && section=galerie4"><li>Page 4</li></a>
                 </ul>
             </div>
     

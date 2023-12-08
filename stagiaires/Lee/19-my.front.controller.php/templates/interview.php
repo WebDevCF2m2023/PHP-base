@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <link href="style.css" rel="stylesheet">
+    <link href="styles/style.css" rel="stylesheet">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Interview</title>
@@ -14,10 +14,10 @@
 
             <ul>
                 <a href="?section=home"><li>Home</li></a> 
-                <a href="?section=rapport"><li>Entreprise</li></a>
+                <a href="?section=entreprise"><li>Entreprise</li></a>
                 <a href="?section=interview"><li>Interview</li></a>
                 <a href="?section=museum"><li>Musée</li></a>
-                <a href="?section=galerie1"><li>Galerie</li></a>
+                <a href="?section=galerie"><li>Galerie</li></a>
                 <a href="?section=conclusion"><li>Conclusion</li></a>
             </ul>
         </nav>
@@ -66,7 +66,7 @@
             &copy; Lee Brennan
         </h4> <hr>
     </footer>
-<script src="script.js"></script>
+<script src="scripts/script.js"></script>
 </body>
 </html>
 

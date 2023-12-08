@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
-    <link href="style.css" rel="stylesheet">
+    <link href="styles/style.css" rel="stylesheet">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Conclusion</title>
@@ -19,10 +19,10 @@
             </div>
             <ul>
                 <a href="?section=home"><li>Home</li></a> 
-                <a href="?section=rapport"><li>Entreprise</li></a>
+                <a href="?section=entreprise"><li>Entreprise</li></a>
                 <a href="?section=interview"><li>Interview</li></a>
                 <a href="?section=museum"><li>Musée</li></a>
-                <a href="?section=galerie1"><li>Galerie</li></a>
+                <a href="?section=galerie"><li>Galerie</li></a>
                 <a href="?section=conclusion"><li>Conclusion</li></a>
             </ul>
         </nav>
@@ -48,7 +48,7 @@
             Je vais conclure en disant merci à tous ceux de C2FM. Leur bonheur, leur soutien et leur accueil ont été grandement appréciés!
         </p>
         <p id="lastnote">
-            Petit histoire pour terminé: (J'ai plus ou moins (plus plus que moins) terminé mon site aujourd'hui, jeudi, et j'ai passé la majeure partie de la journée à aider les autres avec n'importe quel problème qu'ils rencontraient (parfois avec succès, parfois sans, mais toujours avec progrès !). J'ai remarqué plus tôt qu'un de mes collègues avait une erreur avec les liens sur l'une de ses pages. J'ai réussi à utiliser Github pour cloner ses fichiers, corriger l'erreur et lui proposer la solution. J'ai terminé cela juste avant que ma femme rentre à la maison, pour me trouver en train de danser et de chanter : "ça a marché, ça a marché". Maintenant, j'attends avec encore plus d'impatience l'avenir !)
+           Tout petit dernier mot: (J'ai plus ou moins (plus plus que moins) terminé mon site aujourd'hui, jeudi, et j'ai passé la majeure partie de la journée à aider les autres avec n'importe quel problème qu'ils rencontraient (parfois avec succès, parfois sans, mais toujours avec progrès !). J'ai remarqué plus tôt qu'un de mes collègues avait une erreur avec les liens sur l'une de ses pages. J'ai réussi à utiliser Github pour cloner ses fichiers, corriger l'erreur et lui proposer la solution. J'ai terminé cela juste avant que ma femme rentre à la maison, pour me trouver en train de danser et de chanter : "ça a marché, ça a marché". Maintenant, j'attends avec encore plus d'impatience l'avenir !)
         </p>
     </div>
     
