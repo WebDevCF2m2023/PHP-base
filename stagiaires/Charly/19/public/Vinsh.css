@@ -1,0 +1,150 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: linear-gradient(to right, #000402, #005028);
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-size: 16px;
+  line-height: 1.5;
+
+  width: 100%;
+}
+.navbar {
+  background: linear-gradient(to right, #000402, #005028);
+  color: #fff;
+  height: 60px;
+  padding: 10px;
+}
+
+.navbar .logo {
+  font-size: x-large;
+  font-weight: bold;
+  color: whitesmoke;
+}
+
+.navbar a {
+  color: whitesmoke;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 30px;
+}
+
+.navbar a:hover {
+  color: greenyellow;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
+
+.navbar ul {
+  display: flex;
+}
+
+.navbar ul li {
+  position: 10px;
+  margin-left: 20px;
+  display: flex;
+  list-style-type: none;
+}
+.pre {
+  font-style: color= whitesmoke;
+}
+h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  color: aliceblue;
+  padding-left: 50px;
+}
+.h2 {
+  flex: 1;
+  position: left;
+  font: color= whitesmoke;
+  border-radius: 10px;
+  margin: 10px 10px;
+  padding: 15px 20px;
+}
+.text {
+  max-width: 500px;
+  position: left;
+  padding: 25px;
+  color: whitesmoke;
+  text-align: justify;
+}
+.p {
+  font-size: 1rem;
+  font-weight: bold;
+  line-height: 1.2;
+  font-style: color= whitesmoke;
+}
+.text-photo {
+  position: absolute;
+  right: -800px;
+  top: 250px;
+}
+.box i {
+  margin-right: 10px;
+}
+
+@media (max-width: 1840px) {
+  .header .container {
+    flex-direction: column;
+    padding-top: 20px;
+    text-align: center;
+  }
+}
+#Galerie {
+  margin-top: 2px;
+  width: 840px;
+  overflow: 1920px;
+  border: 1px solid#00bf63;
+  border-radius: 10px;
+}
+.images {
+  display: flex;
+  animation-duration: 13s;
+  animation-name: mesImages;
+  animation-iteration-count: infinite;
+}
+@keyframes mesImages {
+  0% {
+    transform: translateX(0);
+  }
+  10% {
+    transform: translateX(-320px);
+  }
+  20% {
+    transform: translateX(-480px);
+  }
+  30% {
+    transform: translateX(-640px);
+  }
+  40% {
+    transform: translateX(-800px);
+  }
+  50% {
+    transform: translateX(-960px);
+  }
+  60% {
+    transform: translateX(-1120px);
+  }
+  70% {
+    transform: translateX(-1280px);
+  }
+  80% {
+    transform: translateX(-1440px);
+  }
+  90% {
+    transform: translateX(-1600px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
