@@ -37,7 +37,7 @@ if(isset($_GET['section'])){
                                    
        
         default:
-            include('../templates/page-404.php');
+            include('../Template/page404.php');
     }
 
 }else{
