@@ -1,0 +1,368 @@
+@font-face {
+  font-family: gothic;
+  src: url(../font/gothic.ttf);
+}
+
+@font-face {
+  font-family: dominik;
+  src: url(../font/dominik.ttf);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: none;
+  font-family: gothic;
+}
+
+.navbar {
+  height: 12%;
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  font-size: 40px;
+  margin-left: 40px;
+}
+
+.logo h4 {
+  color: white;
+  font-family: gothic;
+}
+
+.logo h4 a {
+  color: white;
+}
+
+.logo h4 a:hover {
+  color: red;
+}
+
+.navbar-sections {
+  flex: 1;
+  text-align: right;
+}
+
+.navbar-sections a {
+  list-style: none;
+  display: inline-block;
+  margin-right: 40px;
+  text-decoration: none;
+  color: white;
+  font-size: 32px;
+}
+
+.navbar-sections a:hover {
+  color: red;
+}
+
+.container, .foto-rapport, .container-rapport, .foto-interview, .foto-galerie, .foto-expo {
+  width: 100%;
+  height: 105vh;
+  background-position: center;
+  background-size: cover;
+}
+
+.container {
+  background-image: url(../image/tv.jpg);
+}
+
+.foto-rapport {
+  background-color: #335c67;
+}
+
+.foto-expo {
+  background-color: #335c67;
+}
+
+.foto-interview {
+  background-color: #335c67;
+}
+
+.foto-galerie {
+  background-color: #335c67;
+}
+
+.container-interview {
+  background-color: red;
+}
+
+.francais1 {
+  background-color: #001219;
+  color: white;
+  padding: 5%;
+  margin-right: 20%;
+  margin-top: 5px;
+  margin-left: 20%;
+  border-radius: 20px;
+  width: 8000px;
+  font-size: 20px;
+}
+
+.francais1 h1 {
+  text-align: center;
+}
+
+.francais1 p {
+  color: white;
+  font-family: gothic;
+}
+
+.francais1 p::first-letter {
+  initial-letter: 2;
+  margin-right: 4px;
+  color: red;
+}
+
+#nam {
+  color: red;
+}
+
+.main {
+  display: flex;
+  flex-direction: row;
+}
+
+/* Img Gallerie*/
+
+.img-galerie {
+  width: 70%;
+  margin: 70px auto 50px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  grid-gap: 60px;
+}
+
+.img-galerie img {
+  width: 100%;
+  cursor: pointer;
+  border-radius: 50px;
+}
+
+.img-galerie img:hover {
+  transform: scale(0.9) rotate(-1deg);
+  border-radius: 20px;
+  box-shadow: 0 32px 75px rgba(68,77,136, 0.2);
+}
+
+.full-img {
+  width: 100%;
+  height: 100vh;
+  background: rgba(0,0,0,0.9);
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+}
+
+.full-img img {
+  width: 90%;
+  max-width: 500px;
+}
+
+.full-img span {
+  position: absolute;
+  top: 5%;
+  right: 5%;
+  font-size: 30px;
+  color: #fff;
+  cursor:  pointer;
+}
+
+/*Conclusion*/
+
+.conclusion { 
+  background-color: #001219;
+  color: white;
+  padding: 5%;
+  width: 300px;
+  margin: 1em auto;
+  border-radius: 20px;
+  width: 800px;
+  font-size: 20px;
+}
+
+.conclusion h1 {
+  text-align: center;
+  color: white;
+}
+
+.conclusion p {
+  color: white;
+  font-family: gothic;
+}
+
+.conclusion p::first-letter {
+  initial-letter: 2;
+  margin-right: 4px;
+  color: red;
+}
+
+.organigramme { 
+  background-color: #001219;
+  margin: 4em auto;
+  border-radius: 20px;
+  width: 300px;
+  font-size: 20px;
+  padding: 40px;
+  text-align: center;
+}
+
+.organigramme p a {
+  color: white;
+  font-family: gothic;
+  font-size: 30px;
+}
+
+.organigramme p a:hover {
+  color: red;
+}
+
+.presEntreprise {
+  background-color: #001219;
+  margin: 1em auto;;
+  border-radius: 20px;
+  width: 900px;
+  font-size: 20px;
+  padding: 40px;
+  text-align: center;
+}
+
+.presEntreprise p a {
+  color: white;
+  font-family: gothic;
+  font-size: 30px;
+}
+
+.presEntreprise p a:hover {
+  color: red;
+}
+
+/* Interview Section */
+
+div + div {
+  clear: both;
+}
+
+p {
+  line-height: 1.4em;
+  color: #ffffff;
+}
+
+.interview-title {
+  font-size: 2em;
+  margin: 0.4em 0;
+}
+
+div.seperator {
+  width: 8em;
+  background-color: #ffffff;
+  height: 0.17em;
+  margin-left: 0.5em;
+}
+
+.interview-list > div {
+  border-bottom: 0.07em solid #ededed;
+  padding: 1.5em 0em;
+} 
+
+.interview-list > div:last-child {
+  border: unset;
+}
+
+details > summary {
+  list-style: none;
+  color: white;
+}
+details > summary::-webkit-details-marker {
+  display: none;
+}
+
+summary {
+  font-size: 1.4em;
+  font-weight: bold;
+  cursor: pointer;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none; 
+  user-select: none;
+  transition: all 0.3s ease;
+}
+
+summary:hover {
+  color: red;
+}
+
+details[open] summary ~ * {
+  animation: sweep .5s ease-in-out  ;
+}
+
+@keyframes sweep {
+  0%    {opacity: 0; margin-left: -10px}
+  100%  {opacity: 1; margin-left: 55px}
+}
+
+details[open] summary {
+  color: #ffffff;
+}
+
+details[open] p {
+  border-left: 2px solid #ffffff;
+  margin-left: 55px;
+  padding-left: 25px;
+  opacity: 100;
+  transition: all 3s ease;
+}
+
+details[open] summary:after {
+  content: "-";
+  font-size: 3.2em;
+  margin: -33px 0.35em 0 0;
+  font-weight: 200;
+}
+
+.interview-body {
+  width: 70em;
+  margin: 4em auto;
+  box-shadow: 0px 0px 1px white;
+  border-radius: 2em;
+  padding: 5em;
+  background-color: #001219;
+}
+
+.interview-list {
+  width: 55em;
+  margin: 1em auto;
+  padding: 2em 0;
+  font-family: gothic;
+}
+
+summary::-webkit-details-marker {
+  display: none;
+}
+
+.interview-header h3 {
+  color: white;
+}
+
+summary:after {
+  background: transparent;
+  border-radius: 0.3em;
+  content: "+";
+  color: #ffffff;
+  float: left;
+  font-size: 1.8em;
+  font-weight: bold;
+  margin: -0.3em 0.65em 0 0;
+  padding: 0;
+  text-align: center;
+  width: 25px;
+}
