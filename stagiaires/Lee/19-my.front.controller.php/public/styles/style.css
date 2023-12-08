@@ -1,0 +1,330 @@
+/*   ----------------------------- SELECTORS GENERAUX ---------------------------- */
+body {
+    background-color: #f4d292;
+   
+}
+         
+@keyframes special {    /*  Petit animation qui fait transformer le main header  */
+
+    0% {text-decoration: underline;}
+    25% {font-style: italic; text-transform: capitalize;}
+    50% {font-size: xx-large; font-style: oblique; color: #f29559; text-transform:uppercase;}
+    75% {font-style: italic; text-transform: capitalize;}
+    100% {text-decoration: underline;}
+}   
+
+#hspec:hover {      /*  Pour que l'animation commence quand le souris est sur le header et qu'il dur 6 seconds  */
+    animation-name: special;
+    animation-duration: 6s;   
+}                                 
+
+h1 {
+    text-align: center;
+   /* text-decoration: underline; */
+    font-style: italic;
+}
+
+h2 {
+    text-align: center;
+    margin-right: 100px;
+    text-decoration: underline;
+    font-style: italic;
+    padding-left: 85px;
+}
+
+h3 {
+    text-align: center;
+}
+
+
+nav ul li {
+    display: inline-block;
+    width: 16%;
+    background-color: #f29559;
+    text-align: center;
+    font-size: 30px;
+    border-radius: 50px;
+}
+
+nav ul a {
+    color: rgba(34, 76, 118, 1);
+    /* color: black; */
+}
+
+nav ul li:hover {
+    background-color: #b8b08d;
+}
+
+footer {
+    text-align: center;
+    font-style: italic;
+    font-family: cursive;
+}
+
+#copyright{                 /*  Une autre forme d'animation pour le Footer  */
+    transition: transform 50s ease-in-out;
+}
+
+#copyright:hover {
+    transform: rotateY(-36000deg);
+   
+} 
+/*   --------------------  FIN DU SELECTORS GENERAUX ---------------------------- */
+
+/*   ---------------------------- SELECTORS INDEX ----------------------------   */
+
+#me {                            /* pour positioner l'image sur page l'accueil et mettre une marge autout pour que la texte n'est pas collé contre */
+    float: left;
+    margin-right: 50px;
+    margin-bottom: 20px;
+    margin-left: 40px;
+}
+
+#intro {                        /* pour  regler la texte de la page d'accueil */
+    text-align: justify;
+    font-family: cursive;
+    font-size: 20px;
+    margin: 50px;
+}
+
+/*   ----------------------------FIN DU SELECTORS INDEX ------------------------ */
+
+/*   ----------------------------- SELECTORS MUSEUM ---------------------------- */
+
+li dt a {
+    text-decoration: none;
+}
+
+li dt a:hover {
+    text-decoration: underline;
+    font-style: italic;
+
+}
+
+.column ul li{
+    cursor: pointer;
+}
+
+#expoimg {                  /* pour positioner les images */
+    float: left;
+    padding-right: 15px;
+    margin-left: 100px;
+}
+
+#expoimg2 {
+    float: right;
+    padding-left: 15px;
+    margin-right: 100px;
+}
+
+.museum1 {                  /* pour regler la texte en du premiere partie de la page  */
+    margin-right: 100px;
+    margin-left: 95px;
+    font-family: cursive;
+    font-size: 24px;
+}
+
+.museum2 {                  /* pour regler la texte du deuxieme partie */
+    margin-left: 100px;
+    font-family: cursive;
+    font-size: 22px;
+}
+
+#ladies a {
+    /* color: black; */
+    color: rgba(34, 76, 118, 1);
+}
+dl {
+    font-size: 20px;
+    padding-left: 400px;
+}
+dd {                            /* pour cacher l'info sur les 'ladies' jusqu'a on les selection */
+    display: none;
+} 
+
+dd:target {             
+    font-family: cursive;  
+    font-size: 18px;  
+    position: relative;
+    display: block;
+}
+
+   
+/*   ------------------------- FIN DU SELECTORS MUSEUM ---------------------------- */
+
+/*   ----------------------------- SELECTORS GALERIE ---------------------------- */
+
+#galpad ul li {                         /* Pour positioner les liens vers les autres pages de la Galerie */
+    margin-left: 12%;
+    display: inline-block;
+    width: 16%;
+    background-color: #f4d292;
+    text-align: center;
+    font-size: 30px;
+    border-radius: 50px;
+}
+
+#galpad ul li:hover {
+    background-color: #f29559;
+}
+#galpad {
+    padding-left: 38px;   /* Pour raison inconnu les images ne sont pas central sur la page donc l'utilisation du padding pour le corriger */
+}
+ #galpad a {
+    color: rgba(34, 76, 118, 1);
+ }
+
+
+.lightbox {                                 /* Pour crée un 'lightbox' qui s'ouvre avec l'image sur son fond. Appuyer n'importe ou sur le lightbox pour le fermer */
+    display: none;
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 1em;
+    background: rgba(0, 0, 0, 0.8);
+}
+  
+.lightbox:target {           
+    display: block;
+}
+  
+.lightbox span {                        /* Pour que le 'lightbox' couvert l'ecran entiere */
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+/*   -------------------------FIN DU SELECTORS GALERIE---------------------------- */
+
+/*   ----------------------------- SELECTORS INTERVIEW ---------------------------- */  
+
+#interpad {
+    padding-left: 20px;
+    margin-right: 25px;
+}
+.row {                          /* pour positioner les 3 colums */
+    display: flex;
+}
+
+.column {
+    width: 33%;
+    border-radius: 50px;
+    border-color: black;
+    text-align: center;
+    margin: 5px;
+    padding: 25px;
+}
+
+#col1 {
+    /* background-color: aqua; */
+    font-size: 20px;
+}
+  
+#col2 {
+    /* background-color: red; */                /* Au début, je mettre des couleurs différent sur les elements pour voir plus façilement lequel est lequel :-)*/
+    font-size: 20px;
+    
+}
+
+#col2 a {
+    color: rgba(34, 76, 118, 1);
+}
+
+  
+#col3 {
+    /* background-color: darkorchid; */
+    font-size: 20px;
+}
+
+.column ul li {    
+    font-family: Verdana, Tahoma, sans-serif;                             
+    padding-top: 15px;
+    display: inline-block;
+    text-align: center;
+    font-size: 25px;
+    margin-bottom: 10px;
+    padding-right: 25px;
+    color: rgba(34, 76, 118, 1);
+    text-decoration: underline;
+}
+
+.interintro {
+    font-family: cursive;
+    text-align: center;
+    font-size: 20px;
+    margin-left: 50px;
+    margin-right: 80px;
+}
+
+.interintro a {
+    color: rgb(34,76,118);
+}
+
+#intanswerJD, #intanswerMC {
+    font-size: larger;
+    font-style: italic;
+    font-family: Verdana, Tahoma, sans-serif;
+    overflow-wrap:normal;
+}
+
+.flag {
+    width: 150px;
+    height: 100px;
+    float: left;
+    margin-left: 25%;
+}
+
+/*   -------------------------FIN DU SELECTORS INTERVIEW ---------------------------- */
+
+
+/*   ----------------------------- SELECTORS RAPPORT -------------------------------- */  
+
+#rappad {
+    padding-right: 100px;
+    padding-left: 50px;
+    font-size: 22px;
+    font-family: cursive;
+}
+
+#entreimg {
+    float: left;
+    opacity: 0.5;
+    margin: 50px;
+    position: relative;
+    margin-bottom: 20px;
+}
+
+
+/*   -------------------------FIN DU SELECTORS RAPPORT ---------------------------- */
+
+
+/*   --------------------------- SELECTORS CONCLUSION ----------------------------- */
+
+.conc {
+    text-align: justify;
+    font-family: cursive;
+    font-size: 24px;
+    margin-left: 200px;
+    margin-right: 200px;
+    border: 5px;
+}
+
+#lastnote {
+    text-align: justify;
+    font-family: cursive;
+    font-size: 18px;
+    margin-left: 50px;
+    margin-right: 200px;
+    border: 5px;
+}
+/*  ------------------------- FIN DU SELECTORS CONCLUSION  ------------------------- */
+
+
+
+
