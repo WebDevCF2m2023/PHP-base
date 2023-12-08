@@ -25,6 +25,9 @@ case "livredor":
 case "actualités":
       $title= "actualités";
       $text= "blbalblblabllablalblabla";
+default :
+      $title=404;
+      $text= "ERROR 404 - PAGE NOT FOUND";
        
 endswitch;
 
