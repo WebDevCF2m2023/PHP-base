@@ -1,0 +1,80 @@
+/* colors
+black : #2b2d42
+grey : #8d99ae
+white : #edf2f4
+red clear : #ef233c
+red dark : #d90429
+*/
+#maze {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.maze {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 564px;
+    box-shadow: 0px 0px 20px 5px black;
+}
+/*normal lines*/
+.line_maze {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+}
+/*normal square*/
+.line_maze > div {
+    background-color: #8d99ae;
+    width: 3em;
+    height: 3em;
+}
+/*vertical border*/
+.line_maze > .vertical_line {
+    background-color: #ef233c;
+    width: 3px;
+}
+/*border top and bottom*/
+.interline_maze {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+}
+/*border left and right*/
+.interline_maze > .horizontal_line {
+    width: 3em;
+    height: 3px;
+    background-color: #ef233c;
+}
+/*corner*/
+.interline_maze > .corner_line {
+    width: 3px;
+    height: 3px;
+    background-color: #ef233c;
+}
+.void_line {
+    width: 500px;
+}
+.maze_menu {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.maze_menu > .second{
+    margin-left: 9;
+    text-shadow: 4px 1px #88051b;
+}
+.maze_menu > .first{
+    text-shadow: 4px 1px #88051b;
+}
+div.corner {
+    background-image: url("../img/cherry.webp");
+    background-size: 100%;
+}
+div.pacman {
+    background-image: url("../img/fantom.webp");
+    background-size: 100%;
+}

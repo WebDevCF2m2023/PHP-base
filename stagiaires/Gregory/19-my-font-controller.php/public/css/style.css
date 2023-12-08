@@ -1,0 +1,82 @@
+/* colors
+black : #2b2d42
+grey : #8d99ae
+white : #edf2f4
+red clear : #ef233c
+red dark : #d90429
+*/
+@font-face {
+    font-family: "Comfortaa";
+    src: url(../fronts/Comfortaa_Regular.ttf);
+}
+@font-face {
+    font-family: "capsuula";
+    src: url(../fronts/Capsuula.ttf);
+}
+
+body {
+    font-family: "Comfortaa";
+    letter-spacing: 1px;
+    background-color: #2b2d42;
+}
+h1 {
+    letter-spacing: 4px;
+    color: #ef233c;
+    text-align: center;
+    font-size: 4em;
+    font-weight: 800;
+    text-shadow: 4px 1px #88051b;
+}
+h2 {
+    letter-spacing: 3px;
+    color: #ef233c;
+    text-align: center;
+    font-size: 3em;
+    font-weight: 800;
+    text-shadow: 4px 1px #88051b;
+}
+h3 {
+    letter-spacing: 2px;
+    color: #ef233c;
+    text-align: center;
+    font-size: 2.5em;
+    font-weight: 800;
+    margin: 0.4em;
+}
+p {
+    font-family: "capsuula";
+    font-weight: 400;
+    color: #edf2f4;
+}
+nav[id="page-nav"] {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+nav[id="page-nav"] > a, .nav_button {
+    text-align: center;
+    text-decoration: none;
+    font-size: 2em;
+    padding: 14px ;
+    width: 5em;
+    color: #2b2d42;
+    background-color: #ef233c;
+}
+nav[id="page-nav"] > a:hover, .nav_button:hover {
+    background: linear-gradient(90deg, #ef233c, #d90429);
+}
+div[class="paragraphes"] {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+div[class="paragraphes"] > p {
+    width: 896px;
+    max-width: 100%;
+    font-size: 2em;
+    margin: 0.7em;
+}
+div[class="paragraphes"] > h3 {
+    width: 22.4em;
+    text-align: left;
+}

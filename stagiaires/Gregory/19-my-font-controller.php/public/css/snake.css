@@ -1,0 +1,29 @@
+/* colors
+black : #2b2d42
+grey : #8d99ae
+white : #edf2f4
+red clear : #ef233c
+red dark : #d90429
+*/
+
+#snake {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.snake_line {
+    display: flex;
+    flex-direction: row;
+}
+.snake_line > div {
+    width: 80px;
+    height: 80px;
+    background-color: #8d99ae;
+}
+.snake_line > .snake {
+    background-color: #ef233c;
+}
+.snake_line > .apple {
+    background-color: green;
+}

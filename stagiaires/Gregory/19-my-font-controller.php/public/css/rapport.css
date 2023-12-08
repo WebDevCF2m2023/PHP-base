@@ -1,0 +1,45 @@
+/* colors
+black : #2b2d42
+grey : #8d99ae
+white : #edf2f4
+red clear : #ef233c
+red dark : #d90429
+*/
+p > a {
+    color: #ef233c;
+    text-decoration: none;
+}
+p > a:hover {
+    color: #d90429;
+}
+#rapport {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#rapport > p {
+    font-size: 2em;
+    max-width: 750px;
+    width: 75%;
+}
+#rapport > h3 {
+    font-size: 2.5em;
+    text-align: left;
+    max-width: 750px;
+    width: 75%;
+}
+#rapport > h2 {
+    max-width: 750px;
+    width: 75%;
+}
+#Interview {
+    max-width: 750px;
+    width: 75%;
+    display: flex;
+    justify-content: left;
+}
+#map {
+    width: 400px;
+    height: 400px;
+    margin: 20px;
+}
