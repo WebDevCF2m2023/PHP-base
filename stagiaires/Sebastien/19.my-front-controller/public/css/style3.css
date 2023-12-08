@@ -1,0 +1,317 @@
+@font-face {
+  font-family: "milk";
+  src: url(../fond/milk.otf);
+}
+:root {
+  --green: rgb(61, 214, 88);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica;
+}
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  /*La propriété display définit le type d'affichage utilisée pour le rendu d'un élément (de bloc ou en ligne) et la disposition utilisée pour ses éléments fils : grille ou boîtes flexibles.
+  Le type d'affichage donné par display possède deux composantes : le type d'affichage extérieur qui définit comment la boîte participe au flux et le type d'affichage intérieur qui définit l'organisation des éléments enfants.
+   Certaines valeurs de display sont définies dans des spécifications séparées. Pour plus d'informations, voir la section Spécifications ci-après.*/
+  justify-content: end;
+  /*La propriété CSS justify-content indique la façon dont l'espace doit être réparti entre et autour des éléments selon l'axe principal d'un conteneur flexible ou selon l'axe en ligne lorsque le conteneur est une grille.*/
+  padding-right: 20px;
+  /*La propriété padding-right d'un élément correspond à l'espace nécessaire à la droite d'un élément. La zone de remplissage correspond à l'espace entre le contenu et la bordure. padding-right ne peut pas recevoir de valeurs négatives.*/
+  height: 7vh;
+  /*La propriété height définit la hauteur de la boîte de contenu d'un élément. La boîte de contenu (en-US) est à l'intérieur de la boîte de remplissage (padding) qui est à l'intérieur de la boîte de bordure qui est elle-même à l'intérieur de la boîte de marge de l'élément. Si la propriété box-sizing vaut border-box, cette propriété détermine la hauteur de la boîte de marge.*/
+  background-color: rgb(0, 0, 0);
+  /*couleur de fond d'ecran */
+  border-bottom: 2px solid rgb(0, 4, 244);
+  /*La propriété border-bottom-color permet de définir la couleur utilisée pour la bordure basse d'un élément.*/
+  font-family: "milk", sans-serif;
+}
+
+/*Cela concerne tout les balise html <a> qui se situe dans la balise <nav> */
+nav > a {
+  color: rgb(255, 255, 255);
+  padding-top: 2vh;
+  margin: 0px 10px 0px 20px;
+  font-size: 1.6rem;
+  /*La propriété font-size définit la taille de fonte utilisée pour le texte. La modification de cette taille peut entraîner la modification de la taille d'autres éléments car elle est utilisée pour calculer les valeurs des longueurs relatives (type <length>) (par exemple exprimées avec les unités em ou ex).*/
+  font-weight: bold;
+  /*La propriété CSS font-weight permet de définir la graisse utilisée pour le texte. Les niveaux de graisse disponibles dépendent de la police (cf. font-family). Certaines fontes n'existent qu'avec les niveaux de graisses normal et bold.*/
+  position: relative;
+  /*La propriété CSS position définit la façon dont un élément est positionné dans un document. Les propriétés top, right, bottom et left déterminent l'emplacement final de l'élément positionné.*/
+  text-decoration: none;
+  /*La propriété text-decoration est utilisée pour « décorer » le texte en ajoutant une ligne pouvant être positionnée sous, sur ou à travers le texte. C'est une propriété raccourcie qui permet de paramétrer simultanément les propriétés « détaillées » : text-decoration-line, text-decoration-color et text-decoration-style.*/
+  text-transform: uppercase;
+  /*La propriété text-transform définit la façon d'utiliser les lettres capitales pour le texte d'un élément. Cela permet que le texte soit écrit uniquement en majuscules, minuscules ou que chaque mot commence par une capitale. Cela permet également d'améliorer la lisibilité pour les textes avec des annotations Ruby.*/
+  transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+  /*La propriété transition-timing-function décrit la façon dont les valeurs intermédiaires des propriétés CSS affectées par un effet de transition sont calculées. Ceci permet donc de définir une courbe d'accelération, de manière à ce que la vitesse de la transition varie au cours de sa durée.*/
+  transition-duration: 400ms;
+  /*La propriété transition-duration définit le nombre de secondes ou de millisecondes que doit durer une animation. La valeur par défaut, 0s, indique qu'il n'y aura aucune animation.*/
+  transition-property: color;
+  /*La propriété transition-property désigne les noms des propriétés CSS sur lesquelles un effet de transition devrait être appliqué.*/
+  font-family: serif;
+}
+
+/*Lorsque l'on met la souris sur les balises <a> , on change la couleur du texte des balises <a> en*/
+nav > a:focus,
+nav > a:hover {
+  color: #0602fa;
+}
+
+/*
+  Lorsque l'on met notre souris sur les balises <a> , l'element after est changé.
+  On change le width et la position left de l'element after
+  */
+nav > a:focus:after,
+nav > a:hover:after {
+  width: 100%;
+  left: 0%;
+}
+
+/*   Cela concerne tout les balise html <a> qui se situe dans la balise <nav> 
+       Le after qant a lui signifie qu'il ajoute un element virtuel , une fausse balise après chaque <a>
+       Donc c'est un element html qui ne figure par dans le fichier html
+  */
+/* Crée un pseudo-élément ::after pour les balises <a> à l'intérieur de <nav> */
+nav > a:after {
+  /* Le contenu du pseudo-élément est vide, ce qui signifie qu'il n'affiche aucun contenu textuel. Il est principalement utilisé pour le style. */
+  content: "";
+  /* La propriété pointer-events détermine si l'élément réagit aux interactions de l'utilisateur. "none" signifie qu'il ne réagit pas aux événements de pointage, comme les clics. */
+  pointer-events: none;
+  /* Positionne l'élément 2 pixels au-dessous de son emplacement normal. */
+  bottom: -2px;
+  /* Positionne l'élément horizontalement au milieu de son contenant. */
+  left: 50%;
+  /* La position absolue permet de positionner l'élément par rapport à son contenant le plus proche avec une position relative, dans ce cas, la balise <a>. */
+  position: absolute;
+  /* Définit la largeur initiale de l'élément à 0, le rendant invisible. */
+  width: 0%;
+  /* Définit la hauteur de l'élément à 2 pixels, créant une ligne horizontale. */
+  height: 2px;
+  /* La couleur de fond de la ligne horizontale est blanche (#fff). */
+  background-color: #fff;
+  /* La transition-timing-function détermine la vitesse de l'animation. Dans ce cas, une courbe de transition cubic-bezier est utilisée pour un effet de transition doux. */
+  transition-timing-function: cubic-bezier(0.25, 0.8, 1, 1);
+  /* La transition-duration spécifie la durée de l'animation lorsque la largeur de l'élément change. */
+  transition-duration: 0.8s;
+  /* La transition-property indique quelles propriétés CSS sont animées pendant la transition. Dans ce cas, la largeur et la position horizontale (left) sont animées. */
+  transition-property: width, left;
+}
+#expo {
+  /* Sélecteur pour l'élément avec l'ID "expo" */
+  width: 100vw;
+  /* Définit la largeur à 100% de la largeur de la vue */
+  height: 120vh;
+  /* Définit la hauteur à 120% de la hauteur de la vue */
+  background-image: url("../image\ video/a.jpg");
+  /* Définit une image de fond depuis le chemin spécifié */
+  background-size: cover;
+  /* Ajuste la taille de l'arrière-plan pour couvrir complètement l'élément */
+  background-position: center 7vh;
+  /* Positionne l'arrière-plan au centre de l'élément avec un décalage vertical de 7% de la hauteur de la vue */
+  background-repeat: no-repeat;
+  /* Empêche la répétition de l'arrière-plan */
+  font-family: "milk", sans-serif;
+}
+main {
+  margin-top: 5vh;
+}
+
+.text {
+  /* Sélecteur pour les éléments avec la classe "text" */
+  font-size: 1.6rem;
+  /* Définit la taille de la police à 1.6 fois la taille de la police par défaut */
+  width: 73vw;
+  /* Définit la largeur à 50% de la largeur de la vue */
+  margin: auto;
+  /* Centre l'élément horizontalement dans son conteneur parent */
+  padding: 45px;
+  /* Ajoute un remplissage intérieur de 10 pixels */
+  background-color: rgba(22, 22, 22, 0.93);
+  /* Définit la couleur d'arrière-plan avec une opacité de 0.93 */
+  color: rgb(255, 255, 255);
+  /* Définit la couleur du texte à blanc */
+  border: 2px solid rgb(93, 0, 255);
+  /* Ajoute une bordure d'un pixel de large de couleur noire */
+  border-radius: 25px;
+  /* Arrondit les coins de l'élément avec un rayon de 25 pixels */
+}
+
+.titre {
+  /* Sélecteur pour les éléments avec la classe "titre" */
+  margin: 8rem auto 50px auto;
+  /* Centre l'élément horizontalement dans son conteneur parent et supprime la marge supérieure */
+  text-align: center;
+  /* Centre le texte horizontalement dans l'élément */
+  background-color: rgba(22, 22, 22, 0.95);
+  /* Définit la couleur d'arrière-plan avec une opacité de 0.95 */
+  color: white;
+  /* Définit la couleur du texte à blanc */
+  border: 2px solid rgb(21, 0, 251);
+  /* Ajoute une bordure d'un pixel de large de couleur noire */
+  border-radius: 25px;
+  /* Arrondit les coins de l'élément avec un rayon de 25 pixels */
+  font-size: 1.6rem;
+  /* Définit la taille de la police à 1.6 fois la taille de la police par défaut */
+  width: 25vw;
+  /* Définit la largeur à 19% de la largeur de la vue */
+  padding: 30px;
+}
+
+/*--------------------------------------------(hover before)faire apparaitre des photo sur des mots text----------------------------------------------------------------*/
+/*On crée le pseudo element before qui est lié a asterix
+    On le met en display none afin qu'il ne sois pas visible
+  */
+
+@keyframes bgSpanOpacity {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.bgspan {
+  cursor: pointer;
+  color: rgb(136, 195, 253);
+}
+/*Lorsque l'on met notre souris sur le mot en question , on rend visible le pseudo element before*/
+.bgspan:hover::before {
+  display: inline-block;
+  animation: bgSpanOpacity 1.4s;
+}
+.bgspan::before {
+  /* Sélecteur ::before pour ajouter du contenu avant l'élément avec la classe .bgspan */
+  content: "";
+  /* Ajoute un contenu vide */
+  top: 20vh;
+  /* Positionne le haut de l'élément à 20% de la hauteur de la vue */
+  left: 9vw;
+  /* Positionne la gauche de l'élément à 9% de la largeur de la vue */
+  display: none;
+  /* Masque l'élément, il ne sera pas affiché */
+  position: fixed;
+  /* Positionne l'élément de façon fixe par rapport à la fenêtre du navigateur */
+  width: 15vw;
+  /* Définit la largeur de l'élément à 15% de la largeur de la vue */
+  height: 20vw;
+  /* Définit la hauteur de l'élément à 20% de la largeur de la vue */
+  border: 1px solid black;
+  /* Ajoute une bordure d'un pixel de large de couleur noire */
+  border-radius: 10px;
+  /* Arrondit les coins de l'élément avec un rayon de 10 pixels */
+  background-size: cover;
+  /* Ajuste la taille de l'arrière-plan pour couvrir complètement l'élément */
+  background-position: center;
+  /* Positionne l'arrière-plan au centre de l'élément */
+  box-shadow: 5px 5px 5px rgb(255, 255, 255);
+  /* Ajoute une ombre de 5 pixels de décalage à droite et en bas avec une couleur noire */
+}
+#asterix::before {
+  background-image: url(../image\ video/8835.jpg);
+}
+#manette::before {
+  background-image: url(../image\ video/mannes.gif);
+  left: 10vw;
+  width: 25vw;
+}
+#manneq::before {
+  background-image: url(../image\ video/manq.jpg);
+  left: 10vw;
+  width: 25vw;
+}
+#noel::before {
+  background-image: url(../image\ video/sega.jpg);
+  left: 10vw;
+  width: 25vw;
+}
+#nes::before {
+  background-image: url(../image\ video/nes.jpg);
+  left: 10vw;
+  width: 25vw;
+}
+#boy::before {
+  background-image: url(../image\ video/boy.jpg);
+  left: 10vw;
+  width: 25vw;
+}
+#kid::before {
+  background-image: url(../image\ video/kid.jpg);
+  left: 10vw;
+  width: 15vw;
+}
+#cousin::before {
+  background-image: url(../image\ video/cousin.jpg);
+}
+#pc::before {
+  left: 10vw;
+  width: 25vw;
+  background-image: url(../image\ video/1epc.jpg);
+}
+#msn::before {
+  background-image: url(../image\ video/msn.jpg);
+  left: 10vw;
+  width: 25vw;
+}
+#phone::before {
+  background-image: url(../image\ video/phone.jpg);
+  left: 10vw;
+  width: 25vw;
+}
+#you::before {
+  background-image: url(../image\ video/you.jpg);
+  left: 10vw;
+  width: 25vw;
+}
+#emul::before {
+  background-image: url(../image\ video/emul.webp);
+  left: 10vw;
+  width: 30vw;
+}
+#lent::before {
+  background-image: url(../image\ video/lent.webp);
+  left: 10vw;
+  width: 30vw;
+}
+#fiber::before {
+  background-image: url(../image\ video/fiber.jpg);
+  left: 10vw;
+  width: 30vw;
+}
+#futur::before {
+  background-image: url(../image\ video/futur.jpg);
+  left: 10vw;
+  width: 30vw;
+}
+#bit::before {
+  background-image: url(../image\ video/8bit.jpg);
+  left: 10vw;
+  width: 30vw;
+}
+#ps5::before {
+  background-image: url(../image\ video/ps5.webp);
+  left: 10vw;
+  width: 30vw;
+}
+#retro::before {
+  background-image: url(../image\ video/retro4.jpg);
+  left: 10vw;
+  width: 17vw;
+}
+#mac::before {
+  background-image: url(../image\ video/mac.jpg);
+  left: 10vw;
+  width: 17vw;
+}
+#zen::before {
+  background-image: url(../image\ video/zen.jpg);
+  left: 10vw;
+  width: 17vw;
+}

@@ -6,18 +6,18 @@ if(isset($_GET["section"])){
               $title = "Ma vie";
               $text = "blablablablablablablablablablablablablablablablablablablablablabla";
               break;
-              case "contact":
-                $title = "Contact";
-              $text="blablablablablablablablablablablablablablablablablablablablablablabla";
+                case "contact":
+                  $title = "Contact";
+                  $text="blablablablablablablablablablablablablablablablablablablablablablabla";
               break;
-              case "livredor":
-              $title = "livre d'or";
-              $text = "blablablablablablablablablablablablablablablablablablablablablabla";
+                 case "livredor":
+                    $title = "livre d'or";
+                    $text = "blablablablablablablablablablablablablablablablablablablablablabla";
               break;
 
               default:
-              $title="Error 404";
-              $text="Error 404";
+                    $title="Error 404";
+                    $text="Error 404 - page not found";
 
         endswitch;
 }else{

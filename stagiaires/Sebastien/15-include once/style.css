@@ -1,0 +1,12 @@
+a{
+    background:linear-gradient(75deg,green,blue,red);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    font-size: 5rem;
+}
+p{
+    background:linear-gradient(75deg,green,blue,red);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    font-size: 1.5rem;  
+}
