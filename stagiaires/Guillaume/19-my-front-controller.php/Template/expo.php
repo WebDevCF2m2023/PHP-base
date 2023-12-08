@@ -171,7 +171,7 @@
       </p>
 
       <audio controls autoplay>
-        <source src="sound/perfect.mp3" type="audio/mpeg" />
+        <source src="../Public/CSS/perfect.mp3" type="audio/mpeg" />
       </audio>
     </div>
     <footer class="footer2">© 2024 Capsule Corp. Tous droits réservés.</footer>
