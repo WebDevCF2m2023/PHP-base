@@ -10,7 +10,7 @@
 <div class="container">
   <div class="navbar">
     <div class="logo">
-      <h4><a href="index.php">Erhan ERDAS</a></h4>
+      <h4><a href="?page=accueil">Erhan ERDAS</a></h4>
     </div>
     <?php include 'inc/menu.php'; ?>
   </div>
