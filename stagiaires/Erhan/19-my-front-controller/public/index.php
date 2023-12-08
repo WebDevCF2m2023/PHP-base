@@ -5,6 +5,9 @@ if(isset($_GET['page'])){
         case 'interview':
             include('../templates/entreprise/interview.php');
             break;
+        case 'accueil':
+            include('../templates/accueil.php');
+            break;
         case 'rapport':
             include('../templates/entreprise/rapport.php');
             break;
