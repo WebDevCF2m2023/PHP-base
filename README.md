@@ -415,9 +415,15 @@ Il existe d'autres types de variables, mais nous les verrons plus tard.
 
 Un tableau est une variable qui peut contenir plusieurs valeurs.
 
+Nommés également `array`, ce sont des structures de données fondamentales en PHP, et ils jouent un rôle crucial dans le développement de programmes dynamiques et flexibles.
+
 Les tableaux peuvent contenir des valeurs de type string, integer, float, boolean, array, object, null, etc...
 
-Les tableaux peuvent être indexés numériquement, ou associativement.
+Les tableaux peuvent être indexés numériquement, ou associativement. Ils peuvent être multidimensionnels, en utilisant des tableaux dans des tableaux.
+
+Ils permettent de stocker des données de manière structurée, et peuvent être manipulés facilement, grâce notamment aux fonctions dédiées à la manipulation des tableaux :
+
+https://www.php.net/manual/fr/ref.array.php
 
 Il existe plusieurs manières de créer un tableau :
 
@@ -433,9 +439,11 @@ $tab3 = ["clef1" => "valeur1", "clef2" => "valeur2"];
 $tab4 = array("clef1" => "valeur1", "clef2" => "valeur2");
 // tableau mixte
 $tab5 = ["valeur1", "clef2" => "valeur2"];
+// tableau multidimensionnel
+$tab6 = ["clef1" => ["clef1.1" => "valeur1.1"], "clef2" => "valeur2"];
 
 // affichage des tableaux via le débugueur var_dump()
-var_dump($tab1, $tab2, $tab3, $tab4, $tab5);
+var_dump($tab1, $tab2, $tab3, $tab4, $tab5, $tab6);
 ?>
 ```
 
