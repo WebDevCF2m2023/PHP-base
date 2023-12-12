@@ -16,6 +16,7 @@
 - [Les variables](#les-variables)
   - [Déclaration de variables non strictement typées](#déclaration-de-variables-non-strictement-typées)
   - [Les tableaux](#les-tableaux)
+    - [Les tableaux indexés](#les-tableaux-indexés)
 - [Les variables superglobales](#les-variables-superglobales)
   - [$_GET](#_get)
 - [Les conditions](#les-conditions)
@@ -417,6 +418,60 @@ Un tableau est une variable qui peut contenir plusieurs valeurs.
 Les tableaux peuvent contenir des valeurs de type string, integer, float, boolean, array, object, null, etc...
 
 Les tableaux peuvent être indexés numériquement, ou associativement.
+
+Il existe plusieurs manières de créer un tableau :
+
+```php
+<?php
+// tableau indexé numériquement
+$tab1 = [1, 2, 3];
+// tableau indexé numériquement
+$tab2 = array(1, 2, 3);
+// tableau associatif
+$tab3 = ["clef1" => "valeur1", "clef2" => "valeur2"];
+// tableau associatif
+$tab4 = array("clef1" => "valeur1", "clef2" => "valeur2");
+// tableau mixte
+$tab5 = ["valeur1", "clef2" => "valeur2"];
+
+// affichage des tableaux via le débugueur var_dump()
+var_dump($tab1, $tab2, $tab3, $tab4, $tab5);
+?>
+```
+
+---
+
+[Retour au menu](#menu-de-navigation)
+
+---
+
+#### Les tableaux indexés
+
+Les tableaux indexés numériquement sont des tableaux dont les clés sont des entiers attribués automatiquement à partir de 0.
+
+```php
+<?php
+// tableau indexé numériquement
+$tab1 = [1, 2, 3];
+
+// affichage du tableau via le débugueur var_dump()
+var_dump($tab1);
+// affichera :
+// array(3) { [0]=> int(1) [1]=> int(2) [2]=> int(3) }
+?>
+```
+
+Pour afficher une valeur d'un tableau indexé, nous utilisons la clé de la valeur :
+
+```php
+<?php
+// tableau indexé numériquement
+$tab1 = [1, 2, 3];
+
+// affichage de la valeur du tableau indexé numériquement
+echo $tab1[0]; // affichera 1
+?>
+```
 
 ---
 
