@@ -17,6 +17,7 @@
   - [Déclaration de variables non strictement typées](#déclaration-de-variables-non-strictement-typées)
   - [Les tableaux](#les-tableaux)
     - [Les tableaux indexés](#les-tableaux-indexés)
+    - [Les tableaux associatifs](#les-tableaux-associatifs)
 - [Les variables superglobales](#les-variables-superglobales)
   - [$_GET](#_get)
 - [Les conditions](#les-conditions)
@@ -419,7 +420,9 @@ Nommés également `array`, ce sont des structures de données fondamentales en 
 
 Les tableaux peuvent contenir des valeurs de type string, integer, float, boolean, array, object, null, etc...
 
-Les tableaux peuvent être indexés numériquement, ou associativement. Ils peuvent être multidimensionnels, en utilisant des tableaux dans des tableaux.
+Les tableaux peuvent être indexés numériquement, ou associativement. Ils peuvent être multidimensionnels, en utilisant des tableaux dans des tableaux :
+
+https://www.php.net/manual/fr/language.types.array.php
 
 Ils permettent de stocker des données de manière structurée, et peuvent être manipulés facilement, grâce notamment aux fonctions dédiées à la manipulation des tableaux :
 
@@ -455,7 +458,7 @@ var_dump($tab1, $tab2, $tab3, $tab4, $tab5, $tab6);
 
 #### Les tableaux indexés
 
-Les tableaux indexés numériquement sont des tableaux dont les clés sont des entiers attribués automatiquement à partir de 0.
+Les tableaux indexés numériquement sont des tableaux dont les clés sont des entiers attribués automatiquement à partir de 0. Ce sont les tableaux les plus simples, nommés également `liste`.
 
 ```php
 <?php
@@ -478,6 +481,28 @@ $tab1 = [1, 2, 3];
 
 // affichage de la valeur du tableau indexé numériquement
 echo $tab1[0]; // affichera 1
+?>
+```
+
+---
+
+[Retour au menu](#menu-de-navigation)
+
+---
+
+#### Les tableaux associatifs
+
+Les tableaux associatifs sont des tableaux dont les clés sont des chaînes de caractères.
+
+```php
+<?php
+// tableau associatif
+$tab3 = ["clef1" => "valeur1", "clef2" => "valeur2"];
+
+// affichage du tableau via le débugueur var_dump()
+var_dump($tab3);
+// affichera :
+// array(2) { ["clef1"]=> string(7) "valeur1" ["clef2"]=> string(7) "valeur2" }
 ?>
 ```
 
