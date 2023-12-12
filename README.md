@@ -985,12 +985,37 @@ Il est un exemple de structure de site pour le TI de fin du mois.
 
 ## Les boucles
 
-Les boucles permettent de répéter des instructions un certain nombre de fois.
+Les boucles permettent de répéter des instructions un certain nombre de fois. Il existe plusieurs types de boucles en PHP.
+
+Un grand principe des boucles est de répéter des instructions tant qu'une condition est vraie. Elles ne doivent pas être infinies, sinon le serveur finira par planter.
+
+---
+
+[Retour au menu](#menu-de-navigation)
+
+---
 
 ### for
 
+La boucle `for` est la plus structurée, elle permet de répéter des instructions un certain nombre de fois. Elle est composée de 3 parties :
 
-A continuer...
+- l'initialisation de la variable de boucle
+- la condition de sortie de boucle
+- l'incrémentation de la variable de boucle
+
+On exécute les instructions entre les accolades tant que la condition de sortie de boucle est vraie.
+
+```php
+<?php
+// on initialise la variable $i à 0
+// on répète les instructions entre les accolades
+// tant que $i est inférieur ou égal à 10
+// on incrémente $i de 1 à chaque tour de boucle
+for($i=0;$i<=10;$i++){
+  echo $i;
+}
+?>
+```
 
 --- 
 
