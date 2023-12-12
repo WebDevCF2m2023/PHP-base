@@ -13,8 +13,11 @@
   - [Les balises PHP](#les-balises-php)
   - [Les commentaires](#les-commentaires)
   - [Placement des balises PHP](#placement-des-balises-php)
-  - [Les variables](#les-variables)
-    - [Déclaration de variables non strictement typées](#déclaration-de-variables-non-strictement-typées)
+- [Les variables](#les-variables)
+  - [Déclaration de variables non strictement typées](#déclaration-de-variables-non-strictement-typées)
+  - [Les tableaux](#les-tableaux)
+- [Les variables superglobales](#les-variables-superglobales)
+  - [$_GET](#_get)
 - [Les conditions](#les-conditions)
   - [if](#if)
   - [else](#else)
@@ -22,8 +25,6 @@
   - [Exercices et exemples if - elseif - else](#exercices-et-exemples-if---elseif---else)
   - [Autre manière de faire des conditions](#autre-manière-de-faire-des-conditions)
   - [switch](#switch)
-- [Les variables superglobales](#les-variables-superglobales)
-  - [$_GET](#_get)
 - [Les inclusions](#les-inclusions)
   - [include](#include)
   - [require](#require)
@@ -327,7 +328,7 @@ Nous verrons plus tard comment fonctionnent les fonctions et variables.
 
 ---
 
-### Les variables
+## Les variables
 
 Une variable est un **conteneur pour stocker des informations**. 
 
@@ -349,7 +350,7 @@ Voici une liste des variables prédéfinies en PHP : [Variables prédéfinies](h
 
 ---
 
-#### Déclaration de variables non strictement typées
+### Déclaration de variables non strictement typées
 
 En PHP, une variable commence par le signe `$`, suivi du nom de la variable :
 
@@ -409,9 +410,55 @@ Il existe d'autres types de variables, mais nous les verrons plus tard.
 
 ---
 
+### Les tableaux
+
+Un tableau est une variable qui peut contenir plusieurs valeurs.
+
+Les tableaux peuvent contenir des valeurs de type string, integer, float, boolean, array, object, null, etc...
+
+Les tableaux peuvent être indexés numériquement, ou associativement.
+
+---
+
+[Retour au menu](#menu-de-navigation)
+
+---
+
+## Les variables superglobales
+
+Les variables superglobales sont des variables prédéfinies qui sont toujours accessibles, quel que soit le contexte.
+
+En PHP, les variables superglobales sont des tableaux associatifs.
+
+https://www.php.net/manual/fr/language.variables.superglobals.php
+
+### $_GET
+
+`$_GET` est une variable superglobale qui est utilisée pour collecter des données de formulaires, après avoir envoyé un formulaire avec la méthode "get".
+
+**On l'utilise surtout pour récupérer des données dans l'URL.**
+
+La manière d'écrire des variables get dans l'URL est la suivante : `?section=contact&page=3&nom=dupont`
+
+```php
+<?php
+// affiche le contenu de la variable superglobale $_GET
+var_dump($_GET);
+?>
+```
+
+| 13 | ![Exercice 13](https://github.com/mikhawa/PHP-base/blob/main/datas/folder-type-php-opened_24.png?raw=true) | Exercice 13 | Créez un fichier `13-GET.php` et modifiez le switch pour afficher votre contenu pour les rubriques : Contact - Livre d'or - Actualités.  |
+|----|:----------------------------------------------------------------------------------------------------------:|:-----------:|:----------------------------------------------------------------------------------------------------------------------------------------:|
+
+---
+
+[Retour au menu](#menu-de-navigation)
+
+---
+
 ### Les conditions
 
-Les conditions sont la deuxième brique fondamentale d'un langage de programmation, elles permettent d'évaluer l'état de propositions, de variables etc.
+Les conditions sont la deuxième brique fondamentale d'un langage de programmation, elles permettent d'évaluer l'état de propositions, de variables, etc.
 
 #### if
 
@@ -687,37 +734,7 @@ switch($hasard1){
 
 ---
 
-## Les variables superglobales
 
-Les variables superglobales sont des variables prédéfinies qui sont toujours accessibles, quel que soit le contexte.
-
-En PHP, les variables superglobales sont des tableaux associatifs.
-
-https://www.php.net/manual/fr/language.variables.superglobals.php
-
-### $_GET
-
-`$_GET` est une variable superglobale qui est utilisée pour collecter des données de formulaires, après avoir envoyé un formulaire avec la méthode "get". 
-
-**On l'utilise surtout pour récupérer des données dans l'URL.**
-
-La manière d'écrire des variables get dans l'URL est la suivante : `?section=contact&page=3&nom=dupont`
-
-```php
-<?php
-// affiche le contenu de la variable superglobale $_GET
-var_dump($_GET);
-?>
-```
-
-| 13 | ![Exercice 13](https://github.com/mikhawa/PHP-base/blob/main/datas/folder-type-php-opened_24.png?raw=true) | Exercice 13 | Créez un fichier `13-GET.php` et modifiez le switch pour afficher votre contenu pour les rubriques : Contact - Livre d'or - Actualités.  |
-|----|:----------------------------------------------------------------------------------------------------------:|:-----------:|:----------------------------------------------------------------------------------------------------------------------------------------:|
-
----
-
-[Retour au menu](#menu-de-navigation)
-
----
 
 ## Les inclusions
 
@@ -983,11 +1000,24 @@ Il est un exemple de structure de site pour le TI de fin du mois.
 
 ---
 
+
+
 ## Les boucles
 
 Les boucles permettent de répéter des instructions un certain nombre de fois. Il existe plusieurs types de boucles en PHP.
 
 Un grand principe des boucles est de répéter des instructions tant qu'une condition est vraie. Elles ne doivent pas être infinies, sinon le serveur finira par planter.
+
+Les boucles sont très utiles pour parcourir des tableaux, des objets, des fichiers, des dossiers, des bases de données, etc...
+
+Les fonctions natives (ou structure de langage) en PHP pour faire des boucles sont :
+
+- `while`
+- `do...while`
+- `for`
+- `foreach`
+
+Les fonctions récursives sont également des boucles, mais nous les verrons plus tard.
 
 ---
 
@@ -1000,20 +1030,33 @@ Un grand principe des boucles est de répéter des instructions tant qu'une cond
 La boucle `for` est la plus structurée, elle permet de répéter des instructions un certain nombre de fois. Elle est composée de 3 parties :
 
 - l'initialisation de la variable de boucle
-- la condition de sortie de boucle
-- l'incrémentation de la variable de boucle
+- la condition de sortie de boucle liée à la variable de boucle
+- l'incrémentation (ou décrémentation) de la variable de boucle
 
 On exécute les instructions entre les accolades tant que la condition de sortie de boucle est vraie.
 
 ```php
-<?php
-// on initialise la variable $i à 0
-// on répète les instructions entre les accolades
-// tant que $i est inférieur ou égal à 10
-// on incrémente $i de 1 à chaque tour de boucle
-for($i=0;$i<=10;$i++){
-  echo $i;
+for(initialisation; condition de sortie de boucle; incrémentation){
+  // instructions
 }
+```
+
+
+
+```php
+<?php
+
+for(
+    // on initialise la variable $i à 0 (premier tour de boucle)
+    $i=0;
+    // on définit la condition de sortie de boucle (vérifiée à chaque tour de boucle)
+    $i<=10;
+    // on incrémente $i de 1 à chaque tour de boucle (dernière action du tour de boucle)
+    $i++
+){
+    echo "$i ";
+}
+// Affiche : 0 1 2 3 4 5 6 7 8 9 10
 ?>
 ```
 
