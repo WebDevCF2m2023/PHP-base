@@ -1,0 +1,130 @@
+@font-face {
+    font-family: 'martyric';
+    src: url('../CSS/martyric-webfont.woff') format('woff'),
+         url('../CSS/martyric-webfont.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'adidas';
+    src: url('CSS/font/texgyreadventor-bold-webfont.woff2') format('woff2'),
+         url('CSS/font/texgyreadventor-bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'roboto';
+    src: url('../CSS/roboto/robotocondensed-regular-webfont.woff2') format('woff2'),
+         url('../CSS/roboto/robotocondensed-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+body {
+     /* règle le background de la page */
+
+    background-image: url(https://i.redd.it/v1j1be6y44m91.png);  /* url de l'image de background */
+    background-size: cover;  /* couvre toute la page avec l'image */
+    margin: 0;  /* bordure atour de la page: aucune */
+}
+.button{
+     /* regle le style des boutons accueil, interview, entreprise, conclusion */
+
+    background-color: rgba(159, 51, 51, 0.808); /*couleur de fond du bouton */
+    border: none; /* enleve la bordure autour du background*/
+    color: rgb(156, 174, 246); /* couleur de la typo */
+    padding: 8px; /*marge autour du texte */
+    text-align: center; /*aligne le texte au milieu du bouton */
+    text-decoration: none; /*enlève le soulignement du texte */
+    display: inline-block; /*dispose les boutons l'un a coté de l'autre */
+    font-size: 15px; /* taille de la typo */
+    margin: 4px 4px;  /*écart entre chaque bouton */
+    border-radius: 4rem; /* crée un contour arrondis pour le bouton */
+    font-family: 'roboto'; /*style de la typo */
+    width: 80px; /*règle la largeur du bouton */
+    
+}
+
+.button2 {
+      /* règle le style du bouton expo */
+    
+    padding: 0; /* marge autour du texte */
+    text-align: center; /* alignement du texte au milieu du bouton */
+    text-decoration: none; /* suppression du soulignement du texte */
+    display: inline-block; /* disposition des bouton l'un a coter de l'autre */
+    font-size: 20px; /* taille de la police */
+    margin: 4px 4px; /* marge a gauche et a droite du bouton */
+    font-family: 'martyric'; /*style de la typo */
+    -webkit-text-stroke: 0.1px; /* grandeur du contour de la typo */
+    -webkit-text-stroke-color: rgb(58, 87, 248); /* couleur du contour de la typo */
+    color: gold; /* couleur de la typo */
+   
+}
+
+.button3 { 
+    /*règle le style du bouton galerie */
+    
+    padding: 0; /* marge autour du texte */
+    text-align: center; /* alignement du texte au milieu du bouton */
+    text-decoration: none; /* suppression du soulignement du texte */
+    display: inline-block; /* disposition des bouton l'un a coter de l'autre */
+    font-size: 20px; /* taille de la police */
+    margin: 4px 4px; /* marge a gauche et a droite du bouton */
+    font-family: 'martyric'; /*style de la typo */
+    -webkit-text-stroke: 0.1px; /* grandeur du contour de la typo */
+    -webkit-text-stroke-color: rgb(58, 87, 248); /* couleur du contour de la typo */
+    color: gold; /* couleur de la typo */
+    
+}
+
+.video {
+    /*règle le style de la partie principal ou les vidéos sont affichées */
+
+    column-count: 3; /*permet de placer le contenu en colonne */
+    position: relative; /*permet de déplacer l'image depuis son emplacement initial*/
+    margin-top: 50px; /* marge au dessus */
+    background-color: rgba(159, 51, 51, 0.808); /*couleur du background */
+    padding-top: 1rem; /*marge au dessus */
+    padding-left: 8rem; /*marge sur la gauche du contenu */
+    padding-bottom: 2.5rem; /*marge sur le dessous du contenu */
+    padding-right: 8rem; /*marge sur la droite du contenu */
+    
+}
+
+h2 {
+    /*règle le style du titre principal */
+
+    font-family: 'martyric'; /*style de typo */
+    -webkit-text-stroke: 0.1px; /*grandeur du contour du texte */
+    -webkit-text-stroke-color: rgb(58, 87, 248); /*couleur du contour du texte */
+    font-size: medium; /*taille de la police */
+    color: gold; /*couleur principal du texte */
+    margin-top: 0; /*marge sur le dessus du texte */
+    
+}
+
+a:hover{
+    /* règle le style des liens de la page */
+
+    color: rgb(231, 175, 34); /* couleur des liens une fois le curseur positionné dessus */
+}
+
+.footer {
+    /* règle le style du copyright */
+
+    position:fixed; /*permet de fixer la position du texte */
+    top: 928px; /*marge au dessus du texte */
+    bottom: 0; /*marge en dessous du texte */
+    left: 0; /*marge sur la gauche du texte */
+    right: 5px; /*marge sur la droite du texte */
+    padding: 0.2rem; /*marge autout du texte */
+    font-family: "roboto"; /*style de la typo*/
+    color: white; /*couleur principal du texte */
+    display: flex; /*système de positionement */
+    justify-content: right; /*permet de positionner le texte sur la droite de la page */ 
+}
+

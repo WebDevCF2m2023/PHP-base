@@ -1,0 +1,178 @@
+@font-face {
+    font-family: 'martyric';
+    src: url('../CSS/martyric-webfont.woff') format('woff'),
+         url('../CSS/martyric-webfont.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'adidas';
+    src: url('CSS/font/texgyreadventor-bold-webfont.woff2') format('woff2'),
+         url('CSS/font/texgyreadventor-bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'roboto';
+    src: url('../CSS/roboto/robotocondensed-regular-webfont.woff2') format('woff2'),
+         url('../CSS/roboto/robotocondensed-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+body {
+    /* règle le background de la page */
+
+    background-image: url(https://images.alphacoders.com/107/1072541.jpg); /* url de l'image de background */
+    background-size: cover; /* couvre toute la page avec l'image */
+    margin: 0; /* bordure atour de la page: aucune */
+}
+.button{
+    /* regle le style des boutons accueil, interview, entreprise, conclusion */
+
+    background-color: rgba(159, 51, 51, 0.808); /*couleur de fond du bouton */
+    border: none; /* enleve la bordure autour du background*/
+    color: rgb(156, 174, 246); /* couleur de la typo */
+    padding: 8px; /*marge autour du texte */
+    text-align: center; /*aligne le texte au milieu du bouton */
+    text-decoration: none; /*enlève le soulignement du texte */
+    display: inline-block; /*dispose les boutons l'un a coté de l'autre */
+    width: 80px; /*règle la largeur du bouton */
+    font-size: 15px; /* taille de la typo */
+    margin: 4px 4px;  /*écart entre chaque bouton */
+    border-radius: 4rem; /* crée un contour arrondis pour le bouton */
+    font-family: 'roboto'; /*style de la typo */
+    
+}
+
+
+.button2 {
+    /* règle le style du bouton expo */
+    
+    padding: 0; /* marge autour du texte */
+    text-align: center; /* alignement du texte au milieu du bouton */
+    text-decoration: none; /* suppression du soulignement du texte */
+    display: inline-block; /* disposition des bouton l'un a coter de l'autre */
+    font-size: 20px;  /* taille de la police */
+    margin: 4px 4px; /* marge a gauche et a droite du bouton */
+    font-family: 'martyric'; /*style de la typo */
+    -webkit-text-stroke: 0.1px; /* grandeur du contour de la typo */
+    -webkit-text-stroke-color: rgb(58, 87, 248); /* couleur du contour de la typo */
+    color: gold; /* couleur de la typo */
+}
+
+.button3 {
+     /*règle le style du bouton galerie */
+    
+    padding: 0; /* marge autour du texte */
+    text-align: center; /* alignement du texte au milieu du bouton */
+    text-decoration: none; /* suppression du soulignement du texte */
+    display: inline-block; /* disposition des bouton l'un a coter de l'autre */
+    font-size: 20px; /* taille de la police */
+    margin: 4px 4px; /* marge a gauche et a droite du bouton */
+    font-family: 'martyric'; /*style de la typo */
+    -webkit-text-stroke: 0.1px; /* grandeur du contour de la typo */
+    -webkit-text-stroke-color: rgb(58, 87, 248); /* couleur du contour de la typo */
+    color: gold; /* couleur de la typo */
+}
+
+a:hover{
+      /*règle le style des liens sur la page */
+
+    color: rgb(231, 175, 34);  /* couleur du lien une fois le curseur dessus */
+}
+
+
+img {
+    /*règle le style des images */
+
+    max-width: 100%; /*largeur maximale de l'image */
+}
+
+.slider-container {
+    /* règle le style du container concernant les images */
+
+    max-width: 400px; /*largeur maximale des images */
+    position: relative; /*permet de positionner l'image ou l'on veux par rapport a sa position initial */
+    margin: auto; /* marge automatique */
+    margin-top: 20px; /* marge du dessus */
+    height: 900px; /* hauteur de l'image */
+    overflow: hidden; /* permet de cacher le dépacement du contenu qui se trouve dans le container */
+    border-radius: 10px; /* permet d'arrondir les coutour de l'image qui se trouve dans le container */
+}
+
+.menu {
+    /* règle la position du menu en dessous des images */
+
+    position: absolute; /*permet de positionner les boutons en dessous des images */
+    left: 0; /*marge a gauche */
+    z-index: 11; /*permet de superpositioner des éléments */
+    width: 100%; /* Largeur du menu */
+    bottom: 50px; /*marge en dessous du menu */
+    text-align: center; /*positionner les boutons au centre */
+}
+
+.menu label {
+    /* règle le style des boutons du menu */
+
+    cursor: pointer; /* style du curseur */
+    display: inline-block; /*aligne les éléments l'un a coté de l'autre */
+    width: 15px; /* hauteur des boutons */
+    height: 15px; /* largeur des boutons */
+    background: #ccc; /* couleur des boutons*/
+    border-radius: 50px; /* permet d'arrondir les boutons */
+    margin-top: 2px; /* marge au dessus des boutons */ 
+    margin-right: 5px ; /* marge sur la droite des boutons */
+   
+}
+
+.menu label:hover,.menu label:focus {
+    /*régler le style des boutons une fois le curseur dessus */
+
+    background: #1c87c9; /* couleur des boutons une fois le curseur positionné dessus */
+}
+
+.slide-input{
+    /*permet de régler le style des slides */
+
+    opacity: 0; /*règle l'oppacité */
+}
+
+.slide-img {
+    /*permet de régler le style des slides des images */
+
+    width: 100%; /*permet de régler la largeur */
+    height: 800px; /*permet de régler la hauteur */
+    position: absolute; /*permet de régler la position du contenu */
+    top: 0; /*aucune marge au dessus */
+    left: 100%; /*marge a 100% sur la gauche */
+    z-index: 10; /*permet de superpositionner du contenu */
+    transition: left 0s 0.35s; /*animation de transition par la gauche de 0.35sec */
+    border-radius: 40px; /*permet de creer un arrondis autour du contenu */
+}
+
+[id^="slide"]:checked + .slide-img {
+    /*permet de rélger le style des style */
+
+    left: 0; /* aucune marge a gauche */
+    z-index: 100; /*permet de superpositionner du contenu */
+    transition: left 0.35s ease-out; /*animation de transition par la gauche de 0.35sec */
+    border-radius: 40px; /*bordure arrondie autour du contenu */
+}
+
+.footer {
+    /*permet de regler le style du copyright */
+
+    position:fixed; /*fixe la position du contenu */
+    top: 928px; /*marge au dessus du contenu */
+    bottom: 0; /*marge en dessous du contenu */
+    left: 0; /*marge sur la gauche du contenu */
+    right: 5px; /*marge sur la droite du contenu */
+    padding: 0.2rem; /*marge autour du contenu */
+    font-family: "roboto"; /*style de typo */
+    color: white; /*couleur principal du texte */
+    display: flex; /*système de positionnement */
+    justify-content: right; /*positionne le contenu vers la droite */
+}

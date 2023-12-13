@@ -13,8 +13,13 @@
   - [Les balises PHP](#les-balises-php)
   - [Les commentaires](#les-commentaires)
   - [Placement des balises PHP](#placement-des-balises-php)
-  - [Les variables](#les-variables)
-    - [Déclaration de variables non strictement typées](#déclaration-de-variables-non-strictement-typées)
+- [Les variables](#les-variables)
+  - [Déclaration de variables non strictement typées](#déclaration-de-variables-non-strictement-typées)
+  - [Les tableaux](#les-tableaux)
+    - [Les tableaux indexés](#les-tableaux-indexés)
+    - [Les tableaux associatifs](#les-tableaux-associatifs)
+- [Les variables superglobales](#les-variables-superglobales)
+  - [$_GET](#_get)
 - [Les conditions](#les-conditions)
   - [if](#if)
   - [else](#else)
@@ -22,13 +27,16 @@
   - [Exercices et exemples if - elseif - else](#exercices-et-exemples-if---elseif---else)
   - [Autre manière de faire des conditions](#autre-manière-de-faire-des-conditions)
   - [switch](#switch)
-- [Les variables superglobales](#les-variables-superglobales)
-  - [$_GET](#_get)
 - [Les inclusions](#les-inclusions)
   - [include](#include)
   - [require](#require)
   - [include_once](#include_once)
   - [require_once](#require_once)
+- [Principe du contrôleur frontal](#principe-du-contrôleur-frontal)
+  - [L'index de la racine 18-front-controller](#lindex-de-la-racine-18-front-controller)
+  - [L'index du dossier public 18-front-controller/public](#lindex-du-dossier-public-18-front-controllerpublic)
+    - [Le fichier accueil.php 18-front-controller/templates/accueil.php](#le-fichier-accueilphp-18-front-controllertemplatesaccueilphp)
+  - [Préparation PHP du TI de fin de mois](#préparation-php-du-ti-de-fin-de-mois)
 - [Les boucles](#les-boucles)
   - [for](#for)
 - [Les fonctions](#les-fonctions)
@@ -322,7 +330,7 @@ Nous verrons plus tard comment fonctionnent les fonctions et variables.
 
 ---
 
-### Les variables
+## Les variables
 
 Une variable est un **conteneur pour stocker des informations**. 
 
@@ -344,7 +352,7 @@ Voici une liste des variables prédéfinies en PHP : [Variables prédéfinies](h
 
 ---
 
-#### Déclaration de variables non strictement typées
+### Déclaration de variables non strictement typées
 
 En PHP, une variable commence par le signe `$`, suivi du nom de la variable :
 
@@ -404,9 +412,141 @@ Il existe d'autres types de variables, mais nous les verrons plus tard.
 
 ---
 
+### Les tableaux
+
+Un tableau est une variable qui peut contenir plusieurs valeurs.
+
+Nommés également `array`, ce sont des structures de données fondamentales en PHP, et ils jouent un rôle crucial dans le développement de programmes dynamiques et flexibles.
+
+Les tableaux peuvent contenir des valeurs de type string, integer, float, boolean, array, object, null, etc...
+
+Les tableaux peuvent être indexés numériquement, ou associativement. Ils peuvent être multidimensionnels, en utilisant des tableaux dans des tableaux :
+
+https://www.php.net/manual/fr/language.types.array.php
+
+Ils permettent de stocker des données de manière structurée, et peuvent être manipulés facilement, grâce notamment aux fonctions dédiées à la manipulation des tableaux :
+
+https://www.php.net/manual/fr/ref.array.php
+
+Il existe plusieurs manières de créer un tableau :
+
+```php
+<?php
+// tableau indexé numériquement
+$tab1 = [1, 2, 3];
+// tableau indexé numériquement
+$tab2 = array(1, 2, 3);
+// tableau associatif
+$tab3 = ["clef1" => "valeur1", "clef2" => "valeur2"];
+// tableau associatif
+$tab4 = array("clef1" => "valeur1", "clef2" => "valeur2");
+// tableau mixte
+$tab5 = ["valeur1", "clef2" => "valeur2"];
+// tableau multidimensionnel
+$tab6 = ["clef1" => ["clef1.1" => "valeur1.1"], "clef2" => "valeur2"];
+
+// affichage des tableaux via le débugueur var_dump()
+var_dump($tab1, $tab2, $tab3, $tab4, $tab5, $tab6);
+?>
+```
+
+---
+
+[Retour au menu](#menu-de-navigation)
+
+---
+
+#### Les tableaux indexés
+
+Les tableaux indexés numériquement sont des tableaux dont les clés sont des entiers attribués automatiquement à partir de 0. Ce sont les tableaux les plus simples, nommés également `liste`.
+
+```php
+<?php
+// tableau indexé numériquement
+$tab1 = [1, 2, 3];
+
+// affichage du tableau via le débugueur var_dump()
+var_dump($tab1);
+// affichera :
+// array(3) { [0]=> int(1) [1]=> int(2) [2]=> int(3) }
+?>
+```
+
+Pour afficher une valeur d'un tableau indexé, nous utilisons la clé de la valeur :
+
+```php
+<?php
+// tableau indexé numériquement
+$tab1 = [1, 2, 3];
+
+// affichage de la valeur du tableau indexé numériquement
+echo $tab1[0]; // affichera 1
+?>
+```
+
+---
+
+[Retour au menu](#menu-de-navigation)
+
+---
+
+#### Les tableaux associatifs
+
+Les tableaux associatifs sont des tableaux dont les clés sont des chaînes de caractères.
+
+```php
+<?php
+// tableau associatif
+$tab3 = ["clef1" => "valeur1", "clef2" => "valeur2"];
+
+// affichage du tableau via le débugueur var_dump()
+var_dump($tab3);
+// affichera :
+// array(2) { ["clef1"]=> string(7) "valeur1" ["clef2"]=> string(7) "valeur2" }
+?>
+```
+
+---
+
+[Retour au menu](#menu-de-navigation)
+
+---
+
+## Les variables superglobales
+
+Les variables superglobales sont des variables prédéfinies qui sont toujours accessibles, quel que soit le contexte.
+
+En PHP, les variables superglobales sont des tableaux associatifs.
+
+https://www.php.net/manual/fr/language.variables.superglobals.php
+
+### $_GET
+
+`$_GET` est une variable superglobale qui est utilisée pour collecter des données de formulaires, après avoir envoyé un formulaire avec la méthode "get".
+
+**On l'utilise surtout pour récupérer des données dans l'URL.**
+
+La manière d'écrire des variables get dans l'URL est la suivante : `?section=contact&page=3&nom=dupont`
+
+```php
+<?php
+// affiche le contenu de la variable superglobale $_GET
+var_dump($_GET);
+?>
+```
+
+| 13 | ![Exercice 13](https://github.com/mikhawa/PHP-base/blob/main/datas/folder-type-php-opened_24.png?raw=true) | Exercice 13 | Créez un fichier `13-GET.php` et modifiez le switch pour afficher votre contenu pour les rubriques : Contact - Livre d'or - Actualités.  |
+|----|:----------------------------------------------------------------------------------------------------------:|:-----------:|:----------------------------------------------------------------------------------------------------------------------------------------:|
+
+---
+
+[Retour au menu](#menu-de-navigation)
+
+---
+
 ### Les conditions
 
-Les conditions sont la deuxième brique fondamentale d'un langage de programmation, elles permettent d'évaluer l'état de propositions, de variables etc.
+Les conditions sont la deuxième brique fondamentale d'un langage de programmation, elles permettent d'évaluer l'état de propositions, de variables, etc.
 
 #### if
 
@@ -682,62 +822,22 @@ switch($hasard1){
 
 ---
 
-## Les variables superglobales
 
-Les variables superglobales sont des variables prédéfinies qui sont toujours accessibles, quel que soit le contexte.
-
-En PHP, les variables superglobales sont des tableaux associatifs.
-
-https://www.php.net/manual/fr/language.variables.superglobals.php
-
-### $_GET
-
-`$_GET` est une variable superglobale qui est utilisée pour collecter des données de formulaires, après avoir envoyé un formulaire avec la méthode "get". 
-
-**On l'utilise surtout pour récupérer des données dans l'URL.**
-
-La manière d'écrire des variables get dans l'URL est la suivante : `?section=contact&page=3&nom=dupont`
-
-```php
-<?php
-// affiche le contenu de la variable superglobale $_GET
-var_dump($_GET);
-
-
-
-
-
-| 13 | ![Exercice 13](https://github.com/mikhawa/PHP-base/blob/main/datas/folder-type-php-opened_24.png?raw=true) | Exercice 13 | Créez un fichier `13-GET.php` et modifiez le switch pour afficher votre contenu pour les rubriques : Contact - Livre d'or - Actualités.  |
-|----|:----------------------------------------------------------------------------------------------------------:|:-----------:|:----------------------------------------------------------------------------------------------------------------------------------------:|
-
----
-
-[Retour au menu](#menu-de-navigation)
-
----
 
 ## Les inclusions
 
 Les expressions de langage _include | include_once | require | require_once_ permettent d'inclure et d'exécuter le fichier spécifié en argument.
 
+---
+
+[Retour au menu](#menu-de-navigation)
+
+---
+
 ### include
 
 `include` inclut et exécute le fichier spécifié en argument. Si le fichier n'existe pas, il affiche une erreur et continue l'exécution du script. On peut inclure plusieurs fois le même fichier.
 
-### include_once
-
-`include_once` inclut et exécute le fichier spécifié en argument. Si le fichier n'existe pas, il affiche une erreur et continue l'exécution du script. On ne peut inclure **qu'une seule fois** le même fichier.
-
-### require
-
-`require` inclut et exécute le fichier spécifié en argument. Si le fichier n'existe pas, il affiche une erreur et **stoppe** l'exécution du script. On peut inclure plusieurs fois le même fichier.
-
-### require_once
-
-`require_once` inclut et exécute le fichier spécifié en argument. Si le fichier n'existe pas, il affiche une erreur et **stoppe** l'exécution du script. On ne peut inclure **qu'une seule fois** le même fichier.
-
-**Exemples :**
-
 ```php
 <?php
 // inclut et exécute le fichier "menu.php"
@@ -749,44 +849,6 @@ include("menu.php");
 include("menu.php");
 ?>
 ```
-
-```php
-<?php
-// inclut et exécute le fichier "menu.php"
-include_once("menu.php");
-?>
-<p>ma page html, affichée même en cas d'erreur</p>
-<?php   
-// n'affiche rien, le fichier "menu.php" a déjà été inclus
-include_once("menu.php");
-?>
-```
-
-```php
-<?php
-// inclut et exécute le fichier "menu.php"
-require("menu.php");
-?>
-<p>ma page html, non affichée en cas d'erreur du require</p>
-<?php   
-// inclut et exécute le fichier "menu.php"
-require("menu.php");
-?>
-```
-
-```php
-<?php
-// inclut et exécute le fichier "menu.php"
-require_once("menu.php");
-?>
-<p>ma page html, non affichée en cas d'erreur du require</p>
-<?php   
-// n'affiche rien, le fichier "menu.php" a déjà été inclus
-require_once("menu.php");
-?>
-```
-
-exe
 
 ---
 
@@ -794,14 +856,297 @@ exe
 
 ---
 
+### include_once
+
+`include_once` inclut et exécute le fichier spécifié en argument. Si le fichier n'existe pas, il affiche une erreur et continue l'exécution du script. On ne peut inclure **qu'une seule fois** le même fichier.
+
+```php
+<?php
+// inclut et exécute le fichier "menu.php"
+include_once("menu.php");
+?>
+<p>ma page html, affichée même en cas d'erreur</p>
+<?php   
+// n'affiche rien, le fichier "menu.php" a déjà été inclus
+include_once("menu.php");
+?>
+```
+
+---
+
+[Retour au menu](#menu-de-navigation)
+
+---
+
+### require
+
+`require` inclut et exécute le fichier spécifié en argument. Si le fichier n'existe pas, il affiche une erreur et **stoppe** l'exécution du script. On peut inclure plusieurs fois le même fichier.
+
+```php
+<?php
+// inclut et exécute le fichier "menu.php"
+require("menu.php");
+?>
+<p>ma page html, non affichée en cas d'erreur du require</p>
+<?php   
+// inclut et exécute le fichier "menu.php"
+require("menu.php");
+?>
+```
+
+---
+
+[Retour au menu](#menu-de-navigation)
+
+---
+
+### require_once
+
+`require_once` inclut et exécute le fichier spécifié en argument. Si le fichier n'existe pas, il affiche une erreur et **stoppe** l'exécution du script. On ne peut inclure **qu'une seule fois** le même fichier.
+
+```php
+<?php
+// inclut et exécute le fichier "menu.php"
+require_once("menu.php");
+?>
+<p>ma page html, non affichée en cas d'erreur du require</p>
+<?php   
+// n'affiche rien, le fichier "menu.php" a déjà été inclus
+require_once("menu.php");
+?>
+```
+
+---
+
+[Retour au menu](#menu-de-navigation)
+
+---
+
+## Principe du contrôleur frontal
+
+Le principe du contrôleur frontal est de centraliser toutes les requêtes vers un seul et même fichier, qui va ensuite rediriger vers les bons fichiers.
+
+En général, on utilise un fichier `index.php` qui va rediriger vers les bons fichiers en fonction des paramètres GET.
+
+Dans le dossier `18-front-controller`, On aura une architecture de fichiers comme celle-ci :
+
+```
+.
+├── index.php       -> redirige vers le dossier "public"
+│
+├── /public
+│   ├── index.php   -> contrôleur frontal
+│   ├── /css
+│   │   └── style.css
+│   ├── /js
+│   │   └── script.js
+│   └── /img
+│       └── favicon-32x32.png
+│
+├── /templates      -> fichiers inclus par le contrôleur frontal
+│   ├── /inc        -> fichiers inclus par les fichiers du dossier "templates"
+│   │   ├── menu.php
+│   │   └── footer.php
+│   ├── accueil.php
+│   ├── actualites.php
+│   ├── contact.php
+│   ├── mentions-legales.php
+│   └── page-404.php
+
+```
+
+Le fichier `index.php` à la racine du site va uniquement nous rediriger vers le fichier `index.php` du dossier `public`.
+
+Le dossier `public` contient tous les fichiers accessibles par le navigateur. C'est le dossier racine du site. C'est là que l'on va inclure les fichiers `css`, `js`, `img` et le contrôleur frontal `index.php`.
+
+Le dossier `templates` contient tous les fichiers qui seront inclus dans le fichier `index.php`.
+
+Le dossier `inc` contient tous les fichiers qui seront inclus dans les fichiers du dossier `templates`.
+
+La racine d'un site, par exemple `https://www.cf2m.be`, est en réalité pointé vers un dossier `public`, qui est le seul dossier accessible par le navigateur. C'est ce qu'on appelle le `DocumentRoot`. On utilise cette technique pour éviter que les utilisateurs puissent accéder aux fichiers sensibles du site.
+
+---
+
+[Retour au menu](#menu-de-navigation)
+
+---
+
+### L'index de la racine 18-front-controller
+
+C'est un fichier `index.php` qui va rediriger vers le dossier `public`.
+Il est non obligatoire et pourrait être remplacé par un fichier `.htaccess` qui redirigerait directement vers le dossier `public`.
+
+```php
+<?php
+// on redirige vers le dossier "public" en envoyant un header "Location"
+header("Location: public");
+// on arrête l'exécution du script (bonne pratique)
+exit;
+```
+
+documentation : https://www.php.net/manual/fr/function.header.php
+
+---
+
+[Retour au menu](#menu-de-navigation)
+
+---
+
+### L'index du dossier public 18-front-controller/public
+
+Nommé **Contrôleur Frontal**, ce fichier nommé `index.php` va rediriger les visiteurs vers les bons fichiers en fonction des paramètres GET.
+
+```php
+<?php
+/*
+ * Front Controller
+ */
+
+// si le paramètre "section" est défini dans l'URL
+if(isset($_GET['section'])){
+    // on va utiliser un switch pour rediriger vers le bon fichier
+    switch($_GET['section']){
+        case 'contact':
+            # on inclut le fichier contact.php en suivant l'arborescence de fichiers
+            include('../templates/contact.php');
+            break;
+        case 'rgpd':
+            include('../templates/mentions-legales.php');
+            break;
+        case 'actualites':
+            include('../templates/actualites.php');
+            break;
+        # Si aucune des sections n'est valide, on affiche la page 404
+        default:
+            include('../templates/page-404.php');
+    }
+// si le paramètre "section" n'est pas défini dans l'URL
+}else{
+    // on inclut le fichier accueil.php en suivant l'arborescence de fichiers
+    include('../templates/accueil.php');
+}
+
+```
+
+---
+
+[Retour au menu](#menu-de-navigation)
+
+---
+
+#### Le fichier accueil.php 18-front-controller/templates/accueil.php
+
+C'est la partie du template qui représente notre page d'accueil.
+
+On y inclut avec `include` (ou n'importe quelle des 4 fonctions d'importation de fichier en `PHP`), les fichiers `menu.php` et `footer.php` qui se trouvent dans le dossier `inc` __en utilisant les chemins relatifs depuis le fichier dans lequel l'appel est fait__ (On peut aussi utiliser des chemins absolus, ou des chemins relatifs venant d'un parent, mais ne nous compliquons pas la vie pour le moment !).
+
+__!!! Les chemins vers les fichiers front-end, images, css, javascript, etc... partent TOUS du CONTRÔLEUR FRONTAL, donc du dossier `public/` !__
+
+```php
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, 
+          maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+    <title>Bienvenue sur 18-front-controller</title>
+    <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+    <h1>Bienvenue sur 18-front-controller</h1>
+<?php include 'inc/menu.php'; ?>
+    <p>Vous êtes sur la page d'accueil</p>
+<?php include 'inc/footer.php'; ?>
+<script src="js/script.js"></script>
+</body>
+</html>
+```
+
+Tous les autres fichiers du dossier `templates` sont construits de la même manière. Ils incluent le menu et le footer.
+
+Pour le moment le site n'est pas réellement fonctionnel, car il n'y a pas de contenu dynamique.
+
+Il est un exemple de structure de site pour le TI de fin du mois.
+
+---
+
+[Retour au menu](#menu-de-navigation)
+
+---
+
+### Préparation PHP du TI de fin de mois
+
+| 19 | ![Exercice 19](https://github.com/mikhawa/PHP-base/blob/main/datas/folder-type-php-opened_24.png?raw=true) | Exercice 19 | Créez un dossier nommé `19-my-front-controller.php` et recréez votre __site de préformation__  en utilisant une technique proche du `18-front-controller`, contenant un dossier `public` avec un contrôleur frontal et un dossier `templates`. Utilisez un .css externe au minimum, et quelques images (libres et gratuites !) |
+|----|:----------------------------------------------------------------------------------------------------------:|:-----------:|:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|
+
+---
+
+[Retour au menu](#menu-de-navigation)
+
+---
+
+
+
 ## Les boucles
 
-Les boucles permettent de répéter des instructions un certain nombre de fois.
+Les boucles permettent de répéter des instructions un certain nombre de fois. Il existe plusieurs types de boucles en PHP.
+
+Un grand principe des boucles est de répéter des instructions tant qu'une condition est vraie. Elles ne doivent pas être infinies, sinon le serveur finira par planter.
+
+Les boucles sont très utiles pour parcourir des tableaux, des objets, des fichiers, des dossiers, des bases de données, etc...
+
+Les fonctions natives (ou structure de langage) en PHP pour faire des boucles sont :
+
+- `while`
+- `do...while`
+- `for`
+- `foreach`
+
+Les fonctions récursives sont également des boucles, mais nous les verrons plus tard.
+
+---
+
+[Retour au menu](#menu-de-navigation)
+
+---
 
 ### for
 
+La boucle `for` est la plus structurée, elle permet de répéter des instructions un certain nombre de fois. Elle est composée de 3 parties :
 
-A continuer...
+- l'initialisation de la variable de boucle
+- la condition de sortie de boucle liée à la variable de boucle
+- l'incrémentation (ou décrémentation) de la variable de boucle
+
+On exécute les instructions entre les accolades tant que la condition de sortie de boucle est vraie.
+
+```php
+for(initialisation; condition de sortie de boucle; incrémentation){
+  // instructions
+}
+```
+
+
+
+```php
+<?php
+
+for(
+    // on initialise la variable $i à 0 (premier tour de boucle)
+    $i=0;
+    // on définit la condition de sortie de boucle (vérifiée à chaque tour de boucle)
+    $i<=10;
+    // on incrémente $i de 1 à chaque tour de boucle (dernière action du tour de boucle)
+    $i++
+){
+    echo "$i ";
+}
+// Affiche : 0 1 2 3 4 5 6 7 8 9 10
+?>
+```
 
 --- 
 
