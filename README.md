@@ -484,6 +484,9 @@ echo $tab1[0]; // affichera 1
 ?>
 ```
 
+| 20 | ![Exercice 20](https://github.com/mikhawa/PHP-base/blob/main/datas/folder-type-php-opened_24.png?raw=true) | Exercice 20 | Créez un fichier nommé `20-exe-array-index.php` et affichez avec des `echo` les données de la variable `$monTab = ['un', 'deux', 'trois', 'quatre', 'cinq', 'six', 'sept', 'huit', 'neuf', 'dix'];` séparées par un `<hr>` à chaque ligne |
+|----|:----------------------------------------------------------------------------------------------------------:|:-----------:|:-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|
+
 ---
 
 [Retour au menu](#menu-de-navigation)
