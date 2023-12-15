@@ -573,6 +573,8 @@ var_dump($webdev_2023_2024);
 ?>
 ```
 
+| 22 | ![Exercice 22](https://github.com/mikhawa/PHP-base/blob/main/datas/folder-type-php-opened_24.png?raw=true) | Exercice 22 | Créez un fichier nommé `22-exe-array-multi.php` et affichez avec un `echo` les données de la variable `$webdev_2023_2024` ci dessus pour nous afficher le Github de Laura |
+|----|:----------------------------------------------------------------------------------------------------------:|:-----------:|:-------------------------------------------------------------------------------------------------------------------------------------------------------------------------:| 
 
 ---
 
