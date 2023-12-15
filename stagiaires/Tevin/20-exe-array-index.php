@@ -1,6 +1,6 @@
 <?php
 
-$monTab = ['un', 'deux', 'trois', 'quatre', 'cinq', 'six', 'sept', 'huit', 'neuf', 'dix'];
+$tab1 = ['un', 'deux', 'trois', 'quatre', 'cinq', 'six', 'sept', 'huit', 'neuf', 'dix'];
 
 echo $tab1[0], "<hr>"; 
 
