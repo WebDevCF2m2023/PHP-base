@@ -16,15 +16,17 @@ body{
     border-radius: 10px;
     padding: 15px;
     width:1250px;
+    position: relative;
 }
 
 .banniere h1 {
   text-align: center;
-  margin-top: -9%;
   position: absolute;
-  top: 220px;
-  left: 800px;
-  font-size: 10rem;
+  font-size: 12rem;
+  top: 15%;
+  left: 50%;
+  margin: 0;
+  transform: translate(-50%, -50%);
   background: linear-gradient(25deg,green 30%,rgb(255, 255, 255) 65%,orange 60%);
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;

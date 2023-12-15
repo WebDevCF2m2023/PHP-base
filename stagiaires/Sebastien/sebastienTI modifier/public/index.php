@@ -1,5 +1,5 @@
 <?php
-
+$title="Acceuil";
 if(isset($_GET['p'])){
     
     switch($_GET['p']){
