@@ -13,14 +13,14 @@ $monTableauAssoc = [
 ];
 
 
-echo $monTableauAssoc["prenom"] . '<br>';
-echo $monTableauAssoc["nom"] . '<br>';
-echo $monTableauAssoc["caracteristiques"]["age"] . '<br>';
-echo $monTableauAssoc["caracteristiques"]["taille"] . '<br>';
-echo $monTableauAssoc["caracteristiques"]["poids"] . '<br>';
-echo $monTableauAssoc["caracteristiques"]["couleurYeau"] . '<br>';
-echo $monTableauAssoc["caracteristiques"]["couleurChevaux"] . '<br>';
+echo $monTableauAssoc["prenom"] . '<hr>';
+echo $monTableauAssoc["nom"] . '<hr>';
+echo $monTableauAssoc["caracteristiques"]["age"] . '<hr>';
+echo $monTableauAssoc["caracteristiques"]["taille"] . '<hr>';
+echo $monTableauAssoc["caracteristiques"]["poids"] . '<hr>';
+echo $monTableauAssoc["caracteristiques"]["couleurYeau"] . '<hr>';
+echo $monTableauAssoc["caracteristiques"]["couleurChevaux"] . '<hr>';
 
-echo '<hr>';
+
 
 
