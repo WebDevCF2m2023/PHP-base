@@ -39,4 +39,20 @@ $webdev_2023_2024 = [
     // ... etc
 ];
 
-// Afficher le Github
+echo $webdev_2023_2024["WEBDEV01"]["Sites"]["github"];
+
+echo "<hr>";
+
+var_dump(
+    // tous
+    $webdev_2023_2024,
+        // WEBDEV01
+        $webdev_2023_2024["WEBDEV01"],
+            // Sites
+            $webdev_2023_2024["WEBDEV01"]["Sites"],
+                // github
+                $webdev_2023_2024["WEBDEV01"]["Sites"]['github'],
+);
+
+
+// Afficher le Github de Laura
