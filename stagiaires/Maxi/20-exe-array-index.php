@@ -21,3 +21,4 @@ echo '<hr>';
 echo $monTab[9];
 echo '<hr>';
 
+?>
