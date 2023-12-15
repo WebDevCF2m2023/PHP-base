@@ -18,6 +18,7 @@
   - [Les tableaux](#les-tableaux)
     - [Les tableaux indexés](#les-tableaux-indexés)
     - [Les tableaux associatifs](#les-tableaux-associatifs)
+    - [Les tableaux multidimensionnels](#les-tableaux-multidimensionnels)
 - [Les variables superglobales](#les-variables-superglobales)
   - [$_GET](#_get)
 - [Les conditions](#les-conditions)
@@ -509,13 +510,9 @@ var_dump($tab3);
 ?>
 ```
 
-| 21 | ![Exercice 21](https://github.com/mikhawa/PHP-base/blob/main/datas/folder-type-php-opened_24.png?raw=true) | Exercice 21 | Créez un fichier nommé `21-exe-array-assoc.php` et affichez avec des `echo` les données de la variable `$monTabAssoc =  [
-"prenom" => "Michaël",
-"nom" => "Pitz",
-"caracteristique" => "égocentrique",
-"dateDeNaissance" => "1951-03-02",
-];` séparées par un `<hr>` à chaque ligne |
-|----|:----------------------------------------------------------------------------------------------------------:|:-----------:|:-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|
+| 21 | ![Exercice 21](https://github.com/mikhawa/PHP-base/blob/main/datas/folder-type-php-opened_24.png?raw=true) | Exercice 21 | Créez un fichier nommé `21-exe-array-assoc.php` et affichez avec des `echo` les données de la variable `$monTabAssoc =  ["prenom" => "Michaël", "nom" => "Pitz", "caracteristique" => "égocentrique","dateDeNaissance" => "1951-03-02"];` séparées par un `<hr>` à chaque ligne |
+|----|:----------------------------------------------------------------------------------------------------------:|:-----------:|:-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:| 
+
 
 ---
 
@@ -576,6 +573,8 @@ var_dump($webdev_2023_2024);
 ?>
 ```
 
+| 22 | ![Exercice 22](https://github.com/mikhawa/PHP-base/blob/main/datas/folder-type-php-opened_24.png?raw=true) | Exercice 22 | Créez un fichier nommé `22-exe-array-multi.php` et affichez avec un `echo` les données de la variable `$webdev_2023_2024` ci dessus pour nous afficher le Github de Laura |
+|----|:----------------------------------------------------------------------------------------------------------:|:-----------:|:-------------------------------------------------------------------------------------------------------------------------------------------------------------------------:| 
 
 ---
 
