@@ -1,5 +1,4 @@
 <?php
-// tableau multidimensionnel représentant des données de stagiaires web2023
 
 $webdev_2023_2024 = [
     "WEBDEV01" => [
@@ -12,7 +11,7 @@ $webdev_2023_2024 = [
         ],
     ],
     "WEBDEV02" => [
-        "Nom" => "Eliya Bofona",
+        "Nom" => "Eliya Bofana",
         "Prenom" => "Tevin",
         "Sites" => [
             "SitePerso" => "https://2023.webdev-cf2m.be/Tevin/",
@@ -38,8 +37,8 @@ $webdev_2023_2024 = [
             "github" => "https://github.com/hack86bx",
         ],
     ],
-    // ... etc
 ];
 
+echo $webdev_2023_2024["WEBDEV01"]["Sites"]["github"];
+echo '<hr>';
 var_dump($webdev_2023_2024);
-

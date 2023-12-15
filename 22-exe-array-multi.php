@@ -1,6 +1,4 @@
 <?php
-// tableau multidimensionnel représentant des données de stagiaires web2023
-
 $webdev_2023_2024 = [
     "WEBDEV01" => [
         "Nom" => "Tekfi",
@@ -12,7 +10,7 @@ $webdev_2023_2024 = [
         ],
     ],
     "WEBDEV02" => [
-        "Nom" => "Eliya Bofona",
+        "Nom" => "Eliya Bofana",
         "Prenom" => "Tevin",
         "Sites" => [
             "SitePerso" => "https://2023.webdev-cf2m.be/Tevin/",
@@ -41,5 +39,20 @@ $webdev_2023_2024 = [
     // ... etc
 ];
 
-var_dump($webdev_2023_2024);
+echo $webdev_2023_2024["WEBDEV01"]["Sites"]["github"];
 
+echo "<hr>";
+
+var_dump(
+    // tous
+    $webdev_2023_2024,
+        // WEBDEV01
+        $webdev_2023_2024["WEBDEV01"],
+            // Sites
+            $webdev_2023_2024["WEBDEV01"]["Sites"],
+                // github
+                $webdev_2023_2024["WEBDEV01"]["Sites"]['github'],
+);
+
+
+// Afficher le Github de Laura

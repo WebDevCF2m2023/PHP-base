@@ -1,18 +1,16 @@
 <?php
-// tableau multidimensionnel représentant des données de stagiaires web2023
-
 $webdev_2023_2024 = [
     "WEBDEV01" => [
-        "Nom" => "Tekfi",
-        "Prenom" => "Laura",
+        "Nom" => "Ben Salem",
+        "Prenom" => "Rami",
         "Sites" => [
-            "SitePerso" => "https://2023.webdev-cf2m.be/Laura/",
+            "SitePerso" => "https://2023.webdev-cf2m.be/Rami/",
             "SitePreformation" => "https://2023.webdev-cf2m.be/Laura/prefo/",
-            "github" => "https://github.com/LauraTcf2",
+            "github" => "https://github.com/rammroumm2K",
         ],
     ],
     "WEBDEV02" => [
-        "Nom" => "Eliya Bofona",
+        "Nom" => "Eliya Bofana",
         "Prenom" => "Tevin",
         "Sites" => [
             "SitePerso" => "https://2023.webdev-cf2m.be/Tevin/",
@@ -38,8 +36,7 @@ $webdev_2023_2024 = [
             "github" => "https://github.com/hack86bx",
         ],
     ],
-    // ... etc
+   
 ];
 
-var_dump($webdev_2023_2024);
-
+echo $webdev_2023_2024["WEBDEV01"]["Sites"]["github"] ;

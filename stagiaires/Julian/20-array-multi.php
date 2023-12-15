@@ -12,7 +12,7 @@ $webdev_2023_2024 = [
         ],
     ],
     "WEBDEV02" => [
-        "Nom" => "Eliya Bofona",
+        "Nom" => "Eliya Bofana",
         "Prenom" => "Tevin",
         "Sites" => [
             "SitePerso" => "https://2023.webdev-cf2m.be/Tevin/",
@@ -43,3 +43,5 @@ $webdev_2023_2024 = [
 
 var_dump($webdev_2023_2024);
 
+
+echo $webdev_2023_2024["WEBDEV01"]["Sites"]['github'] . '<br>';

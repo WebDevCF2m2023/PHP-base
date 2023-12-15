@@ -87,12 +87,10 @@
             <span style="background-image: url(images/orig/photo39.jpg)"></span></a>
     </section>
         
-    <footer><hr>
-        <h4 id="copyright">
-   
-            &copy; Lee Brennan
-        </h4> <hr>
-       </footer>
+    <?php
+
+include("../templates/inc/footer.php");
+?>
       
 </body>
 </html>
