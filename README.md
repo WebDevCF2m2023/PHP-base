@@ -13,8 +13,13 @@
   - [Les balises PHP](#les-balises-php)
   - [Les commentaires](#les-commentaires)
   - [Placement des balises PHP](#placement-des-balises-php)
-  - [Les variables](#les-variables)
-    - [Déclaration de variables non strictement typées](#déclaration-de-variables-non-strictement-typées)
+- [Les variables](#les-variables)
+  - [Déclaration de variables non strictement typées](#déclaration-de-variables-non-strictement-typées)
+  - [Les tableaux](#les-tableaux)
+    - [Les tableaux indexés](#les-tableaux-indexés)
+    - [Les tableaux associatifs](#les-tableaux-associatifs)
+- [Les variables superglobales](#les-variables-superglobales)
+  - [$_GET](#_get)
 - [Les conditions](#les-conditions)
   - [if](#if)
   - [else](#else)
@@ -22,8 +27,6 @@
   - [Exercices et exemples if - elseif - else](#exercices-et-exemples-if---elseif---else)
   - [Autre manière de faire des conditions](#autre-manière-de-faire-des-conditions)
   - [switch](#switch)
-- [Les variables superglobales](#les-variables-superglobales)
-  - [$_GET](#_get)
 - [Les inclusions](#les-inclusions)
   - [include](#include)
   - [require](#require)
@@ -327,7 +330,7 @@ Nous verrons plus tard comment fonctionnent les fonctions et variables.
 
 ---
 
-### Les variables
+## Les variables
 
 Une variable est un **conteneur pour stocker des informations**. 
 
@@ -349,7 +352,7 @@ Voici une liste des variables prédéfinies en PHP : [Variables prédéfinies](h
 
 ---
 
-#### Déclaration de variables non strictement typées
+### Déclaration de variables non strictement typées
 
 En PHP, une variable commence par le signe `$`, suivi du nom de la variable :
 
@@ -409,9 +412,204 @@ Il existe d'autres types de variables, mais nous les verrons plus tard.
 
 ---
 
+### Les tableaux
+
+Un tableau est une variable qui peut contenir plusieurs valeurs.
+
+Nommés également `array`, ce sont des structures de données fondamentales en PHP, et ils jouent un rôle crucial dans le développement de programmes dynamiques et flexibles.
+
+Les tableaux peuvent contenir des valeurs de type string, integer, float, boolean, array, object, null, etc...
+
+Les tableaux peuvent être indexés numériquement, ou associativement. Ils peuvent être multidimensionnels, en utilisant des tableaux dans des tableaux :
+
+https://www.php.net/manual/fr/language.types.array.php
+
+Ils permettent de stocker des données de manière structurée, et peuvent être manipulés facilement, grâce notamment aux fonctions dédiées à la manipulation des tableaux :
+
+https://www.php.net/manual/fr/ref.array.php
+
+Il existe plusieurs manières de créer un tableau :
+
+```php
+<?php
+// tableau indexé numériquement
+$tab1 = [1, 2, 3];
+// tableau indexé numériquement
+$tab2 = array(1, 2, 3);
+// tableau associatif
+$tab3 = ["clef1" => "valeur1", "clef2" => "valeur2"];
+// tableau associatif
+$tab4 = array("clef1" => "valeur1", "clef2" => "valeur2");
+// tableau mixte
+$tab5 = ["valeur1", "clef2" => "valeur2"];
+// tableau multidimensionnel
+$tab6 = ["clef1" => ["clef1.1" => "valeur1.1"], "clef2" => "valeur2"];
+
+// affichage des tableaux via le débugueur var_dump()
+var_dump($tab1, $tab2, $tab3, $tab4, $tab5, $tab6);
+?>
+```
+
+---
+
+[Retour au menu](#menu-de-navigation)
+
+---
+
+#### Les tableaux indexés
+
+Les tableaux indexés numériquement sont des tableaux dont les clés sont des entiers attribués automatiquement à partir de 0. Ce sont les tableaux les plus simples, nommés également `liste`.
+
+```php
+<?php
+// tableau indexé numériquement
+$tab1 = [1, 2, 3];
+
+// affichage du tableau via le débugueur var_dump()
+var_dump($tab1);
+// affichera :
+// array(3) { [0]=> int(1) [1]=> int(2) [2]=> int(3) }
+?>
+```
+
+Pour afficher une valeur d'un tableau indexé, nous utilisons la clé de la valeur :
+
+```php
+<?php
+// tableau indexé numériquement
+$tab1 = [1, 2, 3];
+
+// affichage de la valeur du tableau indexé numériquement
+echo $tab1[0]; // affichera 1
+?>
+```
+
+| 20 | ![Exercice 20](https://github.com/mikhawa/PHP-base/blob/main/datas/folder-type-php-opened_24.png?raw=true) | Exercice 20 | Créez un fichier nommé `20-exe-array-index.php` et affichez avec des `echo` les données de la variable `$monTab = ['un', 'deux', 'trois', 'quatre', 'cinq', 'six', 'sept', 'huit', 'neuf', 'dix'];` séparées par un `<hr>` à chaque ligne |
+|----|:----------------------------------------------------------------------------------------------------------:|:-----------:|:-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|
+
+---
+
+[Retour au menu](#menu-de-navigation)
+
+---
+
+#### Les tableaux associatifs
+
+Les tableaux associatifs sont des tableaux dont les clés sont des chaînes de caractères.
+
+```php
+<?php
+// tableau associatif
+$tab3 = ["clef1" => "valeur1", "clef2" => "valeur2"];
+
+// affichage du tableau via le débugueur var_dump()
+var_dump($tab3);
+// affichera :
+// array(2) { ["clef1"]=> string(7) "valeur1" ["clef2"]=> string(7) "valeur2" }
+?>
+```
+
+---
+
+[Retour au menu](#menu-de-navigation)
+
+---
+
+#### Les tableaux multidimensionnels
+
+Les tableaux multidimensionnels sont des tableaux qui contiennent des tableaux. Ils sont souvent utilisés pour représenter des données complexes.
+
+```php
+<?php
+// tableau multidimensionnel représentant des données de stagiaires web2023
+
+$webdev_2023_2024 = [
+    "WEBDEV01" => [
+        "Nom" => "Tekfi",
+        "Prenom" => "Laura",
+        "Sites" => [
+            "SitePerso" => "https://2023.webdev-cf2m.be/Laura/",
+            "SitePreformation" => "https://2023.webdev-cf2m.be/Laura/prefo/",
+            "github" => "https://github.com/LauraTcf2",
+        ],
+    ],
+    "WEBDEV02" => [
+        "Nom" => "Eliya Bofana",
+        "Prenom" => "Tevin",
+        "Sites" => [
+            "SitePerso" => "https://2023.webdev-cf2m.be/Tevin/",
+            "SitePreformation" => "https://2023.webdev-cf2m.be/Tevin/prefo/",
+            "github" => "https://github.com/Tevin01",
+        ],
+    ],
+    "WEBDEV03" => [
+        "Nom" => "Hoater",
+        "Prenom" => "Simona",
+        "Sites" => [
+            "SitePerso" => "https://2023.webdev-cf2m.be/Simona/",
+            "SitePreformation" => "https://2023.webdev-cf2m.be/Simona/",
+            "github" => "https://github.com/simonaiuliana",
+        ],
+    ],
+    "WEBDEV04" => [
+        "Nom" => "Arpaci",
+        "Prenom" => "Emrah",
+        "Sites" => [
+            "SitePerso" => "https://2023.webdev-cf2m.be/Emrah/",
+            "SitePreformation" => "https://2023.webdev-cf2m.be/Emrah/prefowebsite/",
+            "github" => "https://github.com/hack86bx",
+        ],
+    ],
+    // ... etc
+];
+
+var_dump($webdev_2023_2024);
+
+?>
+```
+
+
+---
+
+[Retour au menu](#menu-de-navigation)
+
+---
+
+## Les variables superglobales
+
+Les variables superglobales sont des variables prédéfinies qui sont toujours accessibles, quel que soit le contexte.
+
+En PHP, les variables superglobales sont des tableaux associatifs.
+
+https://www.php.net/manual/fr/language.variables.superglobals.php
+
+### $_GET
+
+`$_GET` est une variable superglobale qui est utilisée pour collecter des données de formulaires, après avoir envoyé un formulaire avec la méthode "get".
+
+**On l'utilise surtout pour récupérer des données dans l'URL.**
+
+La manière d'écrire des variables get dans l'URL est la suivante : `?section=contact&page=3&nom=dupont`
+
+```php
+<?php
+// affiche le contenu de la variable superglobale $_GET
+var_dump($_GET);
+?>
+```
+
+| 13 | ![Exercice 13](https://github.com/mikhawa/PHP-base/blob/main/datas/folder-type-php-opened_24.png?raw=true) | Exercice 13 | Créez un fichier `13-GET.php` et modifiez le switch pour afficher votre contenu pour les rubriques : Contact - Livre d'or - Actualités.  |
+|----|:----------------------------------------------------------------------------------------------------------:|:-----------:|:----------------------------------------------------------------------------------------------------------------------------------------:|
+
+---
+
+[Retour au menu](#menu-de-navigation)
+
+---
+
 ### Les conditions
 
-Les conditions sont la deuxième brique fondamentale d'un langage de programmation, elles permettent d'évaluer l'état de propositions, de variables etc.
+Les conditions sont la deuxième brique fondamentale d'un langage de programmation, elles permettent d'évaluer l'état de propositions, de variables, etc.
 
 #### if
 
@@ -687,37 +885,7 @@ switch($hasard1){
 
 ---
 
-## Les variables superglobales
 
-Les variables superglobales sont des variables prédéfinies qui sont toujours accessibles, quel que soit le contexte.
-
-En PHP, les variables superglobales sont des tableaux associatifs.
-
-https://www.php.net/manual/fr/language.variables.superglobals.php
-
-### $_GET
-
-`$_GET` est une variable superglobale qui est utilisée pour collecter des données de formulaires, après avoir envoyé un formulaire avec la méthode "get". 
-
-**On l'utilise surtout pour récupérer des données dans l'URL.**
-
-La manière d'écrire des variables get dans l'URL est la suivante : `?section=contact&page=3&nom=dupont`
-
-```php
-<?php
-// affiche le contenu de la variable superglobale $_GET
-var_dump($_GET);
-?>
-```
-
-| 13 | ![Exercice 13](https://github.com/mikhawa/PHP-base/blob/main/datas/folder-type-php-opened_24.png?raw=true) | Exercice 13 | Créez un fichier `13-GET.php` et modifiez le switch pour afficher votre contenu pour les rubriques : Contact - Livre d'or - Actualités.  |
-|----|:----------------------------------------------------------------------------------------------------------:|:-----------:|:----------------------------------------------------------------------------------------------------------------------------------------:|
-
----
-
-[Retour au menu](#menu-de-navigation)
-
----
 
 ## Les inclusions
 
@@ -983,14 +1151,65 @@ Il est un exemple de structure de site pour le TI de fin du mois.
 
 ---
 
+
+
 ## Les boucles
 
-Les boucles permettent de répéter des instructions un certain nombre de fois.
+Les boucles permettent de répéter des instructions un certain nombre de fois. Il existe plusieurs types de boucles en PHP.
+
+Un grand principe des boucles est de répéter des instructions tant qu'une condition est vraie. Elles ne doivent pas être infinies, sinon le serveur finira par planter.
+
+Les boucles sont très utiles pour parcourir des tableaux, des objets, des fichiers, des dossiers, des bases de données, etc...
+
+Les fonctions natives (ou structure de langage) en PHP pour faire des boucles sont :
+
+- `while`
+- `do...while`
+- `for`
+- `foreach`
+
+Les fonctions récursives sont également des boucles, mais nous les verrons plus tard.
+
+---
+
+[Retour au menu](#menu-de-navigation)
+
+---
 
 ### for
 
+La boucle `for` est la plus structurée, elle permet de répéter des instructions un certain nombre de fois. Elle est composée de 3 parties :
 
-A continuer...
+- l'initialisation de la variable de boucle
+- la condition de sortie de boucle liée à la variable de boucle
+- l'incrémentation (ou décrémentation) de la variable de boucle
+
+On exécute les instructions entre les accolades tant que la condition de sortie de boucle est vraie.
+
+```php
+for(initialisation; condition de sortie de boucle; incrémentation){
+  // instructions
+}
+```
+
+
+
+```php
+<?php
+
+for(
+    // on initialise la variable $i à 0 (premier tour de boucle)
+    $i=0;
+    // on définit la condition de sortie de boucle (vérifiée à chaque tour de boucle)
+    $i<=10;
+    // on incrémente $i de 1 à chaque tour de boucle (dernière action du tour de boucle)
+    $i++
+){
+    echo "$i ";
+}
+// Affiche : 0 1 2 3 4 5 6 7 8 9 10
+?>
+```
 
 --- 
 
