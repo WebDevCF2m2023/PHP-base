@@ -484,6 +484,9 @@ echo $tab1[0]; // affichera 1
 ?>
 ```
 
+| 20 | ![Exercice 20](https://github.com/mikhawa/PHP-base/blob/main/datas/folder-type-php-opened_24.png?raw=true) | Exercice 20 | Créez un fichier nommé `20-exe-array-index.php` et affichez avec des `echo` les données de la variable `$monTab = ['un', 'deux', 'trois', 'quatre', 'cinq', 'six', 'sept', 'huit', 'neuf', 'dix'];` séparées par un `<hr>` à chaque ligne |
+|----|:----------------------------------------------------------------------------------------------------------:|:-----------:|:-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|
+
 ---
 
 [Retour au menu](#menu-de-navigation)
@@ -505,6 +508,66 @@ var_dump($tab3);
 // array(2) { ["clef1"]=> string(7) "valeur1" ["clef2"]=> string(7) "valeur2" }
 ?>
 ```
+
+---
+
+[Retour au menu](#menu-de-navigation)
+
+---
+
+#### Les tableaux multidimensionnels
+
+Les tableaux multidimensionnels sont des tableaux qui contiennent des tableaux. Ils sont souvent utilisés pour représenter des données complexes.
+
+```php
+<?php
+// tableau multidimensionnel représentant des données de stagiaires web2023
+
+$webdev_2023_2024 = [
+    "WEBDEV01" => [
+        "Nom" => "Tekfi",
+        "Prenom" => "Laura",
+        "Sites" => [
+            "SitePerso" => "https://2023.webdev-cf2m.be/Laura/",
+            "SitePreformation" => "https://2023.webdev-cf2m.be/Laura/prefo/",
+            "github" => "https://github.com/LauraTcf2",
+        ],
+    ],
+    "WEBDEV02" => [
+        "Nom" => "Eliya Bofana",
+        "Prenom" => "Tevin",
+        "Sites" => [
+            "SitePerso" => "https://2023.webdev-cf2m.be/Tevin/",
+            "SitePreformation" => "https://2023.webdev-cf2m.be/Tevin/prefo/",
+            "github" => "https://github.com/Tevin01",
+        ],
+    ],
+    "WEBDEV03" => [
+        "Nom" => "Hoater",
+        "Prenom" => "Simona",
+        "Sites" => [
+            "SitePerso" => "https://2023.webdev-cf2m.be/Simona/",
+            "SitePreformation" => "https://2023.webdev-cf2m.be/Simona/",
+            "github" => "https://github.com/simonaiuliana",
+        ],
+    ],
+    "WEBDEV04" => [
+        "Nom" => "Arpaci",
+        "Prenom" => "Emrah",
+        "Sites" => [
+            "SitePerso" => "https://2023.webdev-cf2m.be/Emrah/",
+            "SitePreformation" => "https://2023.webdev-cf2m.be/Emrah/prefowebsite/",
+            "github" => "https://github.com/hack86bx",
+        ],
+    ],
+    // ... etc
+];
+
+var_dump($webdev_2023_2024);
+
+?>
+```
+
 
 ---
 
