@@ -41,3 +41,5 @@ echo $tab1[8];
 echo "<hr>";
 
 echo $tab1[9];
+
+?>
