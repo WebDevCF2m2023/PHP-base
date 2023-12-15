@@ -560,7 +560,7 @@ $webdev_2023_2024 = [
         ],
     ],
     "WEBDEV04" => [
-        "Nom" => "Arpaci",
+        "Nom" => "Arpachino",
         "Prenom" => "Emrah",
         "Sites" => [
             "SitePerso" => "https://2023.webdev-cf2m.be/Emrah/",
