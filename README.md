@@ -18,6 +18,7 @@
   - [Les tableaux](#les-tableaux)
     - [Les tableaux indexés](#les-tableaux-indexés)
     - [Les tableaux associatifs](#les-tableaux-associatifs)
+    - [Les tableaux multidimensionnels](#les-tableaux-multidimensionnels)
 - [Les variables superglobales](#les-variables-superglobales)
   - [$_GET](#_get)
 - [Les conditions](#les-conditions)
