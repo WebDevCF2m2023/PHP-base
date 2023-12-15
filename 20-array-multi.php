@@ -12,7 +12,7 @@ $webdev_2023_2024 = [
         ],
     ],
     "WEBDEV02" => [
-        "Nom" => "Eliya Bofana",
+        "Nom" => "Eliya Bofona",
         "Prenom" => "Tevin",
         "Sites" => [
             "SitePerso" => "https://2023.webdev-cf2m.be/Tevin/",
