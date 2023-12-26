@@ -1182,6 +1182,7 @@ Les fonctions récursives sont également des boucles, mais nous les verrons plu
 
 ---
 
+
 ### for
 
 La boucle `for` est la plus structurée, elle permet de répéter des instructions un certain nombre de fois. Elle est composée de 3 parties :
@@ -1216,6 +1217,8 @@ for(
 // Affiche : 0 1 2 3 4 5 6 7 8 9 10
 ?>
 ```
+
+
 
 --- 
 
