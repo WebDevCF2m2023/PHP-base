@@ -25,6 +25,8 @@
   - [if](#if)
   - [else](#else)
   - [elseif() ou else if()](#elseif-ou-else-if)
+  - [Les opérateurs de comparaison](#les-opérateurs-de-comparaison)
+  - [Les opérateurs logiques](#les-opérateurs-logiques)
   - [Exercices et exemples if - elseif - else](#exercices-et-exemples-if---elseif---else)
   - [Autre manière de faire des conditions](#autre-manière-de-faire-des-conditions)
   - [switch](#switch)
@@ -678,14 +680,54 @@ if($a==0){
 
 ---
 
+#### Les opérateurs de comparaison
+
+Les opérateurs de comparaison permettent de comparer deux valeurs.
+
+| Opérateur | Description                                                |
+|-----------|------------------------------------------------------------|
+| ==        | Égal à                                                     |
+| ===       | Égal à et du même type ou strictement égal                 |
+| !=        | Différent de                                               |
+| !==       | Différent de ou de type différent ou strictement différent |
+| <         | Inférieur à                                                |
+| >         | Supérieur à                                                |
+| <=        | Inférieur ou égal à                                        |
+| >=        | Supérieur ou égal à                                        |
+
+---
+
+[Retour au menu](#menu-de-navigation)
+
+---
+
+#### Les opérateurs logiques
+
+Les opérateurs logiques permettent de combiner plusieurs conditions.
+
+| Opérateur | Description | Détails                                                        |
+|-----------|-------------|----------------------------------------------------------------|
+| and       | ET          | toutes les conditions doivent être vraies                      |
+| or        | OU          | Une des conditions doit être vraie                             |
+| xor       | OU exclusif | Une des conditions doit être vraie, mais pas les deux          |
+| !         | NON         | Inverse la condition (true devient false - false devient true) |
+
+
+Lien vers les opérateurs logiques :
+
+https://www.php.net/manual/fr/language.operators.logical.php
+
+---
+
+[Retour au menu](#menu-de-navigation)
+
+---
+
 #### Exercices et exemples if - elseif - else
 
 | 09 | ![Exercice 09](https://github.com/mikhawa/PHP-base/blob/main/datas/folder-type-php-opened_24.png?raw=true) | Exercice 09 | Créez un fichier `09-eau.php` qui affiche suvant une température allant de -100 à 200 °, l'état de l'eau (solide en dessous de 0 compris) (liquide entre 1 et 99°) (gazeux à partir de 100°) : L'eau est solide à -7° - L'eau est liquide à 33 ° - L'eau est gazeuse à 105°|
 |----|:----------------------------------------------------------------------------------------------------------:|:-----------:|:-----------------------------------------------------------------------------------------------------:|
 
-Lien vers les opérateurs logiques :
-
-https://www.php.net/manual/fr/language.operators.logical.php
 
 | 10 | ![Exercice 10](https://github.com/mikhawa/PHP-base/blob/main/datas/folder-type-php-opened_24.png?raw=true) | Exercice 10 | Créez un fichier `10-info.php` qui affiche la configuration complète du serveur Apache, PHP, SQL ... |
 |----|:----------------------------------------------------------------------------------------------------------:|:-----------:|:----------------------------------------------------------------------------------------------------:|
@@ -731,11 +773,21 @@ else{
 }
 ```
 
+| 23 | ![Exercice 23](https://github.com/mikhawa/PHP-base/blob/main/datas/folder-type-php-opened_24.png?raw=true) | Exercice 23 | Créez une copie du fichier `23-operateurs-logiques.php` dans votre espace stagiaire, puis vérifiez les variables telles qu'indiquées dans les commentaires |
+|----|:----------------------------------------------------------------------------------------------------------:|:-----------:|:----------------------------------------------------------------------------------------------------------------------------------------------------------:|
+
+| 24 | ![Exercice 24](https://github.com/mikhawa/PHP-base/blob/main/datas/folder-type-php-opened_24.png?raw=true) | Exercice 24 | Créez une copie du fichier `24-operateurs-comparaison.php` dans votre espace stagiaire, puis vérifiez les variables telles qu'indiquées dans les commentaires |
+|----|:----------------------------------------------------------------------------------------------------------:|:-----------:|:-------------------------------------------------------------------------------------------------------------------------------------------------------------:|
+
+
+
 ---
 
 [Retour au menu](#menu-de-navigation)
 
 ---
+
+
 
 #### Autre manière de faire des conditions
 
@@ -1170,7 +1222,7 @@ Les boucles sont très utiles pour parcourir des tableaux, des objets, des fichi
 Les fonctions natives (ou structure de langage) en PHP pour faire des boucles sont :
 
 - `while`
-- `do...while`
+- `do while`
 - `for`
 - `foreach`
 
