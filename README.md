@@ -776,6 +776,7 @@ else{
 | 23 | ![Exercice 23](https://github.com/mikhawa/PHP-base/blob/main/datas/folder-type-php-opened_24.png?raw=true) | Exercice 23 | Créez une copie du fichier `23-operateurs-logiques.php` dans votre espace stagiaire, puis vérifiez les variables telles qu'indiquées dans les commentaires |
 |----|:----------------------------------------------------------------------------------------------------------:|:-----------:|:----------------------------------------------------------------------------------------------------------------------------------------------------------:|
 
+
 | 24 | ![Exercice 24](https://github.com/mikhawa/PHP-base/blob/main/datas/folder-type-php-opened_24.png?raw=true) | Exercice 24 | Créez une copie du fichier `24-operateurs-comparaison.php` dans votre espace stagiaire, puis vérifiez les variables telles qu'indiquées dans les commentaires |
 |----|:----------------------------------------------------------------------------------------------------------:|:-----------:|:-------------------------------------------------------------------------------------------------------------------------------------------------------------:|
 
