@@ -688,7 +688,7 @@ Les opérateurs de comparaison permettent de comparer deux valeurs.
 |-----------|------------------------------------------------------------|
 | ==        | Égal à                                                     |
 | ===       | Égal à et du même type ou strictement égal                 |
-| !=        | Différent de                                               |
+| != ou <>  | Différent de                                               |
 | !==       | Différent de ou de type différent ou strictement différent |
 | <         | Inférieur à                                                |
 | >         | Supérieur à                                                |
@@ -705,12 +705,12 @@ Les opérateurs de comparaison permettent de comparer deux valeurs.
 
 Les opérateurs logiques permettent de combiner plusieurs conditions.
 
-| Opérateur | Description | Détails                                                        |
-|-----------|-------------|----------------------------------------------------------------|
-| and       | ET          | toutes les conditions doivent être vraies                      |
-| or        | OU          | Une des conditions doit être vraie                             |
-| xor       | OU exclusif | Une des conditions doit être vraie, mais pas les deux          |
-| !         | NON         | Inverse la condition (true devient false - false devient true) |
+| Opérateur | Description | Détails                                                                                                   |
+|-----------|-------------|-----------------------------------------------------------------------------------------------------------|
+| and       | ET          | toutes les conditions doivent être vraies                                                                 |
+| or        | OU          | Une des conditions doit être vraie                                                                        |
+| xor       | OU exclusif | Une des conditions doit être vraie, mais pas les deux, peu utilisé sans () car peut provoquer des erreurs |
+| !         | NON         | Inverse la condition (true devient false - false devient true)                                            |
 
 
 Lien vers les opérateurs logiques :
