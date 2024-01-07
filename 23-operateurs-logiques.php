@@ -21,11 +21,21 @@ $genre = "F";
 // Sinon on affiche "1) Désolé, accès réservé aux femmes majeures uniquement<br>"
 
 // Exercice avec l'opérateur OU (OR) ||
-$page = 5;
+$page = mt_rand(5, 25);
 
 // Si la page est plus petite que 10 OU que la page est plus grande que 20
-// Alors, on affiche "2) La page est soit inférieure à 10, soit supérieure à 20<br>"
-// Sinon on affiche "2) La page est entre 10 et 20<br>"
+// Alors, on affiche "2) La page $page est soit inférieure à 10, soit supérieure à 20<br>"
+// Sinon on affiche "2) La page $page est entre 10 et 20<br>"
+
+
+// Exercice avec l'opérateur OU exclusif (XOR) ^
+$note = mt_rand(5, 15)  ;
+
+// Si la note est plus petite que 10 OU que la note est plus grande que 10
+// Alors, on affiche "3) La $note est soit inférieure à 10, soit supérieure à 10<br>"
+// Sinon on affiche "3) La $note est 10<br>"
+
+// Exercice avec l'opérateur NON (NOT) !
 
 
 
