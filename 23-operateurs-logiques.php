@@ -9,7 +9,7 @@
 and | &&  | ET
 or  | ||  | OU
 xor	| ^   | OU exclusif - peu utilisé
-!	|  |	Inverse la condition
+not	| !   |	Inverse la condition
  */
 
 // Exercice avec l'opérateur ET (AND) &&
@@ -17,7 +17,17 @@ $age = 24;
 $genre = "F";
 
 // Si l'âge est supérieur ou égal à 18 ET que le genre est F
-// Alors, on affiche "Bienvenue sur le site"
-// Sinon on affiche "Désolé, accès réservé aux femmes majeures uniquement"
+// Alors, on affiche "1) Bienvenue sur le site<br>"
+// Sinon on affiche "1) Désolé, accès réservé aux femmes majeures uniquement<br>"
+
+// Exercice avec l'opérateur OU (OR) ||
+$page = 5;
+
+// Si la page est plus petite que 10 OU que la page est plus grande que 20
+// Alors, on affiche "2) La page est soit inférieure à 10, soit supérieure à 20<br>"
+// Sinon on affiche "2) La page est entre 10 et 20<br>"
+
+
+
 
 
