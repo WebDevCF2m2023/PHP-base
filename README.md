@@ -6,6 +6,7 @@
 - [Installation de Apache, PHP et MySQL](#installation-de-apache-php-et-mysql)
   - [Installation de WAMP pour Windows](#installation-de-wamp-pour-windows) 
   - [Installation de XAMPP pour MacOs](#installation-de-xampp-pour-macos)
+- [Les fichiers du formateur](#les-fichiers-du-formateur)
 - [Principe des exercices](#principe-des-exercices)
 - [Liste des fonctions à connaitre](../../tree/main/functions#les-fonctions-natives-et-constructions-du-langage-à-connaitre) - Par CŒUR !
 - [Les bases de PHP](#les-bases-de-php)
@@ -165,6 +166,16 @@ https://www.apachefriends.org/fr/index.html pour OS X.
 Voici un petit tutoriel pour installer XAMPP chez vous :
 
 https://www.ionos.fr/digitalguide/serveur/outils/tutoriel-xampp-creer-un-serveur-de-test-local/
+
+---
+
+[Retour au menu](#menu-de-navigation)
+
+---
+
+## Les fichiers du formateur
+
+Vous trouverez les fichiers du formateur dans le dossier `formateur/` de ce git.
 
 ---
 
