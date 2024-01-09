@@ -1271,7 +1271,8 @@ for(
 ?>
 ```
 
-
+| 25 | ![Exercice 25](https://github.com/mikhawa/PHP-base/blob/main/datas/folder-type-php-opened_24.png?raw=true) | Exercice 25 | Créez une copie du fichier `25-boucle-for.php` dans votre espace stagiaire, puis vérifiez les variables telles qu'indiquées dans les commentaires |
+|----|:----------------------------------------------------------------------------------------------------------:|:-----------:|:-------------------------------------------------------------------------------------------------------------------------------------------------:|
 
 --- 
 
