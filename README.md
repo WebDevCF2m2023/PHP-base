@@ -1274,6 +1274,10 @@ for(
 | 25 | ![Exercice 25](https://github.com/mikhawa/PHP-base/blob/main/datas/folder-type-php-opened_24.png?raw=true) | Exercice 25 | Créez une copie du fichier `25-boucle-for.php` dans votre espace stagiaire, puis vérifiez les variables telles qu'indiquées dans les commentaires |
 |----|:----------------------------------------------------------------------------------------------------------:|:-----------:|:-------------------------------------------------------------------------------------------------------------------------------------------------:|
 
+Le résultat de l'exercice 25 devrait ressembler à ceci :
+
+![PHP - Par El Roubio — http://www.elroubio.net/?p=adopt_an_elephpant. Transféré de en.wikibooks à Commons par Adrignola utilisant CommonsHelper., GPL, https://commons.wikimedia.org/w/index.php?curid=11165880](https://raw.githubusercontent.com/WebDevCF2m2023/PHP-base/main/datas/screenshot-php-base_8080-2024.01.09-15_54_20.png)
+
 --- 
 
 [Retour au menu](#menu-de-navigation)
