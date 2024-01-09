@@ -42,6 +42,9 @@
   - [Préparation PHP du TI de fin de mois](#préparation-php-du-ti-de-fin-de-mois)
 - [Les boucles](#les-boucles)
   - [for](#for)
+  - [while](#while)
+  - [do while](#do-while)
+  - [foreach](#foreach)
 - [Les fonctions](#les-fonctions)
 
 
@@ -1283,6 +1286,61 @@ Le résultat de l'exercice 25 devrait ressembler à ceci :
 [Retour au menu](#menu-de-navigation)
 
 ---
+
+### foreach
+
+La boucle `foreach` est la plus utilisée, elle permet de parcourir un tableau ou un objet. 
+
+Elle est composée de 2 parties minimum :
+
+- la variable qui contient le tableau ou l'objet à parcourir
+- la variable qui contient la valeur de l'élément du tableau ou de l'objet à chaque tour de boucle
+
+```php
+foreach($tableau as $element){
+  // instructions
+}
+```
+
+```php
+<?php
+
+$fruits = ['pomme', 'poire', 'banane', 'fraise', 'cerise'];
+
+foreach($fruits as $fruit){
+    echo "$fruit ";
+}
+// Affiche : pomme poire banane fraise cerise
+?>
+```
+
+On peut également récupérer la clé de chaque élément du tableau ou de l'objet à chaque tour de boucle.
+
+```php
+foreach($tableau as $clef => $element){
+  // instructions
+}
+```
+
+```php
+<?php
+
+$fruits = ['pomme', 'poire', 'banane', 'fraise', 'cerise'];
+
+foreach($fruits as $clef => $fruit){
+    echo "$clef : $fruit ";
+}
+// Affiche : 0 : pomme 1 : poire 2 : banane 3 : fraise 4 : cerise
+?>
+```
+
+
+---
+
+[Retour au menu](#menu-de-navigation)
+
+--- 
+
 
 ## Les fonctions
 
