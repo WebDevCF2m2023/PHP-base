@@ -36,6 +36,16 @@ $note = mt_rand(5, 15)  ;
 // Sinon on affiche "3) La $note est 10<br>"
 
 // Exercice avec l'opérateur NON (NOT) !
+$pageActu = 5;
+$nbPage = 5;
+
+// Si la page actuelle vaut le nombre de page
+// On crée l'inverse de la condition avec l'opérateur NOT (!)
+// Alors, on affiche "4) Nous ne sommes pas sur la dernière page $pageActu / $nbPage<br>"
+// Sinon on affiche "4) Nous sommes sur la dernière page $pageActu / $nbPage<br>"
+
+
+
 
 
 
