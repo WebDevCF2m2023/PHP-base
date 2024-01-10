@@ -4,9 +4,9 @@
 /*
  * 3) != : différent de
  */
+$a = mt_rand(1,5);
+$b = mt_rand(1,5);
 
-$a="40";
-$b="10";
 
 if($a != $b){
     echo"2) $a est différent != de $b<br>";
@@ -25,8 +25,6 @@ else{
 // Utilisez l'opérateur strictement différent !== pour vérifier si $a est égal de $b.
 // Affichez "4) $a est strictement différent !== de $b<br>" si c'est vrai et "4) $a est strictement égal à $b<br>" sinon.
 
-$a="40";
-$b="10";
 
 if($a !== $b){
     echo"$a est strictement différent !== de $b<br>";
@@ -46,7 +44,7 @@ $b = mt_rand(1,5);
 
 echo '<p>-- $a = '.$a.' et $b = '.$b.'</p>';
 
-
+if($a < $b)
 
 /*
  * 6) > : supérieur à
@@ -72,4 +70,4 @@ echo '<p>-- $a = '.$a.' et $b = '.$b.'</p>';
 
 // Utilisez l'opérateur >= pour vérifier si $a est supérieur ou égal à $b.
 // Affichez "8) $a est supérieur ou égal >= à $b<br>" si c'est vrai et "8) $a est inférieur à $b<br>" sinon.
-
+?>
