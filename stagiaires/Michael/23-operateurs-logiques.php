@@ -49,7 +49,11 @@ $nbPage = 5;
 // Alors, on affiche "4) Nous ne sommes pas sur la dernière page $pageActu / $nbPage<br>"
 // Sinon on affiche "4) Nous sommes sur la dernière page $pageActu / $nbPage<br>"
 
-echo "4)<br>";
+if(!($pageActu == $nbPage)){
+    echo "4) Nous ne sommes pas sur la dernière page $pageActu / $nbPage<br>";
+}else{
+    echo "4) Nous sommes sur la dernière page $pageActu / $nbPage<br>";
+}
 
 
 
