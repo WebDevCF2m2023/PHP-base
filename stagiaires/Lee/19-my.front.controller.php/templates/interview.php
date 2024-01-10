@@ -61,11 +61,10 @@
     </section>
     <br>
 
-    <footer><hr>
-        <h4 id="copyright">
-            &copy; Lee Brennan
-        </h4> <hr>
-    </footer>
+    <?php
+
+include("../templates/inc/footer.php");
+?>
 <script src="scripts/script.js"></script>
 </body>
 </html>

@@ -54,12 +54,10 @@
     
 
     
-    <footer><hr>
-     <h4 id="copyright">
+    <?php
 
-         &copy; Lee Brennan
-     </h4> <hr>
-    </footer>
+include("../templates/inc/footer.php");
+?>
    
 </body>
 </html>
