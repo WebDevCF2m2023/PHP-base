@@ -43,13 +43,10 @@
             <p>Au début de l'été, un bon ami, Mark Harris, m'a parlé du CF2M et des excellents cours disponibles là-bas. J'ai parcouru les cours disponibles, j'ai vu celui de WebDev et le reste appartient à "l'histoire"...</p>
      </div>       
        
-       <footer>
-        <hr>
-        <h4 id="copyright"> <!-- Encore une fois, les pieds de page, tout comme les en-têtes, sont fixes et réguliers sur toutes les pages -->
-            &copy; Lee Brennan
-        </h4>
-        <hr>    
-       </footer>
+     <?php
+
+include("../templates/inc/footer.php");
+?>
        
 
 
