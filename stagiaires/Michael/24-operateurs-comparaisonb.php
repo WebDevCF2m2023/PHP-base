@@ -15,7 +15,15 @@ $b = mt_rand(1,3);
 echo '<p>-- $a = '.$a.' et $b = '.$b.'</p>';
 
 
-echo "1)<br>";
+// exercice 1
+if($a==$b){
+    echo "1) $a est égal == à $b<br>";
+}else{
+    echo "1) $a est différent de $b<br>";
+}
+
+// en ternaire
+echo$result = ($a==$b)? "1) $a est égal == à $b<br>" : "1) $a est différent de $b<br>";
 
 // Vous pouvez observer que $c et $d ne sont strictement pas du même type (int et string):
 $c=1;
