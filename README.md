@@ -6,6 +6,7 @@
 - [Installation de Apache, PHP et MySQL](#installation-de-apache-php-et-mysql)
   - [Installation de WAMP pour Windows](#installation-de-wamp-pour-windows) 
   - [Installation de XAMPP pour MacOs](#installation-de-xampp-pour-macos)
+- [Les fichiers du formateur](#les-fichiers-du-formateur)
 - [Principe des exercices](#principe-des-exercices)
 - [Liste des fonctions à connaitre](../../tree/main/functions#les-fonctions-natives-et-constructions-du-langage-à-connaitre) - Par CŒUR !
 - [Les bases de PHP](#les-bases-de-php)
@@ -25,6 +26,8 @@
   - [if](#if)
   - [else](#else)
   - [elseif() ou else if()](#elseif-ou-else-if)
+  - [Les opérateurs de comparaison](#les-opérateurs-de-comparaison)
+  - [Les opérateurs logiques](#les-opérateurs-logiques)
   - [Exercices et exemples if - elseif - else](#exercices-et-exemples-if---elseif---else)
   - [Autre manière de faire des conditions](#autre-manière-de-faire-des-conditions)
   - [switch](#switch)
@@ -40,6 +43,9 @@
   - [Préparation PHP du TI de fin de mois](#préparation-php-du-ti-de-fin-de-mois)
 - [Les boucles](#les-boucles)
   - [for](#for)
+  - [while](#while)
+  - [do while](#do-while)
+  - [foreach](#foreach)
 - [Les fonctions](#les-fonctions)
 
 
@@ -160,6 +166,16 @@ https://www.apachefriends.org/fr/index.html pour OS X.
 Voici un petit tutoriel pour installer XAMPP chez vous :
 
 https://www.ionos.fr/digitalguide/serveur/outils/tutoriel-xampp-creer-un-serveur-de-test-local/
+
+---
+
+[Retour au menu](#menu-de-navigation)
+
+---
+
+## Les fichiers du formateur
+
+Vous trouverez les fichiers du formateur dans le dossier `formateur/` de ce git.
 
 ---
 
@@ -678,14 +694,54 @@ if($a==0){
 
 ---
 
+#### Les opérateurs de comparaison
+
+Les opérateurs de comparaison permettent de comparer deux valeurs.
+
+| Opérateur | Description                                                |
+|-----------|------------------------------------------------------------|
+| ==        | Égal à                                                     |
+| ===       | Égal à et du même type ou strictement égal                 |
+| != ou <>  | Différent de                                               |
+| !==       | Différent de ou de type différent ou strictement différent |
+| <         | Inférieur à                                                |
+| >         | Supérieur à                                                |
+| <=        | Inférieur ou égal à                                        |
+| >=        | Supérieur ou égal à                                        |
+
+---
+
+[Retour au menu](#menu-de-navigation)
+
+---
+
+#### Les opérateurs logiques
+
+Les opérateurs logiques permettent de combiner plusieurs conditions.
+
+| Opérateur | Description | Détails                                                                                                   |
+|-----------|-------------|-----------------------------------------------------------------------------------------------------------|
+| and       | ET          | toutes les conditions doivent être vraies                                                                 |
+| or        | OU          | Une des conditions doit être vraie                                                                        |
+| xor       | OU exclusif | Une des conditions doit être vraie, mais pas les deux, peu utilisé sans () car peut provoquer des erreurs |
+| !         | NON         | Inverse la condition (true devient false - false devient true)                                            |
+
+
+Lien vers les opérateurs logiques :
+
+https://www.php.net/manual/fr/language.operators.logical.php
+
+---
+
+[Retour au menu](#menu-de-navigation)
+
+---
+
 #### Exercices et exemples if - elseif - else
 
 | 09 | ![Exercice 09](https://github.com/mikhawa/PHP-base/blob/main/datas/folder-type-php-opened_24.png?raw=true) | Exercice 09 | Créez un fichier `09-eau.php` qui affiche suvant une température allant de -100 à 200 °, l'état de l'eau (solide en dessous de 0 compris) (liquide entre 1 et 99°) (gazeux à partir de 100°) : L'eau est solide à -7° - L'eau est liquide à 33 ° - L'eau est gazeuse à 105°|
 |----|:----------------------------------------------------------------------------------------------------------:|:-----------:|:-----------------------------------------------------------------------------------------------------:|
 
-Lien vers les opérateurs logiques :
-
-https://www.php.net/manual/fr/language.operators.logical.php
 
 | 10 | ![Exercice 10](https://github.com/mikhawa/PHP-base/blob/main/datas/folder-type-php-opened_24.png?raw=true) | Exercice 10 | Créez un fichier `10-info.php` qui affiche la configuration complète du serveur Apache, PHP, SQL ... |
 |----|:----------------------------------------------------------------------------------------------------------:|:-----------:|:----------------------------------------------------------------------------------------------------:|
@@ -731,11 +787,22 @@ else{
 }
 ```
 
+| 23 | ![Exercice 23](https://github.com/mikhawa/PHP-base/blob/main/datas/folder-type-php-opened_24.png?raw=true) | Exercice 23 | Créez une copie du fichier `23-operateurs-logiques.php` dans votre espace stagiaire, puis vérifiez les variables telles qu'indiquées dans les commentaires |
+|----|:----------------------------------------------------------------------------------------------------------:|:-----------:|:----------------------------------------------------------------------------------------------------------------------------------------------------------:|
+
+
+| 24 | ![Exercice 24](https://github.com/mikhawa/PHP-base/blob/main/datas/folder-type-php-opened_24.png?raw=true) | Exercice 24 | Créez une copie du fichier `24-operateurs-comparaison.php` dans votre espace stagiaire, puis vérifiez les variables telles qu'indiquées dans les commentaires |
+|----|:----------------------------------------------------------------------------------------------------------:|:-----------:|:-------------------------------------------------------------------------------------------------------------------------------------------------------------:|
+
+
+
 ---
 
 [Retour au menu](#menu-de-navigation)
 
 ---
+
+
 
 #### Autre manière de faire des conditions
 
@@ -1170,7 +1237,7 @@ Les boucles sont très utiles pour parcourir des tableaux, des objets, des fichi
 Les fonctions natives (ou structure de langage) en PHP pour faire des boucles sont :
 
 - `while`
-- `do...while`
+- `do while`
 - `for`
 - `foreach`
 
@@ -1181,6 +1248,7 @@ Les fonctions récursives sont également des boucles, mais nous les verrons plu
 [Retour au menu](#menu-de-navigation)
 
 ---
+
 
 ### for
 
@@ -1217,11 +1285,73 @@ for(
 ?>
 ```
 
+| 25 | ![Exercice 25](https://github.com/mikhawa/PHP-base/blob/main/datas/folder-type-php-opened_24.png?raw=true) | Exercice 25 | Créez une copie du fichier `25-boucle-for.php` dans votre espace stagiaire, puis vérifiez les variables telles qu'indiquées dans les commentaires |
+|----|:----------------------------------------------------------------------------------------------------------:|:-----------:|:-------------------------------------------------------------------------------------------------------------------------------------------------:|
+
+Le résultat de l'exercice 25 devrait ressembler à ceci :
+
+![PHP - Par El Roubio — http://www.elroubio.net/?p=adopt_an_elephpant. Transféré de en.wikibooks à Commons par Adrignola utilisant CommonsHelper., GPL, https://commons.wikimedia.org/w/index.php?curid=11165880](https://raw.githubusercontent.com/WebDevCF2m2023/PHP-base/main/datas/screenshot-php-base_8080-2024.01.09-15_54_20.png)
+
 --- 
 
 [Retour au menu](#menu-de-navigation)
 
 ---
+
+### foreach
+
+La boucle `foreach` est la plus utilisée, elle permet de parcourir un tableau ou un objet. 
+
+Elle est composée de 2 parties minimum :
+
+- la variable qui contient le tableau ou l'objet à parcourir
+- la variable qui contient la valeur de l'élément du tableau ou de l'objet à chaque tour de boucle
+
+```php
+foreach($tableau as $element){
+  // instructions
+}
+```
+
+```php
+<?php
+
+$fruits = ['pomme', 'poire', 'banane', 'fraise', 'cerise'];
+
+foreach($fruits as $fruit){
+    echo "$fruit ";
+}
+// Affiche : pomme poire banane fraise cerise
+?>
+```
+
+On peut également récupérer la clé de chaque élément du tableau ou de l'objet à chaque tour de boucle.
+
+```php
+foreach($tableau as $clef => $element){
+  // instructions
+}
+```
+
+```php
+<?php
+
+$fruits = ['pomme', 'poire', 'banane', 'fraise', 'cerise'];
+
+foreach($fruits as $clef => $fruit){
+    echo "$clef : $fruit ";
+}
+// Affiche : 0 : pomme 1 : poire 2 : banane 3 : fraise 4 : cerise
+?>
+```
+
+
+---
+
+[Retour au menu](#menu-de-navigation)
+
+--- 
+
 
 ## Les fonctions
 

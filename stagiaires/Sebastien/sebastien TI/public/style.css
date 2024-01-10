@@ -1,0 +1,223 @@
+
+#global {
+	width:1280px;
+	margin: 0px auto;
+    padding: 20px;
+
+
+}
+.banniere {
+    background-image: url(img/banniere.jpg);  
+    background-repeat: no-repeat;
+    height: 500px;
+    border-radius: 10px;
+    padding: 10px;
+    width:1260px;
+}
+
+.banniere h1 {
+  text-align: center;
+  line-height: 80px;      
+  height: 80px;
+  width:300px;
+  border-radius: 30px;
+  background-color: beige;
+  position: absolute;
+  top: 220px;
+  left: 800px;
+  opacity: 75%;  
+
+}
+.image{
+  
+    right: 50%;
+}
+#nav {
+	width:1280px;
+	height:50px;
+    margin: 10px 0;
+    position: sticky;
+    top:0px;
+}
+
+#nav ul {
+    border-radius: 10px;
+    border: 2px solid black;
+    height: 50px;
+    background-color:#CCC;
+    padding :0px 75px;
+    margin: 0;
+}
+
+#nav li {
+	list-style-type:none;           
+	list-style-position:inside;
+
+}
+
+#nav a {
+    
+	float:left;
+	display:block;
+	text-decoration: none;          
+	text-align:center;
+	width:160px;
+	height:50px;
+	line-height:50px;
+	background-color:#CCC;
+	color: rgb(8, 8, 8);
+	font-family: Arial,sans-serif;
+	font-weight: bold;
+	font-size:1em;
+}
+
+#nav a:hover {
+	background-color:#A90331;
+    color: rgb(244, 234, 234);
+}
+
+main {
+	width:1280px;
+	text-align:justify;
+	background-color:lightgrey;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+main h1 {
+	margin:0px;
+	background-color:#A90331;
+	font-family: Arial,sans-serif;
+	font-style:italic;
+	font-size:24px;
+	color:white;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    border-radius: 10px 10px 0px 0px;
+}
+main p, main ul, main h2, main h3 {
+    margin: 20px 30px;
+	font-size:20px;
+    text-align: center;
+}
+
+.image {
+    text-align: center;
+}
+
+.image a {
+    text-decoration: none;
+    color: black;
+}
+
+.lien, .liens {
+	list-style-type:none;
+	padding:0;
+    text-align: center;
+}
+
+.lien a, .liens a {
+	text-decoration:none;       
+	color:#A90331;
+}
+
+.lien a:hover, .liens a:hover {
+	text-decoration:underline;  
+	color:black;
+}
+
+figure img {
+    width: 400px;
+    height: 350px;
+  }
+  
+  caption {
+    font-size: 3.5rem;
+    padding: 0.5rem;
+    font-family: "Courier New", Courier, monospace;
+  }
+  table {
+    margin: auto;
+    font-size: larger;
+    border-collapse: separate;
+    
+    padding: 0.5rem;
+    border-spacing: 15px;
+  }
+  th,
+  td {
+    border: 1px solid rgb(4, 4, 4);
+    padding: 15px;
+    width: 100px;
+    text-align: center;
+  }
+  .contain img {
+    object-fit: contain;
+  }
+  .cover img {
+    object-fit: cover;
+    object-position: center;
+  }
+  .cover.cover1 img {
+    object-position: 0% 40%;
+  }
+  figure {
+    margin: 0;
+  }
+
+  .contact {
+    width: 620px;
+    margin: 0 auto;
+    font-size: 20px;
+}
+
+.contact div label {
+    display: inline-block;
+    height: 30px;
+    line-height: 30px;
+    width: 200px;
+    text-align: right;
+}
+
+.contact input {
+    height: 30px;
+    width: 400px;
+    margin-bottom: 15px;
+}
+
+.contact textarea {
+    height: 80px;
+    width: 400px;
+    resize: none;     
+}
+
+
+.contact label[for="message"] {
+    float: left;
+    text-align: center;
+}
+
+.contact input[type="submit"] {
+    height: 50px;
+    width: 300px;
+    margin-top: 30px;
+    margin-left: 200px;
+    font-size: 20px;
+    border-radius: 20px;
+}
+
+.liens {
+    column-count: 3;
+}
+#remonter {
+    width: 50px;
+    height: 50px;
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+  }
+  
+  #remonter a img {
+    width: 50px;
+  }
