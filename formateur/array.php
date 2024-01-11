@@ -3,14 +3,16 @@
  * Les tableaux
  */
 
-// jours de la semaine en français
-$semaineFr=['lundi','mardi','mercredi','jeudi','vendredi','samedi','dimanche'];
+
 
 // des prénoms
-$classe=['Jean','Eric','Marie','Julie','Luc','Pierre','Paul','Jacques','Hélène','Anne'];
+$classe=['Jean','Eric','Marie','Julie','Luc','Pierre','Paul','Jacques','Hélène','Anne',];
+
+// jours de la semaine en français
+$semaineFr=[1 =>'lundi','mardi','mercredi','jeudi','vendredi','samedi','dimanche',];
 
 // Tableau de données représentant une classe de 18 élèves
-$classe = [
+$classe18 = [
     ['nom' => 'Élève 1', 'age' => 15, 'note' => 90],
     ['nom' => 'Élève 2', 'age' => 16, 'note' => 80],
     ['nom' => 'Élève 3', 'age' => 15, 'note' => 100],
