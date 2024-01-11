@@ -1285,8 +1285,8 @@ for(
 ?>
 ```
 
-| 25 | ![Exercice 25](https://github.com/mikhawa/PHP-base/blob/main/datas/folder-type-php-opened_24.png?raw=true) | Exercice 25 | Créez une copie du fichier `25-boucle-for.php` dans votre espace stagiaire, puis vérifiez les variables telles qu'indiquées dans les commentaires |
-|----|:----------------------------------------------------------------------------------------------------------:|:-----------:|:-------------------------------------------------------------------------------------------------------------------------------------------------:|
+| 25 | ![Exercice 25](https://github.com/mikhawa/PHP-base/blob/main/datas/folder-type-php-opened_24.png?raw=true) | Exercice 25 | Créez une copie du fichier `25-boucle-for.php` dans votre espace stagiaire, puis créez les boucles for telles qu'indiquées dans les commentaires |
+|----|:----------------------------------------------------------------------------------------------------------:|:-----------:|:------------------------------------------------------------------------------------------------------------------------------------------------:|
 
 Le résultat de l'exercice 25 devrait ressembler à ceci :
 
@@ -1345,6 +1345,8 @@ foreach($fruits as $clef => $fruit){
 ?>
 ```
 
+| 26 | ![Exercice 26](https://github.com/mikhawa/PHP-base/blob/main/datas/folder-type-php-opened_24.png?raw=true) | Exercice 26 | Créez une copie du fichier `26-boucle-foreach.php` et `array.php` dans votre espace stagiaire, puis créez les boucles foreach telles qu'indiquées dans les commentaires |
+|----|:----------------------------------------------------------------------------------------------------------:|:-----------:|:-----------------------------------------------------------------------------------------------------------------------------------------------------------------------:|
 
 ---
 
