@@ -1,0 +1,4 @@
+<?php
+/*
+ * Les boucles foreach
+ */
