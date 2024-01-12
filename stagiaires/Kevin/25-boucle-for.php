@@ -74,13 +74,13 @@ echo "</p>";
  * Vous obtiendrez 5 lignes de 5 multiplications chacune.
  */
 
-echo "<p>6) Utilisez deux boucles for imbriquées pour afficher une table de multiplication de 1 à 5.<br>";
-$numbers = "";
+echo "<p>6) Utilisez deux boucles for imbriquées pour afficher une table de multiplication de 1 à 5.<br></p>";
 for($i = 1; $i <= 5; ++$i){
-   echo "Table de multiplication de : <span style='color: green'>".$i."</span> (";
-   for($y = 0; $y <= 10; ++$y)
-      $numbers = $numbers . $y*$i . ",";
-   echo substr($numbers, 0, -1) . ")<br>";
+   echo "<div style='display: inline-block; width: 8%;'>";
+   echo "<h4>Table de $i</h4>";
+   for($y = 0; $y <= 10; ++$y){
+      echo "<p>$y x $i = " . $y * $i . "</p>";
+   }
+   echo "</div>";
 
 }
-echo "</p>";
