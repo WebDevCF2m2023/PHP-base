@@ -48,7 +48,7 @@ else{
 //EXERCICE 3
 $note = mt_rand(5, 15)  ;
 
-if($note < 10 ^ $note > 10){
+if($note <= 10 ^ $note >= 10){
     echo "3) La note $note est soit inférieure à 10, soit supérieure à 10<br>";
 }
 else{
