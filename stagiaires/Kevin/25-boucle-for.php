@@ -18,9 +18,7 @@ echo "</p>";
 
 echo "<p>2) Affichez les nombres pairs de 0 à 20 avec une boucle for<br>";
 $numbers = "";
-for($i = 0; $i <= 20; ++$i) 
-   if($i % 2 == 0) 
-      $numbers = $numbers.$i.",";
+for($i = 0; $i <= 20; $i += 2) $numbers = $numbers.$i.",";
 echo substr($numbers, 0, -1);
 echo "</p>";
 
