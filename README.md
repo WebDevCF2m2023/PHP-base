@@ -43,9 +43,9 @@
   - [Préparation PHP du TI de fin de mois](#préparation-php-du-ti-de-fin-de-mois)
 - [Les boucles](#les-boucles)
   - [for](#for)
+  - [foreach](#foreach)
   - [while](#while)
   - [do while](#do-while)
-  - [foreach](#foreach)
 - [Les fonctions](#les-fonctions)
 
 
@@ -1285,12 +1285,12 @@ for(
 ?>
 ```
 
-| 25 | ![Exercice 25](https://github.com/mikhawa/PHP-base/blob/main/datas/folder-type-php-opened_24.png?raw=true) | Exercice 25 | Créez une copie du fichier `25-boucle-for.php` dans votre espace stagiaire, puis vérifiez les variables telles qu'indiquées dans les commentaires |
-|----|:----------------------------------------------------------------------------------------------------------:|:-----------:|:-------------------------------------------------------------------------------------------------------------------------------------------------:|
+| 25 | ![Exercice 25](https://github.com/mikhawa/PHP-base/blob/main/datas/folder-type-php-opened_24.png?raw=true) | Exercice 25 | Créez une copie du fichier `25-boucle-for.php` dans votre espace stagiaire, puis créez les boucles for telles qu'indiquées dans les commentaires |
+|----|:----------------------------------------------------------------------------------------------------------:|:-----------:|:------------------------------------------------------------------------------------------------------------------------------------------------:|
 
 Le résultat de l'exercice 25 devrait ressembler à ceci :
 
-![PHP - Par El Roubio — http://www.elroubio.net/?p=adopt_an_elephpant. Transféré de en.wikibooks à Commons par Adrignola utilisant CommonsHelper., GPL, https://commons.wikimedia.org/w/index.php?curid=11165880](https://raw.githubusercontent.com/WebDevCF2m2023/PHP-base/main/datas/screenshot-php-base_8080-2024.01.09-15_54_20.png)
+![exercice 25](https://raw.githubusercontent.com/WebDevCF2m2023/PHP-base/main/datas/screenshot-php-base_8080-2024.01.09-15_54_20.png)
 
 --- 
 
@@ -1345,6 +1345,12 @@ foreach($fruits as $clef => $fruit){
 ?>
 ```
 
+| 26 | ![Exercice 26](https://github.com/mikhawa/PHP-base/blob/main/datas/folder-type-php-opened_24.png?raw=true) | Exercice 26 | Créez une copie du fichier `26-boucle-foreach.php` et `array.php` dans votre espace stagiaire, puis créez les boucles foreach telles qu'indiquées dans les commentaires |
+|----|:----------------------------------------------------------------------------------------------------------:|:-----------:|:-----------------------------------------------------------------------------------------------------------------------------------------------------------------------:|
+
+Le résultat de l'exercice 26 devrait ressembler à ceci :
+
+![exercice 26](https://raw.githubusercontent.com/WebDevCF2m2023/PHP-base/main/datas/screenshot-php-base-2023-2024-2024.01.11-20_24_37.png)
 
 ---
 
@@ -1352,6 +1358,21 @@ foreach($fruits as $clef => $fruit){
 
 --- 
 
+### while
+
+---
+
+[Retour au menu](#menu-de-navigation)
+
+--- 
+
+### do while
+
+---
+
+[Retour au menu](#menu-de-navigation)
+
+--- 
 
 ## Les fonctions
 
