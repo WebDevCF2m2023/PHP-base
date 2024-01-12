@@ -7,13 +7,7 @@
  * 1) Affichez les nombres de 10 à 1 avec une boucle for
  */
 echo "<p>1) Affichez les nombres de 10 à 1 avec une boucle for<br>";
-for(
-$i=10;
-$i>=0;
-$i--
-){
-   echo "$i ";
-}
+
 echo "</p>";
 
 /*
