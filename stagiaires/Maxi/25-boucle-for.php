@@ -6,9 +6,9 @@
 /*
  * 1) Affichez les nombres de 10 à 1 avec une boucle for
  */
-
-for( $i=0; $i>10; $i++)
 echo "<p>1) Affichez les nombres de 10 à 1 avec une boucle for<br>";
+for( $i=0; $i>=20; $i+2);
+echo "$i";
 
 echo "</p>";
 
