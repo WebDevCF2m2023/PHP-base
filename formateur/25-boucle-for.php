@@ -56,7 +56,7 @@ echo "</p>";
     // 2 x 1 = 2   2 x 2 = 4   ...   2 x 5 = 10
     // ...
     // 5 x 1 = 5   5 x 2 = 10  ...   5 x 5 = 25
- * Vous aurez besoin de concaténer des chaînes de caractères avec l'opérateur .
+ * Vous aurez besoin de concaténer des chaînes de caractères avec l'opérateur ".".
  * Vous obtiendrez 5 lignes de 5 multiplications chacune.
  */
 
