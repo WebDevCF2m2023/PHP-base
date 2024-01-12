@@ -43,9 +43,9 @@
   - [Préparation PHP du TI de fin de mois](#préparation-php-du-ti-de-fin-de-mois)
 - [Les boucles](#les-boucles)
   - [for](#for)
+  - [foreach](#foreach)
   - [while](#while)
   - [do while](#do-while)
-  - [foreach](#foreach)
 - [Les fonctions](#les-fonctions)
 
 
@@ -1358,6 +1358,21 @@ Le résultat de l'exercice 26 devrait ressembler à ceci :
 
 --- 
 
+### while
+
+---
+
+[Retour au menu](#menu-de-navigation)
+
+--- 
+
+### do while
+
+---
+
+[Retour au menu](#menu-de-navigation)
+
+--- 
 
 ## Les fonctions
 
