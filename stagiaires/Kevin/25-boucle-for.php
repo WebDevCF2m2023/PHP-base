@@ -74,7 +74,7 @@ echo "</p>";
 
 echo "<p>6) Utilisez deux boucles for imbriquées pour afficher une table de multiplication de 1 à 5.<br></p>";
 for($i = 1; $i <= 5; ++$i){
-   echo "<div style='display: inline-block; width: 8%;'>";
+   echo "<div style='display: inline-block; width: 120px;'>";
    echo "<h4>Table de $i</h4>";
    for($y = 0; $y <= 10; ++$y){
       echo "<p>$y x $i = " . $y * $i . "</p>";
