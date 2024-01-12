@@ -53,12 +53,12 @@ if($a === $b){
  */
 
 // Utilisez l'opérateur différent != pour vérifier si $a est égal de $b.
-// Affichez "2) $a est différent != de $b<br>" si c'est vrai et "2) $a est égal à $b<br>" sinon.
+// Affichez "3) $a est différent != de $b<br>" si c'est vrai et "3) $a est égal à $b<br>" sinon.
 
 if($a!=$b){
-    echo "2) $a est différent != de $b<br>";
+    echo "3) $a est différent != de $b<br>";
 }else{
-    echo "2) $a est égal à $b<br>";
+    echo "3) $a est égal à $b<br>";
 }
 
 /*
