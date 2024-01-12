@@ -47,9 +47,9 @@ $note = mt_rand(5, 15)  ;
 // Sinon on affiche "3) La $note est 10<br>"
 
 if($note<=10 xor $note>=10){
-    echo "3) La $note est soit inférieure à 10, soit supérieure à 10<br>";
+    echo "3) La note $note est soit inférieure à 10, soit supérieure à 10<br>";
 }else{
-    echo "3) La $note est 10<br>";
+    echo "3) La note $note est 10<br>";
 }
 
 // Exercice avec l'opérateur NON (NOT) !
