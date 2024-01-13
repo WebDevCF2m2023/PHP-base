@@ -1462,6 +1462,49 @@ while($i<=10){
 
 ### do while
 
+La boucle `do while` est similaire à la boucle `while`, mais elle exécute les instructions au moins une fois, même si la condition est fausse.
+
+Attention, si la condition est toujours `true`, la boucle sera infinie et le serveur finira par planter.
+
+```php
+do{
+  // instructions
+}while(condition);
+```
+
+```php
+
+$i = 0;
+
+do{
+    echo "$i ";
+    $i++;
+}while($i<=10);
+// Affiche : 0 1 2 3 4 5 6 7 8 9 10
+
+// même si la condition est fausse, les instructions sont exécutées au moins une fois
+$page = 1;
+$pageNb = 0;
+echo "Page";
+do{
+    echo " $page";
+    $pageNb++;
+}while($pageNb>1);
+// Affiche : Page 1
+echo "<br>";
+// si on a plus de pages :
+$page = 1;
+$pageNb = 4;
+echo "Page";
+do{
+    echo " $page";
+    $page++;
+}while($page<=$pageNb);
+// Affiche : Page 1 2 3 4
+
+?>
+```
+
 ---
 
 [Retour au menu](#menu-de-navigation)
