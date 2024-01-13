@@ -29,7 +29,7 @@
   - [Les opérateurs de comparaison](#les-opérateurs-de-comparaison)
   - [Les opérateurs logiques](#les-opérateurs-logiques)
   - [Les opérateurs d'affectation](#les-opérateurs-daffectation)
-  - [Les opérateurs arithmétiques](#les-opérateurs-arithmétiques)
+  - [Les opérateurs d'incrémentation et décrémentation](#les-opérateurs-dincrémentation-et-décrémentation)
   - [Exercices et exemples if - elseif - else](#exercices-et-exemples-if---elseif---else)
   - [Autre manière de faire des conditions](#autre-manière-de-faire-des-conditions)
   - [switch](#switch)
@@ -758,6 +758,47 @@ Les opérateurs d'affectation permettent d'affecter une valeur à une variable.
 Lien vers les opérateurs d'affectation :
 
 https://www.php.net/manual/fr/language.operators.assignment.php
+
+---
+
+[Retour au menu](#menu-de-navigation)
+
+---
+
+#### Les Opérateurs d'incrémentation et décrémentation
+
+Les opérateurs d'incrémentation et décrémentation permettent d'augmenter ou diminuer la valeur d'une variable. Ce sont donc des opérateurs d'affectation également.
+
+| Opérateur | Description | Détails                                                                                                   | Exemple | Résultat |  
+|-----------|-------------|-----------------------------------------------------------------------------------------------------------|---------|----------|
+| ++        | Incrémentation | Incrémente la valeur de 1 | $a = 1; $a++; | 2 |        
+| --        | Décrémentation | Décrémente la valeur de 1 | $a = 1; $a--; | 0 |
+| +=        | Incrémentation | Incrémente la valeur de la variable | $a = 1; $a+=2; | 3 |
+| -=        | Décrémentation | Décrémente la valeur de la variable | $a = 1; $a-=2; | -1 |
+| *=        | Incrémentation | Multiplie la valeur de la variable | $a = 1; $a*=2; | 2 |
+| /=        | Décrémentation | Divise la valeur de la variable | $a = 1; $a/=2; | 0.5 |
+| %=        | Incrémentation | Divise la valeur de la variable et affecte le reste à la variable | $a = 1; $a%=2; | 1 |
+| .=        | Concaténation | Concatène la valeur de la variable | $a = 1; $a.=2; | 12 |
+
+Attention à l'ordre des opérateurs, car il peut y avoir des erreurs d'interprétation :
+
+```php
+<?php
+$a = 1;
+echo $a++; // affichera 1
+echo $a; // affichera 2
+echo ++$a; // affichera 3
+echo $a; // affichera 3
+echo $a--; // affichera 3
+echo $a; // affichera 2
+echo --$a; // affichera 1
+echo $a; // affichera 1
+?>
+```
+
+Lien vers les opérateurs d'incrémentation et décrémentation :
+
+https://www.php.net/manual/fr/language.operators.increment.php
 
 ---
 
