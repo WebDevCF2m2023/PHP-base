@@ -1484,14 +1484,16 @@ do{
 
 // même si la condition est fausse, les instructions sont exécutées au moins une fois
 $page = 1;
-$pageNb = 0;
+$pageNb = 1;
 echo "Page";
 do{
     echo " $page";
-    $pageNb++;
-}while($pageNb>1);
+    $page++;
+}while($page<=$pageNb);
 // Affiche : Page 1
+
 echo "<br>";
+
 // si on a plus de pages :
 $page = 1;
 $pageNb = 4;
