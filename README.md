@@ -1360,6 +1360,30 @@ Le résultat de l'exercice 26 devrait ressembler à ceci :
 
 ### while
 
+La boucle `while` permet de répéter des instructions tant qu'une condition est vraie. C'est la boucle la plus simple et la plus souple.
+
+Attention, si la condition est toujours `true`, la boucle sera infinie et le serveur finira par planter.
+
+```php
+while(condition){
+  // instructions
+}
+```
+
+```php
+<?php
+
+$i = 0;
+
+while($i<=10){
+    echo "$i ";
+    $i++;
+}
+// Affiche : 0 1 2 3 4 5 6 7 8 9 10
+?>
+```
+
+
 ---
 
 [Retour au menu](#menu-de-navigation)
