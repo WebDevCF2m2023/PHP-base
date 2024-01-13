@@ -28,6 +28,8 @@
   - [elseif() ou else if()](#elseif-ou-else-if)
   - [Les opérateurs de comparaison](#les-opérateurs-de-comparaison)
   - [Les opérateurs logiques](#les-opérateurs-logiques)
+  - [Les opérateurs d'affectation](#les-opérateurs-daffectation)
+  - [Les opérateurs arithmétiques](#les-opérateurs-arithmétiques)
   - [Exercices et exemples if - elseif - else](#exercices-et-exemples-if---elseif---else)
   - [Autre manière de faire des conditions](#autre-manière-de-faire-des-conditions)
   - [switch](#switch)
@@ -736,6 +738,33 @@ https://www.php.net/manual/fr/language.operators.logical.php
 [Retour au menu](#menu-de-navigation)
 
 ---
+
+
+
+#### Les opérateurs d'affectation
+
+Les opérateurs d'affectation permettent d'affecter une valeur à une variable.
+
+| Opérateur | Description | Détails                                                                                                   |
+|-----------|-------------|-----------------------------------------------------------------------------------------------------------|
+| =         | Affectation | Affecte une valeur à une variable                                                                          |
+| +=        | Affectation et addition | Ajoute la valeur à la variable et affecte le résultat à la variable |
+| -=        | Affectation et soustraction | Soustrait la valeur à la variable et affecte le résultat à la variable |
+| *=        | Affectation et multiplication | Multiplie la valeur à la variable et affecte le résultat à la variable |
+| /=        | Affectation et division | Divise la valeur à la variable et affecte le résultat à la variable |
+| %=        | Affectation et modulo | Divise la valeur à la variable et affecte le reste à la variable |
+| .=        | Affectation et concaténation | Concatène la valeur à la variable et affecte le résultat à la variable |
+
+Lien vers les opérateurs d'affectation :
+
+https://www.php.net/manual/fr/language.operators.assignment.php
+
+---
+
+[Retour au menu](#menu-de-navigation)
+
+---
+
 
 #### Exercices et exemples if - elseif - else
 
