@@ -11,7 +11,7 @@ $tab = array("a", "b", "c", "d", "e", "f", "g", "h", "i", "j");
 
 echo '<p>1) Affichez les lettres de $tab avec une boucle foreach<br>';
 $datas = "";
-foreach($tab as $value) $datas = $datas . $value . ",";
+foreach($tab as $value) $datas .= $value . ",";
 echo substr($datas, 0, -1);
 echo "</p>";
 
@@ -22,7 +22,7 @@ echo "</p>";
 
 echo '<p>2) Affichez les lettres de $tab avec une boucle foreach en affichant aussi la clef de chaque élément<br>';
 $datas = "";
-foreach($tab as $key => $value) $datas = $datas . "( " . $key .";". $value." ),";
+foreach($tab as $key => $value) $datas .= "( " . $key .";". $value." ),";
 echo substr($datas, 0, -1);
 echo "</p>";
 
@@ -69,7 +69,7 @@ echo '<p>7) Avec 2 boucles foreach, affichez tous les champs la liste des pays d
 foreach($countryCode as $value){
     $datas = "";
     foreach($value as $data)
-        $datas = $datas . $data . ",";
+        $datas .= $data . ",";
     echo substr($datas, 0, -1) . "<br>";
 }
 echo "</p>";

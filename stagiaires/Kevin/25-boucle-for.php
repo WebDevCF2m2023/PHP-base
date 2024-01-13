@@ -8,7 +8,7 @@
  */
 echo "<p>1) Affichez les nombres de 10 à 1 avec une boucle for<br>";
 $numbers = "";
-for($i = 10; $i > 0; --$i) $numbers = $numbers.$i.",";
+for($i = 10; $i > 0; --$i) $numbers .= $i.",";
 echo substr($numbers, 0, -1);
 echo "</p>";
 
@@ -18,7 +18,7 @@ echo "</p>";
 
 echo "<p>2) Affichez les nombres pairs de 0 à 20 avec une boucle for<br>";
 $numbers = "";
-for($i = 0; $i <= 20; $i += 2) $numbers = $numbers.$i.",";
+for($i = 0; $i <= 20; $i += 2) $numbers .= $i.",";
 echo substr($numbers, 0, -1);
 echo "</p>";
 
@@ -73,12 +73,15 @@ echo "</p>";
  */
 
 echo "<p>6) Utilisez deux boucles for imbriquées pour afficher une table de multiplication de 1 à 5.<br></p>";
-for($i = 1; $i <= 5; ++$i){
-   echo "<div style='display: inline-block; width: 120px;'>";
-   echo "<h4>Table de $i</h4>";
-   for($y = 0; $y <= 10; ++$y){
-      echo "<p>$y x $i = " . $y * $i . "</p>";
-   }
+for($i = 1; $i <= 5; ++$i):
+?>
+   <div style="display: inline-block; width: 120px;">
+   <h4>Table de <?= $i ?></h4>
+<?php
+   for($y = 0; $y <= 10; ++$y):
+?>
+   <p><?= "$y x $i = " . $y * $i ?></p>
+<?php
+   endfor;
    echo "</div>";
-
-}
+endfor;
