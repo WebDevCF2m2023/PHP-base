@@ -1453,6 +1453,9 @@ while($i<=10){
 ?>
 ```
 
+| 27 | ![Exercice 27](https://github.com/mikhawa/PHP-base/blob/main/datas/folder-type-php-opened_24.png?raw=true) | Exercice 27 | Créez une copie du fichier `27-boucle-while.php`  dans votre espace stagiaire, puis créez les boucles while telles qu'indiquées dans les commentaires |
+|----|:----------------------------------------------------------------------------------------------------------:|:-----------:|:-----------------------------------------------------------------------------------------------------------------------------------------------------:|  
+
 
 ---
 
