@@ -42,7 +42,7 @@ echo "</p>";
 echo "<p>4) Affichez les nombres de 1 à 20 avec une boucle for en calculant la somme de ces nombres et en affichant à chaque tour si le nombre est pair ou impair<br>";
 $somme=0;
 for($i=1;$i <=20; $i++){
-   if ($i %2==0) echo "$i est pair";
+   if ($i %2==0) echo "<span style='color: blue;'>$i est pair</span>";
    else echo "$i inpair";
    echo "<br>";
    $somme = $somme +$i;
