@@ -6,6 +6,11 @@
 /*
  * 1) Affichez les nombres de 10 à 1 avec une boucle for
  */
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 12e0cb16a374b8ba95a7ec83444d646c6f2b7cb0
 echo "<p>1) Affichez les nombres de 10 à 1 avec une boucle for<br>";
 
 echo "</p>";
