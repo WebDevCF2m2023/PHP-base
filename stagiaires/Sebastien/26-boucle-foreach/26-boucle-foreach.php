@@ -50,8 +50,8 @@ echo "</p>";
  */
 
 echo '<p>5) Affichez la liste des prénoms du tableau $classe avec une boucle foreach<br>';
-foreach($classe as $key => $value)
-echo "( $key => $value ),";
+foreach($classe as $value)
+echo " $value ";
 echo "</p>";
 echo "</p>";
 
@@ -62,7 +62,7 @@ echo "</p>";
 
 echo '<p>6) Affichez la liste des \'nom\', \'age\' et \'note\' du tableau $classe18 avec une boucle foreach avec un retour à la ligne entre chaque élément<br>';
 foreach($classe18 as $etudiant){
-    echo "nom:".$etudiant['nom']."|Age". $etudiant['age']."|Note".$etudiant['note']."<br>";
+    echo "nom:".$etudiant['nom']."| Age". $etudiant['age']."| Note".$etudiant['note']."<br>";
 }
 echo "</p>";
 
@@ -72,8 +72,8 @@ echo "</p>";
 
 echo '<p>7) Avec 2 boucles foreach, affichez tous les champs la liste des pays du tableau $countryCode<br>';
 
-foreach ($countryCode as $key => $value){
-    foreach($value as $lol => $city){
+foreach ($countryCode as $key => $code){
+    foreach($code as $from => $city){
         echo"$city|";
     }
     echo "<br>";
