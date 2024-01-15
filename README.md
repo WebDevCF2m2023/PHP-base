@@ -767,6 +767,19 @@ $a= $a+2;
 $a+=2;
 ```
 
+##### -=
+
+équivaut à "retirer à la valeur de"
+
+```php
+$a=1;
+// manière longue
+$a= $a-2;
+// manière courte
+$a-=2;
+```
+
+##### .=
 
 Lien vers les opérateurs d'affectation :
 
