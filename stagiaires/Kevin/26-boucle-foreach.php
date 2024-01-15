@@ -41,7 +41,7 @@ echo "</p>";
  */
 
 echo '<p>4) Affichez le jour actuel de la semaine en français avec la fonction date() et la variable $semaineFr<br>';
-echo "Nous sommes : <strong>" . $semaineFr[date("w")] . "</strong>";
+echo "Nous sommes : <strong>" . $semaineFr[date("w") + 1] . "</strong>";
 echo "</p>";
 
 /*

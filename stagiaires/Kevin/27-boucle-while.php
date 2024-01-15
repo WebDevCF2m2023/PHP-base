@@ -36,3 +36,17 @@ do{
     $page++;
 }while($page<=$pageNb);
 // Affiche : Page 1 2 3 4
+
+echo "<h2>Own test section</h2>";
+
+$test = array(1,2,3,4,5,6,7,8,9);
+foreach($test as &$t) $t *= 2;
+var_dump($test);
+
+$ok = 3;
+modifRef($ok);
+var_dump($ok);
+
+function modifRef(&$v){
+    $v = 5;
+}
