@@ -755,6 +755,19 @@ Les opérateurs d'affectation permettent d'affecter une valeur à une variable.
 | %=        | Affectation et modulo | Divise la valeur à la variable et affecte le reste à la variable |
 | .=        | Affectation et concaténation | Concatène la valeur à la variable et affecte le résultat à la variable |
 
+##### +=
+
+équivaut à "ajouter à la valeur de"
+
+```php
+$a=1;
+// manière longue
+$a= $a+2;
+// manière courte
+$a+=2;
+```
+
+
 Lien vers les opérateurs d'affectation :
 
 https://www.php.net/manual/fr/language.operators.assignment.php
