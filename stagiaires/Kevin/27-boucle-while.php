@@ -1,52 +1,51 @@
 <?php
-$i = 0;
+/*
+ * Les boucles foreach
+ */
 
-while($i<=10){
-    echo "$i ";
-    $i++;
+echo "<p>1) Calculez la somme des entiers de 1 à 10 avec la boucle while<br>";
+
+$somme = 0;
+$i = 1;
+while($i <= 10) $somme += $i++;
+
+
+// ligne qui doit devenir fonctionnelle :
+echo "La somme des entiers de 1 à 10 est : $somme";
+
+echo "</p>";
+
+echo "<p>2) Affichez une table de multiplication (de 1 à 10 au hasard) en utilisant la boucle while<br>";
+
+// essai pour le random_int, qui permet de générer un nombre aléatoire cryptographiquement sûr
+// https://www.php.net/manual/fr/function.random-int.php
+// Nous pouvons utiliser la fonction mt_rand() qui est plus rapide pour générer des nombres aléatoires
+$nombre = random_int(1, 10); // Génère un nombre aléatoire entre 1 et 10
+echo "Table de multiplication de $nombre :<br>";
+try {
+    for($i = 0; $i <= 10; ++$i)
+        echo "$i x $nombre = " . $i * $nombre . " | ";
+} catch (\Random\RandomException $e) {
+    echo $e->getMessage();
 }
-// Affiche : 0 1 2 3 4 5 6 7 8 9 10
 
-$i = 0;
+echo "</p>";
 
-do{
-    echo "$i ";
-    $i++;
-}while($i<=10);
-// Affiche : 0 1 2 3 4 5 6 7 8 9 10
+echo "<p>3) Affichez la factorielle d'un nombre au hasard entre 3 et 12 en utilisant la boucle while<br>
+La factorielle d'un nombre entier positif n, notée n!, est le produit de tous les entiers positifs inférieurs ou égaux à n.<br><br>
+Par exemple : <br>3! = 3 x 2 x 1 = 6 <br> 5! = 5 x 4 x 3 x 2 x 1 = 120 <br> 
+7! = 7 x 6 x 5 x 4 x 3 x 2 x 1 = 5040
+<br><br>";
 
-// même si la condition est fausse, les instructions sont exécutées au moins une fois
-$page = 1;
-$pageNb = 1;
-echo "Page";
-do{
-    echo " $page";
-    $page++;
-}while($page<=$pageNb);
-// Affiche : Page 1
 
-echo "<br>";
 
-// si on a plus de pages :
-$page = 1;
-$pageNb = 4;
-echo "Page";
-do{
-    echo " $page";
-    $page++;
-}while($page<=$pageNb);
-// Affiche : Page 1 2 3 4
+$nombre = mt_rand(3, 12);
+$factorielle = 1;
 
-echo "<h2>Own test section</h2>";
+for($i = $nombre; $i > 1; $i--)
+    $factorielle *= $i;
 
-$test = array(1,2,3,4,5,6,7,8,9);
-foreach($test as &$t) $t *= 2;
-var_dump($test);
+// ligne qui doit devenir fonctionnelle :
+echo "La factorielle de $nombre est : $factorielle";
 
-$ok = 3;
-modifRef($ok);
-var_dump($ok);
-
-function modifRef(&$v){
-    $v = 5;
-}
+echo "</p>";
