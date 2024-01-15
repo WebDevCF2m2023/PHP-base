@@ -70,9 +70,9 @@ echo "</p>";
 
 echo '<p>7) Avec 2 boucles foreach, affichez tous les champs la liste des pays du tableau $countryCode<br>';
 
-foreach ($countryCode as $key=>$value){
-    foreach($value as $lol=>$city){
-        echo"city|";
+foreach ($countryCode as $key => $value){
+    foreach($value as $lol => $city){
+        echo"$city|";
     }
     echo "<br>";
 }
