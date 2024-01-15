@@ -23,8 +23,9 @@ echo "<p>2) Affichez une table de multiplication (de 1 à 10 au hasard) en utili
 $nombre = random_int(1, 10); // Génère un nombre aléatoire entre 1 et 10
 echo "Table de multiplication de $nombre :<br>";
 try {
-    for($i = 0; $i <= 10; ++$i)
-        echo "$i x $nombre = " . $i * $nombre . " | ";
+    $i = 0;
+    while($i <= 10)
+        echo "$i x $nombre = " . $i++ * $nombre . " | ";
 } catch (\Random\RandomException $e) {
     echo $e->getMessage();
 }
@@ -41,9 +42,9 @@ Par exemple : <br>3! = 3 x 2 x 1 = 6 <br> 5! = 5 x 4 x 3 x 2 x 1 = 120 <br>
 
 $nombre = mt_rand(3, 12);
 $factorielle = 1;
-
-for($i = $nombre; $i > 1; $i--)
-    $factorielle *= $i;
+$i = $nombre;
+while($i > 1)
+    $factorielle *= $i--;
 
 // ligne qui doit devenir fonctionnelle :
 echo "La factorielle de $nombre est : $factorielle";
