@@ -781,6 +781,15 @@ $a-=2;
 
 ##### .=
 
+Signe de concaténation
+
+```php
+.= concaténation
+$a ="coucou";
+$a .=" les amis";
+```
+
+
 Lien vers les opérateurs d'affectation :
 
 https://www.php.net/manual/fr/language.operators.assignment.php
