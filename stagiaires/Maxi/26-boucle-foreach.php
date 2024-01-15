@@ -11,7 +11,7 @@ $tab = array("a", "b", "c", "d", "e", "f", "g", "h", "i", "j");
 
 echo '<p>1) Affichez les lettres de $tab avec une boucle foreach<br>';
 foreach($tab as $value){
-    echo "$value,";
+    echo "$value ";
 }
 
 echo "</p>";
@@ -45,7 +45,7 @@ echo "</p>";
  */
 
 echo '<p>4) Affichez le jour actuel de la semaine en français avec la fonction date() et la variable $semaineFr<br>';
-echo $semaineFr [date("w")];
+echo $semaineFr [date("N")];
 
 echo "</p>";
 
@@ -54,8 +54,8 @@ echo "</p>";
  */
 
 echo '<p>5) Affichez la liste des prénoms du tableau $classe avec une boucle foreach<br>';
-foreach($classe as $value){
-    echo "$value <br>";
+foreach($classe as $item){
+    echo "$item  ";
 }
 
 echo "</p>";
@@ -66,6 +66,9 @@ echo "</p>";
  */
 
 echo '<p>6) Affichez la liste des \'nom\', \'age\' et \'note\' du tableau $classe18 avec une boucle foreach avec un retour à la ligne entre chaque élément<br>';
+foreach($classe18 as $item){
+    echo "nom : $item[nom] | age:".$item['age']." | note : {$item['note']}<br>";
+}
 
 echo "</p>";
 
@@ -74,6 +77,11 @@ echo "</p>";
  */
 
 echo '<p>7) Avec 2 boucles foreach, affichez tous les champs la liste des pays du tableau $countryCode<br>';
-
+foreach($countryCode as $key => $code){
+    foreach($code as $city){
+        echo "$city | ";
+    }
+    echo "<br>";
+}
 
 echo "</p>";
