@@ -10,8 +10,9 @@ include 'array.php';
 $tab = array("a", "b", "c", "d", "e", "f", "g", "h", "i", "j");
 
 echo '<p>1) Affichez les lettres de $tab avec une boucle foreach<br>';
-foreach($tab as $value)
+foreach($tab as $value):
 echo "$value ,";
+endforeach;
 echo "</p>";
 
 /*
@@ -20,8 +21,9 @@ echo "</p>";
  */
 
 echo '<p>2) Affichez les lettres de $tab avec une boucle foreach en affichant aussi la clef de chaque élément<br>';
-foreach($tab as $key => $value)
-echo "( $key => $value ),";
+foreach($tab as $key => $value):
+echo "( $key => $value ) | ";
+endforeach;
 echo "</p>";
 
 
@@ -32,7 +34,7 @@ echo "</p>";
 
 echo '<p>3) Affichez les jours de la semaine avec une boucle foreach en affichant aussi la clef de chaque élément<br>';
 foreach($semaineFr as $key => $value)
-echo "( $key => $value ),";
+echo "( $key => $value ) | ";
 echo "</p>";
 
 /*
@@ -40,7 +42,7 @@ echo "</p>";
  */
 
 echo '<p>4) Affichez le jour actuel de la semaine en français avec la fonction date() et la variable $semaineFr<br>';
-echo $semaineFr[date("w")];
+echo $semaineFr[date("N")];
 echo "</p>";
 
 /*
