@@ -1,6 +1,6 @@
 <?php
 /*
- * Les boucles foreach
+ * Les boucles while
  */
 
 echo "<p>1) Calculez la somme des entiers de 1 à 10 avec la boucle while<br>";
