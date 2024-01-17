@@ -12,13 +12,17 @@ if(!empty($_GET["pg"]) && is_numeric($_GET["pg"])){
     elseif($page < 1) $page = 1;
 }
 $depFrPageHTML = "";
-$maxIndex = $page == $nbPages ? $nbPays : $nbPaysParPage * $page;
-for($i = ($page - 1) * $nbPaysParPage; $i < $maxIndex; ++$i)
-    $depFrPageHTML .= "<li>" . $depFr[$i] . "</li>";
+$i = ($page - 1) * $nbPaysParPage;
+do{
+    if($i == $nbPays) break;
+    $depFrPageHTML .= "<li>" . $depFr[$i++] . "</li>";
+}while($i < $nbPaysParPage * $page);
 
 $navLinkHTML = "";
-for($i = 1; $i <= $nbPages; ++$i)
-    $navLinkHTML .= "<a href='?pg=$i'>Page $i</a>";
+$i = 1;
+do{
+    $navLinkHTML .= "<a href='?pg=$i'>Page ".$i++."</a>";
+}while($i <= $nbPages);
 
 ?>
 <!DOCTYPE html>

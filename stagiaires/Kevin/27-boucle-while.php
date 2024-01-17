@@ -25,7 +25,7 @@ try {
     $i = 0;
     echo "Table de multiplication de $nombre :<br>";
     while($i <= 10)
-    echo "$i x $nombre = " . $i++ * $nombre . " | ";
+        echo "$i x $nombre = " . $i++ * $nombre . " | ";
 } catch (\Random\RandomException|ValueError $e) {
     echo $e->getMessage();
 }
