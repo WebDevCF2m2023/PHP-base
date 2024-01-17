@@ -102,6 +102,16 @@ echo "</p>";
  * Vous aurez besoin de concaténer des chaînes de caractères avec l'opérateur ".".
  * Vous obtiendrez 5 lignes de 5 multiplications chacune.
  */
+for ($i = 1; $i <= 5; $i++) {
+   echo "<strong>Table de multiplication par $i :</strong><br>";
+   
+   echo "<table border='1'>";
+   for ($j = 1; $j <= 5; $j++) {
+   echo "<tr><td>$i x $j</td><td>" .($i * $j). "</td></tr>";
+   }
+   echo "</table>";
+   echo "<br>";
+   }
 
 
 echo "<p>6) Utilisez deux boucles for imbriquées pour afficher une table de multiplication de 1 à 5.<br>";
