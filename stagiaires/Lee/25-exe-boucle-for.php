@@ -17,7 +17,7 @@ echo "</p>";
  */
 
 echo "<p>2) Affichez les nombres pairs de 0 à 20 avec une boucle for<br>";
-for ($i = 0; $i <= 20; $i=$i+2) {
+for ($i = 0; $i <= 20; $i+=2) {
     echo "$i ";
 }
 echo "</p>";
@@ -30,7 +30,7 @@ echo "<p>3) Affichez les nombres de 1 à 20 avec une boucle for en calculant la 
 $somme=0;
 for ($i = 1; $i <= 20; $i++) {
     echo "$i ";
-    $somme = $somme + $i;
+    $somme += $i;
 }
 echo " - La somme des nombres de 1 à 20 est : ".$somme;
 echo "</p>";
@@ -44,11 +44,11 @@ echo "<p>4) Affichez les nombres de 1 à 20 avec une boucle for en calculant la 
 $somme=0;
 for ($i = 1; $i <= 20; $i++) {
     if ($i % 2 == 0) {
-        echo "$i : pair | ";
+        echo "$i - pair | ";
     }else {
-        echo "$i : impair | ";
+        echo "$i - impair | ";
     }
-    $somme = $somme + $i;
+    $somme += $i;
 }
 echo "<br>";
 echo " - La somme des nombres de 1 à 20 est : ".$somme;
@@ -62,7 +62,7 @@ echo "</p>";
 echo "<p>5) Affichez la somme des nombres de 1 à 20 à chaque tour avec une boucle for et en affichant à chaque tour si la somme est pair ou impair<br>";
 $somme=0;
 for ($i = 1; $i <= 20; $i++) {
-    $somme = $somme + $i;
+    $somme += $i;
     if ($somme % 2 == 0) {
         echo "La somme est $somme : pair | ";
     }else {
@@ -87,9 +87,14 @@ echo "<p>6) Utilisez deux boucles for imbriquées pour afficher une table de mul
 
 for ($i = 1; $i <= 5; $i++){
     for ($j = 1; $j <= 5; $j++){
-        $k = $i*$j;
+        $k = $i * $j;
+    if ($j < 5):
         echo "$i x $j = $k  | ";
-    }
+    else:
+        echo "$i x $j = $k";
+    endif;
+}
+    
     echo "<br>";
 }
 

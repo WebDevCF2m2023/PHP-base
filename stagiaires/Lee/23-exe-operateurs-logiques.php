@@ -33,7 +33,7 @@ if ($page < 10 || $page > 20) {
 // Exercice avec l'opérateur OU exclusif (XOR) ^
 $note = mt_rand(5, 15)  ;
 
-if ($note < 10 XOR $note > 10) {
+if ($note <= 10 XOR $note >= 10) {
     echo "3) La $note est soit inférieure à 10, soit supérieure à 10<br>";
 }else {
     echo "3) La $note est 10<br>";
