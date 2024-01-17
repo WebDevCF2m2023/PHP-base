@@ -18,9 +18,9 @@ echo "La somme des nombres est : $somme";
 
 for($i=1; $i<=20; $i++){
 	if($i % 2 === 0){
-	echo "\n<br>$i - pair |";
+	echo "\n<br>$i - pair | <br>";
 }else {
-	echo "<br>$i - impair |";
+	echo "<br>$i - impair | ";
 }
 }
 
@@ -36,5 +36,5 @@ for($i=1; $i<=20; $i++){
 
 for($i=1; $i<=5; $i++){
 	for($j=1; $j<=5; $j++){
-	echo "<br>$j x $i = ".($j*$i)." |";
-}}
+	echo "$j x $i = ".($j*$i)." |";
+}echo "<br>";}
