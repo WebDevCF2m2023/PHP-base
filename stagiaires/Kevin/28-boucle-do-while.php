@@ -8,13 +8,12 @@ $nbPages = ceil($nbPays / $nbPaysParPage);
 $page = 1;
 if(!empty($_GET["pg"]) && is_numeric($_GET["pg"])){
     $page = intval($_GET["pg"]);
-    if($page >= $nbPages) $page = $nbPages;
-    elseif($page < 1) $page = 1;
+    if($page > $nbPages || $page < 1) $page = 1;
 }
 $depFrPageHTML = "";
 $i = ($page - 1) * $nbPaysParPage;
 do{
-    if($i == $nbPays) break;
+    if($i >= $nbPays) break;
     $depFrPageHTML .= "<li>" . $depFr[$i++] . "</li>";
 }while($i < $nbPaysParPage * $page);
 
