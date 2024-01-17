@@ -1,4 +1,5 @@
 <?php
+$begin = microtime(true);
 /*
  * Les boucles foreach
  */
@@ -11,6 +12,8 @@ $tab = array("a", "b", "c", "d", "e", "f", "g", "h", "i", "j");
 
 echo '<p>1) Affichez les lettres de $tab avec une boucle foreach<br>';
 
+foreach($tab as $value) echo "$value ";
+
 echo "</p>";
 
 /*
@@ -19,6 +22,10 @@ echo "</p>";
  */
 
 echo '<p>2) Affichez les lettres de $tab avec une boucle foreach en affichant aussi la clef de chaque élément<br>';
+
+foreach($tab as $key => $value):
+    echo "$key => $value | ";
+endforeach;
 
 echo "</p>";
 
@@ -30,6 +37,10 @@ echo "</p>";
 
 echo '<p>3) Affichez les jours de la semaine avec une boucle foreach en affichant aussi la clef de chaque élément<br>';
 
+foreach($semaineFr as $k => $v){
+    echo "$k => $v | ";
+}
+
 echo "</p>";
 
 /*
@@ -38,6 +49,8 @@ echo "</p>";
 
 echo '<p>4) Affichez le jour actuel de la semaine en français avec la fonction date() et la variable $semaineFr<br>';
 
+echo $semaineFr[date("N")];
+
 echo "</p>";
 
 /*
@@ -45,6 +58,10 @@ echo "</p>";
  */
 
 echo '<p>5) Affichez la liste des prénoms du tableau $classe avec une boucle foreach<br>';
+
+foreach($classe as $item){
+    echo "$item ";
+}
 
 echo "</p>";
 
@@ -55,6 +72,11 @@ echo "</p>";
 
 echo '<p>6) Affichez la liste des \'nom\', \'age\' et \'note\' du tableau $classe18 avec une boucle foreach avec un retour à la ligne entre chaque élément<br>';
 
+foreach($classe18 as $item){
+    // "$item[nom] sans guillemet ne fonctionne que entre les double guillemets d'un echo"
+    echo "nom : $item[nom] | âge : ".$item['age']." | note : {$item['note']}<br>";
+}
+
 echo "</p>";
 
 /*
@@ -63,5 +85,14 @@ echo "</p>";
 
 echo '<p>7) Avec 2 boucles foreach, affichez tous les champs la liste des pays du tableau $countryCode<br>';
 
+foreach($countryCode as $code){
+    foreach($code as $city){
+        echo "$city |";
+    }
+    echo "<br>";
+}
 
 echo "</p>";
+
+$totalTime = microtime(true) - $begin;
+echo "<h3>temps pour générer cette page en secondes : $totalTime</h3>";
