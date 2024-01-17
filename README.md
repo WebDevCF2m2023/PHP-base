@@ -1545,6 +1545,10 @@ do{
 ?>
 ```
 
+
+| 28 | ![Exercice 28](https://github.com/mikhawa/PHP-base/blob/main/datas/folder-type-php-opened_24.png?raw=true) | Exercice 28 | Créez une copie du fichier `28-boucle-do-while.php`  dans votre espace stagiaire, puis créez les boucles while telles qu'indiquées dans les commentaires |
+|----|:----------------------------------------------------------------------------------------------------------:|:-----------:|:--------------------------------------------------------------------------------------------------------------------------------------------------------:|
+
 ---
 
 [Retour au menu](#menu-de-navigation)
