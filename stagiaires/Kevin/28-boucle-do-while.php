@@ -4,7 +4,7 @@ require 'array.php';
 $depFr = array_values($depFr);
 $nbPays = count($depFr);
 $nbPaysParPage = 20;
-$nbPages = floor($nbPays / $nbPaysParPage);
+$nbPages = ceil($nbPays / $nbPaysParPage);
 $page = 1;
 if(!empty($_GET["pg"]) && is_numeric($_GET["pg"])){
     $page = intval($_GET["pg"]);
@@ -12,7 +12,8 @@ if(!empty($_GET["pg"]) && is_numeric($_GET["pg"])){
     elseif($page < 1) $page = 1;
 }
 $depFrPageHTML = "";
-for($i = ($page - 1) * $nbPaysParPage; $i < $nbPaysParPage * $page; ++$i)
+$maxIndex = $page == $nbPages ? $nbPays : $nbPaysParPage * $page;
+for($i = ($page - 1) * $nbPaysParPage; $i < $maxIndex; ++$i)
     $depFrPageHTML .= "<li>" . $depFr[$i] . "</li>";
 
 $navLinkHTML = "";
