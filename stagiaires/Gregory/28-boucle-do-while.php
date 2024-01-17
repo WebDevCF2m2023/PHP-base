@@ -50,13 +50,22 @@ else $page = 0;
     echo "</ul></nav>";
     ?>
 <p>Affichez ensuite la liste des régions suivant la variable $_GET nommée 'pg'</p>
-    <h4>Ici la pagination</h4>
     <?php
     $i=$page*$nbPaysParPage;
     do {
         if ($i<$nbPays)echo $depFr[$i]."<hr>";
         $i++;
     }while ($i<$page*$nbPaysParPage+20);
+    ?>
+    <h4>Ici la pagination</h4>
+    <?php
+    $i=0;
+    echo "<nav><ul>";
+    do {
+        if ($i!=$page)echo "<li><a href='?pg=".($i+1)."'>page ".($i+1)."</a></li>";
+        $i++;
+    }while ($i<$nbPages);
+    echo "</ul></nav>";
     ?>
 </body>
 </html>
