@@ -40,32 +40,44 @@ else $page = 0;
     ?>
 <h2>Les régions de France</h2>
     <h4>Ici la pagination</h4>
+    <nav><ul>
     <?php
-    $i=0;
-    echo "<nav><ul>";
-    do {
-        if ($i!=$page)echo "<li><a href='?pg=".($i+1)."'>page ".($i+1)."</a></li>";
-        $i++;
-    }while ($i<$nbPages);
-    echo "</ul></nav>";
+        $i=0;
+        do {
+            if ($i!=$page):
     ?>
+    <li><a href='?pg=<?=$i+1?>'>page <?=$i+1?></a></li>
+    <?php
+            endif;
+            $i++;
+        }while ($i<$nbPages);
+    ?>
+    </ul></nav>
 <p>Affichez ensuite la liste des régions suivant la variable $_GET nommée 'pg'</p>
     <?php
-    $i=$page*$nbPaysParPage;
-    do {
-        if ($i<$nbPays)echo $depFr[$i]."<hr>";
-        $i++;
-    }while ($i<$page*$nbPaysParPage+20);
+        $i=$page*$nbPaysParPage;
+        do {
+            if ($i<$nbPays):
+    ?>
+    <?=$depFr[$i]?><hr>
+    <?php
+            endif;
+            $i++;
+        }while ($i<$page*$nbPaysParPage+20);
     ?>
     <h4>Ici la pagination</h4>
+    <nav><ul>
     <?php
-    $i=0;
-    echo "<nav><ul>";
-    do {
-        if ($i!=$page)echo "<li><a href='?pg=".($i+1)."'>page ".($i+1)."</a></li>";
-        $i++;
-    }while ($i<$nbPages);
-    echo "</ul></nav>";
+        $i=0;
+        do {
+            if ($i!=$page):
     ?>
+    <li><a href='?pg=<?=$i+1?>'>page <?=$i+1?></a></li>
+    <?php
+            endif;
+            $i++;
+        }while ($i<$nbPages);
+    ?>
+    </ul></nav>
 </body>
 </html>
