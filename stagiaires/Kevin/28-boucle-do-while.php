@@ -10,19 +10,6 @@ if(!empty($_GET["pg"]) && is_numeric($_GET["pg"])){
     $page = intval($_GET["pg"]);
     if($page > $nbPages || $page < 1) $page = 1;
 }
-$depFrPageHTML = "";
-$i = ($page - 1) * $nbPaysParPage;
-do{
-    if($i >= $nbPays) break;
-    $depFrPageHTML .= "<li>" . $depFr[$i++] . "</li>";
-}while($i < $nbPaysParPage * $page);
-
-$navLinkHTML = "";
-$i = 1;
-do{
-    $navLinkHTML .= "<a href='?pg=$i'>Page ".$i++."</a>";
-}while($i <= $nbPages);
-
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -49,13 +36,35 @@ do{
     <h1>28-boucle-do-while</h1>
     <h2>Les régions de France : Page <?= $page ?></h2>
     <nav>
-        <?= $navLinkHTML ?>
+        <?php
+        $i = 1;
+        do{
+        ?>
+            <a href='?pg=<?= $i ?>'>Page <?= $i++ ?></a>
+        <?php
+        }while($i <= $nbPages);
+        ?>
     </nav>
     <ol>
-        <?= $depFrPageHTML ?>
+    <?php
+    $i = ($page - 1) * $nbPaysParPage;
+    do{
+        if($i >= $nbPays) break;
+    ?>
+        <li> <?= $depFr[$i++] ?> </li>
+    <?php
+    }while($i < $nbPaysParPage * $page);
+    ?>
     </ol>
     <footer>
-        <?= $navLinkHTML ?>
+    <?php
+        $i = 1;
+        do{
+        ?>
+            <a href='?pg=<?= $i ?>'>Page <?= $i++ ?></a>
+        <?php
+        }while($i <= $nbPages);
+        ?>
     </footer>
 </body>
 </html>
