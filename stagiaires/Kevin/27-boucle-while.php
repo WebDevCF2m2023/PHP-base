@@ -20,12 +20,12 @@ echo "<p>2) Affichez une table de multiplication (de 1 à 10 au hasard) en utili
 // essai pour le random_int, qui permet de générer un nombre aléatoire cryptographiquement sûr
 // https://www.php.net/manual/fr/function.random-int.php
 // Nous pouvons utiliser la fonction mt_rand() qui est plus rapide pour générer des nombres aléatoires
-echo "Table de multiplication de $nombre :<br>";
 try {
     $nombre = random_int(1, 10); // Génère un nombre aléatoire entre 1 et 10
     $i = 0;
+    echo "Table de multiplication de $nombre :<br>";
     while($i <= 10)
-        echo "$i x $nombre = " . $i++ * $nombre . " | ";
+    echo "$i x $nombre = " . $i++ * $nombre . " | ";
 } catch (\Random\RandomException|ValueError $e) {
     echo $e->getMessage();
 }
