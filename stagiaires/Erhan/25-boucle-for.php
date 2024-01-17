@@ -26,7 +26,7 @@ for($i=1; $i<=20; $i++){
 
 $somme = 0;
 for($i=1; $i<=20; $i++){
-	$somme = $somme + $i;
+	$somme += $i;
 	if($somme % 2 === 0){
 		echo "-La somme est : $somme - pair |<br>";
 	}else {
