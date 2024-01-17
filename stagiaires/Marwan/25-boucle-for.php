@@ -6,86 +6,81 @@
 /*
  * 1) Affichez les nombres de 10 à 1 avec une boucle for
  */
-for ($i = 10;$i >= 1; $i--){
-   echo "$i";
-}
+
 echo "<p>1) Affichez les nombres de 10 à 1 avec une boucle for<br>";
 
 echo "</p>";
-
+for ($i = 10;$i >= 1; $i--){
+   echo "$i  ";
+}
 /*
  * 2) Affichez les nombres pairs de 0 à 20 avec une boucle for
  */
-for($i = 0;$i <=20 ;$i+=2){
-   echo"$i";
-}
 
 echo "<p>2) Affichez les nombres pairs de 0 à 20 avec une boucle for<br>";
 
 echo "</p>";
+for($i = 0;$i <=20 ;$i+=2){
+   echo"$i ";
+}
 
 /*
  * 3) Affichez les nombres de 1 à 20 avec une boucle for en calculant la somme de ces nombres
  */
-$total=0;
-
-for($i=1;$i<=20;$i++){
-  $total+=$i;
-  
-   echo " $i ";
-
-  }
-echo "<br>total=$total";
-
 
 
 echo "<p>3) Affichez les nombres de 1 à 20 avec une boucle for en calculant la somme de ces nombres<br>";
-$somme=0;
 
-echo " - La somme des nombres de 1 à 20 est : ".$somme;
+$total=0;
+for($i=1;$i<21;$i++){
+   echo"$i ";
+   $total+=$i;
+  
+}
+echo " - La somme des nombres de 1 à 20 est : ".$total;
 echo "</p>";
+
+
 
 /*
  * 4) Affichez les nombres de 1 à 20 avec une boucle for en calculant la somme de ces nombres
  * et en affichant à chaque tour si le nombre est pair ou impair (utilisez l'opérateur modulo %)
  */
-$total=0;
- for($i=1;$i<=20;$i++){
-   $total+=$i;
-   echo " $i ";
- }
-if ($total % 2 === 0) {
-   echo  "<br>$total est pair ";
-}else{
-   echo "<br>$total est impair ";
-}
-
-
 
  
 echo "<p>4) Affichez les nombres de 1 à 20 avec une boucle for en calculant la somme de ces nombres et en affichant à chaque tour si le nombre est pair ou impair<br>";
-$somme=0;
+$total=0;
+for($i=1;$i<=20;$i++):
+$total+=$i;
 
-echo " - La somme des nombres de 1 à 20 est : ".$somme;
+if ($i % 2 === 0):
+echo "$i : pair | "; 
+else:
+echo "$i: est impair | ";
+endif;
+endfor;
+echo " - La somme des nombres de 1 à 20 est : ".$total;
 echo "</p>";
 
+echo "</p>";
 /*
  * 5) Affichez la somme des nombres de 1 à 20 à chaque tour avec une boucle for
  * et en affichant à chaque tour si la somme est pair ou impair
  */
+
+ $total=0;
+   for($i=1;$i<=20;$i++):
+   $total+=$i;
+  
+   if ($total % 2 === 0):
+   echo "$total : pair | "; 
+   else:
+   echo "$total: est impair | ";
+   endif;
+endfor;
 $total=0;
 
-for($i=1;$i<=20;$i++){
-   $total+=$i;
-   echo " $i ";
-if ($i % 2 === 0) {
-   echo  "est pair";
-} 
-else {
-   echo  "est impair";
-}
- }
- echo "<br>total=$total";
+
  
 echo "<p>5) Affichez la somme des nombres de 1 à 20 à chaque tour avec une boucle for et en affichant à chaque tour si la somme est pair ou impair<br>";
 $somme=0;
