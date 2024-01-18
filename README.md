@@ -8,7 +8,7 @@
   - [Installation de XAMPP pour MacOs](#installation-de-xampp-pour-macos)
 - [Les fichiers du formateur](#les-fichiers-du-formateur)
 - [Principe des exercices](#principe-des-exercices)
-- [Liste des fonctions à connaitre](../../tree/main/functions#les-fonctions-natives-et-constructions-du-langage-à-connaitre) - Par CŒUR !
+- [Liste des fonctions à connaître](../../tree/main/functions#les-fonctions-natives-et-constructions-du-langage-à-connaitre) - Par CŒUR !
 - [Les bases de PHP](#les-bases-de-php)
   - [Les fichiers PHP](#les-fichiers-php)
   - [Les balises PHP](#les-balises-php)
@@ -50,6 +50,8 @@
   - [while](#while)
   - [do while](#do-while)
 - [Les fonctions](#les-fonctions)
+  - [Les fonctions natives](#les-fonctions-natives)
+  - [Les fonctions personnalisées](#les-fonctions-personnalisées)
 
 
 ---
@@ -1614,11 +1616,38 @@ Une fonction peut être appelée plusieurs fois, elle peut prendre des paramètr
 
 Il existe des fonctions prédéfinies en PHP, comme `echo()` ou `print()`, qu'on nomme aussi fonctions natives ou même structures de langage pour les plus courantes.
 
+Il existe aussi des fonctions définies par l'utilisateur.
+
+### Les fonctions natives
+
+Les fonctions natives sont des fonctions prédéfinies en PHP, elles sont utilisables sans avoir à les définir.
+
+Depuis PHP 8 il est possible de changer l'ordre des arguments des fonctions natives, mais nous ne le ferons pas pour le moment.
+
+Les fonctions natives à connaître sont à ce paragraphe :
+
+[Liste des fonctions à connaître](../../tree/main/functions#les-fonctions-natives-et-constructions-du-langage-à-connaitre)
+
+### Les fonctions personnalisées
+
 Il existe aussi des fonctions définies par l'utilisateur, qu'on nomme fonctions personnalisées.
 
 https://www.php.net/manual/fr/language.functions.php
 
-A continuer...
+Pour créer une fonction, on utilise le mot-clé `function` suivi du nom de la fonction, puis des parenthèses `()` et des accolades `{}`.
+
+```php
+function nomDeLaFonction(){
+  // instructions
+}
+```
+
+```php
+function bonjour(){
+    echo "Bonjour";
+}
+```
+
 
 --- 
 
