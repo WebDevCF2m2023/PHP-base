@@ -22,6 +22,7 @@
     - [Les tableaux multidimensionnels](#les-tableaux-multidimensionnels)
 - [Les variables superglobales](#les-variables-superglobales)
   - [$_GET](#_get)
+- [Les constantes](#les-constantes)
 - [Les conditions](#les-conditions)
   - [if](#if)
   - [else](#else)
@@ -624,6 +625,54 @@ var_dump($_GET);
 
 | 13 | ![Exercice 13](https://github.com/mikhawa/PHP-base/blob/main/datas/folder-type-php-opened_24.png?raw=true) | Exercice 13 | Créez un fichier `13-GET.php` et modifiez le switch pour afficher votre contenu pour les rubriques : Contact - Livre d'or - Actualités.  |
 |----|:----------------------------------------------------------------------------------------------------------:|:-----------:|:----------------------------------------------------------------------------------------------------------------------------------------:|
+
+---
+
+[Retour au menu](#menu-de-navigation)
+
+---
+
+## Les constantes
+
+Une constante est un identifiant (un nom) qui représente une valeur simple. Comme son nom l'indique, cette valeur ne peut pas changer durant l'exécution du script (sauf pour les constantes magiques qui changent à chaque fois).
+
+Une constante est définie avec la fonction `define()` ou avec l'opérateur `const`.
+
+Une fois qu'une constante est définie, elle ne peut pas être modifiée ou supprimée !
+
+Les constantes sont utiles pour stocker des informations qui ne changent pas tout au long de l'exécution du script, comme la version du script ou le nom d'un auteur.
+
+Les constantes sont globales. Elles peuvent être utilisées dans toute la page.
+
+Les bonnes pratiques principales de nommage des constantes sont les suivantes :
+
+- Les constantes sont écrites en majuscules.
+- Les constantes sont écrites en snake_case.
+
+
+Avec define() :
+
+```php  
+<?php
+// Définition de la constante avec define()
+define("NOM_DE_LA_CONSTANTE", "valeur de la constante");
+
+// Affichage de la constante
+echo NOM_DE_LA_CONSTANTE;
+?>
+```
+
+Avec const :
+
+```php
+<?php
+// Définition de la constante avec const
+const NOM_DE_LA_CONSTANTE = "valeur de la constante";
+
+// Affichage de la constante
+echo NOM_DE_LA_CONSTANTE;
+?>
+```
 
 ---
 
