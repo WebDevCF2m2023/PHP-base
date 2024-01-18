@@ -642,7 +642,9 @@ Une fois qu'une constante est définie, elle ne peut pas être modifiée ou supp
 
 Les constantes sont utiles pour stocker des informations qui ne changent pas tout au long de l'exécution du script, comme la version du script ou le nom d'un auteur.
 
-Les constantes sont globales. Elles peuvent être utilisées dans toute la page.
+**Les paramètres de configuration sont souvent stockés dans des constantes !**
+
+Les constantes sont **globales**. Elles peuvent être utilisées dans toute la page. Attention en orienté objet, les constantes de classe sont définies dans la classe et sont donc accessibles autrement.
 
 Les bonnes pratiques principales de nommage des constantes sont les suivantes :
 
