@@ -44,7 +44,8 @@ echo "</p>";
 
 echo '<p>4) Affichez le jour actuel de la semaine en français avec la fonction date() et la variable $semaineFr<br>';
 
- 
+ $jouractuel = date("N");
+ echo $semaineFr[$jouractuel];
 
 echo "</p>";
 
@@ -64,9 +65,11 @@ echo "</p>";
  */
 
 echo '<p>6) Affichez la liste des \'nom\', \'age\' et \'note\' du tableau $classe18 avec une boucle foreach avec un retour à la ligne entre chaque élément<br>';
-foreach($classe18 as $key => $classes18){
-    echo $classes18["nom"];
+foreach($classe18 as $class){
+    echo "nom : $class[nom] | age : $class[age] | note : $class[note] ";
+    echo "</br>";
 }
+
 echo "</p>";
 
 /*
@@ -75,5 +78,10 @@ echo "</p>";
 
 echo '<p>7) Avec 2 boucles foreach, affichez tous les champs la liste des pays du tableau $countryCode<br>';
 
-
+foreach($countryCode as $element) {
+    foreach ($element as $value){
+        echo "$value | ";
+    }
+    echo "<br>";
+}
 echo "</p>";
