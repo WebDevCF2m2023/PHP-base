@@ -66,8 +66,3 @@ while ($i <= $nombre) {
 echo "<br>La factorielle de $nombre est : $factorielle";
  
 echo "</p>";
-merci Sourire par Guillaume Baillieux
-09:12
-Guillaume Baillieux
-merci 
-Dispose d’un menu contextuel
