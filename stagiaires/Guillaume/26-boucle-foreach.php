@@ -23,7 +23,7 @@ echo "</p>";
 
 echo '<p>2) Affichez les lettres de $tab avec une boucle foreach en affichant aussi la clef de chaque élément<br>';
 foreach ($tab as  $clef => $element){
-    echo  "$clef : $element ";
+    echo  "$clef : $element |";
 }
 echo "</p>";
 
@@ -73,7 +73,10 @@ echo "</p>";
 echo '<p>6) Affichez la liste des \'nom\', \'age\' et \'note\' du tableau $classe18 avec une boucle foreach avec un retour à la ligne entre chaque élément<br>';
 
 foreach ($classe18 as $class){
+    // propre au echo "" => des clef de tableaux au format string sans ' ou "
     echo "nom : $class[nom]| age : $class[age]| note : $class[note]";
+   /* echo "nom : $class['nom']| age : $class['age']| note : $class['note']";
+      echo "nom : ".$class['nom']."| age : ".$class['age']."| note : ".$class['note']."; */
     echo "</br>";
 }
 
@@ -91,6 +94,13 @@ foreach ($countryCode as $country){
     echo "</br>";
 }
 
+/* foreach($countrycode as $ country){
+    foreach($country as $number){
+        echo "$number |";
+    };
+    echo "<br />"; 
+}
+*/
 
 
 echo "</p>";
