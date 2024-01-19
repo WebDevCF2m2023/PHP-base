@@ -93,5 +93,12 @@ print "bonjour à tous";
 ?>
 ```
 
+ctype_digit
+
+casting de type 
+
+settype 
+
+intval
 
 

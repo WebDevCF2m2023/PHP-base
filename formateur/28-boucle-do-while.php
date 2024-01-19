@@ -16,6 +16,25 @@ $nbPaysParPage = 20;
 // pour afficher toutes les régions, ceil arrondit à l'entier supérieur
 $nbPages = ceil($nbPays / $nbPaysParPage);
 
+/*
+* on va récupérer la page actuelle depuis la variable get si elle existe
+*/
+
+// si elle existe et n'est pas vide (!empty) ET qu'elle contient une chaîne de caractère composée uniquement de numériques (ctype_digit) (0123456789) 
+if(!empty($_GET['pg']) && ctype_digit($_GET['pg'])){
+    // transformation de la variable globable en variable locale traitée:
+        // transtypage avec (int), transforme en entier, donne 0 en cas d'erreur
+        $pageActu = (int) $_GET['pg'];
+        // équivaut à $pageActu = intval($_GET['pg']); qui renvoie 1 en cas d'erreur (et un warning)
+        // équivaut à settype($_GET['pg'], "integer"); mais renvoie false en cas d'erreur
+
+    // sinon
+}else{
+    // page par défaut
+    $pageActu = 1;
+}
+
+
 ?>
 <!doctype html>
 <html lang="fr">
@@ -36,7 +55,31 @@ $nbPages = ceil($nbPays / $nbPaysParPage);
  vous obtiendrez $nbPages pages<br>";
     ?>
 <h2>Les régions de France</h2>
-    <h4>Ici la pagination</h4>
+    <h4>Page <?php
+
+    // initialisation de la variable de boucle
+    $i=1;
+    // on fait le do 1 fois que le while soit juste ou non
+    do{
+        // si on on veut afficher la page actuel
+        if($pageActu === $i):
+    // affichage de la page sans lien        
+    ?>
+    <?=$i?> -
+    <?php
+        // sinon
+        else:
+    // création du lien cliquable
+        ?>
+    <a href="?pg=<?=$i?>"><?=$i?></a> -
+        <?php
+        // fin du if
+        endif;
+        // incrémentation
+        $i++;
+    }
+    while($i<=$nbPages);
+    ?></h4>
 <p>Affichez ensuite la liste des régions suivant la variable $_GET nommée 'pg'</p>
     <hr>
 
