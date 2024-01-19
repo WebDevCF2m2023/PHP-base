@@ -9,7 +9,7 @@
 and | &&  | ET
 or  | ||  | OU
 xor	| ^   | OU exclusif - peu utilisé
-not	| !   |	Inverse la condition
+not	| !   |	Inverse le résultat de la condition (true =>)
  */
 
 // Exercice avec l'opérateur ET (AND) &&
@@ -20,7 +20,7 @@ $genre = "F";
 // Alors, on affiche "1) Bienvenue sur le site<br>"
 // Sinon on affiche "1) Désolé, accès réservé aux femmes majeures uniquement<br>"
 
-if ($age >= "18" && $genre == "F"){
+if ($age >= 18 && $genre ==="F"){
    echo "1) Bienvenue sur le site<br>";
 }
 else {
@@ -35,7 +35,7 @@ $page = mt_rand(5, 25);
 // Alors, on affiche "2) La page $page est soit inférieure à 10, soit supérieure à 20<br>"
 // Sinon on affiche "2) La page $page est entre 10 et 20<br>"
 
-if ($page < "10" || $page > 20){
+if ($page < 10 || $page > 20){
     echo "2) La page $page est soit inférieure à 10, soit supérieure à 20<br>";
 }
 
@@ -52,7 +52,7 @@ $note = mt_rand(5, 15)  ;
 // Alors, on affiche "3) La $note est soit inférieure à 10, soit supérieure à 10<br>"
 // Sinon on affiche "3) La $note est 10<br>"
 
-if ($note < "10" XOR $note > "10"){
+if ($note < 10 XOR $note > 10){
     echo "3) La $note est soit inférieure à 10, soit supérieure à 10<br>";
 }
 else {
