@@ -6,12 +6,12 @@
 echo "<p>1) Calculez la somme des entiers de 1 à 10 avec la boucle while<br>";
 
 $somme = 0;
+$i = 1;
 
 while($i <= 10){
     $somme+= $i;
     $i++;
 }
-echo "$somme ";
 
 // ligne qui doit devenir fonctionnelle :
 echo "La somme des entiers de 1 à 10 est : $somme";
@@ -27,12 +27,20 @@ try {
     $nombre = random_int(1, 10); // Génère un nombre aléatoire entre 1 et 10
     // si erreur, on attrape l'exception
 } catch (\Random\RandomException $e) {
-    // affiche l'erreur
+    // affiche l'erreur     
     echo $e->getMessage();
 }
 
 
 echo "Table de multiplication de $nombre :<br>";
+
+$j = 1; 
+
+while($j <= 10){
+    $resultat = $nombre * $j;
+    echo "$nombre x $j = $resultat<br>";
+    $j++;
+}
 
 
 echo "</p>";
@@ -44,14 +52,16 @@ Par exemple : <br>3! = 3 x 2 x 1 = 6 <br> 5! = 5 x 4 x 3 x 2 x 1 = 120 <br>
 <br><br>";
 
 
-
 $nombre = mt_rand(3, 12);
 $factorielle = 1;
+$i = 1;
+
+while ($i <= $nombre) {
+    $factorielle *= $i;
+    $i++;
+}
 
 // ligne qui doit devenir fonctionnelle :
-echo "La factorielle de $nombre est : $factorielle";
+echo "<br>La factorielle de $nombre est : $factorielle";
 
 echo "</p>";
-
-
-
