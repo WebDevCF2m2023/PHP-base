@@ -9,6 +9,7 @@ $somme = 0;
 $i=1;
 while ($i<=10)$somme+=$i++;
 // ligne qui doit devenir fonctionnelle :
+//echo "La somme des entiers de 1 à 10 est : ".($i*($i-1)/2+$i);
 echo "La somme des entiers de 1 à 10 est : $somme";
 echo "</p>";
 
