@@ -7,6 +7,11 @@ echo "<p>1) Calculez la somme des entiers de 1 à 10 avec la boucle while<br>";
 
 $somme = 0;
 
+while($i <= 10){
+    $somme+= $i;
+    $i++;
+}
+echo "$somme ";
 
 // ligne qui doit devenir fonctionnelle :
 echo "La somme des entiers de 1 à 10 est : $somme";

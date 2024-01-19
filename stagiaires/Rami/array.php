@@ -6,7 +6,7 @@
 
 
 // des prénoms
-$classe=['Jean','Eric','Marie','Julie','Luc','Pierre','Paul','Jacques','Hélène','Anne','Yassine','Jean-Luc','Magib','Samsung',];
+$classe=['Jean','Eric','Marie','Julie','Luc','Pierre','Paul','Jacques','Hélène','Anne',];
 
 // jours de la semaine en français
 $semaineFr=[1 =>'lundi','mardi','mercredi','jeudi','vendredi','samedi','dimanche',];
@@ -388,3 +388,26 @@ $depFr["86"] = "Vienne";
 $depFr["88"] = "Vosges";
 $depFr["89"] = "Yonne";
 $depFr["78"] = "Yvelines";
+
+
+/*
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+*/
