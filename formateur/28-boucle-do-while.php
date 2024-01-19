@@ -6,7 +6,7 @@
 // chargement des données
 include 'array.php';
 
-// on trie $depFr par ordre alphabétique en retirant les clefs
+// on réinitialise les clef de $depFr en gardant l'ordre des valeurs
 $depFr = array_values($depFr);
 // On compte le nombre de pays dans le tableau $depFr
 $nbPays = count($depFr);
