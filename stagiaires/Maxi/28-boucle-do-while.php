@@ -3,7 +3,7 @@
  * Les boucles do while
  */
 
-// chargement des données
+// chargement des données 
 include 'array.php';
 
 // on trie $depFr par ordre alphabétique en retirant les clefs
