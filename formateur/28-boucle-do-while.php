@@ -51,10 +51,11 @@ if(!empty($_GET['pg']) && ctype_digit($_GET['pg'])){
     <p>Puis créez le menu pour passer d'une page à l'autre en utilisant la variable $_GET nommée 'pg'</p>
     <p>Exemple d'un lien valide : <a href="?pg=3">3</a></p>
     <?php
-    echo "Pour ce tableau de $nbPays pays, répartis par $nbPaysParPage pays par page,
+    echo "Pour ce tableau de $nbPays régions, répartis par $nbPaysParPage régions par page,
  vous obtiendrez $nbPages pages<br>";
     ?>
 <h2>Les régions de France</h2>
+
     <h4>Page <?php
 
     // initialisation de la variable de boucle
@@ -67,12 +68,21 @@ if(!empty($_GET['pg']) && ctype_digit($_GET['pg'])){
     ?>
     <?=$i?> -
     <?php
-        // sinon
+        // sinon (nous ne somme plus sur la page 1)
         else:
-    // création du lien cliquable
-        ?>
-    <a href="?pg=<?=$i?>"><?=$i?></a> -
-        <?php
+            // si le lien à afficher est vers la page 1
+            if($i===1):
+                // création du lien cliquable vers la racine du site
+                ?>
+                <a href="28-boucle-do-while.php"><?=$i?></a> -
+                <?php
+            else:
+                // création du lien cliquable vers ?pg=
+                ?>
+                <a href="?pg=<?=$i?>"><?=$i?></a> -
+                <?php
+            endif;
+    
         // fin du if
         endif;
         // incrémentation
@@ -82,8 +92,36 @@ if(!empty($_GET['pg']) && ctype_digit($_GET['pg'])){
     ?></h4>
 <p>Affichez ensuite la liste des régions suivant la variable $_GET nommée 'pg'</p>
     <hr>
-
+    <p>
+    <?php
+    // le tableau $depFr est un tableau indexé et contient 101 valeurs
+    // suivant la page, il faudrait trouver le point de départ de l'index $begin
+    // et le nombre maximum de tour par page
+    $begin= ($pageActu-1)*$nbPaysParPage;
+    $end= $begin + $nbPaysParPage;
+    do{
+        if($begin >= $nbPays) break;
+        echo "$depFr[$begin] <br>";
+        $begin++;
+    }while($begin < $end );
+    // var_dump($depFr);
+    ?>
+    </p>
     <hr>
-    <h4>Ici la pagination</h4>
+    <h4>Page <?php
+    // idem que la pagination de haute de page
+    $i=1;
+    do{
+        if($pageActu === $i){
+            echo "$i - ";
+        }elseif($i===1){
+            echo "<a href='28-boucle-do-while.php'>$i</a> - ";
+        }else{
+            echo "<a href='?pg=$i'>$i</a> - ";
+        }
+        $i++;
+    }while($i<=$nbPages);
+    ?>
+</h4>
 </body>
 </html>
