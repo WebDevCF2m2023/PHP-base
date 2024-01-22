@@ -36,12 +36,21 @@ echo "Table de multiplication de $nombre :<br>";
  
 $j = 1;
  
-while($j <= 10){
+while($j < 10){
     $resultat = $nombre * $j;
     echo "$nombre x $j = $resultat<br>";
     $j++;
 }
+
+/*
+$j = 1;
  
+while($j < 10){
+    echo "$resultat x $j = ".$nombre *$j;
+    echo "<br>";
+    $j++;
+}
+ */
  
 echo "</p>";
  
@@ -60,6 +69,17 @@ while ($i <= $nombre) {
     $factorielle *= $i;
     $i++;
 }
+
+/* $nombre = mt_rand(3, 12);
+$factorielle = 1;
+$i = $nombre;
+ 
+while ($i <= 1) {
+    $factorielle *= $i;
+    $i--;
+}
+ 
+*/
  
  
 // ligne qui doit devenir fonctionnelle :
