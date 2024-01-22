@@ -5,7 +5,7 @@
 
 include 'array.php';
 /*
- * 1) Affichez chaque élément du tableau avec une boucle foreach
+ * 1) Affichez chaque élément du tableau avec une boucle foreach 
  */
 $tab = array("a", "b", "c", "d", "e", "f", "g", "h", "i", "j");
 
