@@ -36,7 +36,7 @@ Les méthodes sont des fonctions qui sont définies dans une classe (POO). Elles
 
 ## Liste des fonctions à connaitre
 
-### array()
+### `array()` ou `[]`
 #### Création d'un tableau
 
 La fonction `array()` permet de créer un tableau, indexé ou associatif.
@@ -55,7 +55,7 @@ echo $tab3["val"][1]; // affiche "quatre"
 ##### Documentation
 https://www.php.net/manual/fr/language.types.array.php
 
-### count()
+### `count()`
 #### Compter le nombre d'éléments d'un tableau
 
 La fonction `count()` permet de compter le nombre d'éléments d'un tableau.
