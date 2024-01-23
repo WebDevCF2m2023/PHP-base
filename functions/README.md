@@ -52,6 +52,23 @@ echo $tab[0]." - ".$tab2["val"]; // affiche "un - trois"
 echo $tab3["val"][1]; // affiche "quatre"
 ```
 
+##### Documentation
+https://www.php.net/manual/fr/language.types.array.php
+
+### count()
+#### Compter le nombre d'éléments d'un tableau
+
+La fonction `count()` permet de compter le nombre d'éléments d'un tableau.
+
+```php
+$tab = array("un", "deux", "trois");
+echo count($tab); // affiche 3
+```
+
+##### Documentation
+https://www.php.net/manual/fr/function.count.php
+
+
 ---
 
 [Retour à la page d'accueil](../../../#menu-de-navigation)
