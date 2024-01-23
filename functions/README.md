@@ -37,7 +37,7 @@ Les méthodes sont des fonctions qui sont définies dans une classe (POO). Elles
 ## Liste des fonctions à connaitre
 
 ### `array()` ou `[]`
-#### Création d'un tableau
+#### Créer d'un tableau
 
 La fonction `array()` permet de créer un tableau, indexé ou associatif.
 
@@ -68,6 +68,22 @@ echo count($tab); // affiche 3
 ##### Documentation
 https://www.php.net/manual/fr/function.count.php
 
+### `ctype_digit()`
+#### Vérifier si une chaîne de caractères ne contient que des chiffres
+
+La fonction `ctype_digit()` permet de vérifier si une chaîne de caractères `string` ne contient que des chiffres.
+
+```php
+$chaine = "123";
+if (ctype_digit($chaine)) {
+    echo "La chaîne ne contient que des chiffres";
+} else {
+    echo "La chaîne contient autre chose que des chiffres";
+}
+```
+
+##### Documentation
+https://www.php.net/manual/fr/function.ctype-digit.php
 
 ---
 
@@ -77,7 +93,6 @@ https://www.php.net/manual/fr/function.count.php
 
 
 
-ctype_digit
 
 casting de type 
 
