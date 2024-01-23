@@ -8,7 +8,7 @@
   - [Installation de XAMPP pour MacOs](#installation-de-xampp-pour-macos)
 - [Les fichiers du formateur](#les-fichiers-du-formateur)
 - [Principe des exercices](#principe-des-exercices)
-- [Liste des fonctions à connaître](../../tree/main/functions#les-fonctions-natives-et-constructions-du-langage-à-connaitre) - Par CŒUR !
+- [Liste des fonctions à connaître](https://github.com/WebDevCF2m2023/PHP-base/tree/main/functions#liste-des-fonctions-%C3%A0-connaitre) - Par CŒUR !
 - [Les bases de PHP](#les-bases-de-php)
   - [Les fichiers PHP](#les-fichiers-php)
   - [Les balises PHP](#les-balises-php)

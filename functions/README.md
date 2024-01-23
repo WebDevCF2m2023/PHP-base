@@ -36,62 +36,29 @@ Les méthodes sont des fonctions qui sont définies dans une classe (POO). Elles
 
 ## Liste des fonctions à connaitre
 
+### array()
+#### Création d'un tableau
+
+La fonction `array()` permet de créer un tableau, indexé ou associatif.
+
+Un tableau en PHP est en fait une carte ordonnée. Une carte est un type qui associe des valeurs à des clés.
+Il peut être multi-dimensionnel. On peut utiliser le raccourci `[]` pour créer ce tableau. La clé est soit un nombre, soit une chaîne de caractères. On peut utiliser les clefs pour accéder aux valeurs du tableau.
+
+```php
+$tab = array("un", "deux", "trois"); // tableau indexé : clefs numériques (0, 1, 2)
+$tab2 = ["a"=>"un", 2 => "deux", "val"=>"trois"]; // tableau associatif
+$tab3 = ["a"=>"un", 2 => "deux", "val"=>["trois", "quatre"]]; // tableau multi-dimensionnel
+echo $tab[0]." - ".$tab2["val"]; // affiche "un - trois"
+echo $tab3["val"][1]; // affiche "quatre"
+```
+
 ---
 
 [Retour à la page d'accueil](../../../#menu-de-navigation)
 
 ---
 
-### Les fonctions natives et constructions du langage à connaitre
 
-- Les balises d'ouverture et fermeture du script php
-
-Lorsque PHP traite un fichier, il cherche les balises d'ouverture et de fermeture () qui délimitent le code qu'il doit interpréter.
-
-De cette manière, cela permet à PHP d'être intégré dans toutes sortes de documents, car tout ce qui se trouve en dehors des balises ouvrantes / fermantes de PHP est ignoré.
-
-```php
-<?php
-// code PHP
-?>
-```
-
-- Les commentaires
-
-Les commentaires permettent d'ajouter des informations dans le code source. Ils sont ignorés par l'interpréteur PHP.
-
-```php
-// Ceci est un commentaire sur une ligne
-
-# Ceci est un autre commentaire sur une ligne
-
-/*
-Ceci est un commentaire
-sur plusieurs lignes
-*/
-```
-
-- echo *(structure du langage)*
-
-Affiche toutes les chaînes de caractères qui lui sont passées en paramètres.
-
-```php
-<?php
-echo "bonjour à tous";
-?>
-```
-
-Version courte avec balise courte : `<?= "bonjour à tous"; ?>`
-
-- print *(structure du langage)*
-
-Affiche toutes les chaînes de caractères qui lui sont passées en paramètres.
-
-```php
-<?php
-print "bonjour à tous";
-?>
-```
 
 ctype_digit
 
