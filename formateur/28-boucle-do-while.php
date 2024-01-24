@@ -8,7 +8,8 @@ include 'array.php';
 
 // on trie $depFr par ordre alphabétique en retirant les clefs
 $depFr = array_values($depFr);
-// On compte le nombre de pays dans le tableau $depFr
+//var_dump($depFr);
+// On compte le nombre de régions dans le tableau $depFr
 $nbPays = count($depFr);
 // On initialise la variable $nbPaysParPage
 $nbPaysParPage = 20;
@@ -16,6 +17,36 @@ $nbPaysParPage = 20;
 // pour afficher toutes les régions, ceil arrondit à l'entier supérieur
 $nbPages = ceil($nbPays / $nbPaysParPage);
 
+// si il existe une variable $_GET['pg'] et qu'elle n'est pas vide (!empty)
+// Et (AND &&) que la variable pg est un string ne contenant 
+// que des signes numériques => 0123456789
+if(!empty($_GET['pg'])&&ctype_digit($_GET['pg'])){
+    // on transforme toujours les superglobales utilisateurs en variables locales
+    // pour le traitement de sécurité: transformation du string en integer 
+    $currentPage = (int) $_GET['pg']; //  en utilisant les castings de type
+
+// sinon (pas de variable $_GET['pg'] ou variable non valide)
+}else{
+    $currentPage=1;
+}
+
+// condition ternaire qui remplit la même condition : condition ? true : false
+$currentPage = !empty($_GET['pg'])&&ctype_digit($_GET['pg'])
+                ? (int) $_GET['pg']
+                : 1;
+
+var_dump($currentPage,$_GET);
+/*
+// si il existe la variable $_GET['pg'] ET (AND ou &&)
+if(isset($_GET['pg'])&&
+        //que la variable pg est un string ne contenant 
+        // que des signes numériques => 0123456789
+        ctype_digit($_GET['pg'])
+        // ET qu'il est différent de vide
+        && !empty($_GET['pg'])){
+    echo $_GET['pg'];
+}
+*/
 ?>
 <!doctype html>
 <html lang="fr">
@@ -32,15 +63,31 @@ $nbPages = ceil($nbPays / $nbPaysParPage);
     <p>Puis créez le menu pour passer d'une page à l'autre en utilisant la variable $_GET nommée 'pg'</p>
     <p>Exemple d'un lien valide : <a href="?pg=3">3</a></p>
     <?php
-    echo "Pour ce tableau de $nbPays pays, répartis par $nbPaysParPage pays par page,
+    echo "Pour ce tableau de $nbPays régions, répartis par $nbPaysParPage régions par page,
  vous obtiendrez $nbPages pages<br>";
     ?>
 <h2>Les régions de France</h2>
-    <h4>Ici la pagination</h4>
+    <h4>
+        <?php
+        $page = 1;
+        do{
+            echo "<a href='?pg=$page'>$page</a> ";
+            $page++;
+        }while($page <= $nbPages);
+        ?>
+    </h4>
 <p>Affichez ensuite la liste des régions suivant la variable $_GET nommée 'pg'</p>
     <hr>
 
     <hr>
-    <h4>Ici la pagination</h4>
+    <h4><?php
+        $i = 1;
+        do{
+            ?>
+        <a href="?pg=<?=$i?>"><?=$i?></a> 
+            <?php
+            $i++;
+        }while($i <= $nbPages);
+        ?></h4>
 </body>
 </html>
