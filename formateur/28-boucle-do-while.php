@@ -35,7 +35,7 @@ $currentPage = !empty($_GET['pg'])&&ctype_digit($_GET['pg'])
                 ? (int) $_GET['pg']
                 : 1;
 
-var_dump($currentPage,$_GET);
+// var_dump($currentPage,$_GET);
 /*
 // si il existe la variable $_GET['pg'] ET (AND ou &&)
 if(isset($_GET['pg'])&&
@@ -78,14 +78,37 @@ if(isset($_GET['pg'])&&
     </h4>
 <p>Affichez ensuite la liste des régions suivant la variable $_GET nommée 'pg'</p>
     <hr>
+        <ul>
+<?php
+// début de l'index du tableau (le LIMIT en SQL)
+$i=($currentPage-1)*$nbPaysParPage;
 
+do{
+    // si on dépasse le nopmbre de pays, on arrête la boucle
+    if($i>=$nbPays) break;
+
+    ?>
+<li><?=$depFr[$i]?></li>
+    <?php
+    $i++;
+}while($i<$nbPaysParPage* $currentPage);
+
+?>
+        </ul>
     <hr>
     <h4><?php
         $i = 1;
         do{
+            // nous sommes sur la page actuelle
+            if($currentPage===$i):
+                // pas de lien
+                echo "$i ";
+            else:
+                // sinon on a le lien
             ?>
-        <a href="?pg=<?=$i?>"><?=$i?></a> 
+            <a href="?pg=<?=$i?>"><?=$i?></a> 
             <?php
+            endif;
             $i++;
         }while($i <= $nbPages);
         ?></h4>
