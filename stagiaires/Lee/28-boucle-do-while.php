@@ -36,11 +36,65 @@ $nbPages = ceil($nbPays / $nbPaysParPage);
  vous obtiendrez $nbPages pages<br>";
     ?>
 <h2>Les régions de France</h2>
+
     <h4>Ici la pagination</h4>
 <p>Affichez ensuite la liste des régions suivant la variable $_GET nommée 'pg'</p>
     <hr>
 
     <hr>
     <h4>Ici la pagination</h4>
+    
+<?php
+if(isset($_GET["pg"])){
+    switch($_GET["pg"]){
+        case "1":
+            $i = 1; 
+            do{
+                echo "$depFr[$i]<br>";
+                $i++;
+            }while ($i<21);
+        break;
+        case "2":
+            $i = 21;
+            do{
+                echo "$depFr[$i]<br>";
+                $i++;
+            }while ($i<41);
+        break;
+        case "3":
+            $i = 41;
+            do{
+                echo "$depFr[$i]<br>";
+                $i++;
+            }while ($i<61);
+        break;
+        case "4":
+            $i = 61;
+            do{
+                echo "$depFr[$i]<br>";
+                $i++;
+            }while ($i<81);
+        break;
+        case "5":
+            $i = 81;
+            do{
+                echo "$depFr[$i]<br>";
+                $i++;
+            }while ($i<100);
+        break;
+        case "6":
+            $i = 100;
+            do{
+                echo "$depFr[$i]<br>";
+                $i++;
+            }while ($i<101);
+        break;
+        default:
+        include('page404.php');
+
+        }
+    }
+    ?>
+    <a href="?pg=1">1 </a><a href="?pg=2">2 </a><a href="?pg=3">3 </a><a href="?pg=4">4 </a><a href="?pg=5">5 </a><a href="?pg=6">6</a>
 </body>
 </html>

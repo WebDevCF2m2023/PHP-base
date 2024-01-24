@@ -36,62 +36,68 @@ Les méthodes sont des fonctions qui sont définies dans une classe (POO). Elles
 
 ## Liste des fonctions à connaitre
 
+### `array()` ou `[]`
+#### Créer d'un tableau
+
+La fonction `array()` permet de créer un tableau, indexé ou associatif.
+
+Un tableau en PHP est en fait une carte ordonnée. Une carte est un type qui associe des valeurs à des clés.
+Il peut être multi-dimensionnel. On peut utiliser le raccourci `[]` pour créer ce tableau. La clé est soit un nombre, soit une chaîne de caractères. On peut utiliser les clefs pour accéder aux valeurs du tableau.
+
+```php
+$tab = array("un", "deux", "trois"); // tableau indexé : clefs numériques (0, 1, 2)
+$tab2 = ["a"=>"un", 2 => "deux", "val"=>"trois"]; // tableau associatif
+$tab3 = ["a"=>"un", 2 => "deux", "val"=>["trois", "quatre"]]; // tableau multi-dimensionnel
+echo $tab[0]." - ".$tab2["val"]; // affiche "un - trois"
+echo $tab3["val"][1]; // affiche "quatre"
+```
+
+##### Documentation
+https://www.php.net/manual/fr/language.types.array.php
+
+### `count()`
+#### Compter le nombre d'éléments d'un tableau
+
+La fonction `count()` permet de compter le nombre d'éléments d'un tableau.
+
+```php
+$tab = array("un", "deux", "trois");
+echo count($tab); // affiche 3
+```
+
+##### Documentation
+https://www.php.net/manual/fr/function.count.php
+
+### `ctype_digit()`
+#### Vérifier si une chaîne de caractères ne contient que des chiffres
+
+La fonction `ctype_digit()` permet de vérifier si une chaîne de caractères `string` ne contient que des chiffres.
+
+```php
+$chaine = "123";
+if (ctype_digit($chaine)) {
+    echo "La chaîne ne contient que des chiffres";
+} else {
+    echo "La chaîne contient autre chose que des chiffres";
+}
+```
+
+##### Documentation
+https://www.php.net/manual/fr/function.ctype-digit.php
+
 ---
 
 [Retour à la page d'accueil](../../../#menu-de-navigation)
 
 ---
 
-### Les fonctions natives et constructions du langage à connaitre
 
-- Les balises d'ouverture et fermeture du script php
 
-Lorsque PHP traite un fichier, il cherche les balises d'ouverture et de fermeture () qui délimitent le code qu'il doit interpréter.
 
-De cette manière, cela permet à PHP d'être intégré dans toutes sortes de documents, car tout ce qui se trouve en dehors des balises ouvrantes / fermantes de PHP est ignoré.
+casting de type 
 
-```php
-<?php
-// code PHP
-?>
-```
+settype 
 
-- Les commentaires
-
-Les commentaires permettent d'ajouter des informations dans le code source. Ils sont ignorés par l'interpréteur PHP.
-
-```php
-// Ceci est un commentaire sur une ligne
-
-# Ceci est un autre commentaire sur une ligne
-
-/*
-Ceci est un commentaire
-sur plusieurs lignes
-*/
-```
-
-- echo *(structure du langage)*
-
-Affiche toutes les chaînes de caractères qui lui sont passées en paramètres.
-
-```php
-<?php
-echo "bonjour à tous";
-?>
-```
-
-Version courte avec balise courte : `<?= "bonjour à tous"; ?>`
-
-- print *(structure du langage)*
-
-Affiche toutes les chaînes de caractères qui lui sont passées en paramètres.
-
-```php
-<?php
-print "bonjour à tous";
-?>
-```
-
+intval
 
 

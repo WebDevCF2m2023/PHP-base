@@ -8,7 +8,7 @@
   - [Installation de XAMPP pour MacOs](#installation-de-xampp-pour-macos)
 - [Les fichiers du formateur](#les-fichiers-du-formateur)
 - [Principe des exercices](#principe-des-exercices)
-- [Liste des fonctions à connaître](../../tree/main/functions#les-fonctions-natives-et-constructions-du-langage-à-connaitre) - Par CŒUR !
+- [Liste des fonctions à connaître](https://github.com/WebDevCF2m2023/PHP-base/tree/main/functions#liste-des-fonctions-%C3%A0-connaitre) - Par CŒUR !
 - [Les bases de PHP](#les-bases-de-php)
   - [Les fichiers PHP](#les-fichiers-php)
   - [Les balises PHP](#les-balises-php)
@@ -52,6 +52,9 @@
 - [Les fonctions](#les-fonctions)
   - [Les fonctions natives](#les-fonctions-natives)
   - [Les fonctions personnalisées](#les-fonctions-personnalisées)
+    - [Les paramètres de fonction](#les-paramètres-de-fonction)
+    - [Les paramètres par défaut](#les-paramètres-par-défaut)
+    - [Les valeurs de retour](#les-valeurs-de-retour)
 
 
 ---
@@ -1618,15 +1621,29 @@ Il existe des fonctions prédéfinies en PHP, comme `echo()` ou `print()`, qu'on
 
 Il existe aussi des fonctions définies par l'utilisateur.
 
+--- 
+
+[Retour au menu](#menu-de-navigation)
+
+---
+
 ### Les fonctions natives
 
 Les fonctions natives sont des fonctions prédéfinies en PHP, elles sont utilisables sans avoir à les définir.
 
 Depuis PHP 8 il est possible de changer l'ordre des arguments des fonctions natives, mais nous ne le ferons pas pour le moment.
 
-Les fonctions natives à connaître sont à ce paragraphe :
+La différence entre une `fonction` et une `procédure` est que la `fonction` renvoie une valeur avec un `return`, alors que la `procédure` ne renvoie rien.
+
+Les fonctions natives, ainsi que leurs paramètres, seront à connaître à ce paragraphe :
 
 [Liste des fonctions à connaître](../../tree/main/functions#les-fonctions-natives-et-constructions-du-langage-à-connaitre)
+
+--- 
+
+[Retour au menu](#menu-de-navigation)
+
+---
 
 ### Les fonctions personnalisées
 
@@ -1636,6 +1653,10 @@ https://www.php.net/manual/fr/language.functions.php
 
 Pour créer une fonction, on utilise le mot-clé `function` suivi du nom de la fonction, puis des parenthèses `()` et des accolades `{}`.
 
+Les règles de nommage des fonctions sont les mêmes que pour les variables.
+
+Le `camelCase` et le `pascalCase` sont les plus utilisés.
+
 ```php
 function nomDeLaFonction(){
   // instructions
@@ -1644,8 +1665,101 @@ function nomDeLaFonction(){
 
 ```php
 function bonjour(){
-    echo "Bonjour";
+    // utilisation du return pour renvoyer une valeur
+    return "Bonjour";
 }
+```
+
+Pour appeler une fonction, on utilise son nom suivi des parenthèses `()`.
+
+```php
+echo bonjour();
+```
+
+--- 
+
+[Retour au menu](#menu-de-navigation)
+
+---
+
+#### Les paramètres de fonction
+
+Une fonction peut prendre des paramètres, qui sont des variables qui seront utilisées dans la fonction. Le terme argument est aussi utilisé.
+
+Les paramètres sont définis entre les parenthèses `()` de la fonction, séparés par des virgules `,`.
+
+```php
+function nomDeLaFonction($param1, $param2, $param3){
+  // instructions
+}
+```
+
+```php
+// Ceci est en fait une procédure, car elle affiche une valeur sans utiliser de return
+function bonjour($prenom){
+    echo "Bonjour $prenom";
+}
+```
+
+Pour appeler une fonction (ici une procédure) avec des paramètres, on utilise son nom suivi des parenthèses `()`, dans lesquelles on indique les valeurs des paramètres.
+
+```php
+bonjour("John");
+```
+
+--- 
+
+[Retour au menu](#menu-de-navigation)
+
+---
+
+#### Les paramètres par défaut
+
+Les arguments sont les valeurs des paramètres.
+
+On peut définir des valeurs par défaut (des arguments donc) pour les paramètres, qui seront utilisées si aucun argument n'est passé lors de l'appel de la fonction.
+
+Les paramètres par défaut sont définis avec un `=` après le nom du paramètre. Notez que les paramètres par défaut doivent être définis après les paramètres sans valeur par défaut.
+
+```php
+function nomDeLaFonction($param1, $param2 = "valeur par défaut", $param3 = "valeur par défaut"){
+  // instructions
+}
+```
+
+```php
+function bonjour($prenom = "John"){
+    echo "Bonjour $prenom";
+}
+```
+
+--- 
+
+[Retour au menu](#menu-de-navigation)
+
+---
+
+#### Les valeurs de retour
+
+Une fonction peut renvoyer une valeur avec le mot-clé `return`.
+
+```php
+function nomDeLaFonction($param1, $param2, $param3){
+  // instructions
+  return $valeur;
+}
+```
+
+```php
+function bonjour($prenom){
+    return "Bonjour $prenom";
+}
+```
+
+Pour appeler une fonction avec des paramètres, on utilise son nom suivi des parenthèses `()`, dans lesquelles on indique les valeurs des paramètres.
+
+```php
+echo bonjour("John");
 ```
 
 
