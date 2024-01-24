@@ -21,19 +21,21 @@ echo "</p>";
  */
 <?php
 $i=0; 
-for ($j=0 ;$j<=20; $j++){
-    $i=+$j;
+for ($j=0 ;$j<=20; $j++){ /* $+=2  plus direct */
+    $i+=$j;
     if ( $j % 2 == 0){
 
-    echo "$j est pair <br>";
+    echo "$j est - pair |";
     }
+    else
+    echo "$j est - impair |";
 }?>
 /*
  * 3) Affichez les nombres de 1 à 20 avec une boucle for en calculant la somme de ces nombres
  */
 <?php
  $h=0;
-for ($j=1 ;$j<=20; $j++){
+for ($j=1 ;$j<=20; $j++){ /*  ": endfor " pour eviter d'écrire des accolade $somme += $i; */
     $h+=$j;
         echo " $j";
     }
@@ -66,8 +68,15 @@ echo " la somme de tous les nombres est  $h";
  
  echo "<p>5) Affichez la somme des nombres de 1 à 20 à chaque tour avec une boucle for et en affichant à chaque tour si la somme est pair ou impair<br>";
  $somme=0;
- 
+ <?php
  echo "</p>";
+ $h=0;
+for ($j=1 ;$j<=20; $j++){
+    $h+=$j;
+        echo " $j";
+    }
+echo " la somme de tous les nombres est  $h";
+   ?> 
  
  /*
   * 6) Utilisez deux boucles for imbriquées pour afficher une table de multiplication de 1 à 5.
@@ -81,5 +90,13 @@ echo " la somme de tous les nombres est  $h";
   */
  
  echo "<p>6) Utilisez deux boucles for imbriquées pour afficher une table de multiplication de 1 à 5.<br>";
+ <?php
+ for ($i=1;$i<=5;$++){
+    for ($i=1;$i<=5;$++){
+        echo "$i x $j = " .($i*$j)."|";
+    }
+    echo"<br>"
+ }
  
  echo "</p>";
+ ?>
