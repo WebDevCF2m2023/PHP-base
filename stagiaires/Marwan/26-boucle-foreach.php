@@ -1,20 +1,80 @@
 <?php
 /*
- * Les tableaux
+ * Les boucles foreach
  */
 
+include 'array.php';
+/*
+ * 1) Affichez chaque élément du tableau avec une boucle foreach
+ */
+$tab = array("a", "b", "c", "d", "e", "f", "g", "h", "i", "j");
+
+echo '<p>1) Affichez les lettres de $tab avec une boucle foreach<br>';
+$tabl=["a", "b", "c", "d", "e", "f", "g", "h", "i", "j"];
+foreach($tabl as $tab){
+    echo"$tab ";
+}
+echo "</p>";
+
+/*
+ * 2) Affichez chaque élément du tableau $tab avec une boucle foreach
+ * en affichant aussi la clef de chaque élément
+ */
+
+echo '<p>2) Affichez les lettres de $tab avec une boucle foreach en affichant aussi la clef de chaque élément<br>';
+$tabl=["a", "b", "c", "d", "e", "f", "g", "h", "i", "j"];
+foreach($tabl as $key=>$tab){
+    echo"$key=>$tab ";
+}
+echo "</p>";
 
 
-// des prénoms
-$classe=['Jean','Eric','Marie','Julie','Luc','Pierre','Paul','Jacques','Hélène','Anne','Yassine','Jean-Luc','Magib','Samsung',];
+/*
+ * 3) Affichez chaque élément du tableau $semaineFr avec une boucle foreach
+ * en affichant aussi la clef de chaque élément
+ */
 
-// jours de la semaine en français
-$semaineFr=[1 =>'lundi','mardi','mercredi','jeudi','vendredi','samedi','dimanche',];
+echo '<p>3) Affichez les jours de la semaine avec une boucle foreach en affichant aussi la clef de chaque élément<br>';
+$semainefr=["lundi","mardi","mercredi","jeudi","vendredi","samedi","dimanche"];
+foreach($semainefr as $key=>$semainef){
+    echo" $key=>$semainef ";
+}
+echo "</p>";
 
-// mois de l'année en français
-$moisFr=[1 =>'janvier','février','mars','avril','mai','juin','juillet','août','septembre','octobre','novembre','décembre',];
+/*
+ * 4) Affichez le jour actuel de la semaine en français avec la fonction date() et la variable $semaineFr
+ */
 
-// Tableau de données représentant une classe de 18 élèves
+echo '<p>4) Affichez le jour actuel de la semaine en français avec la fonction date() et la variable $semaineFr<br>';
+$semainefr=["lundi","mardi","mercredi","jeudi","vendredi","samedi","dimanche"];
+date_default_timezone_set('Europe/Paris');
+ 
+$jourActuel = date('w');
+$jourFr = $semaineFr[3];
+ 
+ 
+echo 'Le jour actuel de la semaine est : ' . $jourFr;
+ 
+
+echo "</p>";
+
+/*
+ * 5) Affichez la liste des prénoms du tableau $classe avec une boucle foreach
+ */
+
+echo '<p>5) Affichez la liste des prénoms du tableau $classe avec une boucle foreach<br>';
+$classe=["Marwan","Rami","Tevin","Eryhan","Emrah","Baris","Lee","Guillaume","Anthony"];
+foreach($classe as $class){
+    echo "$class ";
+}
+echo "</p>";
+
+/*
+ * 6) Affichez la liste des 'nom', 'age' et 'note' du tableau $classe18 avec une boucle foreach
+ * avec un retour à la ligne entre chaque élément
+ */
+
+echo '<p>6) Affichez la liste des \'nom\', \'age\' et \'note\' du tableau $classe18 avec une boucle foreach avec un retour à la ligne entre chaque élément<br>';
 $classe18 = [
     ['nom' => 'Élève 1', 'age' => 15, 'note' => 90],
     ['nom' => 'Élève 2', 'age' => 16, 'note' => 80],
@@ -35,8 +95,15 @@ $classe18 = [
     ['nom' => 'Élève 17', 'age' => 16, 'note' => 95],
     ['nom' => 'Élève 18', 'age' => 15, 'note' => 85],
 ];
+foreach($classe18 as $class){
+    echo "nom : $class[nom] | age : $class[age] | note : $class[note] ";
+    echo "</br>";
+}
+echo "</p>";
 
-// code numérique, code alpha 2, code Alpha 3, nom du pays
+/*
+ * 7) Avec 2 boucles foreach, affichez tous les champs la liste des pays du tableau $countryCode
+ */
 $countryCode = array(
     array('4', 'AFG', 'AF', 'Afghanistan'),
     array('710', 'ZAF', 'ZA', 'Afrique du Sud'),
@@ -288,106 +355,7 @@ $countryCode = array(
     array('894', 'ZMB', 'ZM', 'Zambie'),
     array('716', 'ZWE', 'ZW', 'Zimbabwe')
 );
+echo '<p>7) Avec 2 boucles foreach, affichez tous les champs la liste des pays du tableau $countryCode<br>';
 
-$depFr = array();
-$depFr["01"] = "Ain";
-$depFr["02"] = "Aisne";
-$depFr["03"] = "Allier";
-$depFr["04"] = "Alpes-de-Haute-Provence";
-$depFr["06"] = "Alpes-Maritimes";
-$depFr["07"] = "Ardèche";
-$depFr["08"] = "Ardennes";
-$depFr["09"] = "Ariège";
-$depFr["10"] = "Aube";
-$depFr["11"] = "Aude";
-$depFr["12"] = "Aveyron";
-$depFr["67"] = "Bas-Rhin";
-$depFr["13"] = "Bouches-du-Rhône";
-$depFr["14"] = "Calvados";
-$depFr["15"] = "Cantal";
-$depFr["16"] = "Charente";
-$depFr["17"] = "Charente-Maritime";
-$depFr["18"] = "Cher";
-$depFr["19"] = "Corrèze";
-$depFr["2A"] = "Corse-du-Sud";
-$depFr["21"] = "Côte-d'Or";
-$depFr["22"] = "Côtes-d'Armor";
-$depFr["23"] = "Creuse";
-$depFr["79"] = "Deux-Sèvres";
-$depFr["24"] = "Dordogne";
-$depFr["25"] = "Doubs";
-$depFr["26"] = "Drôme";
-$depFr["91"] = "Essonne";
-$depFr["27"] = "Eure";
-$depFr["28"] = "Eure-et-Loir";
-$depFr["29"] = "Finistère";
-$depFr["30"] = "Gard";
-$depFr["32"] = "Gers";
-$depFr["33"] = "Gironde";
-$depFr["971"] = "Guadeloupe";
-$depFr["973"] = "Guyane";
-$depFr["05"] = "Hautes-Alpes";
-$depFr["65"] = "Hautes-Pyrénées";
-$depFr["2B"] = "Haute-Corse";
-$depFr["31"] = "Haute-Garonne";
-$depFr["43"] = "Haute-Loire";
-$depFr["52"] = "Haute-Marne";
-$depFr["70"] = "Haute-Saône";
-$depFr["74"] = "Haute-Savoie";
-$depFr["87"] = "Haute-Vienne";
-$depFr["92"] = "Hauts-de-Seine";
-$depFr["68"] = "Haut-Rhin";
-$depFr["34"] = "Hérault";
-$depFr["35"] = "Ille-et-Vilaine";
-$depFr["36"] = "Indre";
-$depFr["37"] = "Indre-et-Loire";
-$depFr["38"] = "Isère";
-$depFr["39"] = "Jura";
-$depFr["40"] = "Landes";
-$depFr["974"] = "La Réunion";
-$depFr["42"] = "Loire";
-$depFr["45"] = "Loiret";
-$depFr["44"] = "Loire-Atlantique";
-$depFr["41"] = "Loir-et-Cher";
-$depFr["46"] = "Lot";
-$depFr["47"] = "Lot-et-Garonne";
-$depFr["48"] = "Lozère";
-$depFr["49"] = "Maine-et-Loire";
-$depFr["50"] = "Manche";
-$depFr["51"] = "Marne";
-$depFr["972"] = "Martinique";
-$depFr["53"] = "Mayenne";
-$depFr["976"] = "Mayotte";
-$depFr["54"] = "Meurthe-et-Moselle";
-$depFr["55"] = "Meuse";
-$depFr["56"] = "Morbihan";
-$depFr["57"] = "Moselle";
-$depFr["58"] = "Nièvre";
-$depFr["59"] = "Nord";
-$depFr["60"] = "Oise";
-$depFr["61"] = "Orne";
-$depFr["75"] = "Paris";
-$depFr["62"] = "Pas-de-Calais";
-$depFr["63"] = "Puy-de-Dôme";
-$depFr["64"] = "Pyrénées-Atlantiques";
-$depFr["66"] = "Pyrénées-Orientales";
-$depFr["69"] = "Rhône";
-$depFr["71"] = "Saône-et-Loire";
-$depFr["72"] = "Sarthe";
-$depFr["73"] = "Savoie";
-$depFr["93"] = "Seine-Saint-Denis";
-$depFr["76"] = "Seine-Maritime";
-$depFr["77"] = "Seine-et-Marne";
-$depFr["80"] = "Somme";
-$depFr["81"] = "Tarn";
-$depFr["82"] = "Tarn-et-Garonne";
-$depFr["90"] = "Territoire de Belfort";
-$depFr["94"] = "Val-de-Marne";
-$depFr["95"] = "Val-d'Oise";
-$depFr["83"] = "Var";
-$depFr["84"] = "Vaucluse";
-$depFr["85"] = "Vendée";
-$depFr["86"] = "Vienne";
-$depFr["88"] = "Vosges";
-$depFr["89"] = "Yonne";
-$depFr["78"] = "Yvelines";
+
+echo "</p>";

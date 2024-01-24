@@ -6,18 +6,21 @@
 echo "<p>1) Calculez la somme des entiers de 1 à 10 avec la boucle while<br>";
 
 $somme = 0;
-$i=1;
-
-while($i<=10){
-    $somme += $i;
-    $i++;
+$i= 1;
+while ($i <= 10) {
+    $somme += $i; 
+    $i++;      
+    
+    
+// ligne qui doit devenir fonctionnelle :
+    echo "La somme des entiers de 1 à 10 est :  $somme";
+    echo "</p>";
 }
 
 
-// ligne qui doit devenir fonctionnelle :
-echo "La somme des entiers de 1 à 10 est : $somme";
 
-echo "</p>";
+
+
 
 echo "<p>2) Affichez une table de multiplication (de 1 à 10 au hasard) en utilisant la boucle while<br>";
 
@@ -35,12 +38,17 @@ try {
 
 echo "Table de multiplication de $nombre :<br>";
 
-$i=1;
-while($i<11){
-    echo "$nombre x $i = ".$nombre*$i;
-    echo "<br>";
-    $i++;
+
+
+
+$i = 1;
+while ($i <= 10) {
+    $resultat = $nombre * $i; 
+    echo "$nombre x $i = $resultat<br>"; 
+    $i++; 
 }
+
+
 
 echo "</p>";
 
@@ -52,19 +60,40 @@ Par exemple : <br>3! = 3 x 2 x 1 = 6 <br> 5! = 5 x 4 x 3 x 2 x 1 = 120 <br>
 
 
 
+
+
 $nombre = mt_rand(3, 12);
 $factorielle = 1;
-$calc = $nombre;
 
-while($calc >= 1){
-    $factorielle *= $calc;
-    $calc--;
+
+try {
+    $nombre = random_int(3, 12); // Génère un nombre aléatoire entre 3 et 12
+} catch (Exception $e) {
+    // Affiche l'erreur en cas d'échec
+    echo "Erreur lors de la génération du nombre aléatoire : " . $e->getMessage();
+    // Arrête l'exécution du script
+    exit;
 }
+
+echo "Factorielle de $nombre :<br>";
+
+
+$resultat = 1;
+
+
+$i = 1;
+
+
+while ($i <= $nombre) {
+    $resultat *= $i; 
+    $i++; 
+}
+
+echo "$nombre! = $resultat<br>";
+
 
 // ligne qui doit devenir fonctionnelle :
 echo "La factorielle de $nombre est : $factorielle";
-
-
 
 echo "</p>";
 

@@ -1,17 +1,13 @@
 <?php
 /*
- * Les boucles while
+ * Les boucles foreach
  */
 
 echo "<p>1) Calculez la somme des entiers de 1 à 10 avec la boucle while<br>";
 
 $somme = 0;
-$i=1;
-
-while($i<=10){
-    $somme += $i;
-    $i++;
-}
+$i = 1;
+while($i <= 10) $somme += $i++;
 
 
 // ligne qui doit devenir fonctionnelle :
@@ -26,20 +22,12 @@ echo "<p>2) Affichez une table de multiplication (de 1 à 10 au hasard) en utili
 // Nous pouvons utiliser la fonction mt_rand() qui est plus rapide pour générer des nombres aléatoires
 try {
     $nombre = random_int(1, 10); // Génère un nombre aléatoire entre 1 et 10
-    // si erreur, on attrape l'exception
-} catch (\Random\RandomException $e) {
-    // affiche l'erreur
+    $i = 0;
+    echo "Table de multiplication de $nombre :<br>";
+    while($i <= 10)
+        echo "$i x $nombre = " . $i++ * $nombre . " | ";
+} catch (\Random\RandomException|ValueError $e) {
     echo $e->getMessage();
-}
-
-
-echo "Table de multiplication de $nombre :<br>";
-
-$i=1;
-while($i<11){
-    echo "$nombre x $i = ".$nombre*$i;
-    echo "<br>";
-    $i++;
 }
 
 echo "</p>";
@@ -54,19 +42,11 @@ Par exemple : <br>3! = 3 x 2 x 1 = 6 <br> 5! = 5 x 4 x 3 x 2 x 1 = 120 <br>
 
 $nombre = mt_rand(3, 12);
 $factorielle = 1;
-$calc = $nombre;
-
-while($calc >= 1){
-    $factorielle *= $calc;
-    $calc--;
-}
+$i = $nombre;
+while($i > 1)
+    $factorielle *= $i--;
 
 // ligne qui doit devenir fonctionnelle :
 echo "La factorielle de $nombre est : $factorielle";
 
-
-
 echo "</p>";
-
-
-

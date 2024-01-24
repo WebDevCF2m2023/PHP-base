@@ -10,10 +10,9 @@ include 'array.php';
 $tab = array("a", "b", "c", "d", "e", "f", "g", "h", "i", "j");
 
 echo '<p>1) Affichez les lettres de $tab avec une boucle foreach<br>';
+foreach($tab as $lettres){
+    echo "$lettres ";}
 
-foreach ($tab as $element ){
-    echo $element." ";
-}
 
 echo "</p>";
 
@@ -24,9 +23,8 @@ echo "</p>";
 
 echo '<p>2) Affichez les lettres de $tab avec une boucle foreach en affichant aussi la clef de chaque élément<br>';
 
-foreach($tab as $key => $tabs):
-    echo "$key => $tabs | ";
-endforeach;
+foreach($tab as $key => $value){
+	echo "$key : $value <br>";}
 
 echo "</p>";
 
@@ -39,8 +37,7 @@ echo "</p>";
 echo '<p>3) Affichez les jours de la semaine avec une boucle foreach en affichant aussi la clef de chaque élément<br>';
 
 foreach($semaineFr as $key => $value){
-    echo "$key : $value | ";
-}
+	echo "$key : $value <br>";}
 
 echo "</p>";
 
@@ -49,10 +46,18 @@ echo "</p>";
  */
 
 echo '<p>4) Affichez le jour actuel de la semaine en français avec la fonction date() et la variable $semaineFr<br>';
-// https://www.php.net/manual/fr/function.date.php
-// et https://www.php.net/manual/fr/datetime.format.php
-$today = date("N"); 
-echo $semaineFr[$today];
+
+date_default_timezone_set('Europe/Paris');
+
+$jourActuel = date('w'); 
+$jourFr = $semaineFr[$jourActuel];
+
+
+echo 'Le jour actuel de la semaine est : ' . $jourFr;
+
+
+
+
 echo "</p>";
 
 /*
@@ -62,8 +67,9 @@ echo "</p>";
 echo '<p>5) Affichez la liste des prénoms du tableau $classe avec une boucle foreach<br>';
 
 foreach($classe as $nom){
-    echo "$nom ";
+    echo"$nom  ";
 }
+
 
 echo "</p>";
 
@@ -74,15 +80,11 @@ echo "</p>";
 
 echo '<p>6) Affichez la liste des \'nom\', \'age\' et \'note\' du tableau $classe18 avec une boucle foreach avec un retour à la ligne entre chaque élément<br>';
 
-foreach($classe18 as $classe){
-    // propre au echo "" => des clef de tableaux au format string sans ' ou "
-    echo "nom : $classe[nom] | âge : $classe[age] | note : $classe[note]";
-    // fréquemment utilisé en OO 
-    echo "nom : {$classe['nom']} | âge : {$classe['age']} | note : {$classe['note']}";
-    // simple concaténation
-    echo "nom : ".$classe['nom']." | âge : ".$classe['age']." | note : ".$classe['note'];
-    echo "<br>";
+foreach($classe18 as $etudiant){
+    echo 'Nom: ' . $etudiant['nom'] . ', Age: ' . $etudiant['age'] . ', Note: ' . $etudiant['note'] . '<br>';
+
 }
+
 
 echo "</p>";
 
@@ -95,10 +97,9 @@ echo '<p>7) Avec 2 boucles foreach, affichez tous les champs la liste des pays d
 
 foreach($countryCode as $pays){
     foreach($pays as $loool){
-        echo "$loool | ";
+        echo " $loool   ";
     };
-    echo "<br /><hr>";
-    
-}
+echo"</br><hr>";}
+
 
 echo "</p>";
