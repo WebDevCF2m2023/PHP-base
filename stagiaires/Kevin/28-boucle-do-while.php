@@ -6,9 +6,9 @@ $nbPays = count($depFr);
 $nbPaysParPage = 20;
 $nbPages = ceil($nbPays / $nbPaysParPage);
 $page = 1;
-if(!empty($_GET["pg"]) && is_numeric($_GET["pg"])){
-    $page = intval($_GET["pg"]);
-    if($page > $nbPages || $page < 1) $page = 1;
+if(!empty($_GET["pg"]) && ctype_digit($_GET["pg"])){
+    $page = (int) $_GET["pg"];
+    if($page > $nbPages) $page = 1;
 }
 ?>
 <!DOCTYPE html>

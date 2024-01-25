@@ -38,7 +38,7 @@ function dateEnFr($date){
     
     $toReturn = "$day {$dateTime->format("d")} $month {$dateTime->format("Y")}";
     if(count(explode(":", $date)) > 1)
-        $toReturn .= " à " . $dateTime->format("h") . "h" . $dateTime->format("i");
+        $toReturn .= " à " . $dateTime->format("H") . "h" . $dateTime->format("i");
     
     return ucfirst($toReturn);
 }
