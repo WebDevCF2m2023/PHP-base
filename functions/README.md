@@ -37,7 +37,7 @@ Les méthodes sont des fonctions qui sont définies dans une classe (POO). Elles
 ## Liste des fonctions à connaitre
 
 ### `array()` ou `[]`
-#### Créer d'un tableau
+#### Créer un tableau
 
 La fonction `array()` permet de créer un tableau, indexé ou associatif.
 
@@ -58,7 +58,7 @@ https://www.php.net/manual/fr/language.types.array.php
 ### `()` Casting de type
 #### Convertir une variable dans un autre type
 
-Le casting de type permet de convertir une variable dans un autre type.
+Le casting de type permet de convertir une variable dans un autre type très facilement. Il suffit de mettre le type souhaité entre parenthèses devant la variable à convertir.
 
 Sont disponibles les castings suivants :
 
@@ -70,7 +70,7 @@ Sont disponibles les castings suivants :
 - `(object)` : conversion en objet
 - `(unset)` : conversion en NULL
 
-Ce qui se produira exactement lors d'un transtypage entre certains types n'est pas forcément évident. 
+Ce qui se produira exactement lors d'un **transtypage** entre certains types n'est pas forcément évident. 
 
 En cas dont le retour est important ou non prévisible, il est préférable d'utiliser les fonctions de conversion explicites, telles que `intval()`, `floatval()`, `strval()` ou `boolval()`. 
 
@@ -105,6 +105,8 @@ https://www.php.net/manual/fr/function.count.php
 ### `ctype_digit()`
 #### Vérifier si une chaîne de caractères ne contient que des chiffres
 
+*`ctype_digit(mixed $text): bool`*
+
 La fonction `ctype_digit()` permet de vérifier si une chaîne de caractères `string` ne contient que des chiffres.
 
 ```php
@@ -125,10 +127,27 @@ https://www.php.net/manual/fr/function.ctype-digit.php
 
 ---
 
+### `date()`
+#### Formate un horodatage Unix
+
+*date(string $format, ?int $timestamp = null): string*
+
+La fonction `date()` permet de formater un horodatage Unix. Elle renvoie une chaîne de caractères formatée suivant le paramètre `format` fourni.
+
+```php
+echo date("d/m/Y"); // affiche la date du jour au format jj/mm/aaaa
+```
+
+Pour une utilisation plus avancée, il est recommandé d'utiliser la classe `DateTime` ou `DateTimeImmutable` et leurs méthodes.
+
+##### Documentation
+https://www.php.net/manual/fr/function.date.php
+
+Les formats de date sont expliqués ici :
+
+https://www.php.net/manual/fr/datetime.format.php
 
 
-
-casting de type 
 
 settype 
 
