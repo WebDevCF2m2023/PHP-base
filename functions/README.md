@@ -55,6 +55,40 @@ echo $tab3["val"][1]; // affiche "quatre"
 ##### Documentation
 https://www.php.net/manual/fr/language.types.array.php
 
+### `()` Casting de type
+#### Convertir une variable dans un autre type
+
+Le casting de type permet de convertir une variable dans un autre type.
+
+Sont disponibles les castings suivants :
+
+- `(int)` ou `(integer)` : conversion en entier
+- `(bool)` ou `(boolean)` : conversion en booléen
+- `(float)` ou `(double)` ou `(real)` : conversion en nombre à virgule flottante
+- `(string)` : conversion en chaîne de caractères
+- `(array)` : conversion en tableau
+- `(object)` : conversion en objet
+- `(unset)` : conversion en NULL
+
+Ce qui se produira exactement lors d'un transtypage entre certains types n'est pas forcément évident. 
+
+En cas dont le retour est important ou non prévisible, il est préférable d'utiliser les fonctions de conversion explicites, telles que `intval()`, `floatval()`, `strval()` ou `boolval()`. 
+
+La fonction `settype()` peut également être utilisée pour convertir les variables vers certains types.
+
+```php
+$chaine = "123";
+$chaine2 = "coucou";
+$entier = (int) $chaine; // $entier vaut 123
+// $chaine2 ne contient pas que des chiffres, donc la conversion ne peut pas se faire
+$entier2 = (int) $chaine2; // $entier2 vaut alors 0
+
+```
+
+##### Documentation
+https://www.php.net/manual/fr/language.types.type-juggling.php#language.types.typecasting
+
+
 ### `count()`
 #### Compter le nombre d'éléments d'un tableau
 
