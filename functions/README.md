@@ -148,6 +148,31 @@ Les formats de date sont expliqués ici :
 
 https://www.php.net/manual/fr/datetime.format.php
 
+## `define()`
+### Définit une constante
+
+*`define(string $name, mixed $value, bool $case_insensitive = false): bool`*
+
+Une constante est un identifiant (nom) qui représente une valeur simple. Comme son nom l'indique, cette valeur ne peut pas changer durant l'exécution du script (excepté les constantes magiques qui changent à chaque ligne).
+
+Les règles de nommage des constantes sont les mêmes que pour les autres identifiants en PHP. Une constante est sensible à la casse par défaut. Par convention, les constantes sont toujours en **majuscules**, et en `snake_case`.
+
+```php
+define("CONSTANTE", "valeur");
+echo CONSTANTE; // affiche "valeur"
+```
+
+On peut également utiliser le mot-clé `const` pour définir une constante.
+
+```php
+const MY_CONSTANT = "valeur";
+echo MY_CONSTANT; // affiche "valeur"
+```
+
+
+#### Documentation
+https://www.php.net/manual/fr/function.define.php et https://www.php.net/manual/fr/language.constants.syntax.php
+
 
 
 
