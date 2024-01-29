@@ -116,8 +116,10 @@ La fonction `ctype_digit()` permet de vérifier si une chaîne de caractères `s
 ```php
 $chaine = "123";
 if (ctype_digit($chaine)) {
+    // si true
     echo "La chaîne ne contient que des chiffres";
 } else {
+    // si false
     echo "La chaîne contient autre chose que des chiffres";
 }
 ```
