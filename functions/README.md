@@ -36,8 +36,8 @@ Les méthodes sont des fonctions qui sont définies dans une classe (POO). Elles
 
 ## Liste des fonctions à connaitre
 
-### `array()` ou `[]`
-#### Créer un tableau
+## `array()` ou `[]`
+### Créer un tableau
 
 *`array(mixed ...$values): array`*
 
@@ -54,11 +54,11 @@ echo $tab[0]." - ".$tab2["val"]; // affiche "un - trois"
 echo $tab3["val"][1]; // affiche "quatre"
 ```
 
-##### Documentation
+#### Documentation
 https://www.php.net/manual/fr/language.types.array.php
 
-### `()` Casting de type
-#### Convertir une variable dans un autre type
+## `()` Casting de type
+### Convertir une variable dans un autre type
 
 Le casting de type permet de convertir une variable dans un autre type très facilement. Il suffit de mettre le type souhaité entre parenthèses devant la variable à convertir.
 
@@ -87,12 +87,12 @@ $entier2 = (int) $chaine2; // $entier2 vaut alors 0
 
 ```
 
-##### Documentation
+#### Documentation
 https://www.php.net/manual/fr/language.types.type-juggling.php#language.types.typecasting
 
 
-### `count()`
-#### Compter le nombre d'éléments d'un tableau
+## `count()`
+### Compter le nombre d'éléments d'un tableau
 
 *`count(Countable|array $value, int $mode = COUNT_NORMAL): int`*
 
@@ -103,11 +103,11 @@ $tab = array("un", "deux", "trois");
 echo count($tab); // affiche 3
 ```
 
-##### Documentation
+#### Documentation
 https://www.php.net/manual/fr/function.count.php
 
-### `ctype_digit()`
-#### Vérifier si une chaîne de caractères ne contient que des chiffres
+## `ctype_digit()`
+### Vérifier si une chaîne de caractères ne contient que des chiffres
 
 *`ctype_digit(mixed $text): bool`*
 
@@ -122,17 +122,12 @@ if (ctype_digit($chaine)) {
 }
 ```
 
-##### Documentation
+#### Documentation
 https://www.php.net/manual/fr/function.ctype-digit.php
 
----
 
-[Retour à la page d'accueil](../../../#menu-de-navigation)
-
----
-
-### `date()`
-#### Formate un horodatage Unix
+## `date()`
+### Formate un horodatage Unix
 
 *`date(string $format, ?int $timestamp = null): string`*
 
@@ -144,12 +139,13 @@ echo date("d/m/Y"); // affiche la date du jour au format jj/mm/aaaa
 
 Pour une utilisation plus avancée, il est recommandé d'utiliser la classe `DateTime` ou `DateTimeImmutable` et leurs méthodes.
 
-##### Documentation
+#### Documentation
 https://www.php.net/manual/fr/function.date.php
 
 Les formats de date sont expliqués ici :
 
 https://www.php.net/manual/fr/datetime.format.php
+
 
 
 
