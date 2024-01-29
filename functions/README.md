@@ -39,6 +39,8 @@ Les méthodes sont des fonctions qui sont définies dans une classe (POO). Elles
 ### `array()` ou `[]`
 #### Créer un tableau
 
+*`array(mixed ...$values): array`*
+
 La fonction `array()` permet de créer un tableau, indexé ou associatif.
 
 Un tableau en PHP est en fait une carte ordonnée. Une carte est un type qui associe des valeurs à des clés.
@@ -92,6 +94,8 @@ https://www.php.net/manual/fr/language.types.type-juggling.php#language.types.ty
 ### `count()`
 #### Compter le nombre d'éléments d'un tableau
 
+*`count(Countable|array $value, int $mode = COUNT_NORMAL): int`*
+
 La fonction `count()` permet de compter le nombre d'éléments d'un tableau.
 
 ```php
@@ -130,7 +134,7 @@ https://www.php.net/manual/fr/function.ctype-digit.php
 ### `date()`
 #### Formate un horodatage Unix
 
-*date(string $format, ?int $timestamp = null): string*
+*`date(string $format, ?int $timestamp = null): string`*
 
 La fonction `date()` permet de formater un horodatage Unix. Elle renvoie une chaîne de caractères formatée suivant le paramètre `format` fourni.
 
