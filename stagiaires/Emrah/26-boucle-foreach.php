@@ -57,7 +57,9 @@ $jourActuel = date('N');
 
 echo "Le jour actuel de la semaine est {$semaineFr[$jourActuel]}.";
 
-
+foreach ($classe as $names){
+    echo "$names ";
+}
 /*
  * 5) Affichez la liste des prénoms du tableau $classe avec une boucle foreach
  */
@@ -65,7 +67,10 @@ echo "Le jour actuel de la semaine est {$semaineFr[$jourActuel]}.";
 echo '<p>5) Affichez la liste des prénoms du tableau $classe avec une boucle foreach<br>';
 
 echo "</p>";
-
+foreach($classe18 as $class){
+    echo "nom : $class[nom] | age : $class[age] | note : $class[note] ";
+    echo "</br>";
+}
 /*
  * 6) Affichez la liste des 'nom', 'age' et 'note' du tableau $classe18 avec une boucle foreach
  * avec un retour à la ligne entre chaque élément
@@ -74,7 +79,10 @@ echo "</p>";
 echo '<p>6) Affichez la liste des \'nom\', \'age\' et \'note\' du tableau $classe18 avec une boucle foreach avec un retour à la ligne entre chaque élément<br>';
 
 echo "</p>";
-
+foreach($countryCode as $countries){
+    echo " $countries[0]  | $countries[1] | $countries[2] | $countries[3] | ";
+    echo "</br>";
+}
 /*
  * 7) Avec 2 boucles foreach, affichez tous les champs la liste des pays du tableau $countryCode
  */

@@ -13,8 +13,11 @@ echo '<p>1) Affichez les lettres de $tab avec une boucle foreach<br>';
 
 echo "</p>";
 
-/*
- * 2) Affichez chaque élément du tableau $tab avec une boucle foreach
+foreach($tab as $liste => $tabb){
+    echo "$liste : $tabb ";
+}
+
+ /* 2) Affichez chaque élément du tableau $tab avec une boucle foreach
  * en affichant aussi la clef de chaque élément
  */
 
