@@ -17,8 +17,11 @@ foreach ($tab as $element ){
 
 echo "</p>";
 
-/*
- * 2) Affichez chaque élément du tableau $tab avec une boucle foreach
+foreach($tab as $liste => $tabb){
+    echo "$liste : $tabb ";
+}
+
+ /* 2) Affichez chaque élément du tableau $tab avec une boucle foreach
  * en affichant aussi la clef de chaque élément
  */
 
